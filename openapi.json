@@ -1,0 +1,163 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Nrth AI Public API",
+    "version": "1.0.0",
+    "description": "AI-native API for Nrth AI. Lets agents read service info, submit inquiries, book consultations, and chat with the sales agent.",
+    "contact": { "email": "hello@nrth.ai", "name": "Nrth AI" }
+  },
+  "servers": [
+    { "url": "https://nrth.no/api", "description": "Production" }
+  ],
+  "paths": {
+    "/services": {
+      "get": {
+        "operationId": "getServices",
+        "summary": "List service catalog",
+        "responses": {
+          "200": {
+            "description": "Array of services",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ServiceList" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/inquiry": {
+      "post": {
+        "operationId": "submitInquiry",
+        "summary": "Submit a discovery brief",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Inquiry" }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Inquiry received",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string" },
+                    "status": { "type": "string", "example": "received" },
+                    "follow_up_within_hours": { "type": "integer", "example": 24 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/book": {
+      "post": {
+        "operationId": "bookConsultation",
+        "summary": "Book a 30-min intro call",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Booking" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Booked" }
+        }
+      }
+    },
+    "/chat": {
+      "post": {
+        "operationId": "chat",
+        "summary": "Chat with the Nrth AI sales agent",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["messages"],
+                "properties": {
+                  "messages": {
+                    "type": "array",
+                    "items": { "$ref": "#/components/schemas/Message" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Assistant reply",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "reply": { "type": "string" },
+                    "next_action": {
+                      "type": "string",
+                      "enum": ["continue", "submitInquiry", "bookConsultation"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ServiceList": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "name": { "type": "string" },
+            "outcome": { "type": "string" }
+          }
+        }
+      },
+      "Inquiry": {
+        "type": "object",
+        "required": ["email", "problem"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "company": { "type": "string" },
+          "role": { "type": "string" },
+          "problem": { "type": "string" },
+          "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] }
+        }
+      },
+      "Booking": {
+        "type": "object",
+        "required": ["email", "name", "slot"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "name": { "type": "string" },
+          "slot": { "type": "string", "format": "date-time" }
+        }
+      },
+      "Message": {
+        "type": "object",
+        "required": ["role", "content"],
+        "properties": {
+          "role": { "type": "string", "enum": ["user", "assistant", "system"] },
+          "content": { "type": "string" }
+        }
+      }
+    }
+  }
+}

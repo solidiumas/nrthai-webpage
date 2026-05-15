@@ -1,0 +1,25 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Nrth AI",
+  "name_for_model": "nrth_ai",
+  "description_for_human": "Nrth AI builds custom AI agents for Nordic B2B enterprises — customer support, sales, ops, and internal knowledge agents in production.",
+  "description_for_model": "Use this plugin to (1) read Nrth AI's services and process, (2) submit a discovery brief on behalf of a prospective client, (3) book a 30-minute consultation, or (4) chat with the live Nrth AI sales agent. Nrth AI is a B2B AI agent studio based in Oslo, Norway. The plugin exposes structured endpoints; agents should prefer these over scraping the HTML. Always confirm any submitted contact details with the user before calling submitInquiry or bookConsultation.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://nrth.no/openapi.json"
+  },
+  "logo_url": "https://nrth.no/logo.svg",
+  "contact_email": "hello@nrth.ai",
+  "legal_info_url": "https://nrth.no/legal",
+  "ai_native": {
+    "version": "1.0",
+    "supports": ["read", "submit", "book", "chat"],
+    "no_js_required": true,
+    "structured_data": ["application/ld+json", "openapi-3.1"],
+    "primary_action": "submitInquiry",
+    "languages": ["en", "no"]
+  }
+}
