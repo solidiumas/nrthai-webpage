@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0a0a0b"/>
+  <rect x="0" y="0" width="1200" height="1" fill="#FF8A5B" opacity="0.3"/>
+  <rect x="0" y="629" width="1200" height="1" fill="#FF8A5B" opacity="0.3"/>
+  <!-- Mark -->
+  <text x="80" y="340" font-family="Satoshi, ui-sans-serif, system-ui, sans-serif" font-size="180" font-weight="900" fill="#FF8A5B" letter-spacing="-6">&lt;/&gt;</text>
+  <!-- Wordmark -->
+  <text x="80" y="440" font-family="Satoshi, ui-sans-serif, system-ui, sans-serif" font-size="72" font-weight="700" fill="#FFFFFF" letter-spacing="-2">Nrth AI</text>
+  <!-- Tagline -->
+  <text x="80" y="510" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="400" fill="#a8a49c" letter-spacing="0">Agents that actually do the work.</text>
+  <!-- Domain -->
+  <text x="1120" y="590" font-family="ui-monospace, monospace" font-size="22" font-weight="400" fill="#5c5a55" text-anchor="end">nrth.no</text>
+</svg>

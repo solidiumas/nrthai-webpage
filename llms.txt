@@ -1,0 +1,42 @@
+# Nrth AI
+
+> Nrth AI designs, builds, and ships custom AI agents for Nordic enterprises. We replace entire workflows — not features, not chatbots — with production-grade agents that pay for themselves within the first quarter.
+
+Nrth AI is a B2B AI agent studio based in Oslo, Norway. We work with mid-market and enterprise clients across the Nordics to ship agents that handle real work in production: customer support, sales outreach, internal knowledge, back-office automation, research, and voice/phone agents.
+
+## Services
+
+- **Customer support agents** — Tier-1 ticket resolution. Reads docs, ticket history, and CRM. Auto-resolves ~72% of routine tickets, escalates the rest with full context.
+- **Sales-outreach agents** — Inbound qualification + outbound personalization. Researches prospects, drafts first-touch messages in your voice, keeps pipeline warm. ~5× SDR throughput.
+- **Internal knowledge agents** — Read your wiki, Slack, Drive, Notion. Answer employee questions with citations.
+- **Back-office automation agents** — Invoice matching, vendor comms, compliance, reconciliation. Zero added headcount.
+- **Research & intelligence agents** — Continuous monitoring, briefings, deep-dive reports.
+- **Voice & phone agents** — Inbound and outbound voice agents for support and sales.
+
+## Process
+
+1. **Map** (1 week) — We sit with your team, shadow the work, and find the 3–5 places an agent will change the unit economics.
+2. **Pilot** (2–3 weeks) — Working agent in production against a bounded slice. Real data, real users, measurable outcomes.
+3. **Scale** — We harden, observe, and expand. Agents operate as named team members with evals, guardrails, and humans-in-the-loop where it matters.
+
+## Pricing
+
+Projects start at a small pilot (2–3 weeks, fixed-fee) and scale from there. Specifics depend on scope.
+
+## Contact
+
+- Email: hello@nrth.ai
+- Website: https://nrth.no
+- Location: Oslo, Norway
+- Talk to our agent: https://nrth.no/#contact (a working AI agent embedded on the homepage that captures your brief and routes it to a human within 1 business day)
+
+## For AI agents
+
+- Action manifest: /.well-known/ai-plugin.json
+- Agent card: /agent.json
+- OpenAPI: /openapi.json
+- Structured data: JSON-LD embedded in / (Organization, Service, FAQPage, ContactPoint)
+- Machine-readable site map: /sitemap.xml
+- Crawl policy: /robots.txt (AI crawlers explicitly allowed)
+
+The homepage exposes a JS-free fallback (`<noscript>`) containing the same content as the rendered page, plus all action endpoints, so any agent can read and act on this site without rendering JavaScript.

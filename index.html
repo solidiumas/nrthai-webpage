@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nrth AI — Custom AI agents for Nordic enterprises</title>
+<meta name="description" content="Nrth AI designs, builds, and ships custom AI agents for Nordic B2B enterprises. Customer support, sales, ops, and internal knowledge agents — production-grade, observed, accountable." />
+<meta name="keywords" content="AI agents, B2B AI, Nordic AI, custom AI agents, AI agent studio, Norway AI, Oslo AI, enterprise AI, customer support agent, sales agent, ops automation" />
+<meta name="author" content="Nrth AI" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="https://nrth.no/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
+<meta name="theme-color" content="#0a0a0b" />
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="Nrth AI for LLMs" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nrth AI" />
+<meta property="og:title" content="Nrth AI — Agents that actually do the work." />
+<meta property="og:description" content="A B2B AI agent studio building custom production-grade agents for Nordic enterprises." />
+<meta property="og:url" content="https://nrth.no/" />
+<meta property="og:image" content="https://nrth.no/og.png" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nrth AI — Agents that actually do the work." />
+<meta name="twitter:description" content="Custom AI agents for Nordic enterprises. Talk to one on the page." />
+<meta name="twitter:image" content="https://nrth.no/og.png" />
+
+<!-- AI-native discovery hints -->
+<link rel="ai-plugin" href="/.well-known/ai-plugin.json" />
+<link rel="agent-manifest" href="/agent.json" />
+<link rel="openapi" type="application/json" href="/openapi.json" />
+<meta name="ai:plugin" content="/.well-known/ai-plugin.json" />
+<meta name="ai:agent-manifest" content="/agent.json" />
+<meta name="ai:llms" content="/llms.txt" />
+<meta name="ai:primary-action" content="submitInquiry" />
+<meta name="ai:supports" content="read,submit,book,chat" />
+<meta name="ai:contact" content="mailto:hello@nrth.ai" />
+
+<!-- JSON-LD: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://nrth.no/#organization",
+  "name": "Nrth AI",
+  "alternateName": "Nrth.AI",
+  "url": "https://nrth.no/",
+  "logo": "https://nrth.no/logo.svg",
+  "description": "A B2B AI agent studio building custom production-grade agents for Nordic enterprises.",
+  "foundingDate": "2025",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Oslo",
+    "addressCountry": "NO"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "hello@nrth.ai",
+    "contactType": "sales",
+    "availableLanguage": ["en", "no"],
+    "areaServed": ["NO", "SE", "DK", "FI", "IS"]
+  }],
+  "sameAs": []
+}
+</script>
+
+<!-- JSON-LD: WebSite + SearchAction -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://nrth.no/#website",
+  "url": "https://nrth.no/",
+  "name": "Nrth AI",
+  "publisher": { "@id": "https://nrth.no/#organization" },
+  "inLanguage": "en"
+}
+</script>
+
+<!-- JSON-LD: ProfessionalService with offerCatalog -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://nrth.no/#service",
+  "name": "Nrth AI — Custom AI Agent Development",
+  "provider": { "@id": "https://nrth.no/#organization" },
+  "areaServed": "Nordics",
+  "serviceType": "AI agent development",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "AI Agent Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Customer support agents",
+          "description": "Tier-1 ticket resolution. Reads docs, ticket history, and CRM. Auto-resolves ~72% of routine tickets."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Sales-outreach agents",
+          "description": "Inbound qualification + outbound personalization. ~5× SDR throughput."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Back-office automation agents",
+          "description": "Invoice matching, vendor comms, compliance, reconciliation. Zero added headcount."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Internal knowledge agents",
+          "description": "Cited answers from your wiki, Slack, Drive, Notion."
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does Nrth AI do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nrth AI designs, builds, and ships custom AI agents for Nordic B2B enterprises across customer support, sales, operations, and internal knowledge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does engagement start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We follow a three-step process: Map (1 week of discovery), Pilot (2–3 weeks of a working agent in production against a bounded slice), and Scale (ongoing hardening, observability, and expansion)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a project cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Projects start at a small fixed-fee pilot (2–3 weeks) and scale from there. Specific pricing depends on scope and is shared on the discovery call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get in touch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Send a discovery brief on the homepage at https://nrth.no/#contact, or email hello@nrth.ai. A human from the Nrth AI team responds within 1 business day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Nrth AI located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oslo, Norway. We work with clients across the Nordics."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nrth.no/" },
+    { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://nrth.no/#work" },
+    { "@type": "ListItem", "position": 3, "name": "Process", "item": "https://nrth.no/#process" },
+    { "@type": "ListItem", "position": 4, "name": "Contact", "item": "https://nrth.no/#contact" }
+  ]
+}
+</script>
+
+<!-- JSON-LD: Agent action descriptors (custom AI-action vocab) -->
+<script type="application/ai-actions+json" id="ai-actions">
+{
+  "version": "1.0",
+  "agent_name": "Nrth AI",
+  "actions": [
+    {
+      "id": "submitInquiry",
+      "label": "Submit a discovery brief",
+      "method": "POST",
+      "endpoint": "https://nrth.no/api/inquiry",
+      "primary": true,
+      "input_schema": {
+        "type": "object",
+        "required": ["email", "problem"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "company": { "type": "string" },
+          "role": { "type": "string" },
+          "problem": { "type": "string" },
+          "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] }
+        }
+      }
+    },
+    {
+      "id": "bookConsultation",
+      "label": "Book a 30-minute intro call",
+      "method": "POST",
+      "endpoint": "https://nrth.no/api/book"
+    },
+    {
+      "id": "chat",
+      "label": "Chat with the Nrth AI sales agent",
+      "method": "POST",
+      "endpoint": "https://nrth.no/api/chat",
+      "ui_anchor": "#contact"
+    },
+    {
+      "id": "getServices",
+      "label": "Read service catalog",
+      "method": "GET",
+      "endpoint": "https://nrth.no/api/services"
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --bg-2: #111114;
+    --fg: #f5f2ec;
+    --fg-dim: #a8a49c;
+    --fg-faint: #5c5a55;
+    --line: rgba(245, 242, 236, 0.08);
+    --line-2: rgba(245, 242, 236, 0.14);
+    --accent: #ff8a5b;
+    --accent-deep: #2a9fc4;
+    --warn: #ff8a5b;
+    --serif: "Instrument Serif", "Times New Roman", serif;
+    --sans: "Geist", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --mono: "Geist Mono", ui-monospace, monospace;
+  }
+  html[data-theme="light"] {
+    --bg: #f5f2ec;
+    --bg-2: #ebe7df;
+    --fg: #0a0a0b;
+    --fg-dim: #4a4842;
+    --fg-faint: #8a8680;
+    --line: rgba(10, 10, 11, 0.1);
+    --line-2: rgba(10, 10, 11, 0.18);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "ss01", "ss02", "cv11";
+    scroll-behavior: smooth;
+  }
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  ::selection { background: var(--accent); color: #000; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+  /* ───────── Responsive layout ───────── */
+
+  /* Tablet (≤ 1024px): tighten paddings, reduce gaps */
+  @media (max-width: 1024px) {
+    nav[data-section="nav"] { padding: 16px 24px !important; }
+    nav[data-section="nav"] > div { gap: 18px !important; }
+
+    section[data-section="hero"] {
+      padding: 120px 24px 60px !important;
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+      text-align: left;
+    }
+    section[data-section="hero"] h1 { font-size: clamp(48px, 8vw, 80px) !important; }
+
+    section#work, section#process {
+      padding: 100px 24px !important;
+    }
+    section#work > div[style*="grid-template-columns: repeat(3"],
+    section#process ol[role="list"],
+    section#process > div[style*="grid-template-columns: repeat(3"] {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    section#contact {
+      padding: 100px 24px 60px !important;
+    }
+    section#contact > div[style*="grid-template-columns"] {
+      grid-template-columns: 1fr !important;
+      gap: 48px !important;
+    }
+    section#contact > div > div[style*="position: sticky"] {
+      position: static !important;
+    }
+
+    footer[data-section="footer"] {
+      padding: 32px 24px !important;
+    }
+  }
+
+  /* Mobile (≤ 720px): single-column everywhere, mobile nav */
+  @media (max-width: 720px) {
+    html, body { font-size: 15px; }
+
+    nav[data-section="nav"] { padding: 14px 18px !important; }
+    /* Hide nav text links on mobile, keep logo + CTA */
+    nav[data-section="nav"] .nav-link { display: none !important; }
+    nav[data-section="nav"] > div {
+      gap: 0 !important;
+    }
+    nav[data-section="nav"] button[data-action-id="chat"] {
+      padding: 8px 12px !important;
+      font-size: 10px !important;
+      letter-spacing: 0.12em !important;
+    }
+
+    section[data-section="hero"] {
+      padding: 110px 20px 60px !important;
+      min-height: auto !important;
+    }
+    section[data-section="hero"] h1 {
+      font-size: clamp(40px, 11vw, 64px) !important;
+      line-height: 1 !important;
+    }
+    section[data-section="hero"] p[style*="font-size: 19"] {
+      font-size: 16px !important;
+    }
+    section[data-section="hero"] button {
+      padding: 14px 20px !important;
+      font-size: 11px !important;
+    }
+    /* Scroll cue takes too much room on tiny screens */
+    section[data-section="hero"] > div[style*="bottom: 28"] { display: none !important; }
+
+    section#work, section#process {
+      padding: 80px 20px !important;
+    }
+    /* Section header stack */
+    section#work > div:first-child,
+    section#process > div:first-child {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+    section#work h2, section#process h2 {
+      font-size: clamp(40px, 10vw, 60px) !important;
+    }
+
+    /* Cards & steps single column */
+    section#work > div[style*="grid-template-columns"],
+    section#process ol[role="list"],
+    section#process > div[style*="grid-template-columns"] {
+      grid-template-columns: 1fr !important;
+    }
+    section#work > div[style*="grid-template-columns"] > div {
+      min-height: auto !important;
+      padding: 32px 24px !important;
+    }
+    section#work h3 { font-size: 28px !important; }
+
+    section#contact {
+      padding: 80px 20px 60px !important;
+    }
+    section#contact h2 {
+      font-size: clamp(40px, 10vw, 60px) !important;
+    }
+
+    /* Agent visualization shrinks */
+    section[data-section="hero"] canvas { aspect-ratio: 4 / 3 !important; }
+
+    /* Marquee speed up so it doesn't feel static */
+    div[style*="animation: scroll"] { font-size: 11px !important; }
+
+    /* Footer stacks */
+    footer[data-section="footer"] {
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+      text-align: left !important;
+    }
+    footer[data-section="footer"] > div { text-align: left !important; }
+
+    /* Tweaks panel narrower on mobile */
+    body > div[style*="bottom: 20"][style*="right: 20"] {
+      width: calc(100vw - 32px) !important;
+      max-width: 280px !important;
+    }
+  }
+
+  /* Touch device hover-state cleanup */
+  @media (hover: none) {
+    .nav-link:hover { color: var(--fg-dim) !important; }
+  }
+
+  #root { position: relative; z-index: 1; }
+
+  /* No-JS fallback styling — clean editorial document */
+  .nojs-fallback {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+    color: var(--fg);
+    font-family: var(--sans);
+  }
+  .nojs-fallback h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .nojs-fallback h1 em { color: var(--accent); }
+  .nojs-fallback h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 56px 0 16px;
+  }
+  .nojs-fallback h3 {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fg-dim);
+    margin: 28px 0 8px;
+  }
+  .nojs-fallback p, .nojs-fallback li {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--fg-dim);
+    margin-bottom: 12px;
+  }
+  .nojs-fallback ul, .nojs-fallback ol { padding-left: 22px; margin-bottom: 16px; }
+  .nojs-fallback a { color: var(--accent); border-bottom: 1px solid currentColor; }
+  .nojs-fallback .lede { color: var(--fg); font-size: 19px; max-width: 580px; margin-bottom: 32px; }
+  .nojs-fallback .meta {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--fg-faint);
+    margin-bottom: 32px;
+  }
+  .nojs-fallback .meta::before { content: "● "; color: var(--accent); }
+  .nojs-fallback .actions {
+    border: 1px solid var(--line-2);
+    padding: 24px;
+    margin: 40px 0;
+  }
+  .nojs-fallback .actions h3 { margin-top: 0; color: var(--accent); }
+  .nojs-fallback code {
+    font-family: var(--mono);
+    font-size: 13px;
+    background: var(--bg-2);
+    padding: 2px 6px;
+    border: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<!-- Visible/agent-readable semantic content. Hidden visually when JS hydrates,
+     but always present in the DOM for headless agents and crawlers that don't run JS. -->
+<div id="ssr-shell" itemscope itemtype="https://schema.org/Organization">
+<meta itemprop="name" content="Nrth AI" />
+<meta itemprop="url" content="https://nrth.no/" />
+<meta itemprop="email" content="hello@nrth.ai" />
+
+<header role="banner" aria-label="Site header" data-section="header">
+  <a href="/" aria-label="Nrth AI home" data-action="navigate" data-target="/">Nrth.AI</a>
+  <nav aria-label="Primary" role="navigation">
+    <a href="#work" data-action="navigate" data-target="#work">Work</a>
+    <a href="#process" data-action="navigate" data-target="#process">Process</a>
+    <a href="#contact" data-action="navigate" data-target="#contact">Contact</a>
+    <a href="#contact" data-action="invoke" data-action-id="submitInquiry" data-primary="true">Send brief</a>
+  </nav>
+</header>
+
+<main id="main" role="main">
+
+  <section id="hero" aria-label="Hero" data-section="hero" data-screen-label="Hero">
+    <p class="meta" data-role="eyebrow">AI Agents for the Nordic enterprise · est. 2025</p>
+    <h1 itemprop="slogan">Your next <em>hire</em> isn't a person.</h1>
+    <p class="lede" itemprop="description">Nrth AI builds custom AI agents that handle the work your team shouldn't be doing. Production-grade, observed, and accountable — like the best employee you've ever had.</p>
+    <p>
+      <a href="#contact" data-action="invoke" data-action-id="submitInquiry" data-primary="true" rel="nofollow">Send us a brief →</a>
+      &nbsp;·&nbsp;
+      <a href="#work" data-action="navigate" data-target="#work">See what we build ↓</a>
+    </p>
+  </section>
+
+  <section id="work" aria-label="Services we build" data-section="work" data-screen-label="Work" itemscope itemtype="https://schema.org/OfferCatalog">
+    <h2>Agents we build.</h2>
+    <ul role="list">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="customer_support_agents">
+        <h3 itemprop="name">01 · Tier-1 support, handled</h3>
+        <p itemprop="description">Agents that read your docs, ticket history, and CRM — resolve routine tickets in seconds, escalate the nuanced ones with full context.</p>
+        <p data-metric="auto_resolved" data-value="0.72"><strong>72%</strong> auto-resolved</p>
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="sales_outreach_agents">
+        <h3 itemprop="name">02 · Inbound qualified, outbound personalized</h3>
+        <p itemprop="description">Agents that research prospects, draft first-touch messages in your voice, and keep the pipeline warm while your team sleeps.</p>
+        <p data-metric="sdr_throughput_multiple" data-value="5"><strong>5×</strong> SDR throughput</p>
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="ops_automation_agents">
+        <h3 itemprop="name">03 · The invisible back-office</h3>
+        <p itemprop="description">Invoice matching, vendor comms, compliance checks, data reconciliation — the boring, expensive work becomes a background process.</p>
+        <p data-metric="added_headcount" data-value="0"><strong>0 FTE</strong> added headcount</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="process" aria-label="How we work" data-section="process" data-screen-label="Process">
+    <h2>Map. Pilot. Scale.</h2>
+    <ol role="list">
+      <li data-step="1" data-duration="P1W"><h3>Map · 1 week</h3><p>We sit with your team, shadow the work, and find the 3–5 places an agent will change the unit economics.</p></li>
+      <li data-step="2" data-duration="P3W"><h3>Pilot · 2–3 weeks</h3><p>A working agent in production against a bounded slice — real data, real users, measurable outcomes.</p></li>
+      <li data-step="3" data-duration="ongoing"><h3>Scale · ongoing</h3><p>We harden, observe, and expand. Agents operate as named team members, with evals, guardrails, and a human in the loop where it matters.</p></li>
+    </ol>
+  </section>
+
+  <section id="contact" aria-label="Contact us" data-section="contact" data-screen-label="Contact">
+    <h2>Don't email us. <em>Send a brief.</em></h2>
+    <p>Tell us what you want automated. A human on our team replies with a tailored proposal — usually within one business day.</p>
+    <p itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
+      Email: <a itemprop="email" href="mailto:hello@nrth.ai" data-action="email">hello@nrth.ai</a><br />
+      Location: <span itemprop="areaServed">Oslo, Norway</span>
+    </p>
+
+    <form id="inquiry-form"
+          method="POST"
+          action="https://nrth.no/api/inquiry"
+          enctype="application/json"
+          aria-label="Submit a discovery brief"
+          data-action="invoke"
+          data-action-id="submitInquiry">
+      <h3>Submit a brief (no JS required)</h3>
+      <p><label>Email <input type="email" name="email" required autocomplete="email" /></label></p>
+      <p><label>Company <input type="text" name="company" autocomplete="organization" /></label></p>
+      <p><label>Role <input type="text" name="role" autocomplete="organization-title" /></label></p>
+      <p><label>What would you want an agent to do? <textarea name="problem" required rows="4"></textarea></label></p>
+      <p><label>Urgency
+        <select name="urgency">
+          <option value="exploring">Exploring</option>
+          <option value="this_quarter">This quarter</option>
+          <option value="asap">ASAP</option>
+        </select>
+      </label></p>
+      <p><button type="submit" data-primary="true">Submit brief →</button></p>
+    </form>
+  </section>
+
+</main>
+
+<footer role="contentinfo" aria-label="Site footer" data-section="footer">
+  <p>© 2026 Nrth AI AS · Oslo, Norway · <a href="mailto:hello@nrth.ai">hello@nrth.ai</a></p>
+  <p>
+    Machine-readable:
+    <a href="/llms.txt">llms.txt</a> ·
+    <a href="/agent.json">agent.json</a> ·
+    <a href="/.well-known/ai-plugin.json">ai-plugin</a> ·
+    <a href="/openapi.json">openapi</a> ·
+    <a href="/sitemap.xml">sitemap</a> ·
+    <a href="/robots.txt">robots</a>
+  </p>
+</footer>
+
+</div>
+
+<!-- No-JS visible fallback (only shown when JS is disabled) -->
+<noscript>
+  <style>
+    /* Hide the SSR shell visually when JS is OFF only if needed; show fallback instead */
+    #ssr-shell { display: none; }
+    #root { display: none; }
+  </style>
+  <div class="nojs-fallback">
+    <p class="meta">AI Agents for the Nordic enterprise · est. 2025</p>
+    <h1>Your next <em>hire</em> isn't a person.</h1>
+    <p class="lede">Nrth AI builds custom AI agents that handle the work your team shouldn't be doing. Production-grade, observed, and accountable.</p>
+
+    <h2>Agents we build</h2>
+    <ul>
+      <li><strong>Tier-1 support, handled</strong> — Auto-resolves 72% of routine tickets, escalates with full context.</li>
+      <li><strong>Inbound qualified, outbound personalized</strong> — 5× SDR throughput; personalized first-touch at scale.</li>
+      <li><strong>The invisible back-office</strong> — Invoice matching, vendor comms, compliance — zero added headcount.</li>
+      <li><strong>Internal knowledge agents</strong> — Cited answers from your wiki, Slack, Drive, Notion.</li>
+    </ul>
+
+    <h2>How we work</h2>
+    <ol>
+      <li><strong>Map</strong> · 1 week — We shadow the work and find the 3–5 places an agent changes the unit economics.</li>
+      <li><strong>Pilot</strong> · 2–3 weeks — A working agent in production against a bounded slice.</li>
+      <li><strong>Scale</strong> · ongoing — Hardening, observability, and expansion.</li>
+    </ol>
+
+    <div class="actions">
+      <h3>For AI agents</h3>
+      <p>This site is AI-native. The following endpoints are stable contracts:</p>
+      <ul>
+        <li><code>POST /api/inquiry</code> — submit a discovery brief</li>
+        <li><code>POST /api/book</code> — book a 30-min intro call</li>
+        <li><code>POST /api/chat</code> — talk to the Nrth AI sales agent</li>
+        <li><code>GET /api/services</code> — list service catalog</li>
+      </ul>
+      <p>Manifests: <a href="/.well-known/ai-plugin.json">/.well-known/ai-plugin.json</a> · <a href="/agent.json">/agent.json</a> · <a href="/openapi.json">/openapi.json</a> · <a href="/llms.txt">/llms.txt</a></p>
+    </div>
+
+    <h2>Contact</h2>
+    <p>Email <a href="mailto:hello@nrth.ai">hello@nrth.ai</a> — a human responds within 1 business day. Oslo, Norway.</p>
+  </div>
+</noscript>
+
+<div id="root"></div>
+
+<!-- When JS is ON: hide the SSR shell so the React app owns the visuals.
+     The shell stays in the DOM (display:none) — accessible to crawlers + agents that DO run JS. -->
+<style id="hydration-style">
+  #ssr-shell { display: none; }
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="./src/AgentVisual.jsx"></script>
+<!-- Chat is feature-toggled off. Re-enable by uncommenting and flipping CHAT_ENABLED in App.jsx. -->
+<!-- <script type="text/babel" src="./src/AgentChat.jsx"></script> -->
+<script type="text/babel" src="./src/Sections.jsx"></script>
+<script type="text/babel" src="./src/App.jsx"></script>
+
+</body>
+</html>

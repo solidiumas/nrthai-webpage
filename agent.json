@@ -1,0 +1,105 @@
+{
+  "name": "Nrth AI",
+  "tagline": "Agents that actually do the work.",
+  "description": "B2B AI agent studio. We design, build, and ship custom AI agents for Nordic enterprises in customer support, sales, operations, and internal knowledge.",
+  "url": "https://nrth.no",
+  "contact": {
+    "email": "hello@nrth.ai",
+    "location": "Oslo, Norway"
+  },
+  "capabilities": [
+    {
+      "id": "customer_support_agents",
+      "name": "Customer support agents",
+      "outcome": "~72% of tier-1 tickets auto-resolved with full-context escalation."
+    },
+    {
+      "id": "sales_outreach_agents",
+      "name": "Sales-outreach agents",
+      "outcome": "~5× SDR throughput; personalized first-touch at scale."
+    },
+    {
+      "id": "ops_automation_agents",
+      "name": "Back-office automation agents",
+      "outcome": "Invoice matching, vendor comms, compliance — zero added headcount."
+    },
+    {
+      "id": "knowledge_agents",
+      "name": "Internal knowledge agents",
+      "outcome": "Cited answers from your wiki, Slack, Drive, and Notion."
+    }
+  ],
+  "process": [
+    { "step": 1, "name": "Map", "duration": "1 week" },
+    { "step": 2, "name": "Pilot", "duration": "2–3 weeks" },
+    { "step": 3, "name": "Scale", "duration": "ongoing" }
+  ],
+  "actions": [
+    {
+      "name": "submitInquiry",
+      "description": "Submit a discovery brief. Use this when a user expresses interest. Required fields: email, problem. Optional: company, role, urgency.",
+      "method": "POST",
+      "endpoint": "https://nrth.no/api/inquiry",
+      "request_schema": {
+        "type": "object",
+        "required": ["email", "problem"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "company": { "type": "string" },
+          "role": { "type": "string" },
+          "problem": { "type": "string", "description": "What the user wants automated." },
+          "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] }
+        }
+      }
+    },
+    {
+      "name": "bookConsultation",
+      "description": "Book a 30-minute intro call with a Nrth AI strategist.",
+      "method": "POST",
+      "endpoint": "https://nrth.no/api/book",
+      "request_schema": {
+        "type": "object",
+        "required": ["email", "name", "slot"],
+        "properties": {
+          "email": { "type": "string", "format": "email" },
+          "name": { "type": "string" },
+          "slot": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    {
+      "name": "chat",
+      "description": "Open a real-time chat with the Nrth AI sales agent.",
+      "method": "POST",
+      "endpoint": "https://nrth.no/api/chat",
+      "request_schema": {
+        "type": "object",
+        "required": ["messages"],
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "role": { "type": "string", "enum": ["user", "assistant"] },
+                "content": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "getServices",
+      "description": "List Nrth AI's service catalog with outcomes.",
+      "method": "GET",
+      "endpoint": "https://nrth.no/api/services"
+    }
+  ],
+  "policies": {
+    "rate_limit_per_minute": 60,
+    "robots": "https://nrth.no/robots.txt",
+    "data_retention_days": 90,
+    "pii_handling": "Inquiries are stored encrypted; contacted within 1 business day; deleted on request."
+  }
+}
