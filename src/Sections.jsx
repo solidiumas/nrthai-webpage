@@ -112,7 +112,7 @@ function Hero({ accent, headline, sub, onCTA }) {
             background: accent,
             boxShadow: `0 0 10px ${accent}`,
           }} />
-          AI Agents for the Nordic enterprise · est. 2025
+          AI & AI Agents for enterprises · est. 2026
         </div>
 
         <h1 itemProp="slogan" style={{
@@ -553,8 +553,8 @@ function CTA({ accent, ctaSectionRef, chatEnabled }) {
             display: "grid",
             gap: 6,
           }}>
-            <div>Prefer plain email? <a href="mailto:hello@nrth.ai" data-action="email" itemProp="email" style={{ color: "var(--fg)", borderBottom: "1px solid var(--line-2)" }}>hello@nrth.ai</a></div>
-            <div itemProp="areaServed">Oslo · Norway</div>
+            <div>Prefer plain email? <a href="mailto:contact@nrth.ai" data-action="email" itemProp="email" style={{ color: "var(--fg)", borderBottom: "1px solid var(--line-2)" }}>hello@nrth.ai</a></div>
+            <div itemProp="areaServed">Bergen · Norway</div>
           </div>
         </div>
 
@@ -621,7 +621,7 @@ function InquiryForm({ accent }) {
     ].filter(Boolean).join("\n");
 
     window.location.href =
-      `mailto:hello@nrth.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+      `mailto:contact@nrth.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
     setSent(true);
   };
 
