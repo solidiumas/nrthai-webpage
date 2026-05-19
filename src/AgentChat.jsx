@@ -60,7 +60,7 @@ function AgentChat({ accent = "#6fe3ff" }) {
       });
       setMessages([...next, { role: "assistant", content: reply }]);
     } catch (err) {
-      setMessages([...next, { role: "assistant", content: "I'm having trouble reaching my model right now. Email us directly at hello@nrth.ai and we'll follow up today." }]);
+      setMessages([...next, { role: "assistant", content: "I'm having trouble reaching my model right now. Email us directly at contact@nrth.no and we'll follow up today." }]);
     }
     setBusy(false);
     // keep focus
