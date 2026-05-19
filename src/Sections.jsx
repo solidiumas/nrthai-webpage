@@ -553,7 +553,7 @@ function CTA({ accent, ctaSectionRef, chatEnabled }) {
             display: "grid",
             gap: 6,
           }}>
-            <div>Prefer plain email? <a href="mailto:contact@nrth.ai" data-action="email" itemProp="email" style={{ color: "var(--fg)", borderBottom: "1px solid var(--line-2)" }}>hello@nrth.ai</a></div>
+            <div>Prefer plain email? <a href="mailto:contact@nrth.no" data-action="email" itemProp="email" style={{ color: "var(--fg)", borderBottom: "1px solid var(--line-2)" }}>contact@nrth.no</a></div>
             <div itemProp="areaServed">Bergen · Norway</div>
           </div>
         </div>
@@ -597,32 +597,30 @@ function Footer({ accent }) {
 // onSubmit body to fetch() against that endpoint.
 function InquiryForm({ accent }) {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const formRef = useRef(null);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError(false);
     const fd = new FormData(formRef.current);
     const data = Object.fromEntries(fd.entries());
-    const urgencyLabel = ({
-      exploring: "Exploring",
-      this_quarter: "This quarter",
-      asap: "ASAP",
-    })[data.urgency] || data.urgency;
 
-    const subject = `Brief — ${data.company || data.email}`;
-    const lines = [
-      `From: ${data.email}`,
-      data.company && `Company: ${data.company}`,
-      data.role && `Role: ${data.role}`,
-      `Urgency: ${urgencyLabel}`,
-      "",
-      "What they want automated:",
-      data.problem,
-    ].filter(Boolean).join("\n");
-
-    window.location.href =
-      `mailto:contact@nrth.ai?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
-    setSent(true);
+    try {
+      const res = await fetch("/api/inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("send failed");
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const panelStyle = {
@@ -667,12 +665,12 @@ function InquiryForm({ accent }) {
             lineHeight: 1.05,
             letterSpacing: "-0.01em",
           }}>
-            Email client opened.<br/>
-            <em style={{ color: accent, fontStyle: "italic" }}>Hit send to complete.</em>
+            Brief sent.<br/>
+            <em style={{ color: accent, fontStyle: "italic" }}>We'll be in touch.</em>
           </h3>
           <p style={{ color: "var(--fg-dim)", fontSize: 16, lineHeight: 1.55, maxWidth: 420 }}>
             A human on the Nrth AI team replies within one business day from{" "}
-            <strong style={{ color: "var(--fg)" }}>hello@nrth.ai</strong>.
+            <strong style={{ color: "var(--fg)" }}>contact@nrth.no</strong>.
           </p>
           <button
             type="button"
@@ -725,7 +723,7 @@ function InquiryForm({ accent }) {
         onSubmit={onSubmit}
         className="brief-form"
         method="POST"
-        action="mailto:hello@nrth.ai"
+        action="mailto:contact@nrth.no"
         style={{
           padding: "22px 22px 24px",
           display: "flex",
@@ -746,10 +744,11 @@ function InquiryForm({ accent }) {
         <button
           type="submit"
           data-primary="true"
+          disabled={loading}
           style={{
             marginTop: 6,
             alignSelf: "flex-start",
-            background: accent,
+            background: loading ? "var(--fg-faint)" : accent,
             color: "#000",
             padding: "14px 22px",
             fontFamily: "var(--mono)",
@@ -758,18 +757,34 @@ function InquiryForm({ accent }) {
             textTransform: "uppercase",
             fontWeight: 500,
             transition: "transform 0.15s, box-shadow 0.15s",
+            cursor: loading ? "not-allowed" : "pointer",
           }}
           onMouseEnter={e => {
-            e.currentTarget.style.transform = "translateY(-2px)";
-            e.currentTarget.style.boxShadow = `0 12px 40px -8px ${accent}`;
+            if (!loading) {
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = `0 12px 40px -8px ${accent}`;
+            }
           }}
           onMouseLeave={e => {
             e.currentTarget.style.transform = "translateY(0)";
             e.currentTarget.style.boxShadow = "none";
           }}
         >
-          Send brief →
+          {loading ? "Sending…" : "Send brief →"}
         </button>
+
+        {error && (
+          <p style={{
+            marginTop: 4,
+            fontFamily: "var(--mono)",
+            fontSize: 10.5,
+            letterSpacing: "0.1em",
+            color: "var(--warn)",
+            lineHeight: 1.5,
+          }}>
+            Something went wrong — please try again or email contact@nrth.no directly.
+          </p>
+        )}
 
         <p style={{
           marginTop: 4,
@@ -779,7 +794,7 @@ function InquiryForm({ accent }) {
           color: "var(--fg-faint)",
           lineHeight: 1.5,
         }}>
-          We reply from hello@nrth.ai within one business day. Your data isn't shared.
+          We reply from contact@nrth.no within one business day. Your data isn't shared.
         </p>
       </form>
 
