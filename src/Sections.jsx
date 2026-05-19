@@ -2,7 +2,10 @@
 const { useEffect, useState, useRef } = React;
 
 function scrollToId(id) {
-  const el = document.getElementById(id);
+  // Use querySelectorAll + visibility check because the SSR shell
+  // has duplicate IDs (display:none) that getElementById picks up first.
+  const els = document.querySelectorAll(`#${id}`);
+  const el = Array.from(els).find(e => e.offsetParent !== null) || els[0];
   if (!el) return;
   const y = el.getBoundingClientRect().top + window.scrollY - 80;
   window.scrollTo({ top: y, behavior: "smooth" });
@@ -70,7 +73,10 @@ function Nav({ accent, onCTA }) {
 
 function Logo({ accent }) {
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+    <div
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer" }}
+    >
       <span style={{
         fontFamily: "Satoshi, ui-sans-serif, system-ui, sans-serif",
         fontWeight: 900,

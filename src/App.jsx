@@ -25,7 +25,8 @@ function App() {
   const ctaSectionRef = useRef(null);
 
   const onCTA = () => {
-    const el = document.getElementById("contact");
+    const els = document.querySelectorAll("#contact");
+    const el = Array.from(els).find(e => e.offsetParent !== null) || els[0];
     if (el) {
       const y = el.getBoundingClientRect().top + window.scrollY - 40;
       window.scrollTo({ top: y, behavior: "smooth" });
