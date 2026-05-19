@@ -1,6 +1,13 @@
 // Section components
 const { useEffect, useState, useRef } = React;
 
+function scrollToId(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const y = el.getBoundingClientRect().top + window.scrollY - 80;
+  window.scrollTo({ top: y, behavior: "smooth" });
+}
+
 function Nav({ accent, onCTA }) {
   return (
     <nav role="navigation" aria-label="Primary" data-section="nav" style={{
@@ -25,9 +32,12 @@ function Nav({ accent, onCTA }) {
         textTransform: "uppercase",
         color: "var(--fg-dim)",
       }}>
-        <a href="#work" className="nav-link" data-action="navigate" data-target="#work">Work</a>
-        <a href="#process" className="nav-link" data-action="navigate" data-target="#process">Process</a>
-        <a href="#contact" className="nav-link" data-action="navigate" data-target="#contact">Contact</a>
+        <a href="#work" className="nav-link" data-action="navigate" data-target="#work"
+          onClick={e => { e.preventDefault(); scrollToId("work"); }}>Work</a>
+        <a href="#process" className="nav-link" data-action="navigate" data-target="#process"
+          onClick={e => { e.preventDefault(); scrollToId("process"); }}>Process</a>
+        <a href="#contact" className="nav-link" data-action="navigate" data-target="#contact"
+          onClick={e => { e.preventDefault(); scrollToId("contact"); }}>Contact</a>
         <button
           onClick={onCTA}
           data-action="invoke"
@@ -170,7 +180,8 @@ function Hero({ accent, headline, sub, onCTA }) {
           >
             Send us a brief →
           </button>
-          <a href="#work" data-action="navigate" data-target="#work" style={{
+          <a href="#work" data-action="navigate" data-target="#work"
+            onClick={e => { e.preventDefault(); scrollToId("work"); }} style={{
             fontFamily: "var(--mono)",
             fontSize: 12,
             letterSpacing: "0.16em",
