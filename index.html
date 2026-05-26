@@ -126,6 +126,38 @@
           "name": "Internal knowledge agents",
           "description": "Cited answers from your wiki, Slack, Drive, Notion."
         }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AI Employees",
+          "description": "Autonomous AI agents that replace or augment specific roles — 24/7, at a fraction of the cost of a full-time hire. Setup from ~50.000 NOK; monthly ops from 5.000 NOK. Delivery 1–3 weeks."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "On-Premise AI Infrastructure",
+          "description": "Local AI infrastructure built and deployed on your own hardware — full stack from hardware to model deployment to security. Engagements typically 100.000 to 1.000.000+ NOK. Delivery 2–4 weeks."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom AI Development",
+          "description": "Tailored AI systems built around your proprietary data, processes, and goals. Small from ~150.000 NOK; mid-size from 400.000 NOK; enterprise from 1.000.000 NOK. Delivery 4–16 weeks."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AI Strategy & Advisory",
+          "description": "Executive-level advisory: AI Readiness Assessments (from 35.000 NOK), Strategy Sprints (from 75.000 NOK), and Executive Advisory Retainers (from 25.000 NOK / month). Delivery 1–2 weeks."
+        }
       }
     ]
   }
@@ -191,7 +223,8 @@
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nrth.no/" },
     { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://nrth.no/#work" },
     { "@type": "ListItem", "position": 3, "name": "Process", "item": "https://nrth.no/#process" },
-    { "@type": "ListItem", "position": 4, "name": "Contact", "item": "https://nrth.no/#contact" }
+    { "@type": "ListItem", "position": 4, "name": "Services", "item": "https://nrth.no/#services" },
+    { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://nrth.no/#contact" }
   ]
 }
 </script>
@@ -318,13 +351,16 @@
     }
     section[data-section="hero"] h1 { font-size: clamp(48px, 8vw, 80px) !important; }
 
-    section#work, section#process {
+    section#work, section#process, section#services {
       padding: 100px 24px !important;
     }
     section#work > div[style*="grid-template-columns: repeat(3"],
     section#process ol[role="list"],
     section#process > div[style*="grid-template-columns: repeat(3"] {
       grid-template-columns: repeat(2, 1fr) !important;
+    }
+    section#services > div[style*="grid-template-columns: repeat(2"] {
+      grid-template-columns: 1fr !important;
     }
 
     section#contact {
@@ -377,30 +413,34 @@
     /* Scroll cue takes too much room on tiny screens */
     section[data-section="hero"] > div[style*="bottom: 28"] { display: none !important; }
 
-    section#work, section#process {
+    section#work, section#process, section#services {
       padding: 80px 20px !important;
     }
     /* Section header stack */
     section#work > div:first-child,
-    section#process > div:first-child {
+    section#process > div:first-child,
+    section#services > div:first-child {
       grid-template-columns: 1fr !important;
       gap: 16px !important;
     }
-    section#work h2, section#process h2 {
+    section#work h2, section#process h2, section#services h2 {
       font-size: clamp(40px, 10vw, 60px) !important;
     }
 
     /* Cards & steps single column */
     section#work > div[style*="grid-template-columns"],
     section#process ol[role="list"],
-    section#process > div[style*="grid-template-columns"] {
+    section#process > div[style*="grid-template-columns"],
+    section#services > div[style*="grid-template-columns"] {
       grid-template-columns: 1fr !important;
     }
-    section#work > div[style*="grid-template-columns"] > div {
+    section#work > div[style*="grid-template-columns"] > div,
+    section#services > div[style*="grid-template-columns"] > div {
       min-height: auto !important;
       padding: 32px 24px !important;
     }
     section#work h3 { font-size: 28px !important; }
+    section#services h3 { font-size: 30px !important; }
 
     section#contact {
       padding: 80px 20px 60px !important;
@@ -517,6 +557,7 @@
   <nav aria-label="Primary" role="navigation">
     <a href="#work" data-action="navigate" data-target="#work">Work</a>
     <a href="#process" data-action="navigate" data-target="#process">Process</a>
+    <a href="#services" data-action="navigate" data-target="#services">Services</a>
     <a href="#contact" data-action="navigate" data-target="#contact">Contact</a>
     <a href="#contact" data-action="invoke" data-action-id="submitInquiry" data-primary="true">Send brief</a>
   </nav>
@@ -563,6 +604,32 @@
       <li data-step="2" data-duration="P3W"><h3>Pilot · 2–3 weeks</h3><p>A working agent in production against a bounded slice — real data, real users, measurable outcomes.</p></li>
       <li data-step="3" data-duration="ongoing"><h3>Scale · ongoing</h3><p>We harden, observe, and expand. Agents operate as named team members, with evals, guardrails, and a human in the loop where it matters.</p></li>
     </ol>
+  </section>
+
+  <section id="services" aria-label="Services" data-section="services" data-screen-label="Services" itemscope itemtype="https://schema.org/OfferCatalog">
+    <h2>What we offer.</h2>
+    <ul role="list">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="ai_employees">
+        <h3 itemprop="name">01 · AI Employees</h3>
+        <p itemprop="description">Autonomous AI agents that replace or augment specific roles in your organization — document processing, customer support, technical analysis, internal knowledge work, or specialized workflows. 24/7, at a fraction of the cost of a full-time hire.</p>
+        <p>Typical delivery: 1–3 weeks. Setup from ~50.000 NOK; monthly operations from 5.000 NOK.</p>
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="on_premise_ai_infrastructure">
+        <h3 itemprop="name">02 · On-Premise AI Infrastructure</h3>
+        <p itemprop="description">Local AI infrastructure deployed on your own hardware — full stack from hardware selection to model deployment to security architecture. Your data never leaves your network.</p>
+        <p>Typical delivery: 2–4 weeks. Engagements typically 100.000 to 1.000.000+ NOK.</p>
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="custom_ai_development">
+        <h3 itemprop="name">03 · Custom AI Development</h3>
+        <p itemprop="description">Tailored AI systems built around your proprietary data, processes, and goals. When off-the-shelf tools don't fit, we design and build the system that does.</p>
+        <p>Typical delivery: 4–16 weeks. Small from ~150.000 NOK; mid-size from 400.000 NOK; enterprise from 1.000.000 NOK and up.</p>
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="ai_strategy_advisory">
+        <h3 itemprop="name">04 · AI Strategy &amp; Advisory</h3>
+        <p itemprop="description">Executive-level advisory for leaders navigating AI adoption. AI Readiness Assessments, Strategy Sprints, and Executive Advisory Retainers.</p>
+        <p>Typical delivery: 1–2 weeks. Assessments from 35.000 NOK; Sprints from 75.000 NOK; Retainers from 25.000 NOK / month.</p>
+      </li>
+    </ul>
   </section>
 
   <section id="contact" aria-label="Contact us" data-section="contact" data-screen-label="Contact">
@@ -639,6 +706,14 @@
       <li><strong>Pilot</strong> · 2–3 weeks — A working agent in production against a bounded slice.</li>
       <li><strong>Scale</strong> · ongoing — Hardening, observability, and expansion.</li>
     </ol>
+
+    <h2>Services</h2>
+    <ul>
+      <li><strong>AI Employees</strong> — Autonomous agents that replace or augment specific roles. Setup from ~50.000 NOK; ops from 5.000 NOK / month. Delivery 1–3 weeks.</li>
+      <li><strong>On-Premise AI Infrastructure</strong> — Local AI stack on your own hardware. 100.000 to 1.000.000+ NOK. Delivery 2–4 weeks.</li>
+      <li><strong>Custom AI Development</strong> — Tailored AI systems built on your data and processes. Small from ~150.000 NOK; enterprise from 1.000.000 NOK. Delivery 4–16 weeks.</li>
+      <li><strong>AI Strategy &amp; Advisory</strong> — Readiness assessments, strategy sprints, and executive retainers. From 25.000–75.000 NOK.</li>
+    </ul>
 
     <div class="actions">
       <h3>For AI agents</h3>

@@ -39,6 +39,8 @@ function Nav({ accent, onCTA }) {
           onClick={e => { e.preventDefault(); scrollToId("work"); }}>Work</a>
         <a href="#process" className="nav-link" data-action="navigate" data-target="#process"
           onClick={e => { e.preventDefault(); scrollToId("process"); }}>Process</a>
+        <a href="#services" className="nav-link" data-action="navigate" data-target="#services"
+          onClick={e => { e.preventDefault(); scrollToId("services"); }}>Services</a>
         <a href="#contact" className="nav-link" data-action="navigate" data-target="#contact"
           onClick={e => { e.preventDefault(); scrollToId("contact"); }}>Contact</a>
         <button
@@ -484,6 +486,215 @@ function Process({ accent }) {
   );
 }
 
+function Services({ accent }) {
+  const services = [
+    {
+      n: "01",
+      tag: "Deploy",
+      serviceId: "ai_employees",
+      title: "AI Employees",
+      body: "Autonomous AI agents that replace or augment specific roles in your organization. Instead of hiring, deploy an AI employee that handles document processing, customer support, technical analysis, internal knowledge work, or specialized workflows — 24/7, at a fraction of the cost of a full-time hire.",
+      included: [
+        "Discovery of the role or workflow to be automated",
+        "Custom AI agent built around your processes",
+        "Integration with your existing tools and data",
+        "Deployment on local infrastructure (no data leakage)",
+        "Ongoing optimization and monitoring",
+      ],
+      delivery: "1–3 weeks from kickoff to deployment.",
+      investment: "Setup from ~50.000 NOK; monthly operations from 5.000 NOK. Typical total cost: 15–35% of an equivalent full-time hire.",
+      fit: "Organizations looking to scale capacity without adding headcount — especially roles with repetitive cognitive work, structured analysis, or high-volume processing.",
+    },
+    {
+      n: "02",
+      tag: "Infrastructure",
+      serviceId: "on_premise_ai_infrastructure",
+      title: "On-Premise AI Infrastructure",
+      body: "Local AI infrastructure built and deployed on your own hardware. We design, build, and configure the full stack — from hardware selection to model deployment to security architecture — so your organization can run AI without ever sending data to external servers.",
+      included: [
+        "Hardware specification and procurement support",
+        "Local language model deployment (open-source or licensed)",
+        "Custom fine-tuning on your organization's data",
+        "Security architecture and access control",
+        "Documentation, handover, and team training",
+      ],
+      delivery: "2–4 weeks from kickoff to operational system.",
+      investment: "Typically 100.000 to 1.000.000+ NOK depending on scale, with optional monthly operations support.",
+      fit: "Regulated industries, organizations handling sensitive data, or any business that treats data sovereignty as a strategic priority — not a checkbox.",
+    },
+    {
+      n: "03",
+      tag: "Build",
+      serviceId: "custom_ai_development",
+      title: "Custom AI Development",
+      body: "Tailored AI systems built around your organization's proprietary data, processes, and goals. When off-the-shelf tools don't fit, we design and build the system that does — from first concept to deployed solution.",
+      included: [
+        "Discovery and scoping workshops",
+        "Architecture and solution design",
+        "Custom model development, fine-tuning, and integration",
+        "Testing, deployment, and documentation",
+        "Optional ongoing development and feature work",
+      ],
+      delivery: "4–16 weeks depending on scope and complexity.",
+      investment: "Fixed-price per project. Small from ~150.000 NOK; mid-size from 400.000 NOK; enterprise from 1.000.000 NOK and up.",
+      fit: "Organizations with a specific problem that requires a purpose-built AI solution — typically where existing tools fall short on data sensitivity, integration depth, or domain specificity.",
+    },
+    {
+      n: "04",
+      tag: "Advisory",
+      serviceId: "ai_strategy_advisory",
+      title: "AI Strategy & Advisory",
+      body: "Executive-level advisory for leaders navigating AI adoption. Before deploying anything, we help you understand where AI creates real value in your organization, what to prioritize, and how to avoid the most common (and expensive) mistakes.",
+      included: [
+        "AI Readiness Assessment — 3–5 days of analysis with a written roadmap",
+        "AI Strategy Sprint — 2-week intensive with implementation plan, ROI model, and prioritized pilot scope",
+        "Executive Advisory Retainer — ongoing monthly advisory for leadership teams",
+      ],
+      delivery: "1–2 weeks for assessment and sprint engagements.",
+      investment: "Readiness Assessments from 35.000 NOK; Strategy Sprints from 75.000 NOK; Executive Retainers from 25.000 NOK / month.",
+      fit: "CEOs, CxOs, and executive teams who want clarity before commitment — and a partner who tells them what won't work, not just what will.",
+    },
+  ];
+  return (
+    <section id="services" aria-label="Services" data-section="services" data-screen-label="Services" itemScope itemType="https://schema.org/OfferCatalog" style={{
+      padding: "140px 32px",
+      maxWidth: 1360,
+      margin: "0 auto",
+      borderTop: "1px solid var(--line)",
+    }}>
+      <SectionHeader label="03 · Services" title="What we offer." accent={accent} />
+      <div role="list" style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 1fr)",
+        gap: 2,
+        marginTop: 64,
+        background: "var(--line)",
+        border: "1px solid var(--line)",
+      }}>
+        {services.map(s => <ServiceCard key={s.n} {...s} accent={accent} />)}
+      </div>
+    </section>
+  );
+}
+
+function ServiceCard({ n, tag, title, body, included, delivery, investment, fit, accent, serviceId }) {
+  const [hover, setHover] = useState(false);
+  return (
+    <div
+      role="listitem"
+      itemScope
+      itemType="https://schema.org/Service"
+      data-service-id={serviceId}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        background: "var(--bg)",
+        padding: "44px 36px 40px",
+        display: "flex",
+        flexDirection: "column",
+        gap: 22,
+        position: "relative",
+        transition: "background 0.25s",
+        ...(hover ? { background: "var(--bg-2)" } : {}),
+      }}
+    >
+      <div style={{
+        display: "flex", justifyContent: "space-between", alignItems: "flex-start",
+        fontFamily: "var(--mono)",
+        fontSize: 11,
+        letterSpacing: "0.18em",
+        textTransform: "uppercase",
+        color: "var(--fg-faint)",
+      }}>
+        <span>{n}</span>
+        <span style={{ color: hover ? accent : "var(--fg-dim)", transition: "color 0.25s" }}>{tag}</span>
+      </div>
+
+      <h3 itemProp="name" style={{
+        fontFamily: "var(--serif)",
+        fontWeight: 400,
+        fontSize: 38,
+        lineHeight: 1.05,
+        letterSpacing: "-0.01em",
+      }}>
+        {title}
+      </h3>
+
+      <p itemProp="description" style={{
+        fontSize: 15,
+        lineHeight: 1.6,
+        color: "var(--fg-dim)",
+      }}>
+        {body}
+      </p>
+
+      <div>
+        <div style={{
+          fontFamily: "var(--mono)",
+          fontSize: 10.5,
+          letterSpacing: "0.18em",
+          textTransform: "uppercase",
+          color: "var(--fg-dim)",
+          marginBottom: 12,
+        }}>
+          What's included
+        </div>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 8 }}>
+          {included.map((it, i) => (
+            <li key={i} style={{
+              fontSize: 14.5,
+              lineHeight: 1.5,
+              color: "var(--fg)",
+              display: "grid",
+              gridTemplateColumns: "auto 1fr",
+              gap: 12,
+              alignItems: "baseline",
+            }}>
+              <span style={{ color: accent, fontFamily: "var(--mono)", fontSize: 13 }}>→</span>
+              <span>{it}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div style={{
+        marginTop: "auto",
+        paddingTop: 20,
+        borderTop: "1px solid var(--line)",
+        display: "grid",
+        gap: 14,
+      }}>
+        <ServiceMeta label="Typical delivery" value={delivery} />
+        <ServiceMeta label="Investment" value={investment} />
+        <ServiceMeta label="Best fit" value={fit} />
+      </div>
+    </div>
+  );
+}
+
+function ServiceMeta({ label, value }) {
+  return (
+    <div style={{ display: "grid", gridTemplateColumns: "140px 1fr", gap: 16, alignItems: "baseline" }}>
+      <span style={{
+        fontFamily: "var(--mono)",
+        fontSize: 10.5,
+        letterSpacing: "0.16em",
+        textTransform: "uppercase",
+        color: "var(--fg-faint)",
+      }}>
+        {label}
+      </span>
+      <span style={{
+        fontSize: 14,
+        lineHeight: 1.5,
+        color: "var(--fg-dim)",
+      }}>
+        {value}
+      </span>
+    </div>
+  );
+}
+
 function SectionHeader({ label, title, accent }) {
   return (
     <div style={{
@@ -539,7 +750,7 @@ function CTA({ accent, ctaSectionRef, chatEnabled }) {
             color: "var(--fg-dim)",
             marginBottom: 28,
           }}>
-            <span style={{ color: accent }}>✦</span> 03 · Contact
+            <span style={{ color: accent }}>✦</span> 04 · Contact
           </div>
           <h2 style={{
             fontFamily: "var(--serif)",
@@ -884,4 +1095,4 @@ function BriefField({ label, name, type, options, ...rest }) {
   );
 }
 
-Object.assign(window, { Nav, Hero, Marquee, Work, Process, CTA, Footer, InquiryForm });
+Object.assign(window, { Nav, Hero, Marquee, Work, Process, Services, CTA, Footer, InquiryForm });
