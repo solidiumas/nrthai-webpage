@@ -46,6 +46,7 @@ function App() {
         <Marquee accent={ACCENT} />
         <Work accent={ACCENT} />
         <Process accent={ACCENT} />
+        <Services accent={ACCENT} />
         <CTA accent={ACCENT} ctaSectionRef={ctaSectionRef} chatEnabled={CHAT_ENABLED} />
       </main>
       <Footer accent={ACCENT} />
