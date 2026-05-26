@@ -502,7 +502,7 @@ function Services({ accent }) {
         "Ongoing optimization and monitoring",
       ],
       delivery: "1–3 weeks from kickoff to deployment.",
-      investment: "Setup from ~50.000 NOK; monthly operations from 5.000 NOK. Typical total cost: 15–35% of an equivalent full-time hire.",
+      investment: "Setup from ~$5,000; monthly operations from $500. Typical total cost: 15–35% of an equivalent full-time hire.",
       fit: "Organizations looking to scale capacity without adding headcount — especially roles with repetitive cognitive work, structured analysis, or high-volume processing.",
     },
     {
@@ -519,7 +519,7 @@ function Services({ accent }) {
         "Documentation, handover, and team training",
       ],
       delivery: "2–4 weeks from kickoff to operational system.",
-      investment: "Typically 100.000 to 1.000.000+ NOK depending on scale, with optional monthly operations support.",
+      investment: "Typically $10,000 to $100,000+ depending on scale, with optional monthly operations support.",
       fit: "Regulated industries, organizations handling sensitive data, or any business that treats data sovereignty as a strategic priority — not a checkbox.",
     },
     {
@@ -536,7 +536,7 @@ function Services({ accent }) {
         "Optional ongoing development and feature work",
       ],
       delivery: "4–16 weeks depending on scope and complexity.",
-      investment: "Fixed-price per project. Small from ~150.000 NOK; mid-size from 400.000 NOK; enterprise from 1.000.000 NOK and up.",
+      investment: "Fixed-price per project. Small from ~$15,000; mid-size from $40,000; enterprise from $100,000 and up.",
       fit: "Organizations with a specific problem that requires a purpose-built AI solution — typically where existing tools fall short on data sensitivity, integration depth, or domain specificity.",
     },
     {
@@ -551,7 +551,7 @@ function Services({ accent }) {
         "Executive Advisory Retainer — ongoing monthly advisory for leadership teams",
       ],
       delivery: "1–2 weeks for assessment and sprint engagements.",
-      investment: "Readiness Assessments from 35.000 NOK; Strategy Sprints from 75.000 NOK; Executive Retainers from 25.000 NOK / month.",
+      investment: "Readiness Assessments from $3,500; Strategy Sprints from $7,500; Executive Retainers from $2,500 / month.",
       fit: "CEOs, CxOs, and executive teams who want clarity before commitment — and a partner who tells them what won't work, not just what will.",
     },
   ];
