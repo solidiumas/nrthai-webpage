@@ -811,10 +811,25 @@ function Footer({ accent }) {
       <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
         <Logo accent={accent} />
       </div>
-      <div style={{ textAlign: "center" }}>© 2026 Nrth AI AS</div>
-      <div style={{ textAlign: "right" }}>
-        Built by agents · <span style={{ color: accent }}>▲</span>
+      <div style={{ textAlign: "center" }}>
+        <div>© 2026 Nrth AI AS</div>
+        <a
+          href="/investors"
+          style={{
+            display: "inline-block",
+            marginTop: 10,
+            color: "var(--fg-faint)",
+            borderBottom: "1px solid var(--line-2)",
+            paddingBottom: 2,
+            transition: "color 0.15s, border-color 0.15s",
+          }}
+          onMouseEnter={e => { e.currentTarget.style.color = accent; e.currentTarget.style.borderColor = accent; }}
+          onMouseLeave={e => { e.currentTarget.style.color = "var(--fg-faint)"; e.currentTarget.style.borderColor = "var(--line-2)"; }}
+        >
+          Investors
+        </a>
       </div>
+      <div style={{ textAlign: "right" }}>Built by agents · <span style={{ color: accent }}>▲</span></div>
     </footer>
   );
 }

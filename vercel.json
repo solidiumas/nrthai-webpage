@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/investor/:path*",
-      "destination": "/investor/index.html"
+      "source": "/investors/:path*",
+      "destination": "/investors/index.html"
     }
   ],
   "headers": [
