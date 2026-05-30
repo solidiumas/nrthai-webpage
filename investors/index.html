@@ -6,6 +6,8 @@
 <title>Nrth AI — Investorpresentasjon</title>
 <meta name="description" content="Nrth AI — investorpresentasjon. Sikre, lokale AI-løsninger og egne AI-produkter. Vi henter kapital fra vår nære krets via SLIP." />
 <meta name="theme-color" content="#0a0a0b" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
 
 <!-- Brand fonts: same as nrth.no — Instrument Serif (display), Geist (sans), Geist Mono (mono); Satoshi for the wordmark -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -295,6 +297,26 @@
   .term .val em{color:var(--accent);font-style:normal}
   .term .sub{font-size:12.5px;color:var(--fg-faint);margin-top:8px;line-height:1.4}
 
+  /* highlighted plain-language line under the term boxes */
+  .terms-highlight{
+    margin-top:24px;
+    border:1px solid var(--line-2);
+    border-left:3px solid var(--accent);
+    background:linear-gradient(180deg,rgba(255,255,255,0.015),rgba(255,255,255,0));
+    padding:20px 24px;
+    font-size:15.5px;color:var(--fg-dim);line-height:1.55;
+  }
+  /* discreet "for the curious" footnote at the bottom of #round */
+  .round-fineprint{
+    margin-top:34px;
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:.04em;
+    color:var(--fg-faint);
+    line-height:1.65;
+    max-width:72ch;
+  }
+
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
   .step{position:relative;padding-left:0}
   .step .n{font-family:var(--mono);color:var(--accent);font-size:12px;margin-bottom:12px;letter-spacing:.14em}
@@ -395,8 +417,8 @@
       <span class="lang-en">Investor presentation · Bergen · est. 2026 · <b>Confidential</b></span>
     </div>
     <h1 class="reveal in d1">
-      <span class="lang-no">Din neste <em>ansatte</em> er ikke et menneske.</span>
-      <span class="lang-en">Your next <em>hire</em> isn't a person.</span>
+      <span class="lang-no">Alle vil ha AI. Ingen leverer det ferdig. Det gjør vi.</span>
+      <span class="lang-en">Everyone wants AI. No one delivers it finished. We do.</span>
     </h1>
     <p class="lead reveal in d2">
       <span class="lang-no">Nrth AI bygger sikre, lokale AI-løsninger og egne nøkkelferdige AI-produkter for bedrifter. Vi henter nå kapital fra vår nære krets for å ferdigstille vårt første produkt og lande de første kundene.</span>
@@ -411,9 +433,8 @@
       </a>
     </div>
     <div class="hero-meta reveal in d4">
-      <span class="pill"><span class="dot"></span><span class="lang-no">SLIP · verditak 10 MNOK</span><span class="lang-en">SLIP · 10 MNOK cap</span></span>
-      <span class="pill"><span class="dot"></span><span class="lang-no">35% rabatt</span><span class="lang-en">35% discount</span></span>
-      <span class="pill"><span class="dot"></span><span class="lang-no">Minste beløp 25 000 kr</span><span class="lang-en">Min. ticket NOK 25,000</span></span>
+      <span class="pill"><span class="dot"></span><span class="lang-no">Bli medeier</span><span class="lang-en">Become a co-owner</span></span>
+      <span class="pill"><span class="dot"></span><span class="lang-no">Minste beløp 25 000 kr</span><span class="lang-en">Min. NOK 25,000</span></span>
       <span class="pill"><span class="dot"></span><span class="lang-no">Frist 1. august 2026</span><span class="lang-en">Deadline 1 Aug 2026</span></span>
     </div>
   </div>
@@ -661,29 +682,36 @@
     <div class="sec-head reveal">
       <span class="eyebrow"><span class="lang-no">Runden</span><span class="lang-en">The round</span></span>
       <h2>
-        <span class="lang-no">Vi henter kapital via SLIP.</span>
-        <span class="lang-en">We're raising via a SLIP.</span>
+        <span class="lang-no">Bli medeier fra start.</span>
+        <span class="lang-en">Become a co-owner from day one.</span>
       </h2>
       <p>
-        <span class="lang-no">En SLIP (Startup's Lead Investment Paper) er det norske motstykket til en SAFE, utviklet for tidligfase. Du investerer i dag, og aksjene tegnes ved neste emisjon — med rabatt og et avtalt verditak. Det gir oss fart uten å låse en for tidlig verdivurdering, og gir deg forutsigbarhet.</span>
-        <span class="lang-en">A SLIP (Startup's Lead Investment Paper) is the Norwegian counterpart to a SAFE, built for early stage. You invest today, and shares are issued at the next funding round — with a discount and an agreed valuation cap. It gives us speed without locking in a premature valuation, and gives you predictability.</span>
+        <span class="lang-no">Du går inn med penger nå, mens selskapet er helt i startgropa, og blir medeier. Fordi du er tidlig ute – før selskapet har fått en fast prislapp – får du bedre vilkår enn de som kommer inn etter deg. Det praktiske håndteres gjennom en enkel og vanlig tidligfaseavtale, så du trenger ikke sette deg inn i detaljene. Thomas går gjennom alt sammen med deg.</span>
+        <span class="lang-en">You put in money now, while the company is just getting started, and become a co-owner. Because you're early – before the company has a fixed price tag – you get better terms than those who come in after you. The practical side runs through a simple, standard early-stage agreement, so you don't need to dig into the details. Thomas will walk through everything with you.</span>
       </p>
     </div>
 
     <div class="terms reveal">
-      <div class="term"><div class="lbl"><span class="lang-no">Instrument</span><span class="lang-en">Instrument</span></div><div class="val">SLIP</div><div class="sub"><span class="lang-no">Penger inn nå, aksjer senere</span><span class="lang-en">Money now, shares later</span></div></div>
-      <div class="term"><div class="lbl"><span class="lang-no">Verditak</span><span class="lang-en">Valuation cap</span></div><div class="val">10 <em>MNOK</em></div><div class="sub"><span class="lang-no">Maks verdsettelse ved tegning</span><span class="lang-en">Max valuation at conversion</span></div></div>
-      <div class="term"><div class="lbl"><span class="lang-no">Rabatt</span><span class="lang-en">Discount</span></div><div class="val">35<em>%</em></div><div class="sub"><span class="lang-no">På pris ved neste emisjon</span><span class="lang-en">On the next-round price</span></div></div>
-      <div class="term"><div class="lbl"><span class="lang-no">Minste beløp</span><span class="lang-en">Minimum ticket</span></div><div class="val">25 000 <em>kr</em></div><div class="sub"><span class="lang-no">Per investor</span><span class="lang-en">Per investor</span></div></div>
-      <div class="term"><div class="lbl"><span class="lang-no">Tilgjengelig</span><span class="lang-en">Available</span></div><div class="val"><span class="lang-no">Inntil</span><span class="lang-en">Up to</span> 30<em>%</em></div><div class="sub"><span class="lang-no">Av selskapet, samlet</span><span class="lang-en">Of the company, in total</span></div></div>
-      <div class="term"><div class="lbl"><span class="lang-no">Frist</span><span class="lang-en">Deadline</span></div><div class="val">1. <em>aug</em> 2026</div><div class="sub"><span class="lang-no">For å delta i runden</span><span class="lang-en">To join the round</span></div></div>
+      <div class="term"><div class="lbl"><span class="lang-no">Minste beløp</span><span class="lang-en">Minimum</span></div><div class="val"><span class="lang-no">25 000 <em>kr</em></span><span class="lang-en"><em>NOK</em> 25,000</span></div><div class="sub"><span class="lang-no">Per investor</span><span class="lang-en">Per investor</span></div></div>
+      <div class="term"><div class="lbl"><span class="lang-no">Du blir medeier</span><span class="lang-en">You become a co-owner</span></div><div class="val"><span class="lang-no">Andel</span><span class="lang-en">A stake</span></div><div class="sub"><span class="lang-no">I selskapet</span><span class="lang-en">In the company</span></div></div>
+      <div class="term"><div class="lbl"><span class="lang-no">Frist</span><span class="lang-en">Deadline</span></div><div class="val"><span class="lang-no">1. <em>aug</em> 2026</span><span class="lang-en">1 <em>Aug</em> 2026</span></div><div class="sub"><span class="lang-no">For å være med</span><span class="lang-en">To join</span></div></div>
+    </div>
+
+    <div class="terms-highlight reveal">
+      <span class="lang-no">Som tidlig investor betaler du mindre per aksje enn de neste investorene, og vi har avtalt et tak på verdsettelsen som sikrer deg en god andel selv om selskapet vokser mye.</span>
+      <span class="lang-en">As an early investor you pay less per share than later investors, and we've agreed a ceiling on the valuation that secures you a solid stake even if the company grows a lot.</span>
     </div>
 
     <div class="steps reveal d1">
-      <div class="step"><div class="n">01</div><h4><span class="lang-no">Du investerer i dag</span><span class="lang-en">You invest today</span></h4><p><span class="lang-no">Kapitalen kommer inn nå og bokføres som egenkapital. Ingen tung emisjonsprosess.</span><span class="lang-en">Capital comes in now and is booked as equity. No heavy share-issue process.</span></p></div>
-      <div class="step"><div class="n">02</div><h4><span class="lang-no">Verdsettelse utsettes</span><span class="lang-en">Valuation deferred</span></h4><p><span class="lang-no">Vi unngår å sette en for tidlig pris. Du sikres et tak på 10 MNOK og 35% rabatt.</span><span class="lang-en">We avoid setting a premature price. You're secured a 10 MNOK cap and 35% discount.</span></p></div>
-      <div class="step"><div class="n">03</div><h4><span class="lang-no">Aksjer ved neste emisjon</span><span class="lang-en">Shares at next round</span></h4><p><span class="lang-no">Når selskapet henter ny kapital, konverteres din SLIP til aksjer på de avtalte vilkårene.</span><span class="lang-en">When the company raises again, your SLIP converts to shares on the agreed terms.</span></p></div>
+      <div class="step"><div class="n">01</div><h4><span class="lang-no">Du går inn nå.</span><span class="lang-en">You invest now.</span></h4><p><span class="lang-no">Pengene kommer rett inn i selskapet og hjelper oss å bygge ferdig produktet og lande de første kundene.</span><span class="lang-en">The money goes straight into the company and helps us finish the product and land our first customers.</span></p></div>
+      <div class="step"><div class="n">02</div><h4><span class="lang-no">Du sikrer deg en god posisjon.</span><span class="lang-en">You secure a good position.</span></h4><p><span class="lang-no">Fordi du er tidlig ute, får du gunstigere vilkår enn investorene som kommer etter deg.</span><span class="lang-en">Because you're early, you get better terms than the investors who come after you.</span></p></div>
+      <div class="step"><div class="n">03</div><h4><span class="lang-no">Du blir medeier.</span><span class="lang-en">You become a co-owner.</span></h4><p><span class="lang-no">Når vi senere henter inn mer kapital, gjøres din andel om til aksjer.</span><span class="lang-en">When we later raise more capital, your stake converts into shares.</span></p></div>
     </div>
+
+    <p class="round-fineprint reveal">
+      <span class="lang-no">Avtalen heter en SLIP – en standard norsk tidligfaseavtale. Vil du ha detaljene, spør Thomas.</span>
+      <span class="lang-en">The agreement is called a SLIP – a standard Norwegian early-stage instrument. Want the details? Just ask Thomas.</span>
+    </p>
   </div>
 </section>
 
