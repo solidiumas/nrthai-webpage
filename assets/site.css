@@ -333,11 +333,11 @@ section[id], [id].section { scroll-margin-top: 90px; }
 .cta-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; }
 .cta-left { position: sticky; top: 120px; }
 .cta-left .kicker { margin-bottom: 28px; }
-.cta-left h2 {
+.cta-left h1, .cta-left h2 {
   font-family: var(--serif); font-weight: 400; font-size: clamp(56px, 6.4vw, 92px);
   line-height: 0.98; letter-spacing: -0.02em; margin-bottom: 28px;
 }
-.cta-left h2 em { color: var(--accent); font-style: italic; }
+.cta-left h1 em, .cta-left h2 em { color: var(--accent); font-style: italic; }
 .cta-left .lede { font-size: 18px; line-height: 1.55; color: var(--fg-dim); max-width: 460px; margin-bottom: 28px; }
 .cta-contact {
   font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em;
