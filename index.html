@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -281,477 +281,288 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --bg: #0a0a0b;
-    --bg-2: #111114;
-    --fg: #f5f2ec;
-    --fg-dim: #a8a49c;
-    --fg-faint: #5c5a55;
-    --line: rgba(245, 242, 236, 0.08);
-    --line-2: rgba(245, 242, 236, 0.14);
-    --accent: #ff8a5b;
-    --accent-deep: #2a9fc4;
-    --warn: #ff8a5b;
-    --serif: "Instrument Serif", "Times New Roman", serif;
-    --sans: "Geist", ui-sans-serif, system-ui, -apple-system, sans-serif;
-    --mono: "Geist Mono", ui-monospace, monospace;
-  }
-  html[data-theme="light"] {
-    --bg: #f5f2ec;
-    --bg-2: #ebe7df;
-    --fg: #0a0a0b;
-    --fg-dim: #4a4842;
-    --fg-faint: #8a8680;
-    --line: rgba(10, 10, 11, 0.1);
-    --line-2: rgba(10, 10, 11, 0.18);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body {
-    background: var(--bg);
-    color: var(--fg);
-    font-family: var(--sans);
-    font-size: 16px;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: "ss01", "ss02", "cv11";
-    scroll-behavior: smooth;
-  }
-  body {
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1000;
-    opacity: 0.035;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  }
-  ::selection { background: var(--accent); color: #000; }
-  a { color: inherit; text-decoration: none; }
-  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
-
-  /* ───────── Responsive layout ───────── */
-
-  /* Tablet (≤ 1024px): tighten paddings, reduce gaps */
-  @media (max-width: 1024px) {
-    nav[data-section="nav"] { padding: 16px 24px !important; }
-    nav[data-section="nav"] > div { gap: 18px !important; }
-
-    section[data-section="hero"] {
-      padding: 120px 24px 60px !important;
-      grid-template-columns: 1fr !important;
-      gap: 40px !important;
-      text-align: left;
-    }
-    section[data-section="hero"] h1 { font-size: clamp(48px, 8vw, 80px) !important; }
-
-    section#work, section#process, section#services {
-      padding: 100px 24px !important;
-    }
-    section#work > div[style*="grid-template-columns: repeat(3"],
-    section#process ol[role="list"],
-    section#process > div[style*="grid-template-columns: repeat(3"] {
-      grid-template-columns: repeat(2, 1fr) !important;
-    }
-    section#services > div[style*="grid-template-columns: repeat(2"] {
-      grid-template-columns: 1fr !important;
-    }
-
-    section#contact {
-      padding: 100px 24px 60px !important;
-    }
-    section#contact > div[style*="grid-template-columns"] {
-      grid-template-columns: 1fr !important;
-      gap: 48px !important;
-    }
-    section#contact > div > div[style*="position: sticky"] {
-      position: static !important;
-    }
-
-    footer[data-section="footer"] {
-      padding: 32px 24px !important;
-    }
-  }
-
-  /* Mobile (≤ 720px): single-column everywhere, mobile nav */
-  @media (max-width: 720px) {
-    html, body { font-size: 15px; }
-
-    nav[data-section="nav"] { padding: 14px 18px !important; }
-    /* Hide nav text links on mobile, keep logo + CTA */
-    nav[data-section="nav"] .nav-link { display: none !important; }
-    nav[data-section="nav"] > div {
-      gap: 0 !important;
-    }
-    nav[data-section="nav"] button[data-action-id="chat"] {
-      padding: 8px 12px !important;
-      font-size: 10px !important;
-      letter-spacing: 0.12em !important;
-    }
-
-    section[data-section="hero"] {
-      padding: 110px 20px 60px !important;
-      min-height: auto !important;
-    }
-    section[data-section="hero"] h1 {
-      font-size: clamp(40px, 11vw, 64px) !important;
-      line-height: 1 !important;
-    }
-    section[data-section="hero"] p[style*="font-size: 19"] {
-      font-size: 16px !important;
-    }
-    section[data-section="hero"] button {
-      padding: 14px 20px !important;
-      font-size: 11px !important;
-    }
-    /* Scroll cue takes too much room on tiny screens */
-    section[data-section="hero"] > div[style*="bottom: 28"] { display: none !important; }
-
-    section#work, section#process, section#services {
-      padding: 80px 20px !important;
-    }
-    /* Section header stack */
-    section#work > div:first-child,
-    section#process > div:first-child,
-    section#services > div:first-child {
-      grid-template-columns: 1fr !important;
-      gap: 16px !important;
-    }
-    section#work h2, section#process h2, section#services h2 {
-      font-size: clamp(40px, 10vw, 60px) !important;
-    }
-
-    /* Cards & steps single column */
-    section#work > div[style*="grid-template-columns"],
-    section#process ol[role="list"],
-    section#process > div[style*="grid-template-columns"],
-    section#services > div[style*="grid-template-columns"] {
-      grid-template-columns: 1fr !important;
-    }
-    section#work > div[style*="grid-template-columns"] > div,
-    section#services > div[style*="grid-template-columns"] > div {
-      min-height: auto !important;
-      padding: 32px 24px !important;
-    }
-    section#work h3 { font-size: 28px !important; }
-    section#services h3 { font-size: 30px !important; }
-
-    section#contact {
-      padding: 80px 20px 60px !important;
-    }
-    section#contact h2 {
-      font-size: clamp(40px, 10vw, 60px) !important;
-    }
-
-    /* Agent visualization shrinks */
-    section[data-section="hero"] canvas { aspect-ratio: 4 / 3 !important; }
-
-    /* Marquee speed up so it doesn't feel static */
-    div[style*="animation: scroll"] { font-size: 11px !important; }
-
-    /* Footer stacks */
-    footer[data-section="footer"] {
-      grid-template-columns: 1fr !important;
-      gap: 12px !important;
-      text-align: left !important;
-    }
-    footer[data-section="footer"] > div { text-align: left !important; }
-
-    /* Tweaks panel narrower on mobile */
-    body > div[style*="bottom: 20"][style*="right: 20"] {
-      width: calc(100vw - 32px) !important;
-      max-width: 280px !important;
-    }
-  }
-
-  /* Touch device hover-state cleanup */
-  @media (hover: none) {
-    .nav-link:hover { color: var(--fg-dim) !important; }
-  }
-
-  #root { position: relative; z-index: 1; }
-
-  /* No-JS fallback styling — clean editorial document */
-  .nojs-fallback {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 80px 32px 120px;
-    color: var(--fg);
-    font-family: var(--sans);
-  }
-  .nojs-fallback h1 {
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: clamp(48px, 6vw, 88px);
-    line-height: 1;
-    letter-spacing: -0.02em;
-    margin-bottom: 24px;
-  }
-  .nojs-fallback h1 em { color: var(--accent); }
-  .nojs-fallback h2 {
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    margin: 56px 0 16px;
-  }
-  .nojs-fallback h3 {
-    font-family: var(--mono);
-    font-size: 12px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--fg-dim);
-    margin: 28px 0 8px;
-  }
-  .nojs-fallback p, .nojs-fallback li {
-    font-size: 17px;
-    line-height: 1.55;
-    color: var(--fg-dim);
-    margin-bottom: 12px;
-  }
-  .nojs-fallback ul, .nojs-fallback ol { padding-left: 22px; margin-bottom: 16px; }
-  .nojs-fallback a { color: var(--accent); border-bottom: 1px solid currentColor; }
-  .nojs-fallback .lede { color: var(--fg); font-size: 19px; max-width: 580px; margin-bottom: 32px; }
-  .nojs-fallback .meta {
-    font-family: var(--mono);
-    font-size: 11.5px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--fg-faint);
-    margin-bottom: 32px;
-  }
-  .nojs-fallback .meta::before { content: "● "; color: var(--accent); }
-  .nojs-fallback .actions {
-    border: 1px solid var(--line-2);
-    padding: 24px;
-    margin: 40px 0;
-  }
-  .nojs-fallback .actions h3 { margin-top: 0; color: var(--accent); }
-  .nojs-fallback code {
-    font-family: var(--mono);
-    font-size: 13px;
-    background: var(--bg-2);
-    padding: 2px 6px;
-    border: 1px solid var(--line);
-  }
-</style>
+<link rel="stylesheet" href="/assets/site.css" />
 </head>
-<body>
-
-<!-- Visible/agent-readable semantic content. Hidden visually when JS hydrates,
-     but always present in the DOM for headless agents and crawlers that don't run JS. -->
-<div id="ssr-shell" itemscope itemtype="https://schema.org/Organization">
+<body itemscope itemtype="https://schema.org/Organization">
 <meta itemprop="name" content="Nrth AI" />
 <meta itemprop="url" content="https://nrth.no/" />
 <meta itemprop="email" content="contact@nrth.no" />
 
-<header role="banner" aria-label="Site header" data-section="header">
-  <a href="/" aria-label="Nrth AI home" data-action="navigate" data-target="/">Nrth.AI</a>
-  <nav aria-label="Primary" role="navigation">
-    <a href="#work" data-action="navigate" data-target="#work">Work</a>
-    <a href="#process" data-action="navigate" data-target="#process">Process</a>
-    <a href="#services" data-action="navigate" data-target="#services">Services</a>
-    <a href="#contact" data-action="navigate" data-target="#contact">Contact</a>
-    <a href="#contact" data-action="invoke" data-action-id="submitInquiry" data-primary="true">Send brief</a>
+<!-- ───────── Header / nav ───────── -->
+<header class="site-nav" data-section="nav">
+  <a class="logo" href="/" aria-label="Nrth AI home" data-action="navigate" data-target="/">
+    <span class="logo-mark">&lt;/&gt;</span>
+    <span class="logo-word">Nrth AI</span>
+  </a>
+  <nav class="nav-right" aria-label="Primary">
+    <a class="nav-link" href="/platform" data-action="navigate" data-target="/platform">Product</a>
+    <a class="nav-link" href="/work" data-action="navigate" data-target="/work">Work</a>
+    <a class="nav-link" href="/company" data-action="navigate" data-target="/company">Company</a>
+    <a class="nav-link" href="/services" data-action="navigate" data-target="/services">Services</a>
+    <a class="nav-link" href="/contact" data-action="navigate" data-target="/contact">Contact</a>
+    <a class="nav-cta" href="/contact" data-action="invoke" data-action-id="submitInquiry" aria-label="Send Nrth AI a discovery brief">Send a brief →</a>
   </nav>
 </header>
 
 <main id="main" role="main">
 
-  <section id="hero" aria-label="Hero" data-section="hero" data-screen-label="Hero">
-    <p class="meta" data-role="eyebrow">AI Agents for enterprises · est. 2026</p>
-    <h1 itemprop="slogan">Your next <em>hire</em> isn't a person.</h1>
-    <p class="lede" itemprop="description">Nrth AI builds custom AI & AI agents that handle the work your team shouldn't be doing. Production-grade, observed, and accountable — like the best employee you've ever had.</p>
-    <p>
-      <a href="#contact" data-action="invoke" data-action-id="submitInquiry" data-primary="true" rel="nofollow">Send us a brief →</a>
-      &nbsp;·&nbsp;
-      <a href="#work" data-action="navigate" data-target="#work">See what we build ↓</a>
-    </p>
+  <!-- ───────── Hero ───────── -->
+  <section class="hero" id="hero" data-section="hero" data-screen-label="Hero" aria-label="Hero">
+    <div>
+      <p class="eyebrow" data-role="eyebrow">AI &amp; AI Agents for enterprises · est. 2026</p>
+      <h1 itemprop="slogan">Your next <em>hire</em> isn't a person.</h1>
+      <p class="lede" itemprop="description">Nrth AI builds custom AI &amp; AI agents that handle the work your team shouldn't be doing. Production-grade, observed, and accountable — like the best employee you've ever had.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact" data-action="invoke" data-action-id="submitInquiry" rel="nofollow">Send us a brief →</a>
+        <a class="link-arrow" href="#work" data-action="navigate" data-target="#work">See what we build ↓</a>
+      </div>
+    </div>
+    <div>
+      <div class="hero-visual" aria-hidden="true">
+        <canvas data-agent-visual></canvas>
+        <span class="visual-tick tl"></span>
+        <span class="visual-tick tr"></span>
+        <span class="visual-tick bl"></span>
+        <span class="visual-tick br"></span>
+        <span class="visual-label live"><span class="dot">●</span> agent.live</span>
+        <span class="visual-label run">n°01 / run</span>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
   </section>
 
-  <section id="work" aria-label="Services we build" data-section="work" data-screen-label="Work" itemscope itemtype="https://schema.org/OfferCatalog">
-    <h2>Agents we build.</h2>
-    <ul role="list">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="customer_support_agents">
-        <h3 itemprop="name">01 · Tier-1 support, handled</h3>
+  <!-- ───────── Marquee ───────── -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Customer support agents <span class="star">✦</span></span>
+      <span>Sales-outreach agents <span class="star">✦</span></span>
+      <span>Research &amp; intel agents <span class="star">✦</span></span>
+      <span>Back-office automation <span class="star">✦</span></span>
+      <span>Internal knowledge agents <span class="star">✦</span></span>
+      <span>Voice &amp; phone agents <span class="star">✦</span></span>
+      <span>Customer support agents <span class="star">✦</span></span>
+      <span>Sales-outreach agents <span class="star">✦</span></span>
+      <span>Research &amp; intel agents <span class="star">✦</span></span>
+      <span>Back-office automation <span class="star">✦</span></span>
+      <span>Internal knowledge agents <span class="star">✦</span></span>
+      <span>Voice &amp; phone agents <span class="star">✦</span></span>
+      <span>Customer support agents <span class="star">✦</span></span>
+      <span>Sales-outreach agents <span class="star">✦</span></span>
+      <span>Research &amp; intel agents <span class="star">✦</span></span>
+      <span>Back-office automation <span class="star">✦</span></span>
+      <span>Internal knowledge agents <span class="star">✦</span></span>
+      <span>Voice &amp; phone agents <span class="star">✦</span></span>
+    </div>
+  </div>
+
+  <!-- ───────── Work ───────── -->
+  <section class="section" id="work" data-section="work" data-screen-label="Work" aria-label="Agents we build" itemscope itemtype="https://schema.org/OfferCatalog">
+    <div class="section-header">
+      <div class="kicker"><span class="star">✦</span> 01 · Work</div>
+      <h2>Agents we build.</h2>
+    </div>
+    <div class="card-grid card-grid--3" role="list">
+      <article class="card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="customer_support_agents">
+        <div class="card-head"><span>01</span><span class="tag">Support</span></div>
+        <h3 itemprop="name">Tier-1 support, handled</h3>
         <p itemprop="description">Agents that read your docs, ticket history, and CRM — resolve routine tickets in seconds, escalate the nuanced ones with full context.</p>
-        <p data-metric="auto_resolved" data-value="0.72"><strong>72%</strong> auto-resolved</p>
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="sales_outreach_agents">
-        <h3 itemprop="name">02 · Inbound qualified, outbound personalized</h3>
+        <div class="card-metric" data-metric="auto_resolved" data-value="0.72">
+          <span class="value">72%</span><span class="label">auto-resolved</span>
+        </div>
+      </article>
+      <article class="card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="sales_outreach_agents">
+        <div class="card-head"><span>02</span><span class="tag">Revenue</span></div>
+        <h3 itemprop="name">Inbound qualified, outbound personalized</h3>
         <p itemprop="description">Agents that research prospects, draft first-touch messages in your voice, and keep the pipeline warm while your team sleeps.</p>
-        <p data-metric="sdr_throughput_multiple" data-value="5"><strong>5×</strong> SDR throughput</p>
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="ops_automation_agents">
-        <h3 itemprop="name">03 · The invisible back-office</h3>
+        <div class="card-metric" data-metric="sdr_throughput_multiple" data-value="5">
+          <span class="value">5×</span><span class="label">SDR throughput</span>
+        </div>
+      </article>
+      <article class="card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="ops_automation_agents">
+        <div class="card-head"><span>03</span><span class="tag">Ops</span></div>
+        <h3 itemprop="name">The invisible back-office</h3>
         <p itemprop="description">Invoice matching, vendor comms, compliance checks, data reconciliation — the boring, expensive work becomes a background process.</p>
-        <p data-metric="added_headcount" data-value="0"><strong>0 FTE</strong> added headcount</p>
-      </li>
-    </ul>
+        <div class="card-metric" data-metric="added_headcount" data-value="0">
+          <span class="value">0 FTE</span><span class="label">added headcount</span>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <section id="process" aria-label="How we work" data-section="process" data-screen-label="Process">
-    <h2>Map. Pilot. Scale.</h2>
-    <ol role="list">
-      <li data-step="1" data-duration="P1W"><h3>Map · 1 week</h3><p>We sit with your team, shadow the work, and find the 3–5 places an agent will change the unit economics.</p></li>
-      <li data-step="2" data-duration="P3W"><h3>Pilot · 2–3 weeks</h3><p>A working agent in production against a bounded slice — real data, real users, measurable outcomes.</p></li>
-      <li data-step="3" data-duration="ongoing"><h3>Scale · ongoing</h3><p>We harden, observe, and expand. Agents operate as named team members, with evals, guardrails, and a human in the loop where it matters.</p></li>
+  <!-- ───────── Process ───────── -->
+  <section class="section section--bordered" id="process" data-section="process" data-screen-label="Process" aria-label="How we work">
+    <div class="section-header">
+      <div class="kicker"><span class="star">✦</span> 02 · Process</div>
+      <h2>Map. Pilot. Scale.</h2>
+    </div>
+    <ol class="process-grid" role="list">
+      <li class="process-step" role="listitem" data-step="1" data-step-name="Map">
+        <div class="numeral">i</div>
+        <div class="step-label">Step 1 — Map</div>
+        <p>One week. We sit with your team, shadow the work, and find the 3–5 places an agent will change the unit economics.</p>
+      </li>
+      <li class="process-step" role="listitem" data-step="2" data-step-name="Pilot">
+        <div class="numeral">ii</div>
+        <div class="step-label">Step 2 — Pilot</div>
+        <p>Two to three weeks. A working agent in production against a bounded slice — real data, real users, measurable outcomes.</p>
+      </li>
+      <li class="process-step" role="listitem" data-step="3" data-step-name="Scale">
+        <div class="numeral">iii</div>
+        <div class="step-label">Step 3 — Scale</div>
+        <p>We harden, observe, and expand. Agents operate as named team members, with evals, guardrails, and a human in the loop where it matters.</p>
+      </li>
     </ol>
   </section>
 
-  <section id="services" aria-label="Services" data-section="services" data-screen-label="Services" itemscope itemtype="https://schema.org/OfferCatalog">
-    <h2>What we offer.</h2>
-    <ul role="list">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="ai_employees">
-        <h3 itemprop="name">01 · AI Employees</h3>
-        <p itemprop="description">Autonomous AI agents that replace or augment specific roles in your organization — document processing, customer support, technical analysis, internal knowledge work, or specialized workflows. 24/7, at a fraction of the cost of a full-time hire.</p>
-        <p>Typical delivery: 1–3 weeks. Setup from ~$5,000; monthly operations from $500.</p>
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="on_premise_ai_infrastructure">
-        <h3 itemprop="name">02 · On-Premise AI Infrastructure</h3>
-        <p itemprop="description">Local AI infrastructure deployed on your own hardware — full stack from hardware selection to model deployment to security architecture. Your data never leaves your network.</p>
-        <p>Typical delivery: 2–4 weeks. Engagements typically $10,000 to $100,000+.</p>
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="custom_ai_development">
-        <h3 itemprop="name">03 · Custom AI Development</h3>
-        <p itemprop="description">Tailored AI systems built around your proprietary data, processes, and goals. When off-the-shelf tools don't fit, we design and build the system that does.</p>
-        <p>Typical delivery: 4–16 weeks. Small from ~$15,000; mid-size from $40,000; enterprise from $100,000 and up.</p>
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="ai_strategy_advisory">
-        <h3 itemprop="name">04 · AI Strategy &amp; Advisory</h3>
-        <p itemprop="description">Executive-level advisory for leaders navigating AI adoption. AI Readiness Assessments, Strategy Sprints, and Executive Advisory Retainers.</p>
-        <p>Typical delivery: 1–2 weeks. Assessments from $3,500; Sprints from $7,500; Retainers from $2,500 / month.</p>
-      </li>
-    </ul>
+  <!-- ───────── Services ───────── -->
+  <section class="section section--bordered" id="services" data-section="services" data-screen-label="Services" aria-label="Services" itemscope itemtype="https://schema.org/OfferCatalog">
+    <div class="section-header">
+      <div class="kicker"><span class="star">✦</span> 03 · Services</div>
+      <h2>What we offer.</h2>
+    </div>
+    <div class="card-grid card-grid--2" role="list">
+      <article class="service-card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="ai_employees">
+        <div class="card-head"><span>01</span><span class="tag">Deploy</span></div>
+        <h3 itemprop="name">AI Employees</h3>
+        <p class="desc" itemprop="description">Autonomous AI agents that replace or augment specific roles in your organization. Instead of hiring, deploy an AI employee that handles document processing, customer support, technical analysis, internal knowledge work, or specialized workflows — 24/7, at a fraction of the cost of a full-time hire.</p>
+        <div>
+          <div class="included-label">What's included</div>
+          <ul class="included">
+            <li><span class="arrow">→</span><span>Discovery of the role or workflow to be automated</span></li>
+            <li><span class="arrow">→</span><span>Custom AI agent built around your processes</span></li>
+            <li><span class="arrow">→</span><span>Integration with your existing tools and data</span></li>
+            <li><span class="arrow">→</span><span>Deployment on local infrastructure (no data leakage)</span></li>
+            <li><span class="arrow">→</span><span>Ongoing optimization and monitoring</span></li>
+          </ul>
+        </div>
+        <div class="service-meta-group">
+          <div class="service-meta"><span class="label">Typical delivery</span><span class="value">1–3 weeks from kickoff to deployment.</span></div>
+          <div class="service-meta"><span class="label">Investment</span><span class="value">Setup from ~$5,000; monthly operations from $500. Typical total cost: 15–35% of an equivalent full-time hire.</span></div>
+          <div class="service-meta"><span class="label">Best fit</span><span class="value">Organizations looking to scale capacity without adding headcount — especially roles with repetitive cognitive work, structured analysis, or high-volume processing.</span></div>
+        </div>
+      </article>
+      <article class="service-card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="on_premise_ai_infrastructure">
+        <div class="card-head"><span>02</span><span class="tag">Infrastructure</span></div>
+        <h3 itemprop="name">On-Premise AI Infrastructure</h3>
+        <p class="desc" itemprop="description">Local AI infrastructure built and deployed on your own hardware. We design, build, and configure the full stack — from hardware selection to model deployment to security architecture — so your organization can run AI without ever sending data to external servers.</p>
+        <div>
+          <div class="included-label">What's included</div>
+          <ul class="included">
+            <li><span class="arrow">→</span><span>Hardware specification and procurement support</span></li>
+            <li><span class="arrow">→</span><span>Local language model deployment (open-source or licensed)</span></li>
+            <li><span class="arrow">→</span><span>Custom fine-tuning on your organization's data</span></li>
+            <li><span class="arrow">→</span><span>Security architecture and access control</span></li>
+            <li><span class="arrow">→</span><span>Documentation, handover, and team training</span></li>
+          </ul>
+        </div>
+        <div class="service-meta-group">
+          <div class="service-meta"><span class="label">Typical delivery</span><span class="value">2–4 weeks from kickoff to operational system.</span></div>
+          <div class="service-meta"><span class="label">Investment</span><span class="value">Typically $10,000 to $100,000+ depending on scale, with optional monthly operations support.</span></div>
+          <div class="service-meta"><span class="label">Best fit</span><span class="value">Regulated industries, organizations handling sensitive data, or any business that treats data sovereignty as a strategic priority — not a checkbox.</span></div>
+        </div>
+      </article>
+      <article class="service-card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="custom_ai_development">
+        <div class="card-head"><span>03</span><span class="tag">Build</span></div>
+        <h3 itemprop="name">Custom AI Development</h3>
+        <p class="desc" itemprop="description">Tailored AI systems built around your organization's proprietary data, processes, and goals. When off-the-shelf tools don't fit, we design and build the system that does — from first concept to deployed solution.</p>
+        <div>
+          <div class="included-label">What's included</div>
+          <ul class="included">
+            <li><span class="arrow">→</span><span>Discovery and scoping workshops</span></li>
+            <li><span class="arrow">→</span><span>Architecture and solution design</span></li>
+            <li><span class="arrow">→</span><span>Custom model development, fine-tuning, and integration</span></li>
+            <li><span class="arrow">→</span><span>Testing, deployment, and documentation</span></li>
+            <li><span class="arrow">→</span><span>Optional ongoing development and feature work</span></li>
+          </ul>
+        </div>
+        <div class="service-meta-group">
+          <div class="service-meta"><span class="label">Typical delivery</span><span class="value">4–16 weeks depending on scope and complexity.</span></div>
+          <div class="service-meta"><span class="label">Investment</span><span class="value">Fixed-price per project. Small from ~$15,000; mid-size from $40,000; enterprise from $100,000 and up.</span></div>
+          <div class="service-meta"><span class="label">Best fit</span><span class="value">Organizations with a specific problem that requires a purpose-built AI solution — typically where existing tools fall short on data sensitivity, integration depth, or domain specificity.</span></div>
+        </div>
+      </article>
+      <article class="service-card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="ai_strategy_advisory">
+        <div class="card-head"><span>04</span><span class="tag">Advisory</span></div>
+        <h3 itemprop="name">AI Strategy &amp; Advisory</h3>
+        <p class="desc" itemprop="description">Executive-level advisory for leaders navigating AI adoption. Before deploying anything, we help you understand where AI creates real value in your organization, what to prioritize, and how to avoid the most common (and expensive) mistakes.</p>
+        <div>
+          <div class="included-label">What's included</div>
+          <ul class="included">
+            <li><span class="arrow">→</span><span>AI Readiness Assessment — 3–5 days of analysis with a written roadmap</span></li>
+            <li><span class="arrow">→</span><span>AI Strategy Sprint — 2-week intensive with implementation plan, ROI model, and prioritized pilot scope</span></li>
+            <li><span class="arrow">→</span><span>Executive Advisory Retainer — ongoing monthly advisory for leadership teams</span></li>
+          </ul>
+        </div>
+        <div class="service-meta-group">
+          <div class="service-meta"><span class="label">Typical delivery</span><span class="value">1–2 weeks for assessment and sprint engagements.</span></div>
+          <div class="service-meta"><span class="label">Investment</span><span class="value">Readiness Assessments from $3,500; Strategy Sprints from $7,500; Executive Retainers from $2,500 / month.</span></div>
+          <div class="service-meta"><span class="label">Best fit</span><span class="value">CEOs, CxOs, and executive teams who want clarity before commitment — and a partner who tells them what won't work, not just what will.</span></div>
+        </div>
+      </article>
+    </div>
   </section>
 
-  <section id="contact" aria-label="Contact us" data-section="contact" data-screen-label="Contact">
-    <h2>Don't email us. <em>Send a brief.</em></h2>
-    <p>Tell us what you want automated. A human on our team replies with a tailored proposal — usually within one business day.</p>
-    <p itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
-      Email: <a itemprop="email" href="mailto:contact@nrth.no" data-action="email">contact@nrth.no</a><br />
-      Location: <span itemprop="areaServed">Bergen, Norway</span>
-    </p>
+  <!-- ───────── Contact ───────── -->
+  <section class="section section--bordered" id="contact" data-section="contact" data-screen-label="Contact" aria-label="Contact us">
+    <div class="cta-grid">
+      <div class="cta-left">
+        <div class="kicker"><span class="star">✦</span> 04 · Contact</div>
+        <h2>Don't email us.<br /><em>Send a brief.</em></h2>
+        <p class="lede">Tell us what you want automated. A human on our team replies with a tailored proposal — usually within one business day.</p>
+        <div class="cta-contact" itemscope itemtype="https://schema.org/ContactPoint">
+          <div>Prefer plain email? <a href="mailto:contact@nrth.no" itemprop="email" data-action="email">contact@nrth.no</a></div>
+          <div itemprop="areaServed">Bergen · Norway</div>
+        </div>
+      </div>
 
-    <form id="inquiry-form"
-          method="POST"
-          action="https://nrth.no/api/inquiry"
-          enctype="application/json"
-          aria-label="Submit a discovery brief"
-          data-action="invoke"
-          data-action-id="submitInquiry">
-      <h3>Submit a brief (no JS required)</h3>
-      <p><label>Email <input type="email" name="email" required autocomplete="email" /></label></p>
-      <p><label>Company <input type="text" name="company" autocomplete="organization" /></label></p>
-      <p><label>Role <input type="text" name="role" autocomplete="organization-title" /></label></p>
-      <p><label>What would you want an agent to do? <textarea name="problem" required rows="4"></textarea></label></p>
-      <p><label>Urgency
-        <select name="urgency">
-          <option value="exploring">Exploring</option>
-          <option value="this_quarter">This quarter</option>
-          <option value="asap">ASAP</option>
-        </select>
-      </label></p>
-      <p><button type="submit" data-primary="true">Submit brief →</button></p>
-    </form>
+      <div class="brief-panel" data-action="invoke" data-action-id="submitInquiry" data-endpoint="/api/inquiry">
+        <div class="brief-head">
+          <div class="left"><span class="pdot"></span><span data-brief-status>nrth.brief — fill in</span></div>
+          <div class="ver">brief.v1</div>
+        </div>
+        <form class="brief-form" method="POST" action="/api/inquiry" aria-label="Submit a discovery brief">
+          <label><span class="lbl">Email <span class="req">*</span></span><input type="email" name="email" required autocomplete="email" placeholder="you@company.com" /></label>
+          <label><span class="lbl">Company</span><input type="text" name="company" autocomplete="organization" placeholder="Optional" /></label>
+          <label><span class="lbl">Role</span><input type="text" name="role" autocomplete="organization-title" placeholder="Optional" /></label>
+          <label><span class="lbl">What would you want an agent to do? <span class="req">*</span></span><textarea name="problem" required rows="4" placeholder="A few sentences is fine — what work, what system, what outcome."></textarea></label>
+          <label><span class="lbl">Urgency</span>
+            <select name="urgency">
+              <option value="exploring">Exploring</option>
+              <option value="this_quarter">This quarter</option>
+              <option value="asap">ASAP</option>
+            </select>
+          </label>
+          <button type="submit" class="brief-submit" data-primary="true">Send brief →</button>
+          <p class="brief-error" hidden>Something went wrong — please try again or email contact@nrth.no directly.</p>
+          <p class="brief-note">We reply from contact@nrth.no within one business day. Your data isn't shared.</p>
+        </form>
+        <div class="brief-sent" role="status" aria-live="polite">
+          <h3>Brief sent.<br /><em>We'll be in touch.</em></h3>
+          <p>A human on the Nrth AI team replies within one business day from <strong>contact@nrth.no</strong>.</p>
+          <button type="button" class="btn-ghost brief-reset">Send another →</button>
+        </div>
+      </div>
+    </div>
   </section>
 
 </main>
 
-<footer role="contentinfo" aria-label="Site footer" data-section="footer">
-  <p>© 2026 Nrth AI AS · Bergen, Norway · <a href="mailto:contact@nrth.no">contact@nrth.no</a></p>
-  <p><a href="/investors">Investors</a></p>
-  <p>
-    Machine-readable:
-    <a href="/llms.txt">llms.txt</a> ·
-    <a href="/agent.json">agent.json</a> ·
-    <a href="/.well-known/ai-plugin.json">ai-plugin</a> ·
-    <a href="/openapi.json">openapi</a> ·
-    <a href="/sitemap.xml">sitemap</a> ·
-    <a href="/robots.txt">robots</a>
-  </p>
+<!-- ───────── Footer ───────── -->
+<footer class="site-footer" data-section="footer" role="contentinfo">
+  <div>
+    <a class="logo" href="/" aria-label="Nrth AI home">
+      <span class="logo-mark">&lt;/&gt;</span>
+      <span class="logo-word">Nrth AI</span>
+    </a>
+  </div>
+  <div class="center">
+    <div>© 2026 Nrth AI AS</div>
+    <a class="footer-investors" href="/investors">Investors</a>
+  </div>
+  <div class="right">Built by agents · <span class="star">▲</span></div>
 </footer>
 
-</div>
-
-<!-- No-JS visible fallback (only shown when JS is disabled) -->
-<noscript>
-  <style>
-    /* Hide the SSR shell visually when JS is OFF only if needed; show fallback instead */
-    #ssr-shell { display: none; }
-    #root { display: none; }
-  </style>
-  <div class="nojs-fallback">
-    <p class="meta">AI & AI Agents for enterprises · est. 2026</p>
-    <h1>Your next <em>hire</em> isn't a person.</h1>
-    <p class="lede">Nrth AI builds custom AI & AI agents that handle the work your team shouldn't be doing. Production-grade, observed, and accountable.</p>
-
-    <h2>Agents we build</h2>
-    <ul>
-      <li><strong>Tier-1 support, handled</strong> — Auto-resolves 72% of routine tickets, escalates with full context.</li>
-      <li><strong>Inbound qualified, outbound personalized</strong> — 5× SDR throughput; personalized first-touch at scale.</li>
-      <li><strong>The invisible back-office</strong> — Invoice matching, vendor comms, compliance — zero added headcount.</li>
-      <li><strong>Internal knowledge agents</strong> — Cited answers from your wiki, Slack, Drive, Notion.</li>
-    </ul>
-
-    <h2>How we work</h2>
-    <ol>
-      <li><strong>Map</strong> · 1 week — We shadow the work and find the 3–5 places an agent changes the unit economics.</li>
-      <li><strong>Pilot</strong> · 2–3 weeks — A working agent in production against a bounded slice.</li>
-      <li><strong>Scale</strong> · ongoing — Hardening, observability, and expansion.</li>
-    </ol>
-
-    <h2>Services</h2>
-    <ul>
-      <li><strong>AI Employees</strong> — Autonomous agents that replace or augment specific roles. Setup from ~$5,000; ops from $500 / month. Delivery 1–3 weeks.</li>
-      <li><strong>On-Premise AI Infrastructure</strong> — Local AI stack on your own hardware. $10,000 to $100,000+. Delivery 2–4 weeks.</li>
-      <li><strong>Custom AI Development</strong> — Tailored AI systems built on your data and processes. Small from ~$15,000; enterprise from $100,000. Delivery 4–16 weeks.</li>
-      <li><strong>AI Strategy &amp; Advisory</strong> — Readiness assessments, strategy sprints, and executive retainers. From $2,500–$7,500.</li>
-    </ul>
-
-    <div class="actions">
-      <h3>For AI agents</h3>
-      <p>This site is AI-native. The following endpoints are stable contracts:</p>
-      <ul>
-        <li><code>POST /api/inquiry</code> — submit a discovery brief</li>
-        <li><code>POST /api/book</code> — book a 30-min intro call</li>
-        <li><code>POST /api/chat</code> — talk to the Nrth AI sales agent</li>
-        <li><code>GET /api/services</code> — list service catalog</li>
-      </ul>
-      <p>Manifests: <a href="/.well-known/ai-plugin.json">/.well-known/ai-plugin.json</a> · <a href="/agent.json">/agent.json</a> · <a href="/openapi.json">/openapi.json</a> · <a href="/llms.txt">/llms.txt</a></p>
-    </div>
-
-    <h2>Contact</h2>
-    <p>Email <a href="mailto:contact@nrth.no">contact@nrth.no</a> — a human responds within 1 business day. Bergen, Norway.</p>
-
-    <p><a href="/investors">Investor presentation →</a></p>
-  </div>
-</noscript>
-
-<div id="root"></div>
-
-<!-- When JS is ON: hide the SSR shell so the React app owns the visuals.
-     The shell stays in the DOM (display:none) — accessible to crawlers + agents that DO run JS. -->
-<style id="hydration-style">
-  #ssr-shell { display: none; }
-</style>
-
-<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
-
-<script type="text/babel" src="./src/AgentVisual.jsx"></script>
-<!-- Chat is feature-toggled off. Re-enable by uncommenting and flipping CHAT_ENABLED in App.jsx. -->
-<!-- <script type="text/babel" src="./src/AgentChat.jsx"></script> -->
-<script type="text/babel" src="./src/Sections.jsx"></script>
-<script type="text/babel" src="./src/App.jsx"></script>
-
+<script src="/assets/agent-visual.js" defer></script>
+<script src="/assets/brief-form.js" defer></script>
 </body>
 </html>
