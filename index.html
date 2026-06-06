@@ -198,14 +198,17 @@
     <span class="logo-mark">&lt;/&gt;</span>
     <span class="logo-word">Nrth AI</span>
   </a>
-  <nav class="nav-right" aria-label="Primary">
+  <nav class="nav-right" id="primary-nav" aria-label="Primary">
     <a class="nav-link" href="#product" data-action="navigate" data-target="#product">Product</a>
     <a class="nav-link" href="#work" data-action="navigate" data-target="#work">Work</a>
     <a class="nav-link" href="#company" data-action="navigate" data-target="#company">Company</a>
     <a class="nav-link" href="/services" data-action="navigate" data-target="/services">Services</a>
-    <a class="nav-link" href="/contact" data-action="navigate" data-target="/contact">Contact</a>
-    <a class="nav-cta" href="/contact" data-action="invoke" data-action-id="submitInquiry" aria-label="Send Nrth AI a discovery brief">Send a brief →</a>
+    <a class="nav-link" href="#contact" data-action="navigate" data-target="#contact">Contact</a>
+    <a class="nav-cta" href="#contact" data-action="invoke" data-action-id="submitInquiry" aria-label="Send Nrth AI a discovery brief">Send a brief →</a>
   </nav>
+  <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
 </header>
 
 <main id="main" role="main">
@@ -262,12 +265,11 @@
 
   <!-- ═══════════ PRODUCT ═══════════ -->
   <section class="section section--bordered" id="product" data-section="product" data-screen-label="Product" aria-label="The Nrth Agentic OS" itemscope itemtype="https://schema.org/SoftwareApplication">
-    <div class="sec-head">
-      <span class="kicker"><span class="star">✦</span> 01 · Product</span>
+    <div class="section-header">
+      <div class="kicker"><span class="star">✦</span> 01 · Product</div>
       <h2>The Nrth <em>Agentic OS</em>.</h2>
-      <p itemprop="description">A native AI Agentic OS — a secure runtime that connects your enterprise workflows, AI models, agents, and skills into one accountable layer. It runs on any hardware, on-premise, so your data never leaves the network.</p>
     </div>
-    <p class="section-intro">Not a chat box bolted onto your data. A layer that runs the work, keeps a full audit trail, and operates entirely inside your environment — so the people accountable for the outcome stay in control of it.</p>
+    <p class="section-intro" itemprop="description">A native AI Agentic OS — a secure runtime that connects your enterprise workflows, AI models, agents, and skills into one accountable layer. It runs on any hardware, on-premise, so your data never leaves the network. Not a chat box bolted onto your data: a layer that runs the work, keeps a full audit trail, and operates entirely inside your environment — so the people accountable for the outcome stay in control of it.</p>
 
     <div class="subsec" id="how">
       <div class="subsec-head"><span class="lbl"><span class="star">✦</span> How it works</span><h3>Setup, workflows, agents, skills.</h3></div>
@@ -358,11 +360,11 @@
 
   <!-- ═══════════ WORK ═══════════ -->
   <section class="section section--bordered" id="work" data-section="work" data-screen-label="Work" aria-label="Outcomes in production" itemscope itemtype="https://schema.org/OfferCatalog">
-    <div class="sec-head">
-      <span class="kicker"><span class="star">✦</span> 02 · Work</span>
+    <div class="section-header">
+      <div class="kicker"><span class="star">✦</span> 02 · Work</div>
       <h2>Outcomes, not <em>slideware</em>.</h2>
-      <p>Concrete numbers from agents running on the OS — what each one is built to hit against a bounded slice of real work. Proof the OS works in production, not a consulting portfolio.</p>
     </div>
+    <p class="section-intro">Concrete numbers from agents running on the OS — what each one is built to hit against a bounded slice of real work. Proof the OS works in production, not a consulting portfolio.</p>
     <div class="stat-row">
       <div class="stat-cell" data-metric="auto_resolved" data-value="0.72">
         <div class="big">72%</div>
@@ -429,11 +431,11 @@
 
   <!-- ═══════════ COMPANY ═══════════ -->
   <section class="section section--bordered" id="company" data-section="company" data-screen-label="Company" aria-label="Company">
-    <div class="sec-head">
-      <span class="kicker"><span class="star">✦</span> 03 · Company</span>
+    <div class="section-header">
+      <div class="kicker"><span class="star">✦</span> 03 · Company</div>
       <h2>Infrastructure for <em>enterprise AI agents</em>.</h2>
-      <p>Nrth AI is a pre-seed startup based in Bergen, Norway (est. 2026). We're building the next-generation operating system for enterprise AI agents — and taking on pilot customers to train and stress-test it in production. Demand for AI is enormous, but most companies are handed a subscription and left to wire it together themselves; we build the accountable layer that closes that gap.</p>
     </div>
+    <p class="section-intro">Nrth AI is a pre-seed startup based in Bergen, Norway (est. 2026). We're building the next-generation operating system for enterprise AI agents — and taking on pilot customers to train and stress-test it in production. Demand for AI is enormous, but most companies are handed a subscription and left to wire it together themselves; we build the accountable layer that closes that gap.</p>
 
     <div class="subsec">
       <div class="subsec-head"><span class="lbl"><span class="star">✦</span> Why now</span><h3>The timing isn't an accident.</h3></div>
@@ -558,5 +560,6 @@
 
 <script src="/assets/agent-visual.js" defer></script>
 <script src="/assets/brief-form.js" defer></script>
+<script src="/assets/nav.js" defer></script>
 </body>
 </html>

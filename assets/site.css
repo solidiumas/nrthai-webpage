@@ -121,6 +121,20 @@ select:focus-visible {
 }
 .nav-cta:hover { background: var(--accent); color: #000; }
 
+/* Mobile menu toggle (hidden on desktop) */
+.nav-toggle {
+  display: none; background: none; border: 0; cursor: pointer;
+  padding: 8px; margin: -8px -6px -8px 0; color: var(--fg); line-height: 0;
+}
+.nav-toggle .bar {
+  display: block; width: 22px; height: 2px; background: currentColor;
+  border-radius: 2px; transition: transform 0.22s, opacity 0.22s;
+}
+.nav-toggle .bar + .bar { margin-top: 5px; }
+body.nav-open .nav-toggle .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+body.nav-open .nav-toggle .bar:nth-child(2) { opacity: 0; }
+body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ───────── Eyebrows ───────── */
 .eyebrow {
   font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.22em;
@@ -233,6 +247,7 @@ section[id], [id].section { scroll-margin-top: 90px; }
   font-family: var(--serif); font-weight: 400;
   font-size: clamp(48px, 5.6vw, 84px); line-height: 0.98; letter-spacing: -0.02em;
 }
+.section-header h2 em { color: var(--accent); font-style: italic; }
 
 /* ───────── Card grids (Work) ───────── */
 .card-grid {
@@ -454,19 +469,18 @@ section[id], [id].section { scroll-margin-top: 90px; }
 .section-intro { font-size: 18px; color: var(--fg-dim); line-height: 1.55; max-width: 70ch; margin-top: 28px; }
 
 /* In-section sub-part (used when a big section groups several blocks) */
-.subsec { margin-top: 72px; }
-.subsec-head { margin-bottom: 28px; }
+.subsec { margin-top: 96px; }
+.subsec-head { margin-bottom: 36px; }
 .subsec-head .lbl {
-  display: block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--fg-dim); margin-bottom: 12px;
+  display: block; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--fg-dim); margin-bottom: 18px;
 }
 .subsec-head .lbl .star { color: var(--accent); }
 .subsec-head h3 {
-  font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3vw, 40px);
-  line-height: 1.02; letter-spacing: -0.01em;
+  font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.6vw, 48px);
+  line-height: 1.0; letter-spacing: -0.015em;
 }
 .subsec-head h3 em { color: var(--accent); font-style: italic; }
-@media (max-width: 720px) { .subsec { margin-top: 56px; } }
 
 /* ───────── OS stack (layered diagram: Setup / Workflows / Agents / Skills) ───────── */
 .os-stack {
@@ -590,9 +604,21 @@ section[id], [id].section { scroll-margin-top: 90px; }
   html, body { font-size: 15px; }
 
   .site-nav { padding: 14px 18px; }
-  .nav-link { display: none; }
-  .nav-right { gap: 0; }
-  .nav-cta { padding: 8px 12px; font-size: 10px; letter-spacing: 0.12em; }
+  .nav-toggle { display: block; }
+  .nav-right {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--bg);
+    -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%);
+    border-bottom: 1px solid var(--line-2);
+    box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.6);
+    padding: 4px 18px 18px; display: none;
+  }
+  body.nav-open .nav-right { display: flex; }
+  .nav-link { padding: 14px 2px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .nav-cta { margin-top: 16px; text-align: center; padding: 14px; font-size: 11px; letter-spacing: 0.16em; }
+  .subsec { margin-top: 64px; }
+  .subsec-head { margin-bottom: 28px; }
 
   .hero { padding: 110px 20px 60px; min-height: auto; }
   .hero h1 { font-size: clamp(40px, 11vw, 64px); line-height: 1; }
