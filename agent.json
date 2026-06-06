@@ -17,9 +17,9 @@
   },
   "pages": {
     "home": "https://nrth.no/",
-    "product": "https://nrth.no/product",
-    "work": "https://nrth.no/work",
-    "company": "https://nrth.no/company",
+    "product": "https://nrth.no/#product",
+    "work": "https://nrth.no/#work",
+    "company": "https://nrth.no/#company",
     "services": "https://nrth.no/services",
     "contact": "https://nrth.no/contact",
     "investors": "https://nrth.no/investors"

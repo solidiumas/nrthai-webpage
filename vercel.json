@@ -1,6 +1,11 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/product", "destination": "/#product", "permanent": true },
+    { "source": "/work", "destination": "/#work", "permanent": true },
+    { "source": "/company", "destination": "/#company", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/investors/:path*",

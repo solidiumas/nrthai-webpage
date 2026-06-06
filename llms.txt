@@ -13,7 +13,7 @@ A native AI Agentic OS: a secure runtime that turns models, agents, and real bus
 - Security-first: permissioned tool access, full audit logs, evals, guardrails, human-in-the-loop.
 - In active development. Pilot customers get early access via custom deployments.
 
-See: https://nrth.no/product
+See: https://nrth.no/#product
 
 ## Outcomes in production (Work)
 
@@ -24,7 +24,7 @@ Representative outcomes from agents running on the OS:
 - **Back-office automation agents** — invoice matching, vendor comms, compliance, reconciliation; zero added headcount.
 - Plus research, internal-knowledge, and voice/phone agents.
 
-See: https://nrth.no/work
+See: https://nrth.no/#work
 
 ## Services — early access to the OS
 
@@ -43,10 +43,10 @@ Pre-seed, Bergen, Norway, est. 2026. Two founders: Thomas Uthaug (business, prod
 
 ## Pages
 
-- Home: https://nrth.no/
-- Product (the Agentic OS): https://nrth.no/product
-- Work (outcomes): https://nrth.no/work
-- Company: https://nrth.no/company
+- Home — with Product, Work and Company as scroll-down sections: https://nrth.no/
+  - Product / the Agentic OS: https://nrth.no/#product
+  - Work / outcomes: https://nrth.no/#work
+  - Company / mission + team: https://nrth.no/#company
 - Services: https://nrth.no/services
 - Contact: https://nrth.no/contact
 - Investors: https://nrth.no/investors

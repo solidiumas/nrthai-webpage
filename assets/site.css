@@ -453,6 +453,21 @@ section[id], [id].section { scroll-margin-top: 90px; }
 .sec-head p { font-size: 18px; color: var(--fg-dim); line-height: 1.5; }
 .section-intro { font-size: 18px; color: var(--fg-dim); line-height: 1.55; max-width: 70ch; margin-top: 28px; }
 
+/* In-section sub-part (used when a big section groups several blocks) */
+.subsec { margin-top: 72px; }
+.subsec-head { margin-bottom: 28px; }
+.subsec-head .lbl {
+  display: block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--fg-dim); margin-bottom: 12px;
+}
+.subsec-head .lbl .star { color: var(--accent); }
+.subsec-head h3 {
+  font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.02; letter-spacing: -0.01em;
+}
+.subsec-head h3 em { color: var(--accent); font-style: italic; }
+@media (max-width: 720px) { .subsec { margin-top: 56px; } }
+
 /* ───────── OS stack (layered diagram: Setup / Workflows / Agents / Skills) ───────── */
 .os-stack {
   display: grid; gap: 2px; margin-top: 48px;
