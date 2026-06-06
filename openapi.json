@@ -3,8 +3,8 @@
   "info": {
     "title": "Nrth AI Public API",
     "version": "1.0.0",
-    "description": "AI-native API for Nrth AI. Lets agents read service info, submit inquiries, book consultations, and chat with the sales agent.",
-    "contact": { "email": "hello@nrth.ai", "name": "Nrth AI" }
+    "description": "AI-native API for Nrth AI — builder of the Nrth Agentic OS, a secure on-premise AI runtime for enterprise agents. Lets agents read service info, submit inquiries, book consultations, and chat with the sales agent.",
+    "contact": { "email": "contact@nrth.no", "name": "Nrth AI" }
   },
   "servers": [
     { "url": "https://nrth.no/api", "description": "Production" }

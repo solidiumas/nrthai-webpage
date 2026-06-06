@@ -1,11 +1,28 @@
 {
   "name": "Nrth AI",
-  "tagline": "Agents that actually do the work.",
-  "description": "B2B AI agent studio. We design, build, and ship custom AI agents for Nordic enterprises in customer support, sales, operations, and internal knowledge.",
+  "tagline": "The Agentic OS for enterprise AI.",
+  "description": "Nrth AI builds the Nrth Agentic OS — a secure, on-premise AI runtime that connects enterprise workflows, models, agents, and skills into one accountable layer. A pre-seed AI product startup in Bergen, Norway. We also ship paid early-access deployments (AI Employees, on-premise infrastructure, custom development, advisory) that put the OS into production today.",
   "url": "https://nrth.no",
   "contact": {
-    "email": "hello@nrth.ai",
-    "location": "Oslo, Norway"
+    "email": "contact@nrth.no",
+    "location": "Bergen, Norway"
+  },
+  "product": {
+    "name": "Nrth Agentic OS",
+    "status": "in_active_development",
+    "summary": "A secure runtime connecting workflows, models, agents, and skills into one accountable layer. Hardware-agnostic and on-premise; data never leaves the network.",
+    "model": ["setup", "workflows", "agents", "skills"],
+    "early_access": "Pilot customers get early access via custom deployments.",
+    "url": "https://nrth.no/product"
+  },
+  "pages": {
+    "home": "https://nrth.no/",
+    "product": "https://nrth.no/#product",
+    "work": "https://nrth.no/#work",
+    "company": "https://nrth.no/#company",
+    "services": "https://nrth.no/services",
+    "contact": "https://nrth.no/contact",
+    "investors": "https://nrth.no/investors"
   },
   "capabilities": [
     {
