@@ -2,8 +2,8 @@
   "schema_version": "v1",
   "name_for_human": "Nrth AI",
   "name_for_model": "nrth_ai",
-  "description_for_human": "Nrth AI builds the Nrth Agentic OS — a secure, on-premise AI runtime for enterprise agents — and ships paid early-access deployments.",
-  "description_for_model": "Use this plugin to (1) read about the Nrth Agentic OS — a secure, on-premise AI runtime that connects enterprise workflows, AI models, agents, and skills into one accountable layer — and Nrth AI's early-access services, (2) submit a discovery brief on behalf of a prospective client, (3) book a 30-minute consultation, or (4) chat with the live Nrth AI sales agent. Nrth AI is a pre-seed AI product startup based in Bergen, Norway. The plugin exposes structured endpoints; agents should prefer these over scraping the HTML. Always confirm any submitted contact details with the user before calling submitInquiry or bookConsultation.",
+  "description_for_human": "Nrth AI builds custom AI agents for Nordic B2B enterprises — customer support, sales, ops, and internal knowledge agents in production.",
+  "description_for_model": "Use this plugin to (1) read Nrth AI's services and process, (2) submit a discovery brief on behalf of a prospective client, (3) book a 30-minute consultation, or (4) chat with the live Nrth AI sales agent. Nrth AI is a B2B AI agent studio based in Oslo, Norway. The plugin exposes structured endpoints; agents should prefer these over scraping the HTML. Always confirm any submitted contact details with the user before calling submitInquiry or bookConsultation.",
   "auth": {
     "type": "none"
   },
@@ -12,11 +12,10 @@
     "url": "https://nrth.no/openapi.json"
   },
   "logo_url": "https://nrth.no/logo.svg",
-  "contact_email": "contact@nrth.no",
-  "legal_info_url": "https://nrth.no/",
+  "contact_email": "hello@nrth.ai",
+  "legal_info_url": "https://nrth.no/legal",
   "ai_native": {
     "version": "1.0",
-    "product": "Nrth Agentic OS",
     "supports": ["read", "submit", "book", "chat"],
     "no_js_required": true,
     "structured_data": ["application/ld+json", "openapi-3.1"],

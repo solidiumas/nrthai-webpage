@@ -1,77 +1,42 @@
 # Nrth AI
 
-> Nrth AI builds the Nrth Agentic OS — a secure, on-premise AI runtime that connects enterprise workflows, AI models, agents, and skills into one accountable layer. We also ship paid early-access deployments that put the OS into production today.
+> Nrth AI designs, builds, and ships custom AI agents for Nordic enterprises. We replace entire workflows — not features, not chatbots — with production-grade agents that pay for themselves within the first quarter.
 
-Nrth AI is a pre-seed AI product startup based in Bergen, Norway (est. 2026). We are building the next-generation infrastructure for enterprise AI agents, and we take on pilot customers to deploy, train, and stress-test the OS in production.
+Nrth AI is a B2B AI agent studio based in Oslo, Norway. We work with mid-market and enterprise clients across the Nordics to ship agents that handle real work in production: customer support, sales outreach, internal knowledge, back-office automation, research, and voice/phone agents.
 
-## Product — the Nrth Agentic OS
+## Services
 
-A native AI Agentic OS: a secure runtime that turns models, agents, and real business workflows into one governed system — observable, permissioned, and accountable for every action it takes.
+- **Customer support agents** — Tier-1 ticket resolution. Reads docs, ticket history, and CRM. Auto-resolves ~72% of routine tickets, escalates the rest with full context.
+- **Sales-outreach agents** — Inbound qualification + outbound personalization. Researches prospects, drafts first-touch messages in your voice, keeps pipeline warm. ~5× SDR throughput.
+- **Internal knowledge agents** — Read your wiki, Slack, Drive, Notion. Answer employee questions with citations.
+- **Back-office automation agents** — Invoice matching, vendor comms, compliance, reconciliation. Zero added headcount.
+- **Research & intelligence agents** — Continuous monitoring, briefings, deep-dive reports.
+- **Voice & phone agents** — Inbound and outbound voice agents for support and sales.
 
-- Runs on any hardware, on-premise — your data never leaves the network.
-- Setup → Workflows → Agents → Skills: four layers, one accountable system.
-- Security-first: permissioned tool access, full audit logs, evals, guardrails, human-in-the-loop.
-- In active development. Pilot customers get early access via custom deployments.
+## Process
 
-See: https://nrth.no/#product
+1. **Map** (1 week) — We sit with your team, shadow the work, and find the 3–5 places an agent will change the unit economics.
+2. **Pilot** (2–3 weeks) — Working agent in production against a bounded slice. Real data, real users, measurable outcomes.
+3. **Scale** — We harden, observe, and expand. Agents operate as named team members with evals, guardrails, and humans-in-the-loop where it matters.
 
-## Outcomes in production (Work)
+## Pricing
 
-Representative outcomes from agents running on the OS:
-
-- **Customer support agents** — ~72% of tier-1 tickets auto-resolved; the rest escalated with full context.
-- **Sales-outreach agents** — ~5× SDR throughput; personalized first-touch at scale.
-- **Back-office automation agents** — invoice matching, vendor comms, compliance, reconciliation; zero added headcount.
-- Plus research, internal-knowledge, and voice/phone agents.
-
-See: https://nrth.no/#work
-
-## Services — early access to the OS
-
-Four engagements, with pricing and delivery timelines included:
-
-- **AI Employees** — an agent running on the OS that replaces or augments a role. Setup from ~$5,000; monthly ops from $500. Delivery 1–3 weeks.
-- **On-Premise AI Infrastructure** — the platform/infrastructure the OS runs on, on your own hardware. Typically $10,000–$100,000+. Delivery 2–4 weeks.
-- **Custom AI Development** — custom builds on the OS. Small from ~$15,000; mid-size from $40,000; enterprise from $100,000+. Delivery 4–16 weeks.
-- **AI Strategy & Advisory** — OS-adoption advisory. Readiness assessments from $3,500; strategy sprints from $7,500; executive retainers from $2,500/month. Delivery 1–2 weeks.
-
-See: https://nrth.no/services
-
-## Company
-
-Pre-seed, Bergen, Norway, est. 2026. Two founders: Thomas Uthaug (business, product & delivery) and Simen Uthaug (technical & developer). We take on pilot customers to train and stress-test the OS. Investor presentation: https://nrth.no/investors
-
-## Pages
-
-- Home — with Product, Work and Company as scroll-down sections: https://nrth.no/
-  - Product / the Agentic OS: https://nrth.no/#product
-  - Work / outcomes: https://nrth.no/#work
-  - Company / mission + team: https://nrth.no/#company
-- Services: https://nrth.no/services
-- Contact: https://nrth.no/contact
-- Investors: https://nrth.no/investors
+Projects start at a small pilot (2–3 weeks, fixed-fee) and scale from there. Specifics depend on scope.
 
 ## Contact
 
-- Email: contact@nrth.no
+- Email: hello@nrth.ai
 - Website: https://nrth.no
-- Location: Bergen, Norway
-- Send a brief: https://nrth.no/contact — a human responds within 1 business day.
+- Location: Oslo, Norway
+- Talk to our agent: https://nrth.no/#contact (a working AI agent embedded on the homepage that captures your brief and routes it to a human within 1 business day)
 
 ## For AI agents
 
 - Action manifest: /.well-known/ai-plugin.json
 - Agent card: /agent.json
 - OpenAPI: /openapi.json
-- Structured data: JSON-LD embedded in pages (Organization, Service, SoftwareApplication, FAQPage, ContactPoint)
-- Machine-readable sitemap: /sitemap.xml
+- Structured data: JSON-LD embedded in / (Organization, Service, FAQPage, ContactPoint)
+- Machine-readable site map: /sitemap.xml
 - Crawl policy: /robots.txt (AI crawlers explicitly allowed)
 
-Stable API contracts (unchanged):
-
-- `POST /api/inquiry` — submit a discovery brief
-- `POST /api/book` — book a 30-minute intro call
-- `POST /api/chat` — talk to the Nrth AI sales agent
-- `GET /api/services` — list the service catalog
-
-Every page is static HTML that requires no JavaScript to read, so any agent can read and act on this site without rendering JS.
+The homepage exposes a JS-free fallback (`<noscript>`) containing the same content as the rendered page, plus all action endpoints, so any agent can read and act on this site without rendering JavaScript.
