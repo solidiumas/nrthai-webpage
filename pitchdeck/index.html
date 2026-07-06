@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nrth AI — Pitch deck</title>
+<meta name="description" content="Nrth AI — investorpresentasjon. Nrth Agentic OS: sikker, lokal AI-infrastruktur for bedrifter." />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="theme-color" content="#0a0a0b" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
+
+<!-- Brand fonts: same as nrth.no — Instrument Serif (display), Geist (sans), Geist Mono (mono); Satoshi for the wordmark -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg:#0a0a0b;
+    --bg-2:#111114;
+    --fg:#f5f2ec;
+    --fg-dim:#a8a49c;
+    --fg-faint:#5c5a55;
+    --line:rgba(245,242,236,0.08);
+    --line-2:rgba(245,242,236,0.14);
+    --accent:#ff8a5b;
+    --serif:"Instrument Serif","Times New Roman",serif;
+    --sans:"Geist",ui-sans-serif,system-ui,-apple-system,sans-serif;
+    --mono:"Geist Mono",ui-monospace,monospace;
+    --maxw:1180px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  html,body{height:100%;overscroll-behavior:none}
+  body{
+    font-family:var(--sans);
+    background:var(--bg);
+    color:var(--fg);
+    line-height:1.5;
+    font-size:16px;
+    overflow:hidden;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-feature-settings:"ss01","ss02","cv11";
+  }
+  /* Subtle grain overlay — same as nrth.no */
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:1000;
+    opacity:0.035;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  ::selection{background:var(--accent);color:#000}
+
+  h1,h2,h3,h4{
+    font-family:var(--serif);
+    color:var(--fg);
+    line-height:1.02;
+    letter-spacing:-0.02em;
+    font-weight:400;
+  }
+  em{font-style:italic;color:var(--accent)}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  /* ---------- Language switch ---------- */
+  body.lang-en .lang-no{display:none !important}
+  body:not(.lang-en) .lang-en{display:none !important}
+
+  /* ---------- Chrome: progress, logo, counter, controls ---------- */
+  .progress{
+    position:fixed;top:0;left:0;right:0;height:2px;z-index:60;background:var(--line);
+  }
+  .progress .fill{
+    height:100%;width:0;background:var(--accent);
+    box-shadow:0 0 12px var(--accent);
+    transition:width .45s var(--ease);
+  }
+  .chrome-top{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 28px;pointer-events:none;
+  }
+  .chrome-top > *{pointer-events:auto}
+  .logo{display:flex;align-items:center;gap:10px}
+  .logo svg{display:block}
+  .logo .word{
+    font-family:"Satoshi",var(--sans);
+    font-weight:700;font-size:15px;color:var(--fg);letter-spacing:-0.02em;
+  }
+  .chrome-right{display:flex;align-items:center;gap:12px}
+  .chip{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--fg-faint);border:1px solid var(--line-2);padding:7px 12px;
+    background:color-mix(in oklab, var(--bg) 72%, transparent);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    transition:color .15s,border-color .15s;
+  }
+  button.chip:hover, a.chip:hover{color:var(--fg);border-color:var(--fg-dim)}
+
+  .chrome-bottom{
+    position:fixed;bottom:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 28px;pointer-events:none;
+  }
+  .chrome-bottom > *{pointer-events:auto}
+  .counter{
+    font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--fg-faint);
+  }
+  .counter b{color:var(--fg);font-weight:400}
+  .nav-btns{display:flex;gap:8px}
+  .nav-btn{
+    width:44px;height:44px;border:1px solid var(--line-2);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--fg-dim);font-family:var(--mono);font-size:15px;
+    background:color-mix(in oklab, var(--bg) 72%, transparent);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    transition:all .15s;
+  }
+  .nav-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .nav-btn[disabled]{opacity:.3;pointer-events:none}
+  .keys-hint{
+    font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--fg-faint);display:flex;align-items:center;gap:8px;
+  }
+  .keys-hint .k{border:1px solid var(--line-2);padding:3px 7px}
+
+  /* side dots */
+  .dots{
+    position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:50;
+    display:flex;flex-direction:column;gap:10px;
+  }
+  .dots button{
+    width:8px;height:8px;border-radius:50%;padding:0;
+    background:var(--line-2);transition:all .25s;position:relative;
+  }
+  .dots button.active{background:var(--accent);box-shadow:0 0 10px var(--accent)}
+  .dots button:hover{background:var(--fg-dim)}
+  .dots button .tip{
+    position:absolute;right:18px;top:50%;transform:translateY(-50%);
+    font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--fg-dim);background:var(--bg-2);border:1px solid var(--line-2);
+    padding:5px 10px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;
+  }
+  .dots button:hover .tip{opacity:1}
+
+  /* ---------- Deck / slides ---------- */
+  .deck{position:fixed;inset:0;overflow:hidden}
+  .slide{
+    position:absolute;inset:0;
+    display:flex;align-items:center;justify-content:center;
+    padding:96px 28px 88px;
+    opacity:0;visibility:hidden;transform:translateY(26px);
+    transition:opacity .55s var(--ease),transform .55s var(--ease),visibility 0s linear .55s;
+    overflow-y:auto;overflow-x:hidden;
+  }
+  .slide.active{
+    opacity:1;visibility:visible;transform:none;
+    transition:opacity .55s var(--ease),transform .55s var(--ease),visibility 0s;
+    z-index:2;
+  }
+  .slide.prev{transform:translateY(-26px)}
+  .inner{width:100%;max-width:var(--maxw);margin:auto}
+
+  /* staggered reveal inside active slide */
+  .r{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+  .slide.active .r{opacity:1;transform:none}
+  .slide.active .r.d1{transition-delay:.1s}
+  .slide.active .r.d2{transition-delay:.2s}
+  .slide.active .r.d3{transition-delay:.3s}
+  .slide.active .r.d4{transition-delay:.4s}
+  .slide.active .r.d5{transition-delay:.5s}
+
+  .eyebrow{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--fg-dim);display:inline-flex;align-items:center;gap:10px;margin-bottom:26px;
+  }
+  .eyebrow::before{
+    content:"";width:6px;height:6px;border-radius:50%;
+    background:var(--accent);box-shadow:0 0 10px var(--accent);
+  }
+  .slide h2{font-size:clamp(36px,5vw,64px);margin-bottom:22px;max-width:20ch}
+  .slide .lead{font-size:clamp(16px,1.7vw,19px);color:var(--fg-dim);max-width:62ch;line-height:1.55}
+
+  /* ---------- Title slide ---------- */
+  .s-title{text-align:left}
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:10px;
+    border:1px solid var(--line);background:var(--bg-2);
+    padding:8px 14px;margin-bottom:34px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-dim);
+  }
+  .hero-tag b{color:var(--accent);font-weight:400}
+  .s-title h1{font-size:clamp(46px,7vw,104px);line-height:.98;max-width:16ch;margin-bottom:28px}
+  .s-title .lead{margin-bottom:36px}
+  .pills{display:flex;flex-wrap:wrap;gap:10px}
+  .pill{
+    background:var(--bg-2);border:1px solid var(--line);
+    padding:9px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--fg-dim);display:inline-flex;align-items:center;gap:8px;
+  }
+  .pill .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+  /* ---------- Card grids ---------- */
+  .grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  .card{background:var(--bg);padding:30px 28px;transition:background .25s}
+  .card:hover{background:var(--bg-2)}
+  .card .num{
+    font-family:var(--mono);font-size:11px;color:var(--accent);
+    letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px;display:block;
+  }
+  .card h3{font-size:clamp(22px,2.2vw,28px);margin-bottom:12px}
+  .card p{font-size:14.5px;color:var(--fg-dim);line-height:1.55}
+  .card .tagline{
+    margin-top:18px;padding-top:14px;border-top:1px solid var(--line);
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-faint);
+  }
+
+  /* ---------- OS stack ---------- */
+  .os-stack{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+  .os-layer{
+    background:var(--bg);padding:20px 26px;
+    display:grid;grid-template-columns:200px 1fr;gap:26px;align-items:baseline;
+    transition:background .25s;cursor:default;
+  }
+  .os-layer:hover{background:var(--bg-2)}
+  .os-layer .layer-id{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--fg-faint);display:block;margin-bottom:6px;
+  }
+  .os-layer .layer-name{font-family:var(--serif);font-size:clamp(20px,2vw,26px);line-height:1.05;letter-spacing:-0.01em}
+  .os-layer p{font-size:14px;line-height:1.55;color:var(--fg-dim)}
+
+  /* ---------- Split / panel ---------- */
+  .split{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:start}
+  .checklist{list-style:none;display:flex;flex-direction:column;gap:16px}
+  .checklist li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--fg-dim);line-height:1.55}
+  .checklist .ic{
+    flex:0 0 auto;width:26px;height:26px;border:1px solid var(--line-2);
+    display:flex;align-items:center;justify-content:center;color:var(--accent);margin-top:2px;
+    font-family:var(--mono);font-size:12px;
+  }
+  .checklist li b{color:var(--fg);font-weight:600}
+  .panel{
+    background:linear-gradient(180deg,rgba(255,255,255,0.015),rgba(255,255,255,0));
+    border:1px solid var(--line-2);padding:28px;position:relative;overflow:hidden;
+  }
+  .panel h3{font-size:22px;margin-bottom:12px}
+  .panel .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+    padding:13px 0;border-bottom:1px solid var(--line)}
+  .panel .row:last-of-type{border-bottom:0}
+  .panel .row .k{color:var(--fg-dim);font-size:14px}
+  .panel .row .v{font-family:var(--serif);color:var(--fg);font-size:21px;white-space:nowrap}
+  .panel .row .v em{font-style:normal}
+  .panel .codeglow{
+    position:absolute;right:-16px;bottom:-28px;font-family:var(--mono);
+    font-size:110px;color:rgba(245,242,236,0.03);
+  }
+
+  /* ---------- Stats ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .stat{background:var(--bg);padding:26px 22px}
+  .stat .big{font-family:var(--serif);font-size:clamp(40px,4.6vw,58px);color:var(--accent);letter-spacing:-0.02em;line-height:1}
+  .stat .big .unit{font-size:.55em;margin-left:2px}
+  .stat .lbl{font-size:13px;color:var(--fg-faint);margin-top:12px;line-height:1.45}
+
+  /* ---------- Timeline ---------- */
+  .timeline{position:relative}
+  .timeline::before{content:"";position:absolute;left:15px;top:6px;bottom:6px;width:1px;background:var(--line-2)}
+  .tl-item{position:relative;padding:0 0 26px 50px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item .dot{
+    position:absolute;left:9px;top:4px;width:14px;height:14px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--accent);
+  }
+  .tl-item.soft .dot{border-color:var(--line-2)}
+  .tl-item .when{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase}
+  .tl-item.soft .when{color:var(--fg-faint)}
+  .tl-item h3{font-size:clamp(19px,2vw,23px);margin:6px 0}
+  .tl-item p{font-size:14px;color:var(--fg-dim);max-width:64ch;line-height:1.5}
+
+  /* ---------- Team ---------- */
+  .team{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .member{background:var(--bg);padding:30px 28px;transition:background .25s}
+  .member:hover{background:var(--bg-2)}
+  .member .avatar{
+    width:48px;height:48px;background:var(--bg-2);color:var(--accent);
+    border:1px solid var(--line-2);
+    display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;margin-bottom:18px;
+  }
+  .member h3{font-size:26px;margin-bottom:5px}
+  .member .role{font-family:var(--mono);font-size:11px;color:var(--accent);margin-bottom:14px;letter-spacing:.08em;text-transform:uppercase}
+  .member p{font-size:14px;color:var(--fg-dim);margin-bottom:14px;line-height:1.55}
+  .member .tags{display:flex;flex-wrap:wrap;gap:7px}
+  .member .tags span{font-family:var(--mono);font-size:10px;background:var(--bg-2);border:1px solid var(--line);padding:4px 9px;color:var(--fg-dim);letter-spacing:.06em;text-transform:uppercase}
+
+  /* ---------- Terms / funds ---------- */
+  .terms{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .term{background:var(--bg);padding:24px 22px}
+  .term .lbl{font-family:var(--mono);font-size:10.5px;color:var(--fg-faint);text-transform:uppercase;letter-spacing:.16em}
+  .term .val{font-family:var(--serif);font-size:clamp(26px,2.8vw,34px);color:var(--fg);margin-top:10px;letter-spacing:-0.01em;line-height:1}
+  .term .val em{font-style:normal}
+  .term .sub{font-size:12.5px;color:var(--fg-faint);margin-top:8px;line-height:1.4}
+
+  .funds{display:flex;flex-direction:column;gap:15px}
+  .fund-row .top{display:flex;justify-content:space-between;margin-bottom:7px;font-size:14px;color:var(--fg-dim)}
+  .fund-row .top .pct{font-family:var(--mono);color:var(--fg)}
+  .track{height:8px;background:var(--bg-2);border:1px solid var(--line);overflow:hidden}
+  .bar{height:100%;width:0;background:var(--accent);transition:width 1.1s var(--ease)}
+  .slide.active .bar{width:var(--w);transition-delay:.35s}
+
+  .highlight{
+    border:1px solid var(--line-2);border-left:3px solid var(--accent);
+    background:linear-gradient(180deg,rgba(255,255,255,0.015),rgba(255,255,255,0));
+    padding:18px 22px;font-size:15px;color:var(--fg-dim);line-height:1.55;
+  }
+
+  /* ---------- Quote (Hardanger) ---------- */
+  .bigquote{
+    font-family:var(--serif);font-size:clamp(22px,2.6vw,32px);line-height:1.25;
+    color:var(--fg);max-width:34ch;letter-spacing:-0.01em;
+  }
+  .bigquote em{color:var(--accent)}
+
+  /* ---------- Contact slide ---------- */
+  .contacts{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--accent);color:#000;font-weight:500;
+    padding:14px 22px;font-size:12px;
+    font-family:var(--mono);letter-spacing:.16em;text-transform:uppercase;
+    transition:transform .15s,box-shadow .15s;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px -8px var(--accent)}
+  .btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line-2)}
+  .btn.ghost:hover{background:var(--bg-2);border-color:var(--fg);box-shadow:none}
+  .risk{font-size:11.5px;color:var(--fg-faint);max-width:86ch;margin-top:34px;line-height:1.65}
+
+  .mt-18{margin-top:18px}
+  .mt-28{margin-top:28px}
+  .mt-38{margin-top:38px}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:940px){
+    .g3,.g4{grid-template-columns:repeat(2,1fr)}
+    .split{grid-template-columns:1fr;gap:28px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .os-layer{grid-template-columns:1fr;gap:8px;padding:18px 22px}
+    .dots{display:none}
+    .keys-hint{display:none}
+    .slide{padding:88px 20px 84px}
+  }
+  @media(max-width:640px){
+    .g2,.g3,.g4,.team,.terms{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr 1fr}
+    body{font-size:15px}
+    .chip.hide-m{display:none}
+    .chrome-top{padding:16px 18px}
+    .chrome-bottom{padding:14px 18px}
+    .slide h2{font-size:clamp(30px,8vw,40px)}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .slide,.r,.bar,.progress .fill{transition:none !important}
+  }
+
+  /* ---------- Print: one slide per page ---------- */
+  @media print{
+    body{overflow:visible;background:#fff;color:#000}
+    body::before{display:none}
+    .chrome-top,.chrome-bottom,.dots,.progress{display:none}
+    .deck{position:static}
+    .slide{
+      position:static;opacity:1;visibility:visible;transform:none;
+      page-break-after:always;padding:40px;min-height:100vh;
+    }
+    .r{opacity:1;transform:none}
+    .bar{width:var(--w)}
+  }
+</style>
+</head>
+<body class="lang-no">
+
+<div class="progress" aria-hidden="true"><div class="fill" id="progress-fill"></div></div>
+
+<!-- ============ CHROME: TOP ============ -->
+<div class="chrome-top">
+  <a href="/" class="logo" aria-label="Nrth AI — hovedsiden">
+    <svg width="32" height="24" viewBox="0 0 96 60" fill="none" aria-hidden="true">
+      <path d="M30 12 L13 30 L30 48" stroke="#FF8A5B" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="40" y1="50" x2="56" y2="10" stroke="#FF8A5B" stroke-width="8.5" stroke-linecap="round"/>
+      <path d="M66 12 L83 30 L66 48" stroke="#FF8A5B" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="word">Nrth AI</span>
+  </a>
+  <div class="chrome-right">
+    <span class="chip hide-m"><span class="lang-no">Konfidensielt</span><span class="lang-en">Confidential</span></span>
+    <button class="chip" id="lang-btn" aria-label="Switch language">EN</button>
+  </div>
+</div>
+
+<!-- ============ DECK ============ -->
+<main class="deck" id="deck" aria-live="polite">
+
+  <!-- 01 · TITLE -->
+  <section class="slide s-title" data-title="Nrth AI">
+    <div class="inner">
+      <div class="hero-tag r">
+        <span class="lang-no">Investorpresentasjon · Bergen &amp; Hardanger · <b>2026</b></span>
+        <span class="lang-en">Investor presentation · Bergen &amp; Hardanger · <b>2026</b></span>
+      </div>
+      <h1 class="r d1">
+        <span class="lang-no">Vi bygger operativ&shy;systemet for <em>sikker AI</em> i bedrifter.</span>
+        <span class="lang-en">We're building the operating system for <em>secure enterprise AI</em>.</span>
+      </h1>
+      <p class="lead r d2">
+        <span class="lang-no">Nrth Agentic OS er en sikker AI-plattform som kjører på bedriftens egen maskinvare — der dataene aldri forlater huset, og hver handling kan etterprøves.</span>
+        <span class="lang-en">The Nrth Agentic OS is a secure AI runtime that runs on the company's own hardware — data never leaves the building, and every action is auditable.</span>
+      </p>
+      <div class="pills r d3">
+        <span class="pill"><span class="dot"></span><span class="lang-no">Produktselskap · pre-seed</span><span class="lang-en">Product company · pre-seed</span></span>
+        <span class="pill"><span class="dot"></span><span class="lang-no">Røtter i Hardanger</span><span class="lang-en">Roots in Hardanger</span></span>
+        <span class="pill"><span class="dot"></span><span class="lang-no">Henter 2–4 MNOK</span><span class="lang-en">Raising NOK 2–4M</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · PROBLEM -->
+  <section class="slide" data-title="Problemet">
+    <div class="inner">
+      <span class="eyebrow r"><span class="lang-no">Problemet</span><span class="lang-en">The problem</span></span>
+      <h2 class="r d1">
+        <span class="lang-no">Alle vil ha AI. Nesten ingen får det <em>trygt</em> i produksjon.</span>
+        <span class="lang-en">Everyone wants AI. Almost no one gets it into production <em>safely</em>.</span>
+      </h2>
+      <p class="lead r d2" style="margin-bottom:34px">
+        <span class="lang-no">Etterspørselen er enorm, men mellom AI-modellene og det faktiske arbeidet mangler det et lag som er sikkert, etterprøvbart og under bedriftens kontroll.</span>
+        <span class="lang-en">Demand is enormous, but between the AI models and the actual work there's a missing layer — one that is secure, auditable and under the company's control.</span>
+      </p>
+      <div class="grid g3">
+        <div class="card r d2">
+          <span class="num">01</span>
+          <h3><span class="lang-no">Datasuverenitet er ikke valgfritt</span><span class="lang-en">Data sovereignty isn't optional</span></h3>
+          <p><span class="lang-no">For regulerte bransjer, industri, energi og maritim sektor er det uaktuelt å sende sensitive data til servere i utlandet. Dagens AI-tjenester krever nettopp det.</span><span class="lang-en">For regulated industries, manufacturing, energy and maritime, sending sensitive data to servers abroad is a non-starter. Today's AI services demand exactly that.</span></p>
+          <div class="tagline"><span class="lang-no">Skyen er ikke et alternativ</span><span class="lang-en">The cloud is not an option</span></div>
+        </div>
+        <div class="card r d3">
+          <span class="num">02</span>
+          <h3><span class="lang-no">Verktøy er ikke løsninger</span><span class="lang-en">Tools are not solutions</span></h3>
+          <p><span class="lang-no">Bedrifter kjøper AI-abonnementer og må selv få alt til å henge sammen. Resultatet er pilotprosjekter som aldri når produksjon.</span><span class="lang-en">Companies buy AI subscriptions and are left to stitch everything together themselves. The result: pilots that never reach production.</span></p>
+          <div class="tagline"><span class="lang-no">Limet mangler</span><span class="lang-en">The glue is missing</span></div>
+        </div>
+        <div class="card r d4">
+          <span class="num">03</span>
+          <h3><span class="lang-no">Ingen ansvarlighet</span><span class="lang-en">No accountability</span></h3>
+          <p><span class="lang-no">Når en AI-agent handler på vegne av bedriften, må noen kunne svare for hva den gjorde og hvorfor. Svarte bokser uten logg og tilgangsstyring stopper i compliance.</span><span class="lang-en">When an AI agent acts on the company's behalf, someone must be able to answer for what it did and why. Black boxes without audit logs and permissions die in compliance review.</span></p>
+          <div class="tagline"><span class="lang-no">Svart boks stopper i styret</span><span class="lang-en">Black boxes die in the boardroom</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · SOLUTION / PRODUCT -->
+  <section class="slide" data-title="Produktet">
+    <div class="inner">
+      <span class="eyebrow r"><span class="lang-no">Løsningen</span><span class="lang-en">The solution</span></span>
+      <h2 class="r d1">
+        <span class="lang-no">Nrth <em>Agentic OS</em> — ett sikkert lag mellom AI og arbeidet.</span>
+        <span class="lang-en">The Nrth <em>Agentic OS</em> — one secure layer between AI and the work.</span>
+      </h2>
+      <p class="lead r d2" style="margin-bottom:30px">
+        <span class="lang-no">Et operativsystem for AI-agenter: en sikker kjøretid som kobler bedriftens arbeidsprosesser, AI-modeller, agenter og ferdigheter sammen i ett etterprøvbart system — på bedriftens egen maskinvare.</span>
+        <span class="lang-en">An operating system for AI agents: a secure runtime connecting the company's workflows, AI models, agents and skills into one auditable system — on the company's own hardware.</span>
+      </p>
+      <div class="os-stack r d3">
+        <div class="os-layer">
+          <div><span class="layer-id"><span class="lang-no">Lag 01</span><span class="lang-en">Layer 01</span></span><span class="layer-name">Setup</span></div>
+          <p><span class="lang-no">Koble til systemer, data og modeller. OS-et installeres i bedriftens miljø og kartlegger verktøy, tilganger og grenser hver agent får lov til å bruke.</span><span class="lang-en">Connect systems, data and models. The OS deploys into the company's environment and maps the tools, permissions and guardrails each agent may use.</span></p>
+        </div>
+        <div class="os-layer">
+          <div><span class="layer-id"><span class="lang-no">Lag 02</span><span class="lang-en">Layer 02</span></span><span class="layer-name">Workflows</span></div>
+          <p><span class="lang-no">Definer arbeidet. Reelle forretningsprosesser blir strukturerte, observerbare arbeidsflyter OS-et kan kjøre, overvåke og forbedre.</span><span class="lang-en">Define the work. Real business processes become structured, observable workflows the OS can run, monitor and improve.</span></p>
+        </div>
+        <div class="os-layer">
+          <div><span class="layer-id"><span class="lang-no">Lag 03</span><span class="lang-en">Layer 03</span></span><span class="layer-name">Agents</span></div>
+          <p><span class="lang-no">Sett agentene i arbeid. Navngitte agenter utfører arbeidsflytene ende til ende — og eskalerer til et menneske i det øyeblikket en oppgave krever det.</span><span class="lang-en">Put agents to work. Named agents execute workflows end to end — escalating to a human the moment a task requires one.</span></p>
+        </div>
+        <div class="os-layer">
+          <div><span class="layer-id"><span class="lang-no">Lag 04</span><span class="lang-en">Layer 04</span></span><span class="layer-name">Skills</span></div>
+          <p><span class="lang-no">Utvid hva agentene kan. Gjenbrukbare ferdigheter — søk, uthenting, beregning, integrasjoner — deles på tvers, så kapasiteten vokser i stedet for å bygges på nytt hver gang.</span><span class="lang-en">Extend what agents can do. Reusable skills — search, retrieval, compute, integrations — are shared across the system, so capability compounds instead of being rebuilt.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · WHY DIFFERENT -->
+  <section class="slide" data-title="Fortrinn">
+    <div class="inner">
+      <span class="eyebrow r"><span class="lang-no">Hvorfor vi vinner</span><span class="lang-en">Why we win</span></span>
+      <h2 class="r d1">
+        <span class="lang-no">Sikker gjennom <em>arkitektur</em> — ikke gjennom løfter.</span>
+        <span class="lang-en">Secure by <em>architecture</em> — not by promise.</span>
+      </h2>
+      <div class="grid g4 mt-28">
+        <div class="card r d1">
+          <span class="num">01 · Hardware</span>
+          <h3><span class="lang-no">Kjører på alt</span><span class="lang-en">Runs on anything</span></h3>
+          <p><span class="lang-no">GPU-server, arbeidsstasjon eller infrastrukturen bedriften allerede eier. Ingen innlåsing til én leverandør eller sky.</span><span class="lang-en">A GPU server, a workstation, or infrastructure the company already owns. No vendor or cloud lock-in.</span></p>
+          <div class="tagline"><span class="lang-no">On-prem eller sky</span><span class="lang-en">On-prem or cloud</span></div>
+        </div>
+        <div class="card r d2">
+          <span class="num">02 · <span class="lang-no">Suverenitet</span><span class="lang-en">Sovereignty</span></span>
+          <h3><span class="lang-no">Data forlater aldri huset</span><span class="lang-en">Data never leaves</span></h3>
+          <p><span class="lang-no">Installert on-premise blir data, prompts og resultater innenfor bedriftens eget nettverk. Ingenting sendes til servere andre kontrollerer.</span><span class="lang-en">Deployed on-premise, data, prompts and outputs stay inside the company's own network. Nothing is sent to servers others control.</span></p>
+          <div class="tagline"><span class="lang-no">Dine vegger · dine data</span><span class="lang-en">Your walls · your data</span></div>
+        </div>
+        <div class="card r d3">
+          <span class="num">03 · <span class="lang-no">Sikkerhet</span><span class="lang-en">Security</span></span>
+          <h3><span class="lang-no">Ansvarlig by design</span><span class="lang-en">Accountable by design</span></h3>
+          <p><span class="lang-no">Tilgangsstyrt verktøybruk, full revisjonslogg, evalueringer og rekkverk på hver agenthandling — med menneske i løkka der det betyr noe.</span><span class="lang-en">Permissioned tool access, full audit logs, evals and guardrails on every agent action — with a human in the loop where it matters.</span></p>
+          <div class="tagline"><span class="lang-no">Logget · tilgangsstyrt</span><span class="lang-en">Audited · permissioned</span></div>
+        </div>
+        <div class="card r d4">
+          <span class="num">04 · <span class="lang-no">Eierskap</span><span class="lang-en">Ownership</span></span>
+          <h3><span class="lang-no">Kunden eier stacken</span><span class="lang-en">You own the stack</span></h3>
+          <p><span class="lang-no">Modellen, dataene og IP-en blir hos kunden. Agentene jobber som ansvarlige medlemmer av teamet — ikke en svart boks man leier per sete.</span><span class="lang-en">The model, the data and the IP stay with the customer. Agents work as accountable team members — not a black box rented by the seat.</span></p>
+          <div class="tagline"><span class="lang-no">Modell · data · IP</span><span class="lang-en">Model · data · IP</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · MARKET / THE MATH -->
+  <section class="slide" data-title="Marked">
+    <div class="inner">
+      <span class="eyebrow r"><span class="lang-no">Markedet · hvorfor nå</span><span class="lang-en">The market · why now</span></span>
+      <h2 class="r d1">
+        <span class="lang-no">Regnestykket er <em>brutalt enkelt</em>.</span>
+        <span class="lang-en">The math is <em>brutally simple</em>.</span>
+      </h2>
+      <div class="split mt-28">
+        <ul class="checklist r d2">
+          <li><span class="ic">→</span><div><b><span class="lang-no">«AI-ansatt»-økonomien.</span><span class="lang-en">The "AI employee" economics.</span></b> <span class="lang-no">En dyktig ansatt i Norge koster 1–1,5 MNOK i året. En tilsvarende AI-løsning koster 15–35 % av det, jobber døgnet rundt og slutter aldri.</span><span class="lang-en">A skilled employee in Norway costs NOK 1–1.5M per year. An equivalent AI system costs 15–35% of that, works around the clock and never churns.</span></div></li>
+          <li><span class="ic">→</span><div><b><span class="lang-no">Regulering presser AI hjem.</span><span class="lang-en">Regulation pushes AI back home.</span></b> <span class="lang-no">GDPR, EUs AI-forordning og bransjekrav gjør lokal kjøring til et krav — ikke en preferanse — for store deler av norsk nærings- og arbeidsliv.</span><span class="lang-en">GDPR, the EU AI Act and industry requirements make local deployment a requirement — not a preference — for large parts of Nordic industry.</span></div></li>
+          <li><span class="ic">→</span><div><b><span class="lang-no">Verdien flytter seg til laget vårt.</span><span class="lang-en">The value is moving to our layer.</span></b> <span class="lang-no">Modellene blir billigere og byttbare. Det varige laget er systemet som kobler AI til faktisk arbeid — sikkert og etterprøvbart. Det er det vi bygger.</span><span class="lang-en">Models get cheaper and interchangeable. The durable layer is the system connecting AI to real work — securely and auditably. That's what we're building.</span></div></li>
+          <li><span class="ic">→</span><div><b><span class="lang-no">Internasjonalt fra dag én.</span><span class="lang-en">International from day one.</span></b> <span class="lang-no">Programvare kjenner ingen kommunegrenser. Pilotdialogene våre spenner allerede fra Norge til Sverige og Australia.</span><span class="lang-en">Software knows no municipal borders. Our pilot dialogues already span Norway, Sweden and Australia.</span></div></li>
+        </ul>
+        <div class="panel r d3">
+          <h3><span class="lang-no">Regnestykket</span><span class="lang-en">The math</span></h3>
+          <div class="row"><span class="k"><span class="lang-no">Ansatt i Norge / år</span><span class="lang-en">Employee in Norway / yr</span></span><span class="v">1–1,5 MNOK</span></div>
+          <div class="row"><span class="k"><span class="lang-no">Tilsvarende AI-løsning</span><span class="lang-en">Equivalent AI system</span></span><span class="v"><em>15–35 %</em></span></div>
+          <div class="row"><span class="k"><span class="lang-no">Driftstid</span><span class="lang-en">Uptime</span></span><span class="v">24 / 7</span></div>
+          <div class="row"><span class="k"><span class="lang-no">Eierskap til data &amp; modell</span><span class="lang-en">Data &amp; model ownership</span></span><span class="v">100 %</span></div>
+          <div class="codeglow">&lt;/&gt;</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 · BUSINESS MODEL -->
+  <section class="slide" data-title="Forretningsmodell">
+    <div class="inner">
+      <span class="eyebrow r"><span class="lang-no">Forretningsmodellen</span><span class="lang-en">Business model</span></span>
+      <h2 class="r d1">
+        <span class="lang-no">Pilotkundene <em>betaler</em> for tidlig tilgang — og herder produktet.</span>
+        <span class="lang-en">Pilot customers <em>pay</em> for early access — and harden the product.</span>
+      </h2>
+      <p class="lead r d2" style="margin-bottom:30px">
+        <span class="lang-no">Frem til OS-et er selvbetjent selger vi det som skreddersydde utrullinger. Hver leveranse gir inntekt i dag, og gjør produktet mer standardisert og skalerbart i morgen.</span>
+        <span class="lang-en">Until the OS is self-serve, we sell it as custom deployments. Every engagement earns revenue today and makes the product more standardised and scalable tomorrow.</span>
+      </p>
+      <div class="grid g4">
+        <div class="card r d2">
+          <span class="num">01</span>
+          <h3><span class="lang-no">AI-ansatte</span><span class="lang-en">AI employees</span></h3>
+          <p><span class="lang-no">En agent på OS-et som avlaster eller erstatter en rolle. Etablering fra ~50 000 kr, deretter løpende drift månedlig.</span><span class="lang-en">An agent on the OS that augments or replaces a role. Setup from ~$5,000, then monthly operations.</span></p>
+          <div class="tagline"><span class="lang-no">Repeterende inntekt</span><span class="lang-en">Recurring revenue</span></div>
+        </div>
+        <div class="card r d3">
+          <span class="num">02</span>
+          <h3><span class="lang-no">On-prem infrastruktur</span><span class="lang-en">On-prem infrastructure</span></h3>
+          <p><span class="lang-no">Plattformen OS-et kjører på, installert på kundens egen maskinvare. Typisk 100 000 – 1 000 000 kr+ per utrulling.</span><span class="lang-en">The platform the OS runs on, installed on the customer's own hardware. Typically $10,000–$100,000+ per deployment.</span></p>
+          <div class="tagline"><span class="lang-no">Størst kontraktsverdi</span><span class="lang-en">Largest contract value</span></div>
+        </div>
+        <div class="card r d4">
+          <span class="num">03</span>
+          <h3><span class="lang-no">Skreddersydd utvikling</span><span class="lang-en">Custom development</span></h3>
+          <p><span class="lang-no">Spesialbygde løsninger oppå OS-et for kunder med særegne behov — fra avgrensede prosjekter til større løp.</span><span class="lang-en">Purpose-built solutions on top of the OS for customers with specific needs — from bounded projects to larger programmes.</span></p>
+          <div class="tagline"><span class="lang-no">Prosjektinntekt</span><span class="lang-en">Project revenue</span></div>
+        </div>
+        <div class="card r d5">
+          <span class="num">04</span>
+          <h3><span class="lang-no">Rådgivning &amp; kurs</span><span class="lang-en">Advisory &amp; courses</span></h3>
+          <p><span class="lang-no">AI-strategi, kurs og foredrag. Gir inntekt fra dag én — og fyller samtidig pipeline med nye kundeemner.</span><span class="lang-en">AI strategy, courses and talks. Revenue from day one — and a pipeline of new leads at the same time.</span></p>
+          <div class="tagline"><span class="lang-no">Inntekt + synlighet</span><span class="lang-en">Revenue + visibility</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 · TRACTION -->
+  <section class="slide" data-title="Status">
+    <div class="inner">
+      <span class="eyebrow r"><span class="lang-no">Status så langt</span><span class="lang-en">Traction so far</span></span>
+      <h2 class="r d1">
+        <span class="lang-no">Tidlig — men <em>reell</em> trekkraft.</span>
+        <span class="lang-en">Early — but <em>real</em> momentum.</span>
+      </h2>
+      <p class="lead r d2" style="margin-bottom:30px">
+        <span class="lang-no">Vi er ærlige på hvor vi står: selskapet er pre-revenue. Men produktet er i aktiv utvikling, og pilotdialogene er i gang i tre land — før vi har lansert noe som helst.</span>
+        <span class="lang-en">We're honest about where we are: the company is pre-revenue. But the product is in active development, and pilot dialogues are underway in three countries — before we've launched anything at all.</span>
+      </p>
+      <div class="stats r d3">
+        <div class="stat"><div class="big"><span class="count" data-to="4">0</span></div><div class="lbl"><span class="lang-no">aktive kundedialoger — Australia, Sverige, Norge ×2</span><span class="lang-en">active customer dialogues — Australia, Sweden, Norway ×2</span></div></div>
+        <div class="stat"><div class="big"><span class="count" data-to="1">0</span></div><div class="lbl"><span class="lang-no">pilotavtale nær signering (AU)</span><span class="lang-en">pilot agreement near signing (AU)</span></div></div>
+        <div class="stat"><div class="big"><span class="count" data-to="3">0</span></div><div class="lbl"><span class="lang-no">land i pipeline før lansering</span><span class="lang-en">countries in the pipeline pre-launch</span></div></div>
+        <div class="stat"><div class="big"><span class="count" data-to="100">0</span><span class="unit">%</span></div><div class="lbl"><span class="lang-no">merkevare &amp; AI-native plattform live på nrth.no</span><span class="lang-en">brand &amp; AI-native platform live on nrth.no</span></div></div>
+      </div>
+      <div class="grid g3 mt-18">
+        <div class="card r d4"><span class="num">✦</span><h3><span class="lang-no">Kjøretiden virker</span><span class="lang-en">The runtime works</span></h3><p><span class="lang-no">Kjernen, arbeidsflytene og agentlaget kjører i skreddersydde pilotoppsett — mot reelt arbeid, på partnerens maskinvare.</span><span class="lang-en">The core runtime, workflows and agent layer run in custom pilot setups — against real work, on partner hardware.</span></p></div>
+        <div class="card r d4"><span class="num">✦</span><h3><span class="lang-no">Internasjonal pipeline</span><span class="lang-en">International pipeline</span></h3><p><span class="lang-no">Dialoger på tvers av tre land før lansering viser at behovet er reelt og grenseløst.</span><span class="lang-en">Dialogues across three countries before launch show the need is real and borderless.</span></p></div>
+        <div class="card r d5"><span class="num">✦</span><h3><span class="lang-no">Vi praktiserer det vi selger</span><span class="lang-en">We practice what we sell</span></h3><p><span class="lang-no">nrth.no er bygget som en AI-native plattform med maskinlesbare grensesnitt — selskapets eget utstillingsvindu for teknologien.</span><span class="lang-en">nrth.no is built as an AI-native platform with machine-readable interfaces — our own showcase for the technology.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 · ROADMAP -->
+  <section class="slide" data-title="Veikart">
+    <div class="inner">
+      <span class="eyebrow r"><span class="lang-no">Veien videre</span><span class="lang-en">The road ahead</span></span>
+      <h2 class="r d1">
+        <span class="lang-no">Fra pilot til <em>selvgående</em> produktselskap.</span>
+        <span class="lang-en">From pilot to a <em>self-sustaining</em> product company.</span>
+      </h2>
+      <div class="timeline r d2 mt-28">
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div class="when"><span class="lang-no">Nå · H2 2026</span><span class="lang-en">Now · H2 2026</span></div>
+          <h3><span class="lang-no">Signere og levere pilotkunder</span><span class="lang-en">Sign and deliver pilot customers</span></h3>
+          <p><span class="lang-no">Konvertere dialogene i Australia, Sverige og Norge til betalte pilotutrullinger av OS-et — parallelt med kurs og foredrag som bygger synlighet.</span><span class="lang-en">Convert the dialogues in Australia, Sweden and Norway into paid pilot deployments of the OS — alongside courses and talks that build visibility.</span></p>
+        </div>
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div class="when"><span class="lang-no">Vinter 2026/27</span><span class="lang-en">Winter 2026/27</span></div>
+          <h3><span class="lang-no">Første betalende OS-kunder i produksjon</span><span class="lang-en">First paying OS customers in production</span></h3>
+          <p><span class="lang-no">Piloter blir løpende kundeforhold med drift og lisens. OS-et herdes der det må: mot ekte arbeid hos ekte kunder.</span><span class="lang-en">Pilots become ongoing customer relationships with operations and licensing. The OS hardens where it must: against real work at real customers.</span></p>
+        </div>
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div class="when">2027</div>
+          <h3><span class="lang-no">Delt ferdighetsbibliotek + styringskonsoll</span><span class="lang-en">Shared skills library + governance console</span></h3>
+          <p><span class="lang-no">Et voksende bibliotek av gjenbrukbare ferdigheter og en konsoll for evalueringer, revisjonslogger og rekkverk — slik at kundene selv ser og styrer hva hver agent gjør.</span><span class="lang-en">A growing library of reusable skills and a console for evals, audit logs and guardrails — so customers can see and govern exactly what every agent does.</span></p>
+        </div>
+        <div class="tl-item soft">
+          <div class="dot"></div>
+          <div class="when"><span class="lang-no">Senere</span><span class="lang-en">Later</span></div>
+          <h3><span class="lang-no">Selvbetjent utrulling</span><span class="lang-en">Self-serve deployment</span></h3>
+          <p><span class="lang-no">OS-et pakkes slik at bedrifter kan sette det opp i eget miljø med kort onboarding — det er da skalaen kommer.</span><span class="lang-en">The OS gets packaged so companies can stand it up in their own environment with short onboarding — that's where the scale comes.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 · TEAM -->
+  <section class="slide" data-title="Team">
+    <div class="inner">
+      <span class="eyebrow r"><span class="lang-no">Teamet</span><span class="lang-en">The team</span></span>
+      <h2 class="r d1">
+        <span class="lang-no">Finans- og leveransetyngde møter <em>utviklerkraft</em>.</span>
+        <span class="lang-en">Finance and delivery depth meets <em>builder energy</em>.</span>
+      </h2>
+      <div class="team mt-28">
+        <div class="member r d2">
+          <div class="avatar">TU</div>
+          <h3>Thomas Uthaug</h3>
+          <div class="role">Co-founder · <span class="lang-no">Forretning, produkt &amp; leveranse</span><span class="lang-en">Business, product &amp; delivery</span></div>
+          <p>
+            <span class="lang-no">Et tiår på tvers av finans, kvalitetsledelse og teknologileveranse — Storebrand og Sopra Steria. MSc i finans fra NHH, med utveksling ved UC Berkeley og Copenhagen Business School. Har bygget karrieren på å oversette kompleks teknologi til forretningsverdi på bunnlinjen.</span>
+            <span class="lang-en">A decade across finance, quality leadership and technology delivery — Storebrand and Sopra Steria. MSc in Finance from NHH, with exchange studies at UC Berkeley and Copenhagen Business School. A career built on translating complex technology into bottom-line business value.</span>
+          </p>
+          <div class="tags"><span>NHH MSc Finance</span><span>UC Berkeley</span><span>Storebrand</span><span>Sopra Steria</span></div>
+        </div>
+        <div class="member r d3">
+          <div class="avatar">SU</div>
+          <h3>Simen Uthaug</h3>
+          <div class="role">Co-founder · <span class="lang-no">Teknisk &amp; utvikler</span><span class="lang-en">Technical &amp; developer</span></div>
+          <p>
+            <span class="lang-no">Bachelor i informasjonsvitenskap (UiB) og mastergrad i UX og Utvikling. Full-stack-utvikler med erfaring i TypeScript, React, Python, API-integrasjon, databaser og maskinlæring (nevrale nett, NLP). Bygger kjernen i Nrth Agentic OS.</span>
+            <span class="lang-en">BSc in Information Science (UiB) plus a master's degree in UX and Development. Full-stack developer experienced in TypeScript, React, Python, API integration, databases and machine learning (neural nets, NLP). Building the core of the Nrth Agentic OS.</span>
+          </p>
+          <div class="tags"><span>UiB Info. Science</span><span>MSc UX &amp; Dev</span><span>TypeScript / React</span><span>Python / ML</span></div>
+        </div>
+      </div>
+      <p class="lead r d4 mt-18" style="font-size:15px">
+        <span class="lang-no">To brødre med komplementære styrker — det forretningsmessige og det tekniske — og felles røtter i Hardanger.</span>
+        <span class="lang-en">Two brothers with complementary strengths — the business side and the technical side — and shared roots in Hardanger.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- 10 · HARDANGER -->
+  <section class="slide" data-title="Hardanger">
+    <div class="inner">
+      <span class="eyebrow r"><span class="lang-no">Forankring</span><span class="lang-en">Roots</span></span>
+      <h2 class="r d1">
+        <span class="lang-no">Røttene våre er i <em>Hardanger</em>.</span>
+        <span class="lang-en">Our roots are in <em>Hardanger</em>.</span>
+      </h2>
+      <div class="split mt-28">
+        <div>
+          <p class="bigquote r d2" style="margin-bottom:26px">
+            <span class="lang-no">«Vi vil bygge kompetanse&shy;arbeidsplasser innen AI — <em>der vi selv kommer fra</em>.»</span>
+            <span class="lang-en">"We want to build knowledge jobs in AI — <em>where we ourselves come from</em>."</span>
+          </p>
+          <p class="lead r d3" style="font-size:15.5px">
+            <span class="lang-no">Nrth AI er registrert i Bergen, men historien vår starter i Hardanger — og vi ønsker at fremtiden til selskapet også skal ligge der. En investering fra HardangerVossfondet vil være direkte utløsende for å legge utviklingsmiljøet vårt til regionen.</span>
+            <span class="lang-en">Nrth AI is registered in Bergen, but our story starts in Hardanger — and we want the company's future to be there too. An investment from HardangerVossfondet would directly enable us to base our development environment in the region.</span>
+          </p>
+        </div>
+        <div class="grid r d3" style="grid-template-columns:1fr">
+          <div class="card">
+            <span class="num">01 · <span class="lang-no">Oppvekst</span><span class="lang-en">Upbringing</span></span>
+            <h3 style="font-size:22px"><span class="lang-no">Skolegang i Hardanger</span><span class="lang-en">Schooled in Hardanger</span></h3>
+            <p><span class="lang-no">Begge gründerne gikk videregående i Hardanger. Regionen formet oss.</span><span class="lang-en">Both founders attended upper secondary school in Hardanger. The region shaped us.</span></p>
+          </div>
+          <div class="card">
+            <span class="num">02 · <span class="lang-no">Tilstedeværelse</span><span class="lang-en">Presence</span></span>
+            <h3 style="font-size:22px"><span class="lang-no">Her hele vinteren</span><span class="lang-en">Here all winter</span></h3>
+            <p><span class="lang-no">Familien har hytte i Hardanger, og vi tilbringer normalt hele vinteren i området. Dette er ikke en tilflyttet tilknytning — det er hjemme.</span><span class="lang-en">The family cabin is in Hardanger, and we normally spend the entire winter in the area. This isn't an adopted connection — it's home.</span></p>
+          </div>
+          <div class="card">
+            <span class="num">03 · <span class="lang-no">Ambisjon</span><span class="lang-en">Ambition</span></span>
+            <h3 style="font-size:22px"><span class="lang-no">Etablering i regionen</span><span class="lang-en">Establishing in the region</span></h3>
+            <p><span class="lang-no">Vi ønsker å etablere virksomhet i Hardanger/Voss — AI-arbeidsplasser som gir unge fagfolk en grunn til å komme hjem.</span><span class="lang-en">We want to establish operations in Hardanger/Voss — AI jobs that give young professionals a reason to come home.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 · THE ROUND -->
+  <section class="slide" data-title="Runden">
+    <div class="inner">
+      <span class="eyebrow r"><span class="lang-no">Runden</span><span class="lang-en">The round</span></span>
+      <h2 class="r d1">
+        <span class="lang-no">Vi henter <em>2–4 MNOK</em> for å gå fulltid.</span>
+        <span class="lang-en">We're raising <em>NOK 2–4M</em> to go full-time.</span>
+      </h2>
+      <p class="lead r d2" style="margin-bottom:30px">
+        <span class="lang-no">Kapitalen tar begge gründerne over i fulltid og gir 24 måneders runway — nok til å levere pilotene, lande de første betalende kundene og bygge OS-et mot selvbetjening.</span>
+        <span class="lang-en">The capital takes both founders full-time and provides 24 months of runway — enough to deliver the pilots, land the first paying customers and build the OS toward self-serve.</span>
+      </p>
+      <div class="terms r d2">
+        <div class="term"><div class="lbl"><span class="lang-no">Beløp</span><span class="lang-en">Amount</span></div><div class="val">2–4 <em>MNOK</em></div><div class="sub"><span class="lang-no">Såkornrunde</span><span class="lang-en">Seed round</span></div></div>
+        <div class="term"><div class="lbl">Runway</div><div class="val">24 <em>mnd</em></div><div class="sub"><span class="lang-no">To gründere på fulltid</span><span class="lang-en">Two founders full-time</span></div></div>
+        <div class="term"><div class="lbl"><span class="lang-no">Vilkår</span><span class="lang-en">Terms</span></div><div class="val"><span class="lang-no">Åpne</span><span class="lang-en">Open</span></div><div class="sub"><span class="lang-no">Struktur og verdsettelse avklares sammen</span><span class="lang-en">Structure and valuation agreed together</span></div></div>
+      </div>
+      <div class="split mt-28" style="grid-template-columns:1fr 1fr">
+        <div class="funds r d3">
+          <div class="fund-row" style="--w:55%">
+            <div class="top"><span><span class="lang-no">Lønn — to gründere på fulltid</span><span class="lang-en">Salary — two founders full-time</span></span><span class="pct">55%</span></div>
+            <div class="track"><div class="bar"></div></div>
+          </div>
+          <div class="fund-row" style="--w:25%">
+            <div class="top"><span><span class="lang-no">Produktutvikling &amp; maskinvare</span><span class="lang-en">Product development &amp; hardware</span></span><span class="pct">25%</span></div>
+            <div class="track"><div class="bar"></div></div>
+          </div>
+          <div class="fund-row" style="--w:12%">
+            <div class="top"><span><span class="lang-no">Salg &amp; markedsføring</span><span class="lang-en">Sales &amp; marketing</span></span><span class="pct">12%</span></div>
+            <div class="track"><div class="bar"></div></div>
+          </div>
+          <div class="fund-row" style="--w:8%">
+            <div class="top"><span><span class="lang-no">Verktøy &amp; infrastruktur</span><span class="lang-en">Tools &amp; infrastructure</span></span><span class="pct">8%</span></div>
+            <div class="track"><div class="bar"></div></div>
+          </div>
+        </div>
+        <div class="highlight r d4">
+          <span class="lang-no"><b style="color:var(--fg)">Utløsende effekt.</b> Kapitalen er tenkt som et fundament som utløser mer: den kvalifiserer oss for offentlige virkemidler og gjør det lettere å hente inn ytterligere privat kapital. Fordelingen er veiledende — struktur og verdsettelse diskuterer vi gjerne åpent i møtet.</span>
+          <span class="lang-en"><b style="color:var(--fg)">A catalytic effect.</b> The capital is designed as a foundation that unlocks more: it qualifies us for public innovation funding and makes further private capital easier to raise. The split is indicative — we're happy to discuss structure and valuation openly in the meeting.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 · CONTACT -->
+  <section class="slide" data-title="Kontakt">
+    <div class="inner">
+      <span class="eyebrow r"><span class="lang-no">Takk</span><span class="lang-en">Thank you</span></span>
+      <h2 class="r d1" style="max-width:18ch">
+        <span class="lang-no">La oss bygge dette — <em>fra vest</em>.</span>
+        <span class="lang-en">Let's build this — <em>from the west</em>.</span>
+      </h2>
+      <p class="lead r d2" style="margin-bottom:26px">
+        <span class="lang-no">Vi ser frem til dialogen. Ta kontakt for datarom, referanser eller en teknisk gjennomgang av OS-et.</span>
+        <span class="lang-en">We look forward to the dialogue. Get in touch for the data room, references, or a technical walkthrough of the OS.</span>
+      </p>
+      <div class="contacts r d3">
+        <a class="btn" href="mailto:thomas@nrth.no?subject=Nrth%20AI%20%E2%80%94%20Investering">thomas@nrth.no</a>
+        <a class="btn ghost" href="/">nrth.no →</a>
+      </div>
+      <p class="risk r d4">
+        <span class="lang-no"><b style="color:var(--fg-dim)">Risiko &amp; forbehold:</b> Nrth AI er et nystartet selskap uten driftshistorikk eller løpende inntekter. Investeringer i tidligfaseselskaper innebærer høy risiko, og hele det investerte beløpet kan gå tapt. Denne presentasjonen er informasjon til en avgrenset mottakerkrets og utgjør verken et offentlig tilbud, finansiell rådgivning eller en investeringsanbefaling. Endelige og bindende vilkår følger av signert avtale. Veiledende tall og fordelinger kan endres.</span>
+        <span class="lang-en"><b style="color:var(--fg-dim)">Risk &amp; disclaimer:</b> Nrth AI is a newly founded company with no operating history or recurring revenue. Investing in early-stage companies carries high risk, and the entire invested amount may be lost. This presentation is information for a limited audience and constitutes neither a public offering, financial advice, nor an investment recommendation. Final and binding terms follow from a signed agreement. Indicative figures and allocations may change.</span>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ CHROME: BOTTOM ============ -->
+<div class="chrome-bottom">
+  <div class="counter" id="counter"><b>01</b> / 12</div>
+  <div class="keys-hint" aria-hidden="true">
+    <span class="k">←</span><span class="k">→</span>
+    <span class="lang-no">Naviger</span><span class="lang-en">Navigate</span>
+  </div>
+  <div class="nav-btns">
+    <button class="nav-btn" id="btn-prev" aria-label="Forrige">←</button>
+    <button class="nav-btn" id="btn-next" aria-label="Neste">→</button>
+  </div>
+</div>
+
+<nav class="dots" id="dots" aria-label="Slides"></nav>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var total = slides.length;
+  var current = -1;
+  var fill = document.getElementById('progress-fill');
+  var counter = document.getElementById('counter');
+  var dotsWrap = document.getElementById('dots');
+  var btnPrev = document.getElementById('btn-prev');
+  var btnNext = document.getElementById('btn-next');
+
+  // ---- side dots ----
+  slides.forEach(function(s, i){
+    var b = document.createElement('button');
+    b.setAttribute('aria-label', s.dataset.title || ('Slide ' + (i+1)));
+    var tip = document.createElement('span');
+    tip.className = 'tip';
+    tip.textContent = s.dataset.title || (i+1);
+    b.appendChild(tip);
+    b.addEventListener('click', function(){ go(i); });
+    dotsWrap.appendChild(b);
+  });
+  var dots = Array.prototype.slice.call(dotsWrap.children);
+
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+
+  function go(i, instant){
+    if (i < 0 || i >= total || i === current) return;
+    slides.forEach(function(s, j){
+      s.classList.remove('active', 'prev');
+      if (j === i) s.classList.add('active');
+      else if (j < i) s.classList.add('prev');
+    });
+    current = i;
+    fill.style.width = (((i + 1) / total) * 100) + '%';
+    counter.innerHTML = '<b>' + pad(i + 1) + '</b> / ' + pad(total);
+    dots.forEach(function(d, j){ d.classList.toggle('active', j === i); });
+    btnPrev.disabled = (i === 0);
+    btnNext.disabled = (i === total - 1);
+    if (history.replaceState) history.replaceState(null, '', '#' + (i + 1));
+    slides[i].scrollTop = 0;
+    runCounters(slides[i]);
+  }
+  function next(){ go(current + 1); }
+  function prev(){ go(current - 1); }
+
+  // ---- animated number counters ----
+  function runCounters(slide){
+    slide.querySelectorAll('.count').forEach(function(el){
+      var to = parseInt(el.dataset.to, 10);
+      var dur = 900, t0 = null;
+      function step(ts){
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(to * eased);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      el.textContent = '0';
+      requestAnimationFrame(step);
+    });
+  }
+
+  // ---- keyboard ----
+  document.addEventListener('keydown', function(e){
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    switch (e.key) {
+      case 'ArrowRight': case 'ArrowDown': case ' ': case 'PageDown': e.preventDefault(); next(); break;
+      case 'ArrowLeft': case 'ArrowUp': case 'PageUp': e.preventDefault(); prev(); break;
+      case 'Home': e.preventDefault(); go(0); break;
+      case 'End': e.preventDefault(); go(total - 1); break;
+    }
+  });
+  btnNext.addEventListener('click', next);
+  btnPrev.addEventListener('click', prev);
+
+  // ---- wheel (throttled; respects slides that scroll internally) ----
+  var wheelLock = 0;
+  document.addEventListener('wheel', function(e){
+    var now = Date.now();
+    if (now < wheelLock) return;
+    var s = slides[current];
+    var canScroll = s.scrollHeight > s.clientHeight + 4;
+    if (canScroll) {
+      var atBottom = s.scrollTop + s.clientHeight >= s.scrollHeight - 4;
+      var atTop = s.scrollTop <= 4;
+      if ((e.deltaY > 0 && !atBottom) || (e.deltaY < 0 && !atTop)) return;
+    }
+    if (Math.abs(e.deltaY) < 24) return;
+    wheelLock = now + 900;
+    if (e.deltaY > 0) next(); else prev();
+  }, { passive: true });
+
+  // ---- touch swipe ----
+  var tx = 0, ty = 0;
+  document.addEventListener('touchstart', function(e){
+    tx = e.touches[0].clientX; ty = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchend', function(e){
+    var dx = e.changedTouches[0].clientX - tx;
+    var dy = e.changedTouches[0].clientY - ty;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+      if (dx < 0) next(); else prev();
+    }
+  }, { passive: true });
+
+  // ---- language toggle (button shows the non-active language) ----
+  var langBtn = document.getElementById('lang-btn');
+  function setLang(lang){
+    var en = lang === 'en';
+    document.body.classList.toggle('lang-en', en);
+    document.documentElement.lang = en ? 'en' : 'no';
+    document.title = en ? 'Nrth AI — Pitch deck' : 'Nrth AI — Pitch deck';
+    langBtn.textContent = en ? 'NO' : 'EN';
+  }
+  langBtn.addEventListener('click', function(){
+    setLang(document.body.classList.contains('lang-en') ? 'no' : 'en');
+  });
+
+  // ---- start on hash slide if present ----
+  var start = parseInt((location.hash || '').replace('#', ''), 10);
+  go(!isNaN(start) && start >= 1 && start <= total ? start - 1 : 0);
+})();
+</script>
+</body>
+</html>
