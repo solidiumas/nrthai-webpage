@@ -240,13 +240,12 @@ body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-7px) rotate
 /* Offset in-page anchor jumps so targets clear the fixed nav */
 section[id], [id].section { scroll-margin-top: 90px; }
 .section-header {
-  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 16px;
   border-bottom: 1px solid var(--line); padding-bottom: 32px;
 }
 .section-header h2 {
   font-family: var(--serif); font-weight: 400;
   font-size: clamp(48px, 5.6vw, 84px); line-height: 0.98; letter-spacing: -0.02em;
-  text-align: center;
 }
 .section-header h2 em { color: var(--accent); font-style: italic; white-space: nowrap; }
 
@@ -467,7 +466,7 @@ section[id], [id].section { scroll-margin-top: 90px; }
 }
 .sec-head h2 em { color: var(--accent); font-style: italic; }
 .sec-head p { font-size: 18px; color: var(--fg-dim); line-height: 1.5; }
-.section-intro { font-size: 18px; color: var(--fg-dim); line-height: 1.55; max-width: 70ch; margin-top: 28px; margin-left: auto; margin-right: auto; text-align: center; }
+.section-intro { font-size: 18px; color: var(--fg-dim); line-height: 1.55; max-width: 70ch; margin-top: 28px; }
 
 /* In-section sub-part (used when a big section groups several blocks) */
 .subsec { margin-top: 96px; }
