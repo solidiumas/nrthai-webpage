@@ -113,7 +113,14 @@
     font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--fg-faint);
   }
   .counter b{color:var(--fg);font-weight:400}
-  .nav-btns{display:flex;gap:8px}
+  .nav-center{
+    position:absolute;left:50%;bottom:12px;transform:translateX(-50%);
+    display:flex;align-items:center;gap:12px;
+  }
+  .nav-lbl{
+    font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--fg-faint);
+  }
   .nav-btn{
     width:44px;height:44px;border:1px solid var(--line-2);
     display:flex;align-items:center;justify-content:center;
@@ -124,11 +131,6 @@
   }
   .nav-btn:hover{border-color:var(--accent);color:var(--accent)}
   .nav-btn[disabled]{opacity:.3;pointer-events:none}
-  .keys-hint{
-    font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--fg-faint);display:flex;align-items:center;gap:8px;
-  }
-  .keys-hint .k{border:1px solid var(--line-2);padding:3px 7px}
 
   /* side dots */
   .dots{
@@ -355,7 +357,6 @@
     .stats{grid-template-columns:repeat(2,1fr)}
     .os-layer{grid-template-columns:1fr;gap:8px;padding:18px 22px}
     .dots{display:none}
-    .keys-hint{display:none}
     .slide{padding:88px 20px 84px}
   }
   @media(max-width:640px){
@@ -817,12 +818,9 @@
 <!-- ============ CHROME: BOTTOM ============ -->
 <div class="chrome-bottom">
   <div class="counter" id="counter"><b>01</b> / 12</div>
-  <div class="keys-hint" aria-hidden="true">
-    <span class="k">←</span><span class="k">→</span>
-    <span class="lang-no">Naviger</span><span class="lang-en">Navigate</span>
-  </div>
-  <div class="nav-btns">
+  <div class="nav-center">
     <button class="nav-btn" id="btn-prev" aria-label="Forrige">←</button>
+    <span class="nav-lbl"><span class="lang-no">Naviger</span><span class="lang-en">Navigate</span></span>
     <button class="nav-btn" id="btn-next" aria-label="Neste">→</button>
   </div>
 </div>
