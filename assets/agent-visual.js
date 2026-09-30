@@ -22,6 +22,11 @@
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     var accent = accentColor();
     var W = 0, H = 0;
+    var ready = false;
+
+    // prefers-reduced-motion: tegn ett stillbilde i stedet for animasjonen.
+    var reduce = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
+    function still() { return !!(reduce && reduce.matches); }
 
     function resize() {
       var r = canvas.getBoundingClientRect();
@@ -29,6 +34,7 @@
       canvas.width = W * dpr;
       canvas.height = H * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (ready && still()) render(performance.now());
     }
     resize();
     var ro = new ResizeObserver(resize);
@@ -173,14 +179,22 @@
         ctx.fillText(n.label.toUpperCase(), p.x, p.y + n.r + 6);
       }
 
-      raf = requestAnimationFrame(render);
+      if (!still()) raf = requestAnimationFrame(render);
     }
+    ready = true;
     raf = requestAnimationFrame(render);
+
+    if (reduce && reduce.addEventListener) {
+      reduce.addEventListener("change", function () {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(render);
+      });
+    }
 
     // Pause when the tab is hidden (saves cycles; resumes on return).
     document.addEventListener("visibilitychange", function () {
       if (document.hidden) { cancelAnimationFrame(raf); }
-      else { raf = requestAnimationFrame(render); }
+      else if (!still()) { raf = requestAnimationFrame(render); }
     });
   }
 

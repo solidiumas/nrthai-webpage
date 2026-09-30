@@ -647,3 +647,192 @@ section[id], [id].section { scroll-margin-top: 90px; }
 @media (hover: none) {
   .nav-link:hover { color: var(--fg-dim); }
 }
+
+/* ───── Revisjon 2026-10 ───── */
+/* Nye komponenter for nrth.no-revisjonen (docs/revisjon-2026-10/05-komponenter-og-design.md).
+   Bare eksisterende variabler. Ingen nye farger, fonter eller avrundede hjørner. */
+
+[hidden] { display: none !important; }
+
+/* Tilgjengelighet: --fg-faint (2,9:1) brukes ikke til tekst som skal leses */
+.card-head { color: var(--fg-dim); }
+.stat-cell .lbl { color: var(--fg-dim); }
+.site-footer { color: var(--fg-dim); }
+
+/* ───────── Hopp til innhold ───────── */
+.skip-link {
+  position: absolute; left: 16px; top: -200px; z-index: 1001;
+  background: var(--accent); color: #000; padding: 12px 18px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em;
+  text-transform: uppercase; font-weight: 500;
+}
+.skip-link:focus { top: 16px; }
+
+/* Ankre på kort under den faste menyen */
+.service-card[id], .card[id] { scroll-margin-top: 90px; }
+
+/* ───────── page-hero (undersider) ───────── */
+.page-hero {
+  min-height: 64vh; padding: 140px 32px 80px;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+}
+.page-hero .kicker { margin-bottom: 28px; }
+.page-hero h1 { font-size: clamp(48px, 6vw, 96px); line-height: 0.98; margin-bottom: 28px; }
+.page-hero .lede { margin-bottom: 40px; }
+.page-hero > :last-child { margin-bottom: 0; }
+
+/* ───────── door-card (tre dører på forsiden) ───────── */
+.door-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.door-list li {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: baseline;
+  font-size: 14.5px; line-height: 1.5; color: var(--fg);
+}
+.door-list .arrow { color: var(--accent); font-family: var(--mono); font-size: 13px; }
+.door-list .dur {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  color: var(--fg-dim); white-space: nowrap;
+}
+.door-card .card-foot {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  color: var(--fg-dim);
+}
+.door-card .card-foot .link-arrow { margin-left: auto; }
+.section-actions { margin-top: 48px; display: flex; gap: 20px 28px; align-items: center; flex-wrap: wrap; }
+.section-actions p { font-size: 15px; line-height: 1.55; color: var(--fg-dim); }
+
+/* ───────── booking (id="book") ───────── */
+.booking .cta-grid { grid-template-columns: 5fr 7fr; }
+.booking .cta-left h2 { font-size: clamp(48px, 5.6vw, 84px); }
+.booking .included-label { margin-top: 8px; }
+.booking .included { margin-bottom: 28px; }
+.booking-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+.booking-chips span {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--fg-dim); border: 1px solid var(--line-2); padding: 6px 12px;
+}
+.booking-alt { font-size: 15px; line-height: 1.55; color: var(--fg-dim); }
+.booking-alt .link-arrow { margin-left: 6px; }
+.booking-body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 22px; }
+.booking-frame { display: block; width: 100%; min-height: 640px; border: 0; background: var(--bg); }
+
+/* Temavalg: ekte radioknapper stilt som brikker */
+.topic-picker { border: 0; padding: 0; margin: 0; min-width: 0; }
+.topic-picker legend {
+  padding: 0; margin-bottom: 12px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--fg-dim);
+}
+.topic-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.topic-chip { position: relative; display: inline-flex; }
+.topic-chip input {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  margin: 0; opacity: 0; cursor: pointer;
+}
+.topic-chip span {
+  display: inline-block; padding: 9px 14px; border: 1px solid var(--line-2);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--fg-dim); transition: color 0.15s, border-color 0.15s;
+}
+.topic-chip:hover span { color: var(--fg); }
+.topic-chip input:checked + span { color: var(--accent); border-color: var(--accent); }
+.topic-chip input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* På /book: bare panelet, i full bredde under sidehero */
+.booking--solo { padding-top: 0; }
+
+/* ───────── info-box (foredrag og kurs) ───────── */
+.section--compact { padding-top: 80px; padding-bottom: 80px; }
+.info-box {
+  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+  border: 1px solid var(--line-2); padding: 32px 40px;
+}
+.info-box .kicker { display: block; margin-bottom: 14px; }
+.info-box-title {
+  font-family: var(--serif); font-weight: 400; font-size: 32px;
+  line-height: 1.05; letter-spacing: -0.01em;
+}
+.info-box p { font-size: 15px; line-height: 1.55; color: var(--fg-dim); margin-top: 10px; }
+.info-box .btn-ghost { align-self: center; flex-shrink: 0; }
+
+/* ───────── os-note (Nrth OS) ───────── */
+.os-note {
+  display: flex; align-items: baseline; gap: 16px 28px; flex-wrap: wrap;
+  border: 1px dashed var(--line-2); padding: 24px 32px; margin-top: 48px;
+}
+.os-note-label {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--accent);
+}
+.os-note p { flex: 1; min-width: 240px; font-size: 16px; line-height: 1.55; color: var(--fg); }
+.os-note a {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); border-bottom: 1px solid var(--accent); padding-bottom: 2px;
+}
+.os-note a:hover { color: var(--fg); border-color: var(--fg); }
+
+/* ───────── prose (personvern) ───────── */
+.prose { max-width: 720px; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--fg-dim); }
+.prose h2 {
+  font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1.1;
+  letter-spacing: -0.01em; color: var(--fg); margin: 48px 0 12px;
+}
+.prose h2:first-child { margin-top: 0; }
+.prose p, .prose ul { margin-bottom: 16px; }
+.prose ul { padding-left: 20px; }
+.prose strong { color: var(--fg); font-weight: 500; }
+.prose a { color: var(--fg); border-bottom: 1px solid var(--line-2); }
+.prose a:hover { border-color: var(--fg); }
+
+/* ───────── Footer ───────── */
+.footer-top {
+  grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 20px 32px;
+  padding-bottom: 28px; border-bottom: 1px solid var(--line);
+}
+.footer-links { display: flex; flex-wrap: wrap; align-items: center; row-gap: 8px; }
+.site-footer .sep { margin: 0 10px; }
+.site-footer a:not(.logo) { color: var(--fg-dim); transition: color 0.15s; }
+.site-footer a:not(.logo):hover { color: var(--fg); }
+
+/* ───────── Responsivt (revisjon) ───────── */
+@media (max-width: 1024px) {
+  .booking .cta-grid { grid-template-columns: 1fr; }
+  .page-hero { padding: 120px 24px 60px; }
+}
+/* Tre kort i to kolonner: det siste kortet tar hele bredden i stedet for å etterlate et tomt felt */
+@media (max-width: 1024px) and (min-width: 721px) {
+  .card-grid--3 > :last-child:nth-child(odd),
+  .process-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+/* Menyen får ikke plass på én linje under ca. 820 px: bruk dagens mobilmeny fra 860 px */
+@media (max-width: 860px) {
+  .nav-toggle { display: block; }
+  .nav-right {
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--bg);
+    -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%);
+    border-bottom: 1px solid var(--line-2);
+    box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.6);
+    padding: 4px 18px 18px; display: none;
+  }
+  body.nav-open .nav-right { display: flex; }
+  .nav-link { padding: 14px 2px; border-bottom: 1px solid var(--line); font-size: 13px; }
+  .nav-cta { margin-top: 16px; text-align: center; padding: 14px; font-size: 11px; letter-spacing: 0.16em; }
+}
+@media (max-width: 720px) {
+  .page-hero { min-height: auto; padding: 110px 20px 60px; }
+  .booking .cta-left h2 { font-size: clamp(40px, 10vw, 60px); }
+  .info-box { flex-direction: column; align-items: flex-start; padding: 28px 24px; }
+  .info-box .btn-ghost { align-self: flex-start; }
+  .os-note { padding: 22px 24px; }
+  .footer-top { flex-direction: column; align-items: flex-start; }
+}
+
+/* ───────── Redusert bevegelse ───────── */
+@media (prefers-reduced-motion: reduce) {
+  html, body { scroll-behavior: auto; }
+  .marquee-track { animation: none; }
+  .brief-head .pdot { animation: none; }
+  .btn:hover, .brief-submit:hover { transform: none; }
+}
