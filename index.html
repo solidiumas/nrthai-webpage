@@ -1,44 +1,36 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="nb" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- Redirect old single-page anchors whose content moved to its own page.
-     #product, #work, #company, #process and #contact are sections on this page. -->
+<!-- Videresend gamle ankre fra den engelske ensidesversjonen til nye sider og seksjoner. -->
 <script>
   (function () {
-    var moved = { "#services": "/services" };
+    var moved = {
+      "#services": "/ai-tjenester",
+      "#contact": "#book",
+      "#product": "#tjenester",
+      "#work": "#tjenester",
+      "#process": "#slik-jobber-vi",
+      "#company": "/om-oss"
+    };
     var dest = moved[location.hash];
     if (dest) location.replace(dest);
   })();
 </script>
-<title>Nrth AI — The Agentic OS for enterprise AI</title>
-<meta name="description" content="Nrth AI builds the Nrth Agentic OS — a secure, on-premise runtime that connects enterprise workflows, AI models, agents, and skills into one accountable layer. Plus paid early-access deployments." />
-<meta name="keywords" content="Agentic OS, AI agents, on-premise AI, enterprise AI, secure AI runtime, custom AI agents, AI agent studio, AI infrastructure" />
-<meta name="author" content="Nrth AI" />
+<title>Nrth AI · Vi løser AI for norske bedrifter</title>
+<meta name="description" content="Nrth AI i Bergen hjelper bedrifter å selge mer og jobbe mer effektivt med AI. AI-vurdering, implementering og AI-tjenester. Book et møte." />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 <link rel="canonical" href="https://nrth.no/" />
+<link rel="alternate" hreflang="nb" href="https://nrth.no/" />
+<link rel="alternate" hreflang="en" href="https://nrth.no/en" />
+<link rel="alternate" hreflang="x-default" href="https://nrth.no/" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
 <meta name="theme-color" content="#0a0a0b" />
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="Nrth AI for LLMs" />
 
-<!-- Open Graph -->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Nrth AI" />
-<meta property="og:title" content="Nrth AI — The Agentic OS for enterprise AI" />
-<meta property="og:description" content="A secure, on-premise AI runtime for enterprise agents — from a product startup shipping paid early-access deployments." />
-<meta property="og:url" content="https://nrth.no/" />
-<meta property="og:image" content="https://nrth.no/og.png" />
-<meta property="og:locale" content="en_US" />
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Nrth AI — The Agentic OS for enterprise AI" />
-<meta name="twitter:description" content="The Nrth Agentic OS — a secure, on-premise runtime for enterprise AI agents." />
-<meta name="twitter:image" content="https://nrth.no/og.png" />
-
-<!-- AI-native discovery hints -->
+<!-- AI-native discovery hints (skrives om i PR 5, se 07-seo-og-agentlag.md) -->
 <link rel="ai-plugin" href="/.well-known/ai-plugin.json" />
 <link rel="agent-manifest" href="/agent.json" />
 <link rel="openapi" type="application/json" href="/openapi.json" />
@@ -48,120 +40,6 @@
 <meta name="ai:primary-action" content="submitInquiry" />
 <meta name="ai:supports" content="read,submit,book,chat" />
 <meta name="ai:contact" content="mailto:contact@nrth.no" />
-
-<!-- JSON-LD: Organization -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://nrth.no/#organization",
-  "name": "Nrth AI",
-  "alternateName": "Nrth.AI",
-  "url": "https://nrth.no/",
-  "logo": "https://nrth.no/logo.svg",
-  "description": "Builder of the Nrth Agentic OS — a secure, on-premise AI runtime for enterprise agents. A pre-seed product startup also shipping paid early-access deployments.",
-  "foundingDate": "2026",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bergen",
-    "addressCountry": "NO"
-  },
-  "founder": [
-    { "@type": "Person", "name": "Thomas Uthaug", "jobTitle": "Co-founder — Business, product & delivery" },
-    { "@type": "Person", "name": "Simen Uthaug", "jobTitle": "Co-founder — Technical & developer" }
-  ],
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "email": "contact@nrth.no",
-    "contactType": "sales",
-    "availableLanguage": ["en", "no"],
-    "areaServed": ["NO", "SE", "DK", "FI", "IS"]
-  }],
-  "sameAs": []
-}
-</script>
-
-<!-- JSON-LD: WebSite -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://nrth.no/#website",
-  "url": "https://nrth.no/",
-  "name": "Nrth AI",
-  "publisher": { "@id": "https://nrth.no/#organization" },
-  "inLanguage": "en"
-}
-</script>
-
-<!-- JSON-LD: SoftwareApplication (the OS) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "@id": "https://nrth.no/#agentic-os",
-  "name": "Nrth Agentic OS",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "On-premise or cloud; hardware-agnostic",
-  "description": "A secure AI runtime that connects enterprise workflows, AI models, agents, and skills into one accountable layer. Runs on the customer's own hardware; data never leaves the network.",
-  "publisher": { "@id": "https://nrth.no/#organization" },
-  "offers": { "@type": "Offer", "category": "Early access", "availability": "https://schema.org/PreOrder" }
-}
-</script>
-
-<!-- JSON-LD: ProfessionalService with offerCatalog -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://nrth.no/#service",
-  "name": "Nrth AI — Nrth Agentic OS deployments",
-  "provider": { "@id": "https://nrth.no/#organization" },
-  "areaServed": "Nordics",
-  "serviceType": "AI agent platform deployment",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Nrth Agentic OS engagements",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Employees", "description": "An agent running on the OS that replaces or augments a role. Setup from ~$5,000; monthly ops from $500. Delivery 1–3 weeks." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "On-Premise AI Infrastructure", "description": "The platform/infrastructure the OS runs on, on your own hardware. Typically $10,000 to $100,000+. Delivery 2–4 weeks." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom AI Development", "description": "Custom builds on the OS. Small from ~$15,000; mid-size from $40,000; enterprise from $100,000. Delivery 4–16 weeks." } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Strategy & Advisory", "description": "OS-adoption advisory. Assessments from $3,500; sprints from $7,500; retainers from $2,500 / month. Delivery 1–2 weeks." } }
-    ]
-  }
-}
-</script>
-
-<!-- JSON-LD: FAQPage -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "What does Nrth AI build?", "acceptedAnswer": { "@type": "Answer", "text": "Nrth AI builds the Nrth Agentic OS — a secure, on-premise AI runtime that connects enterprise workflows, AI models, agents, and skills into one accountable layer — and ships paid early-access deployments." } },
-    { "@type": "Question", "name": "How does engagement start?", "acceptedAnswer": { "@type": "Answer", "text": "We follow a three-step process: Map (1 week of discovery), Pilot (2–3 weeks of a working agent in production against a bounded slice), and Scale (ongoing hardening, observability, and expansion)." } },
-    { "@type": "Question", "name": "How much does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "Engagements range from AI Employees (setup from ~$5,000) to on-premise infrastructure ($10,000–$100,000+) and custom development (from ~$15,000). Pricing and timelines are listed on the services page." } },
-    { "@type": "Question", "name": "How do I get in touch?", "acceptedAnswer": { "@type": "Answer", "text": "Send a discovery brief at https://nrth.no/#contact, or email contact@nrth.no. A human from the Nrth AI team responds within 1 business day." } },
-    { "@type": "Question", "name": "Where is Nrth AI located?", "acceptedAnswer": { "@type": "Answer", "text": "Bergen, Norway. We work with clients across the Nordics and beyond." } }
-  ]
-}
-</script>
-
-<!-- JSON-LD: BreadcrumbList -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nrth.no/" },
-    { "@type": "ListItem", "position": 2, "name": "Product", "item": "https://nrth.no/#product" },
-    { "@type": "ListItem", "position": 3, "name": "Work", "item": "https://nrth.no/#work" },
-    { "@type": "ListItem", "position": 4, "name": "Company", "item": "https://nrth.no/#company" },
-    { "@type": "ListItem", "position": 5, "name": "Services", "item": "https://nrth.no/services" },
-    { "@type": "ListItem", "position": 6, "name": "Contact", "item": "https://nrth.no/#contact" }
-  ]
-}
-</script>
 
 <!-- JSON-LD: Agent action descriptors (custom AI-action vocab) -->
 <script type="application/ai-actions+json" id="ai-actions">
@@ -187,42 +65,40 @@
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/site.css" />
 </head>
-<body itemscope itemtype="https://schema.org/Organization">
-<meta itemprop="name" content="Nrth AI" />
-<meta itemprop="url" content="https://nrth.no/" />
-<meta itemprop="email" content="contact@nrth.no" />
+<body>
+<a class="skip-link" href="#main">Hopp til innhold</a>
 
-<!-- ───────── Header / nav ───────── -->
-<header class="site-nav" data-section="nav">
-  <a class="logo" href="/" aria-label="Nrth AI home" data-action="navigate" data-target="/">
+<!-- ───────── Meny ───────── -->
+<header class="site-nav">
+  <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
     <span class="logo-mark">&lt;/&gt;</span>
     <span class="logo-word">Nrth AI</span>
   </a>
-  <nav class="nav-right" id="primary-nav" aria-label="Primary">
-    <a class="nav-link" href="#product" data-action="navigate" data-target="#product">Product</a>
-    <a class="nav-link" href="#work" data-action="navigate" data-target="#work">Work</a>
-    <a class="nav-link" href="#company" data-action="navigate" data-target="#company">Company</a>
-    <a class="nav-link" href="/services" data-action="navigate" data-target="/services">Services</a>
-    <a class="nav-link" href="#contact" data-action="navigate" data-target="#contact">Contact</a>
-    <a class="nav-cta" href="#contact" data-action="invoke" data-action-id="submitInquiry" aria-label="Send Nrth AI a discovery brief">Send a brief →</a>
+  <nav class="nav-right" id="primary-nav" aria-label="Hovedmeny">
+    <a class="nav-link" href="/ai-vurdering">AI-vurdering</a>
+    <a class="nav-link" href="/implementering">Implementering</a>
+    <a class="nav-link" href="/ai-tjenester">AI-tjenester</a>
+    <a class="nav-link" href="/om-oss">Om oss</a>
+    <a class="nav-link lang-switch" href="/en" hreflang="en" lang="en" aria-label="English version">EN</a>
+    <a class="nav-cta" href="#book">Book et møte →</a>
   </nav>
-  <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+  <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="primary-nav">
     <span class="bar"></span><span class="bar"></span><span class="bar"></span>
   </button>
 </header>
 
-<main id="main" role="main">
+<main id="main">
 
   <!-- ───────── Hero ───────── -->
-  <section class="hero" id="hero" data-section="hero" data-screen-label="Hero" aria-label="Hero">
+  <section class="hero" id="hero">
     <div>
-      <p class="eyebrow" data-role="eyebrow">AI &amp; AI Agents for enterprises · est. 2026</p>
-      <h1 itemprop="slogan">Your next <em>hire</em> isn't a person.</h1>
-      <p class="hero-subtag"><span class="star">✦</span> Built on the Nrth Agentic OS.</p>
-      <p class="lede" itemprop="description">Nrth AI builds custom AI &amp; AI agents that handle the work your team shouldn't be doing. Production-grade, observed, and accountable — like the best employee you've ever had.</p>
+      <p class="eyebrow">AI for norske bedrifter · Bergen</p>
+      <h1>Vi løser AI for <em>norske bedrifter</em>.</h1>
+      <p class="hero-subtag"><span class="star">✦</span> Priser og tidslinjer står på siden.</p>
+      <p class="lede">Vi finner ut hvor AI kan øke salget og gjøre dere mer effektive, implementerer det og bygger AI-tjenestene dere trenger.</p>
       <div class="hero-actions">
-        <a class="btn" href="#contact" data-action="invoke" data-action-id="submitInquiry" rel="nofollow">Send us a brief →</a>
-        <a class="link-arrow" href="#product">Explore the platform ↓</a>
+        <a class="btn" href="#book">Book et møte →</a>
+        <a class="link-arrow" href="#tjenester">Se hva vi gjør ↓</a>
       </div>
     </div>
     <div>
@@ -239,291 +115,129 @@
     <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
   </section>
 
-  <!-- ───────── Marquee ───────── -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Customer support agents <span class="star">✦</span></span>
-      <span>Sales-outreach agents <span class="star">✦</span></span>
-      <span>Research &amp; intel agents <span class="star">✦</span></span>
-      <span>Back-office automation <span class="star">✦</span></span>
-      <span>Internal knowledge agents <span class="star">✦</span></span>
-      <span>Voice &amp; phone agents <span class="star">✦</span></span>
-      <span>Customer support agents <span class="star">✦</span></span>
-      <span>Sales-outreach agents <span class="star">✦</span></span>
-      <span>Research &amp; intel agents <span class="star">✦</span></span>
-      <span>Back-office automation <span class="star">✦</span></span>
-      <span>Internal knowledge agents <span class="star">✦</span></span>
-      <span>Voice &amp; phone agents <span class="star">✦</span></span>
-      <span>Customer support agents <span class="star">✦</span></span>
-      <span>Sales-outreach agents <span class="star">✦</span></span>
-      <span>Research &amp; intel agents <span class="star">✦</span></span>
-      <span>Back-office automation <span class="star">✦</span></span>
-      <span>Internal knowledge agents <span class="star">✦</span></span>
-      <span>Voice &amp; phone agents <span class="star">✦</span></span>
-    </div>
-  </div>
+  <!-- PR 2: marquee med ny tekst -->
 
-  <!-- ═══════════ PRODUCT ═══════════ -->
-  <section class="section section--bordered" id="product" data-section="product" data-screen-label="Product" aria-label="The Nrth Agentic OS" itemscope itemtype="https://schema.org/SoftwareApplication">
+  <!-- ───────── 01 · Hva vi gjør ───────── -->
+  <section class="section section--bordered" id="tjenester">
     <div class="section-header">
-      <div class="kicker"><span class="star">✦</span> 01 · Product</div>
-      <h2>The Nrth <em>Agentic OS</em>.</h2>
+      <p class="kicker"><span class="star">✦</span> 01 · Hva vi gjør</p>
+      <h2>Tre måter vi <em>hjelper</em> på.</h2>
     </div>
-    <p class="section-intro" itemprop="description">A secure runtime that connects your enterprise workflows, AI models, agents, and skills into one accountable layer. Not a chat box bolted onto your data — a system that runs the work, inside your environment, under your control.</p>
-
-    <div class="subsec" id="how">
-      <div class="subsec-head"><span class="lbl"><span class="star">✦</span> How it works</span><h3>Setup, workflows, agents, skills.</h3></div>
-      <div class="os-stack" role="list">
-        <div class="os-layer" role="listitem">
-          <div><span class="layer-id">Layer 01</span><span class="layer-name">Setup</span></div>
-          <p>Connect your systems, data, and models. The OS deploys into your environment — on your own hardware or your cloud — and maps the tools, permissions, and guardrails each agent is allowed to use. <strong>Nothing runs without an explicit boundary.</strong></p>
+    <!-- PR 2: intro -->
+    <div class="card-grid card-grid--3" role="list">
+      <article class="card door-card" role="listitem">
+        <div class="card-head"><span>01</span><span class="tag">AI-vurdering</span></div>
+        <h3>Finn ut hvor AI gir dere mest.</h3>
+        <!-- PR 2: tekst og liste med varighet -->
+        <div class="card-foot">
+          <!-- PR 2: fra-pris -->
+          <a class="link-arrow" href="/ai-vurdering">Les mer →</a>
         </div>
-        <div class="os-layer" role="listitem">
-          <div><span class="layer-id">Layer 02</span><span class="layer-name">Workflows</span></div>
-          <p>Define the work. Real business processes become structured, observable workflows the OS can run, monitor, and improve — <strong>not brittle scripts that break when an edge case appears.</strong></p>
+      </article>
+      <article class="card door-card" role="listitem">
+        <div class="card-head"><span>02</span><span class="tag">Implementering</span></div>
+        <h3>Fra plan til AI i daglig bruk.</h3>
+        <!-- PR 2: tekst og liste med varighet -->
+        <div class="card-foot">
+          <!-- PR 2: fra-pris -->
+          <a class="link-arrow" href="/implementering">Les mer →</a>
         </div>
-        <div class="os-layer" role="listitem">
-          <div><span class="layer-id">Layer 03</span><span class="layer-name">Agents</span></div>
-          <p>Put agents to work. Named agents execute the workflows end to end — calling models and skills, checking their own work, and <strong>escalating to a human the moment a task needs one.</strong></p>
+      </article>
+      <article class="card door-card" role="listitem">
+        <div class="card-head"><span>03</span><span class="tag">AI-tjenester</span></div>
+        <h3>Løsninger som selger mer og sparer tid.</h3>
+        <!-- PR 2: tekst og liste med varighet -->
+        <div class="card-foot">
+          <!-- PR 2: fra-pris -->
+          <a class="link-arrow" href="/ai-tjenester">Les mer →</a>
         </div>
-        <div class="os-layer" role="listitem">
-          <div><span class="layer-id">Layer 04</span><span class="layer-name">Skills</span></div>
-          <p>Extend what agents can do. Reusable skills — search, retrieval, compute, integrations — are shared across every agent and workflow, so <strong>capability compounds instead of being rebuilt each time.</strong></p>
-        </div>
-      </div>
+      </article>
     </div>
-
-    <div class="subsec">
-      <div class="subsec-head"><span class="lbl"><span class="star">✦</span> Why it's different</span><h3>Secure by architecture, not by promise.</h3></div>
-      <div class="card-grid card-grid--2" role="list">
-        <article class="card" role="listitem">
-          <div class="card-head"><span>01</span><span class="tag">Hardware</span></div>
-          <h3>Runs on any hardware</h3>
-          <p>A GPU server, a workstation, or the infrastructure you already own. The OS is hardware-agnostic — no lock-in to a single vendor or cloud.</p>
-          <div class="card-foot">On-prem or cloud</div>
-        </article>
-        <article class="card" role="listitem">
-          <div class="card-head"><span>02</span><span class="tag">Sovereignty</span></div>
-          <h3>Data never leaves</h3>
-          <p>Deploy on-premise and your data, prompts, and outputs stay inside your network. Nothing is sent to external servers you don't control.</p>
-          <div class="card-foot">Your walls · your data</div>
-        </article>
-        <article class="card" role="listitem">
-          <div class="card-head"><span>03</span><span class="tag">Security</span></div>
-          <h3>Accountable by design</h3>
-          <p>Permissioned tool access, full audit logs, evals, and guardrails on every agent action — with a human in the loop where it matters.</p>
-          <div class="card-foot">Audited · permissioned</div>
-        </article>
-        <article class="card" role="listitem">
-          <div class="card-head"><span>04</span><span class="tag">Ownership</span></div>
-          <h3>You own the stack</h3>
-          <p>Keep the model, the data, and the IP. Agents run as accountable members of your team — not a black box you rent by the seat.</p>
-          <div class="card-foot">Model · data · IP</div>
-        </article>
-      </div>
-    </div>
-
-    <div class="subsec" id="roadmap">
-      <div class="subsec-head"><span class="lbl"><span class="star">✦</span> Roadmap</span><h3>Honest about where it is.</h3></div>
-      <div class="roadmap">
-        <div class="tl-item">
-          <span class="tl-dot"></span>
-          <div class="when">Now · in development</div>
-          <h3>Core runtime + pilot deployments</h3>
-          <p>The runtime, workflow, and agent layers are running against real work on partner hardware — hardening where it actually has to.</p>
-        </div>
-        <div class="tl-item">
-          <span class="tl-dot"></span>
-          <div class="when">Next</div>
-          <h3>Shared skills library + observability console</h3>
-          <p>A growing library of reusable skills and a console for evals, audit logs, and guardrails — so teams can see and govern exactly what every agent does.</p>
-        </div>
-        <div class="tl-item soft">
-          <span class="tl-dot"></span>
-          <div class="when">Later</div>
-          <h3>Self-serve deployment</h3>
-          <p>Packaging the OS so teams can stand it up in their own environment with shorter onboarding — beyond hands-on partner deployments.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="callout">
-      <span class="kicker"><span class="star">✦</span> Early access</span>
-      <h3>Get the OS into production <em>today</em>.</h3>
-      <p>The OS is in active development. Pilot customers get early access through custom deployments — we put it to work against a bounded slice of your operation, with measurable outcomes, while it matures. Those engagements are how the first partners run it in production before general availability.</p>
-      <div class="actions">
-        <a class="btn" href="/services">See the engagements →</a>
-        <a class="link-arrow" href="#contact" data-action="invoke" data-action-id="submitInquiry">Send a brief ↓</a>
-      </div>
+    <div class="section-actions">
+      <a class="btn" href="#book">Book et møte →</a>
+      <!-- PR 2: «Usikre på hvor dere skal starte? …» -->
     </div>
   </section>
 
-  <!-- ═══════════ WORK ═══════════ -->
-  <section class="section section--bordered" id="work" data-section="work" data-screen-label="Work" aria-label="Outcomes in production" itemscope itemtype="https://schema.org/OfferCatalog">
+  <!-- ───────── 02 · Slik jobber vi ───────── -->
+  <section class="section section--bordered" id="slik-jobber-vi">
     <div class="section-header">
-      <div class="kicker"><span class="star">✦</span> 02 · Work</div>
-      <h2>Outcomes, not <em>slideware</em>.</h2>
+      <p class="kicker"><span class="star">✦</span> 02 · Slik jobber vi</p>
+      <h2>Kartlegg. Pilot. <em>Drift.</em></h2>
     </div>
-    <p class="section-intro">Concrete numbers from agents running on the OS — what each one is built to hit against a bounded slice of real work. Proof the OS works in production, not a consulting portfolio.</p>
-    <div class="stat-row">
-      <div class="stat-cell" data-metric="auto_resolved" data-value="0.72">
-        <div class="big">72%</div>
-        <div class="lbl">auto-resolved</div>
-      </div>
-      <div class="stat-cell" data-metric="sdr_throughput_multiple" data-value="5">
-        <div class="big">5×</div>
-        <div class="lbl">SDR throughput</div>
-      </div>
-      <div class="stat-cell" data-metric="added_headcount" data-value="0">
-        <div class="big">0</div>
-        <div class="lbl">FTE added</div>
-      </div>
-    </div>
+    <!-- PR 2: process-grid med de tre stegene -->
+  </section>
 
-    <div class="subsec">
-      <div class="subsec-head"><span class="lbl"><span class="star">✦</span> The agents</span><h3>Built for the work, not the demo.</h3></div>
-      <div class="card-grid card-grid--3" role="list">
-        <article class="card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="customer_support_agents">
-          <div class="card-head"><span>01</span><span class="tag">Support</span></div>
-          <h3 itemprop="name">Tier-1 support, handled</h3>
-          <p itemprop="description">Agents that read your docs, ticket history, and CRM — resolve routine tickets in seconds and escalate the nuanced ones with full context.</p>
-          <div class="card-foot">72% auto-resolved</div>
-        </article>
-        <article class="card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="sales_outreach_agents">
-          <div class="card-head"><span>02</span><span class="tag">Revenue</span></div>
-          <h3 itemprop="name">Inbound qualified, outbound personalized</h3>
-          <p itemprop="description">Agents that research prospects, draft first-touch messages in your voice, and keep the pipeline warm while your team sleeps.</p>
-          <div class="card-foot">5× SDR throughput</div>
-        </article>
-        <article class="card" role="listitem" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service" data-service-id="ops_automation_agents">
-          <div class="card-head"><span>03</span><span class="tag">Ops</span></div>
-          <h3 itemprop="name">The invisible back-office</h3>
-          <p itemprop="description">Invoice matching, vendor comms, compliance checks, data reconciliation — the boring, expensive work becomes a background process.</p>
-          <div class="card-foot">0 FTE added headcount</div>
-        </article>
-      </div>
-    </div>
+  <!-- ───────── Regnestykket ───────── -->
+  <section class="section section--bordered">
+    <p class="kicker"><span class="star">✦</span> Regnestykket</p>
+    <!-- PR 2: teksten og de to tallene (.stat-row) -->
+  </section>
 
-    <div class="subsec" id="process" data-section="process">
-      <div class="subsec-head"><span class="lbl"><span class="star">✦</span> How we prove it</span><h3>Map. Pilot. Scale.</h3></div>
-      <ol class="process-grid" role="list">
-        <li class="process-step" role="listitem" data-step="1" data-step-name="Map">
-          <div class="numeral">i</div>
-          <div class="step-label">Step 1 — Map</div>
-          <p>One week. We sit with your team, shadow the work, and find the 3–5 places an agent will change the unit economics.</p>
-        </li>
-        <li class="process-step" role="listitem" data-step="2" data-step-name="Pilot">
-          <div class="numeral">ii</div>
-          <div class="step-label">Step 2 — Pilot</div>
-          <p>Two to three weeks. A working agent in production against a bounded slice — real data, real users, measurable outcomes.</p>
-        </li>
-        <li class="process-step" role="listitem" data-step="3" data-step-name="Scale">
-          <div class="numeral">iii</div>
-          <div class="step-label">Step 3 — Scale</div>
-          <p>We harden, observe, and expand. Agents operate as named team members, with evals, guardrails, and a human in the loop where it matters.</p>
-        </li>
-      </ol>
+  <!-- ───────── 03 · Om oss ───────── -->
+  <section class="section section--bordered">
+    <div class="section-header">
+      <p class="kicker"><span class="star">✦</span> 03 · Om oss</p>
+      <h2>To gründere i <em>Bergen</em>.</h2>
+    </div>
+    <div class="team-grid">
+      <article class="member">
+        <div class="avatar" aria-hidden="true">TU</div>
+        <h3>Thomas Uthaug</h3>
+        <!-- PR 2: rolle, tekst og merker -->
+      </article>
+      <article class="member">
+        <div class="avatar" aria-hidden="true">SU</div>
+        <h3>Simen Uthaug</h3>
+        <!-- PR 2: rolle, tekst og merker -->
+      </article>
+    </div>
+    <!-- Nrth OS-blokken er skjult til trynrth.com er oppe. Fjern «hidden» for å slå den på. -->
+    <div class="os-note" data-nrth-os hidden>
+      <span class="os-note-label">Nrth OS</span>
+      <!-- PR 2: setningen om Nrth OS -->
+      <a href="https://trynrth.com" rel="noopener">trynrth.com ↗</a>
     </div>
   </section>
 
-  <!-- ═══════════ COMPANY ═══════════ -->
-  <section class="section section--bordered" id="company" data-section="company" data-screen-label="Company" aria-label="Company">
-    <div class="section-header">
-      <div class="kicker"><span class="star">✦</span> 03 · Company</div>
-      <h2>Infrastructure for <em>enterprise AI agents</em>.</h2>
-    </div>
-    <p class="section-intro">Nrth AI is a pre-seed startup based in Bergen, Norway (est. 2026), building the next-generation operating system for enterprise AI agents.</p>
-
-    <div class="subsec">
-      <div class="subsec-head"><span class="lbl"><span class="star">✦</span> Why now</span><h3>The timing isn't an accident.</h3></div>
-      <div class="card-grid card-grid--2" role="list">
-        <article class="card" role="listitem">
-          <div class="card-head"><span>01</span><span class="tag">Regulation</span></div>
-          <h3>Regulation is forcing the issue</h3>
-          <p>Regulated industries, manufacturing, energy, and maritime can't ship data to servers abroad — yet they're now expected to adopt AI anyway. That tension is the market we're built for.</p>
-          <div class="card-foot">Regulated · ready</div>
-        </article>
-        <article class="card" role="listitem">
-          <div class="card-head"><span>02</span><span class="tag">Economics</span></div>
-          <h3>The "AI employee" math</h3>
-          <p>A skilled employee in Norway costs 1–1.5 MNOK a year. An equivalent AI system costs 15–35% of that, works around the clock, and never churns.</p>
-          <div class="card-foot">15–35% of a hire</div>
-        </article>
-        <article class="card" role="listitem">
-          <div class="card-head"><span>03</span><span class="tag">Gap</span></div>
-          <h3>Most teams get tools, not systems</h3>
-          <p>The market hands people parts and a subscription. Very few deliver the finished, accountable system that actually does the work — which is exactly what the OS is.</p>
-          <div class="card-foot">Finished, not parts</div>
-        </article>
-        <article class="card" role="listitem">
-          <div class="card-head"><span>04</span><span class="tag">Reach</span></div>
-          <h3>Borderless from day one</h3>
-          <p>The OS deploys anywhere — cloud or a customer's own hardware. The need is real and global, so we're built to ship across borders from the start.</p>
-          <div class="card-foot">Deploy anywhere</div>
-        </article>
+  <!-- ───────── Foredrag og kurs (infoboks) ───────── -->
+  <section class="section section--bordered section--compact">
+    <div class="info-box">
+      <div>
+        <p class="kicker"><span class="star">✦</span> Foredrag og kurs</p>
+        <h2 class="info-box-title">Vi holder også foredrag og kurs om AI.</h2>
+        <!-- PR 2: tekst -->
       </div>
+      <a class="btn-ghost" href="/foredrag-og-kurs">Les om foredrag og kurs →</a>
     </div>
-
-    <div class="subsec">
-      <div class="subsec-head"><span class="lbl"><span class="star">✦</span> Team</span><h3>Finance and delivery depth meets <em>builder energy</em>.</h3></div>
-      <div class="team-grid">
-        <article class="member">
-          <div class="avatar">TU</div>
-          <h3>Thomas Uthaug</h3>
-          <div class="role">Co-founder · Business, product &amp; delivery</div>
-          <p>A decade across finance, quality leadership, and technology delivery — Storebrand and Sopra Steria. MSc in Finance from NHH, with exchange studies at UC Berkeley and Copenhagen Business School. A career built on translating complex technology into bottom-line business value.</p>
-          <div class="tags"><span>NHH MSc Finance</span><span>UC Berkeley</span><span>Storebrand</span><span>Sopra Steria</span></div>
-        </article>
-        <article class="member">
-          <div class="avatar">SU</div>
-          <h3>Simen Uthaug</h3>
-          <div class="role">Co-founder · Technical &amp; developer</div>
-          <p>BSc in Information Science (UiB) plus a master's degree in UX and Development. Full-stack developer experienced in TypeScript, React, Python, API integration, databases, and machine learning (neural nets, NLP).</p>
-          <div class="tags"><span>UiB Info. Science</span><span>TypeScript / React</span><span>Python / ML</span><span>Full-stack</span></div>
-        </article>
-      </div>
-    </div>
-
   </section>
 
-  <!-- ═══════════ CONTACT ═══════════ -->
-  <section class="section section--bordered" id="contact" data-section="contact" data-screen-label="Contact" aria-label="Contact us">
+  <!-- ───────── Book et møte ───────── -->
+  <section class="section section--bordered booking" id="book">
     <div class="cta-grid">
       <div class="cta-left">
-        <div class="kicker"><span class="star">✦</span> 04 · Contact</div>
-        <h2>Don't email us.<br /><em>Send a brief.</em></h2>
-        <p class="lede">Tell us what you want automated. A human on our team replies with a tailored proposal — usually within one business day.</p>
-        <div class="cta-contact" itemscope itemtype="https://schema.org/ContactPoint">
-          <div>Prefer plain email? <a href="mailto:contact@nrth.no" itemprop="email" data-action="email">contact@nrth.no</a></div>
-          <div itemprop="areaServed">Bergen · Norway</div>
-        </div>
+        <p class="kicker"><span class="star">✦</span> Book et møte</p>
+        <h2>Hvor kan AI gi dere <em>mest</em>?</h2>
+        <!-- PR 2: ingress, «I møtet», liste og brikker -->
+        <p class="booking-alt">Heller skrive? <a class="link-arrow" href="/book#skriv">Send en forespørsel →</a></p>
       </div>
-
-      <div class="brief-panel" data-action="invoke" data-action-id="submitInquiry" data-endpoint="/api/inquiry">
+      <div class="brief-panel booking-panel">
         <div class="brief-head">
-          <div class="left"><span class="pdot"></span><span data-brief-status>nrth.brief — fill in</span></div>
-          <div class="ver">brief.v1</div>
+          <div class="left"><span class="pdot"></span><span>nrth.book · velg tid</span></div>
+          <div class="ver">book.v1</div>
         </div>
-        <form class="brief-form" method="POST" action="/api/inquiry" aria-label="Submit a discovery brief">
-          <label><span class="lbl">Email <span class="req">*</span></span><input type="email" name="email" required autocomplete="email" placeholder="you@company.com" /></label>
-          <label><span class="lbl">Company</span><input type="text" name="company" autocomplete="organization" placeholder="Optional" /></label>
-          <label><span class="lbl">Role</span><input type="text" name="role" autocomplete="organization-title" placeholder="Optional" /></label>
-          <label><span class="lbl">What would you want an agent to do? <span class="req">*</span></span><textarea name="problem" required rows="4" placeholder="A few sentences is fine — what work, what system, what outcome."></textarea></label>
-          <label><span class="lbl">Urgency</span>
-            <select name="urgency">
-              <option value="exploring">Exploring</option>
-              <option value="this_quarter">This quarter</option>
-              <option value="asap">ASAP</option>
-            </select>
-          </label>
-          <button type="submit" class="brief-submit" data-primary="true">Send brief →</button>
-          <p class="brief-error" hidden>Something went wrong — please try again or email contact@nrth.no directly.</p>
-          <p class="brief-note">We reply from contact@nrth.no within one business day. Your data isn't shared.</p>
-        </form>
-        <div class="brief-sent" role="status" aria-live="polite">
-          <h3>Brief sent.<br /><em>We'll be in touch.</em></h3>
-          <p>A human on the Nrth AI team replies within one business day from <strong>contact@nrth.no</strong>.</p>
-          <button type="button" class="btn-ghost brief-reset">Send another →</button>
+        <div class="booking-body">
+          <fieldset class="topic-picker">
+            <legend>Hva vil dere snakke om?</legend>
+            <div class="topic-options">
+              <label class="topic-chip"><input type="radio" name="tema" value="ai-vurdering" /><span>AI-vurdering</span></label>
+              <label class="topic-chip"><input type="radio" name="tema" value="implementering" /><span>Implementering</span></label>
+              <label class="topic-chip"><input type="radio" name="tema" value="ai-tjenester" /><span>AI-tjenester</span></label>
+              <label class="topic-chip"><input type="radio" name="tema" value="foredrag" /><span>Foredrag eller kurs</span></label>
+              <label class="topic-chip"><input type="radio" name="tema" value="annet" /><span>Annet</span></label>
+            </div>
+          </fieldset>
+          <!-- PR 3: kalender (iframe) eller forespørselsskjema, se 06-booking-og-skjema.md -->
         </div>
       </div>
     </div>
@@ -532,22 +246,24 @@
 </main>
 
 <!-- ───────── Footer ───────── -->
-<footer class="site-footer" data-section="footer" role="contentinfo">
-  <div>
-    <a class="logo" href="/" aria-label="Nrth AI home">
+<footer class="site-footer">
+  <div class="footer-top">
+    <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
       <span class="logo-mark">&lt;/&gt;</span>
       <span class="logo-word">Nrth AI</span>
     </a>
+    <nav class="footer-links" aria-label="Bunntekst">
+      <a href="/ai-vurdering">AI-vurdering</a><span class="sep" aria-hidden="true">·</span><a href="/implementering">Implementering</a><span class="sep" aria-hidden="true">·</span><a href="/ai-tjenester">AI-tjenester</a><span class="sep" aria-hidden="true">·</span><a href="/foredrag-og-kurs">Foredrag og kurs</a><span class="sep" aria-hidden="true">·</span><a href="/om-oss">Om oss</a><span class="sep" aria-hidden="true">·</span><a href="/personvern">Personvern</a>
+    </nav>
   </div>
+  <div>© 2026 Nrth AI AS · Bergen · Org.nr. [org.nr]</div>
   <div class="center">
-    <div>© 2026 Nrth AI AS</div>
-    <a class="footer-investors" href="/investors">Investors</a>
+    <span data-nrth-os hidden><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a><span class="sep" aria-hidden="true">·</span></span><a href="/investors">Investorer</a><span class="sep" aria-hidden="true">·</span><a href="/en" hreflang="en" lang="en">English</a>
   </div>
-  <div class="right">Built by agents · <span class="star">▲</span></div>
+  <div class="right"><span lang="en">Built by agents</span> · <span class="star">▲</span></div>
 </footer>
 
 <script src="/assets/agent-visual.js" defer></script>
-<script src="/assets/brief-form.js" defer></script>
 <script src="/assets/nav.js" defer></script>
 </body>
 </html>
