@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.classList.add("js");</script>
 <title>Privacy · Nrth AI</title>
 <meta name="description" content="How Nrth AI AS handles the information you give us when you book a meeting or send a request." />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -31,6 +32,9 @@
     <span class="logo-mark">&lt;/&gt;</span>
     <span class="logo-word">Nrth AI</span>
   </a>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
   <nav class="nav-right" id="primary-nav" aria-label="Primary">
     <a class="nav-link" href="/en/ai-assessment">AI assessment</a>
     <a class="nav-link" href="/en/implementation">Implementation</a>
@@ -39,9 +43,6 @@
     <a class="nav-link lang-switch" href="/personvern" hreflang="nb" lang="nb" aria-label="Norsk versjon">NO</a>
     <a class="nav-cta" href="/en/book">Book a meeting →</a>
   </nav>
-  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
-    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-  </button>
 </header>
 
 <main id="main">
@@ -53,7 +54,7 @@
 
   <section class="section section--bordered">
     <div class="prose">
-      <!-- PR 2/PR 4: teksten (utkast, må godkjennes før publisering) -->
+      <!-- PR 4: teksten (utkast, må godkjennes før publisering) -->
     </div>
   </section>
 
@@ -66,14 +67,19 @@
       <span class="logo-mark">&lt;/&gt;</span>
       <span class="logo-word">Nrth AI</span>
     </a>
-    <nav class="footer-links" aria-label="Footer">
-      <a href="/en/ai-assessment">AI assessment</a><span class="sep" aria-hidden="true">·</span><a href="/en/implementation">Implementation</a><span class="sep" aria-hidden="true">·</span><a href="/en/ai-services">AI services</a><span class="sep" aria-hidden="true">·</span><a href="/en/talks-and-courses">Talks and courses</a><span class="sep" aria-hidden="true">·</span><a href="/en/about">About</a><span class="sep" aria-hidden="true">·</span><a href="/en/privacy">Privacy</a>
+    <nav class="footer-links dots" aria-label="Footer">
+      <ul>
+        <li><a href="/en/ai-assessment">AI assessment</a></li>
+        <li><a href="/en/implementation">Implementation</a></li>
+        <li><a href="/en/ai-services">AI services</a></li>
+        <li><a href="/en/talks-and-courses">Talks and courses</a></li>
+        <li><a href="/en/about">About</a></li>
+        <li><a href="/en/privacy">Privacy</a></li>
+      </ul>
     </nav>
   </div>
-  <div>© 2026 Nrth AI AS · Bergen, Norway · Org. no. [org.nr]</div>
-  <div class="center">
-    <span data-nrth-os hidden><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a><span class="sep" aria-hidden="true">·</span></span><a href="/investors">Investors</a><span class="sep" aria-hidden="true">·</span><a href="/personvern" hreflang="nb" lang="nb">Norsk</a>
-  </div>
+  <div class="dots"><p><span>© 2026 Nrth AI AS</span> <span>Bergen, Norway</span> <span>Org. no. [org.nr]</span></p></div>
+  <div class="center dots"><p><span data-nrth-os hidden><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></span> <span><a href="/investors">Investors</a></span> <span><a href="/personvern" hreflang="nb" lang="nb">Norsk</a></span></p></div>
   <div class="right"><span lang="en">Built by agents</span> · <span class="star">▲</span></div>
 </footer>
 

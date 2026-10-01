@@ -184,6 +184,11 @@
     ready = true;
     raf = requestAnimationFrame(render);
 
+    // Stillbildet tegnes på nytt når Geist Mono er lastet, så etikettene får riktig font.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { if (still()) render(performance.now()); });
+    }
+
     if (reduce && reduce.addEventListener) {
       reduce.addEventListener("change", function () {
         cancelAnimationFrame(raf);

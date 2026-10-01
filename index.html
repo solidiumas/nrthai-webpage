@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.classList.add("js");</script>
 <!-- Videresend gamle ankre fra den engelske ensidesversjonen til nye sider og seksjoner. -->
 <script>
   (function () {
@@ -74,6 +75,9 @@
     <span class="logo-mark">&lt;/&gt;</span>
     <span class="logo-word">Nrth AI</span>
   </a>
+  <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="primary-nav">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
   <nav class="nav-right" id="primary-nav" aria-label="Hovedmeny">
     <a class="nav-link" href="/ai-vurdering">AI-vurdering</a>
     <a class="nav-link" href="/implementering">Implementering</a>
@@ -82,9 +86,6 @@
     <a class="nav-link lang-switch" href="/en" hreflang="en" lang="en" aria-label="English version">EN</a>
     <a class="nav-cta" href="#book">Book et møte →</a>
   </nav>
-  <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="primary-nav">
-    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-  </button>
 </header>
 
 <main id="main">
@@ -124,8 +125,8 @@
       <h2>Tre måter vi <em>hjelper</em> på.</h2>
     </div>
     <!-- PR 2: intro -->
-    <div class="card-grid card-grid--3" role="list">
-      <article class="card door-card" role="listitem">
+    <div class="card-grid card-grid--3">
+      <article class="card door-card">
         <div class="card-head"><span>01</span><span class="tag">AI-vurdering</span></div>
         <h3>Finn ut hvor AI gir dere mest.</h3>
         <!-- PR 2: tekst og liste med varighet -->
@@ -134,7 +135,7 @@
           <a class="link-arrow" href="/ai-vurdering">Les mer →</a>
         </div>
       </article>
-      <article class="card door-card" role="listitem">
+      <article class="card door-card">
         <div class="card-head"><span>02</span><span class="tag">Implementering</span></div>
         <h3>Fra plan til AI i daglig bruk.</h3>
         <!-- PR 2: tekst og liste med varighet -->
@@ -143,7 +144,7 @@
           <a class="link-arrow" href="/implementering">Les mer →</a>
         </div>
       </article>
-      <article class="card door-card" role="listitem">
+      <article class="card door-card">
         <div class="card-head"><span>03</span><span class="tag">AI-tjenester</span></div>
         <h3>Løsninger som selger mer og sparer tid.</h3>
         <!-- PR 2: tekst og liste med varighet -->
@@ -252,14 +253,19 @@
       <span class="logo-mark">&lt;/&gt;</span>
       <span class="logo-word">Nrth AI</span>
     </a>
-    <nav class="footer-links" aria-label="Bunntekst">
-      <a href="/ai-vurdering">AI-vurdering</a><span class="sep" aria-hidden="true">·</span><a href="/implementering">Implementering</a><span class="sep" aria-hidden="true">·</span><a href="/ai-tjenester">AI-tjenester</a><span class="sep" aria-hidden="true">·</span><a href="/foredrag-og-kurs">Foredrag og kurs</a><span class="sep" aria-hidden="true">·</span><a href="/om-oss">Om oss</a><span class="sep" aria-hidden="true">·</span><a href="/personvern">Personvern</a>
+    <nav class="footer-links dots" aria-label="Bunntekst">
+      <ul>
+        <li><a href="/ai-vurdering">AI-vurdering</a></li>
+        <li><a href="/implementering">Implementering</a></li>
+        <li><a href="/ai-tjenester">AI-tjenester</a></li>
+        <li><a href="/foredrag-og-kurs">Foredrag og kurs</a></li>
+        <li><a href="/om-oss">Om oss</a></li>
+        <li><a href="/personvern">Personvern</a></li>
+      </ul>
     </nav>
   </div>
-  <div>© 2026 Nrth AI AS · Bergen · Org.nr. [org.nr]</div>
-  <div class="center">
-    <span data-nrth-os hidden><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a><span class="sep" aria-hidden="true">·</span></span><a href="/investors">Investorer</a><span class="sep" aria-hidden="true">·</span><a href="/en" hreflang="en" lang="en">English</a>
-  </div>
+  <div class="dots"><p><span>© 2026 Nrth AI AS</span> <span>Bergen</span> <span>Org.nr. [org.nr]</span></p></div>
+  <div class="center dots"><p><span data-nrth-os hidden><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></span> <span><a href="/investors">Investorer</a></span> <span><a href="/en" hreflang="en" lang="en">English</a></span></p></div>
   <div class="right"><span lang="en">Built by agents</span> · <span class="star">▲</span></div>
 </footer>
 
