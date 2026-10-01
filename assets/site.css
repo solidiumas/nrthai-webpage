@@ -653,12 +653,16 @@ section[id], [id].section { scroll-margin-top: 90px; }
    Bare eksisterende variabler. Ingen nye farger, fonter eller avrundede hjørner. */
 
 [hidden] { display: none !important; }
+/* Tallområder som «1–1,5» og «15–35 %» skal ikke brytes over to linjer */
+.nowrap { white-space: nowrap; }
 
 /* Tilgjengelighet: --fg-faint (2,9:1) brukes ikke til tekst som skal leses */
 .card-head { color: var(--fg-dim); }
 .stat-cell .lbl { color: var(--fg-dim); }
 .site-footer { color: var(--fg-dim); }
 .booking-panel .brief-head .ver { color: var(--fg-dim); }
+.service-meta .label { color: var(--fg-dim); }
+.card-foot { color: var(--fg-dim); }
 
 /* ───────── Hopp til innhold ───────── */
 .skip-link {
@@ -784,6 +788,26 @@ section[id], [id].section { scroll-margin-top: 90px; }
 }
 .os-note a:hover { color: var(--fg); border-color: var(--fg); }
 
+/* ───────── math-block (Regnestykket) ───────── */
+/* Bygget av .stat-row og .stat-cell: tekst til venstre, to tall til høyre. Bare det andre tallet er oransje. */
+.math-block { display: grid; grid-template-columns: 5fr 7fr; gap: 48px 64px; align-items: center; }
+.math-block .kicker { margin-bottom: 20px; }
+.math-text p:not(.kicker) { font-size: 22px; line-height: 1.45; color: var(--fg); max-width: 34ch; }
+.math-block .stat-row { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0; }
+.math-block .stat-cell .big { color: var(--fg); font-size: clamp(44px, 4.4vw, 64px); white-space: nowrap; }
+.math-block .stat-cell--accent .big { color: var(--accent); }
+
+/* ───────── contact-lines (Om oss) ───────── */
+/* Som .cta-contact og .service-meta: etikett i mono over verdien. */
+.contact-lines { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 32px; }
+.contact-lines dt {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--fg-dim); margin-bottom: 10px;
+}
+.contact-lines dd { font-size: 16px; line-height: 1.5; color: var(--fg); }
+.contact-lines a { border-bottom: 1px solid var(--line-2); transition: border-color 0.15s; }
+.contact-lines a:hover { border-color: var(--fg); }
+
 /* ───────── prose (personvern) ───────── */
 .prose { max-width: 720px; font-family: var(--sans); font-size: 17px; line-height: 1.6; color: var(--fg-dim); }
 .prose h2 {
@@ -823,6 +847,7 @@ section[id], [id].section { scroll-margin-top: 90px; }
 @media (max-width: 1024px) {
   .booking .cta-grid { grid-template-columns: 1fr; }
   .page-hero { padding: 120px 24px 60px; }
+  .math-block { grid-template-columns: 1fr; }
 }
 /* Tre kort i to kolonner: det siste kortet tar hele bredden i stedet for å etterlate et tomt felt */
 @media (max-width: 1024px) and (min-width: 721px) {
@@ -874,6 +899,10 @@ section[id], [id].section { scroll-margin-top: 90px; }
   .footer-top { flex-direction: column; align-items: flex-start; }
   .card h2 { font-size: 28px; }
   .service-card h2 { font-size: 30px; }
+  .service-meta { grid-template-columns: 1fr; gap: 6px; }
+  .math-text p:not(.kicker) { font-size: 19px; }
+  .math-block .stat-row { grid-template-columns: 1fr; }
+  .contact-lines { grid-template-columns: 1fr; gap: 20px; }
 }
 
 /* ───────── Redusert bevegelse ───────── */
