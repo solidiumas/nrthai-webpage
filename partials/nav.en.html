@@ -1,0 +1,26 @@
+<!-- Referansekopi av menyen. Ikke publisert (.vercelignore). Kopieres inn i hver side.
+     Varierer per side:
+     - aria-current="page" på lenken til siden man står på
+     - href på språklenken (EN/NO) = samme side på det andre språket
+     - href på «Book et møte →» = "#book", eller /book (/en/book) på personvernsiden
+     Eksempelet under er forsiden. -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ───────── Meny ───────── -->
+<header class="site-nav">
+  <a class="logo" href="/en" aria-label="Nrth AI, home">
+    <span class="logo-mark">&lt;/&gt;</span>
+    <span class="logo-word">Nrth AI</span>
+  </a>
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
+  <nav class="nav-right" id="primary-nav" aria-label="Primary">
+    <a class="nav-link" href="/en/ai-assessment">AI assessment</a>
+    <a class="nav-link" href="/en/implementation">Implementation</a>
+    <a class="nav-link" href="/en/ai-services">AI services</a>
+    <a class="nav-link" href="/en/about">About</a>
+    <a class="nav-link lang-switch" href="/" hreflang="nb" lang="nb" aria-label="Norsk versjon">NO</a>
+    <a class="nav-cta" href="#book">Book a meeting →</a>
+  </nav>
+</header>

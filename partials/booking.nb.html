@@ -1,0 +1,35 @@
+<!-- Referansekopi av bookingseksjonen. Ikke publisert (.vercelignore). Kopieres inn nederst på
+     alle sider unntatt /book, /personvern og 404.
+     Varierer per side: data-default-topic (se 06-booking-og-skjema.md §3).
+     På /book brukes bare panelet (.booking--solo), uten venstre kolonne.
+     Eksempelet under er forsiden (ingen forhåndsvalgt tema). -->
+<!-- ───────── Book et møte ───────── -->
+<section class="section section--bordered booking" id="book">
+  <div class="cta-grid">
+    <div class="cta-left">
+      <p class="kicker"><span class="star">✦</span> Book et møte</p>
+      <h2>Hvor kan AI gi dere <em>mest</em>?</h2>
+      <!-- PR 2: ingress, «I møtet», liste og brikker -->
+      <p class="booking-alt">Heller skrive? <a class="link-arrow" href="/book#skriv">Send en forespørsel →</a></p>
+    </div>
+    <div class="brief-panel booking-panel">
+      <div class="brief-head">
+        <div class="left"><span class="pdot"></span><span>nrth.book · velg tid</span></div>
+        <div class="ver">book.v1</div>
+      </div>
+      <div class="booking-body">
+        <fieldset class="topic-picker">
+          <legend>Hva vil dere snakke om?</legend>
+          <div class="topic-options">
+            <label class="topic-chip"><input type="radio" name="tema" value="ai-vurdering" /><span>AI-vurdering</span></label>
+            <label class="topic-chip"><input type="radio" name="tema" value="implementering" /><span>Implementering</span></label>
+            <label class="topic-chip"><input type="radio" name="tema" value="ai-tjenester" /><span>AI-tjenester</span></label>
+            <label class="topic-chip"><input type="radio" name="tema" value="foredrag" /><span>Foredrag eller kurs</span></label>
+            <label class="topic-chip"><input type="radio" name="tema" value="annet" /><span>Annet</span></label>
+          </div>
+        </fieldset>
+        <!-- PR 3: kalender (iframe) eller forespørselsskjema, se 06-booking-og-skjema.md -->
+      </div>
+    </div>
+  </div>
+</section>

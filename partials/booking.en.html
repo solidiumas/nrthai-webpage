@@ -1,0 +1,35 @@
+<!-- Referansekopi av bookingseksjonen. Ikke publisert (.vercelignore). Kopieres inn nederst på
+     alle sider unntatt /book, /personvern og 404.
+     Varierer per side: data-default-topic (se 06-booking-og-skjema.md §3).
+     På /book brukes bare panelet (.booking--solo), uten venstre kolonne.
+     Eksempelet under er forsiden (ingen forhåndsvalgt tema). -->
+<!-- ───────── Book et møte ───────── -->
+<section class="section section--bordered booking" id="book">
+  <div class="cta-grid">
+    <div class="cta-left">
+      <p class="kicker"><span class="star">✦</span> Book a meeting</p>
+      <h2>Where can AI do the <em>most</em> for you?</h2>
+      <!-- PR 4: ingress, «I møtet», liste og brikker -->
+      <p class="booking-alt">Prefer to write? <a class="link-arrow" href="/en/book#write">Send a request →</a></p>
+    </div>
+    <div class="brief-panel booking-panel">
+      <div class="brief-head">
+        <div class="left"><span class="pdot"></span><span>nrth.book · pick a time</span></div>
+        <div class="ver">book.v1</div>
+      </div>
+      <div class="booking-body">
+        <fieldset class="topic-picker">
+          <legend>What would you like to talk about?</legend>
+          <div class="topic-options">
+            <label class="topic-chip"><input type="radio" name="tema" value="ai-assessment" /><span>AI assessment</span></label>
+            <label class="topic-chip"><input type="radio" name="tema" value="implementation" /><span>Implementation</span></label>
+            <label class="topic-chip"><input type="radio" name="tema" value="ai-services" /><span>AI services</span></label>
+            <label class="topic-chip"><input type="radio" name="tema" value="talk" /><span>Talk or course</span></label>
+            <label class="topic-chip"><input type="radio" name="tema" value="other" /><span>Other</span></label>
+          </div>
+        </fieldset>
+        <!-- PR 3: kalender (iframe) eller forespørselsskjema, se 06-booking-og-skjema.md -->
+      </div>
+    </div>
+  </div>
+</section>

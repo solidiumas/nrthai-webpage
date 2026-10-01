@@ -2,9 +2,11 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/product", "destination": "/#product", "permanent": true },
-    { "source": "/work", "destination": "/#work", "permanent": true },
-    { "source": "/company", "destination": "/#company", "permanent": true }
+    { "source": "/services", "destination": "/ai-tjenester", "permanent": true },
+    { "source": "/work", "destination": "/ai-tjenester", "permanent": true },
+    { "source": "/company", "destination": "/om-oss", "permanent": true },
+    { "source": "/contact", "destination": "/book", "permanent": true },
+    { "source": "/product", "destination": "/", "permanent": true }
   ],
   "rewrites": [
     {

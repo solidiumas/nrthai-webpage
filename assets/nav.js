@@ -32,10 +32,14 @@
       }
     });
 
-    // Close on Escape.
+    // Close on Escape. If focus was inside the menu, return it to the toggle.
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && document.body.classList.contains("nav-open")) {
-        close(document.querySelector(".nav-toggle"));
+        var btn = document.querySelector(".nav-toggle");
+        var panel = document.querySelector(".nav-right");
+        var inside = panel && panel.contains(document.activeElement);
+        close(btn);
+        if (inside && btn) btn.focus();
       }
     });
   }
