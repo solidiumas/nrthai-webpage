@@ -660,9 +660,11 @@ section[id], [id].section { scroll-margin-top: 90px; }
 .card-head { color: var(--fg-dim); }
 .stat-cell .lbl { color: var(--fg-dim); }
 .site-footer { color: var(--fg-dim); }
-.booking-panel .brief-head .ver { color: var(--fg-dim); }
+.brief-head .ver { color: var(--fg-dim); }
 .service-meta .label { color: var(--fg-dim); }
 .card-foot { color: var(--fg-dim); }
+.brief-note { color: var(--fg-dim); }
+.brief-form input::placeholder, .brief-form textarea::placeholder { color: var(--fg-dim); }
 
 /* ───────── Hopp til innhold ───────── */
 .skip-link {
@@ -726,8 +728,14 @@ section[id], [id].section { scroll-margin-top: 90px; }
 }
 .booking-alt { font-size: 15px; line-height: 1.55; color: var(--fg-dim); }
 .booking-alt .link-arrow { margin-left: 6px; }
-.booking-body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 22px; }
+/* Skjemaet i panelet. Også .brief-form, så sendingen og kvitteringen virker som i forespørselsskjemaet.
+   Står etter .brief-form og overstyrer avstanden: 22 px mellom temavalget og resten. */
+.booking-form { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 22px; }
+.booking-request { display: flex; flex-direction: column; gap: 16px; }
+.booking-fields { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px 32px; }
 .booking-frame { display: block; width: 100%; min-height: 640px; border: 0; background: var(--bg); }
+/* Kalendermodus (booking.js): iframen og lenken «Åpne kalenderen i ny fane ↗» */
+.booking-calendar { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
 
 /* Temavalg: ekte radioknapper stilt som brikker */
 .topic-picker { border: 0; padding: 0; margin: 0; min-width: 0; }
@@ -756,7 +764,18 @@ section[id], [id].section { scroll-margin-top: 90px; }
 }
 
 /* På /book: bare panelet, i full bredde under sidehero */
-.booking--solo { padding-top: 0; }
+.booking--solo { padding-top: 0; scroll-margin-top: 90px; }
+
+/* ───────── Skjemaene (booking og forespørsel) ───────── */
+/* Fokus i feltene: understreken blir 2 px oransje i stedet for 1 px */
+.brief-form input:focus, .brief-form textarea:focus, .brief-form select:focus { box-shadow: 0 1px 0 var(--accent); }
+.brief-note a, .brief-error a { color: var(--fg); border-bottom: 1px solid var(--line-2); transition: border-color 0.15s; }
+.brief-note a:hover, .brief-error a:hover { border-color: var(--fg); }
+/* Kvitteringen får fokus fra brief-form.js. Den er ikke en kontroll, så ingen fokusramme. */
+.brief-sent [tabindex="-1"]:focus { outline: none; }
+/* På /book er kvitteringen h2 (sidehero har h1), ellers h3. Samme utseende. */
+.brief-sent h2 { font-family: var(--serif); font-weight: 400; font-size: 36px; line-height: 1.05; letter-spacing: -0.01em; }
+.brief-sent h2 em { color: var(--accent); font-style: italic; }
 
 /* ───────── info-box (foredrag og kurs) ───────── */
 .section--compact { padding-top: 80px; padding-bottom: 80px; }
@@ -848,6 +867,14 @@ section[id], [id].section { scroll-margin-top: 90px; }
   .booking .cta-grid { grid-template-columns: 1fr; }
   .page-hero { padding: 120px 24px 60px; }
   .math-block { grid-template-columns: 1fr; }
+}
+/* Bookingskjemaet: én kolonne i panelet ved siden av teksten. Der panelet har hele bredden
+   (under 1025 px, og på /book), står feltene i to eller tre kolonner. */
+@media (max-width: 1024px) and (min-width: 721px) {
+  .booking-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1025px) {
+  .booking--solo .booking-fields { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 /* Tre kort i to kolonner: det siste kortet tar hele bredden i stedet for å etterlate et tomt felt */
 @media (max-width: 1024px) and (min-width: 721px) {
