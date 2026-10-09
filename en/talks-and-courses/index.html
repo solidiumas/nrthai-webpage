@@ -93,19 +93,66 @@
           <div class="left"><span class="pdot"></span><span>nrth.book · pick a time</span></div>
           <div class="ver">book.v1</div>
         </div>
-        <div class="booking-body">
+        <form class="brief-form booking-form" method="POST" action="/api/book">
+          <input type="hidden" name="lang" value="en" />
           <fieldset class="topic-picker">
-            <legend>What would you like to talk about?</legend>
+            <legend>What would you like to talk about? <span class="req" aria-hidden="true">*</span></legend>
             <div class="topic-options">
-              <label class="topic-chip"><input type="radio" name="tema" value="ai-assessment" /><span>AI assessment</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="implementation" /><span>Implementation</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="ai-services" /><span>AI services</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="talk" /><span>Talk or course</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="other" /><span>Other</span></label>
+              <label class="topic-chip"><input type="radio" name="tema" value="ai-assessment" required /><span>AI assessment</span></label>
+              <label class="topic-chip"><input type="radio" name="tema" value="implementation" required /><span>Implementation</span></label>
+              <label class="topic-chip"><input type="radio" name="tema" value="ai-services" required /><span>AI services</span></label>
+              <label class="topic-chip"><input type="radio" name="tema" value="talk" required checked /><span>Talk or course</span></label>
+              <label class="topic-chip"><input type="radio" name="tema" value="other" required /><span>Other</span></label>
             </div>
           </fieldset>
-          <!-- PR 3: kalender (iframe) eller forespørselsskjema, se 06-booking-og-skjema.md -->
+          <div class="booking-request">
+            <div class="booking-fields">
+              <label><span class="lbl">Name <span class="req" aria-hidden="true">*</span></span><input type="text" name="navn" required maxlength="2000" autocomplete="name" /></label>
+              <label><span class="lbl">Email <span class="req" aria-hidden="true">*</span></span><input type="email" name="epost" required maxlength="2000" autocomplete="email" /></label>
+              <label><span class="lbl">Company</span><input type="text" name="bedrift" maxlength="2000" autocomplete="organization" /></label>
+              <label><span class="lbl">What do you want to achieve?</span>
+                <select name="maal">
+                  <option value="" label=" "></option>
+                  <option value="salg">Increase sales</option>
+                  <option value="effektivitet">Work more efficiently</option>
+                  <option value="kvalitet">Improve quality or customer experience</option>
+                  <option value="vet-ikke">Not sure yet</option>
+                </select>
+              </label>
+              <label><span class="lbl">When suits you?</span>
+                <select name="naar">
+                  <option value="" label=" "></option>
+                  <option value="denne-uken">This week</option>
+                  <option value="neste-uke">Next week</option>
+                  <option value="senere">In two weeks or later</option>
+                </select>
+              </label>
+              <label><span class="lbl">Preferred time</span><input type="text" name="tid" maxlength="2000" placeholder="E.g. Tuesday morning" /></label>
+              <label><span class="lbl">Meeting format</span>
+                <select name="form">
+                  <option value="" label=" "></option>
+                  <option value="digitalt">Online</option>
+                  <option value="bergen">In Bergen</option>
+                </select>
+              </label>
+            </div>
+            <div class="visually-hidden" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
+            <button type="submit" class="brief-submit" data-sending="Sending…">Request the meeting →</button>
+            <p class="brief-error" role="alert" hidden>Something went wrong. Please try again, or email <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
+            <p class="brief-note">We confirm the time by email within one business day. See <a href="/en/privacy">privacy</a>.</p>
+          </div>
+        </form>
+        <div class="brief-sent">
+          <h3 tabindex="-1">Thanks.<br /> <em>We'll confirm the time.</em></h3>
+          <p>You'll hear from contact@nrth.no within one business day with a proposed time.</p>
+          <button type="button" class="btn-ghost brief-reset">Book another →</button>
         </div>
+        <template class="booking-calendar-tpl" data-notes-prefix="Topic:">
+          <div class="booking-calendar">
+            <iframe class="booking-frame" title="Pick a time for a meeting with Nrth AI" loading="lazy"></iframe>
+            <p><a class="link-arrow">Open the calendar in a new tab ↗</a></p>
+          </div>
+        </template>
       </div>
     </div>
   </section>
@@ -136,5 +183,8 @@
 </footer>
 
 <script src="/assets/nav.js" defer></script>
+<script src="/assets/booking-config.js" defer></script>
+<script src="/assets/booking.js" defer></script>
+<script src="/assets/brief-form.js" defer></script>
 </body>
 </html>
