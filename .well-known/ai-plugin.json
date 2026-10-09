@@ -3,7 +3,7 @@
   "name_for_human": "Nrth AI",
   "name_for_model": "nrth_ai",
   "description_for_human": "Nrth AI builds the Nrth Agentic OS — a secure, on-premise AI runtime for enterprise agents — and ships paid early-access deployments.",
-  "description_for_model": "Use this plugin to (1) read about the Nrth Agentic OS — a secure, on-premise AI runtime that connects enterprise workflows, AI models, agents, and skills into one accountable layer — and Nrth AI's early-access services, (2) submit a discovery brief on behalf of a prospective client, (3) book a 30-minute consultation, or (4) chat with the live Nrth AI sales agent. Nrth AI is a pre-seed AI product startup based in Bergen, Norway. The plugin exposes structured endpoints; agents should prefer these over scraping the HTML. Always confirm any submitted contact details with the user before calling submitInquiry or bookConsultation.",
+  "description_for_model": "Use this plugin to (1) read about the Nrth Agentic OS — a secure, on-premise AI runtime that connects enterprise workflows, AI models, agents, and skills into one accountable layer — and Nrth AI's early-access services, (2) submit a discovery brief on behalf of a prospective client, (3) request a meeting, or (4) chat with the live Nrth AI sales agent. Nrth AI is a pre-seed AI product startup based in Bergen, Norway. The plugin exposes structured endpoints; agents should prefer these over scraping the HTML. Always confirm any submitted contact details with the user before calling submitInquiry or bookConsultation.",
   "auth": {
     "type": "none"
   },

@@ -51,8 +51,13 @@
     { "id": "submitInquiry", "label": "Submit a discovery brief", "method": "POST", "endpoint": "https://nrth.no/api/inquiry", "primary": true,
       "input_schema": { "type": "object", "required": ["email", "problem"], "properties": {
         "email": { "type": "string", "format": "email" }, "company": { "type": "string" }, "role": { "type": "string" },
-        "problem": { "type": "string" }, "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] } } } },
-    { "id": "bookConsultation", "label": "Book a 30-minute intro call", "method": "POST", "endpoint": "https://nrth.no/api/book" },
+        "problem": { "type": "string" }, "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] }, "lang": { "type": "string", "enum": ["nb", "en"] } } } },
+    { "id": "bookConsultation", "label": "Request a meeting", "method": "POST", "endpoint": "https://nrth.no/api/book",
+      "input_schema": { "type": "object", "required": ["tema", "navn", "epost"], "properties": {
+        "tema": { "type": "string", "enum": ["ai-vurdering", "implementering", "ai-tjenester", "foredrag", "annet", "ai-assessment", "implementation", "ai-services", "talk", "other"] }, "navn": { "type": "string" }, "epost": { "type": "string", "format": "email" },
+        "bedrift": { "type": "string" }, "maal": { "type": "string", "enum": ["salg", "effektivitet", "kvalitet", "vet-ikke"] },
+        "naar": { "type": "string", "enum": ["denne-uken", "neste-uke", "senere"] }, "tid": { "type": "string" },
+        "form": { "type": "string", "enum": ["fysisk", "digitalt"] }, "lang": { "type": "string", "enum": ["nb", "en"] } } } },
     { "id": "chat", "label": "Chat with the Nrth AI sales agent", "method": "POST", "endpoint": "https://nrth.no/api/chat", "ui_anchor": "#contact" },
     { "id": "getServices", "label": "Read service catalog", "method": "GET", "endpoint": "https://nrth.no/api/services" }
   ]
