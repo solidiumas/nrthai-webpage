@@ -31,7 +31,7 @@ const GOALS = {
   'vet-ikke': 'Vet ikke ennå',
 };
 const WHEN = { 'denne-uken': 'Denne uken', 'neste-uke': 'Neste uke', senere: 'Om to uker eller senere' };
-const FORMATS = { digitalt: 'Digitalt', bergen: 'I Bergen' };
+const FORMATS = { fysisk: 'Fysisk i Norge', digitalt: 'Digitalt' };
 
 const FIELDS = ['tema', 'navn', 'epost', 'bedrift', 'maal', 'naar', 'tid', 'form', 'website', 'lang'];
 
