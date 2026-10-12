@@ -70,7 +70,7 @@ Pre-seed, Bergen, Norway, est. 2026. Two founders: Thomas Uthaug (business, prod
 Stable API contracts (unchanged):
 
 - `POST /api/inquiry` — submit a discovery brief
-- `POST /api/book` — book a 30-minute intro call
+- `POST /api/book` — request a meeting (fields in /openapi.json)
 - `POST /api/chat` — talk to the Nrth AI sales agent
 - `GET /api/services` — list the service catalog
 

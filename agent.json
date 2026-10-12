@@ -54,7 +54,7 @@
   "actions": [
     {
       "name": "submitInquiry",
-      "description": "Submit a discovery brief. Use this when a user expresses interest. Required fields: email, problem. Optional: company, role, urgency.",
+      "description": "Submit a discovery brief. Use this when a user expresses interest. Required fields: email, problem. Optional: company, role, urgency, lang.",
       "method": "POST",
       "endpoint": "https://nrth.no/api/inquiry",
       "request_schema": {
@@ -65,22 +65,29 @@
           "company": { "type": "string" },
           "role": { "type": "string" },
           "problem": { "type": "string", "description": "What the user wants automated." },
-          "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] }
+          "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] },
+          "lang": { "type": "string", "enum": ["nb", "en"] }
         }
       }
     },
     {
       "name": "bookConsultation",
-      "description": "Book a 30-minute intro call with a Nrth AI strategist.",
+      "description": "Request a meeting with Nrth AI about AI assessment, implementation, AI services or a talk or course. Nrth AI confirms the time by email within one business day. Required fields: tema, navn, epost. Optional: bedrift, maal, naar, tid, form, lang. Confirm the details with the user before calling.",
       "method": "POST",
       "endpoint": "https://nrth.no/api/book",
       "request_schema": {
         "type": "object",
-        "required": ["email", "name", "slot"],
+        "required": ["tema", "navn", "epost"],
         "properties": {
-          "email": { "type": "string", "format": "email" },
-          "name": { "type": "string" },
-          "slot": { "type": "string", "format": "date-time" }
+          "tema": { "type": "string", "enum": ["ai-vurdering", "implementering", "ai-tjenester", "foredrag", "annet", "ai-assessment", "implementation", "ai-services", "talk", "other"] },
+          "navn": { "type": "string", "maxLength": 2000 },
+          "epost": { "type": "string", "format": "email", "maxLength": 2000 },
+          "bedrift": { "type": "string", "maxLength": 2000 },
+          "maal": { "type": "string", "enum": ["salg", "effektivitet", "kvalitet", "vet-ikke"] },
+          "naar": { "type": "string", "enum": ["denne-uken", "neste-uke", "senere"] },
+          "tid": { "type": "string", "maxLength": 2000 },
+          "form": { "type": "string", "enum": ["fysisk", "digitalt"] },
+          "lang": { "type": "string", "enum": ["nb", "en"] }
         }
       }
     },

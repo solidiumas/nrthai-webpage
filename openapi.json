@@ -39,38 +39,32 @@
           }
         },
         "responses": {
-          "201": {
-            "description": "Inquiry received",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "id": { "type": "string" },
-                    "status": { "type": "string", "example": "received" },
-                    "follow_up_within_hours": { "type": "integer", "example": 24 }
-                  }
-                }
-              }
-            }
-          }
+          "200": { "description": "Inquiry received", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Ok" } } } },
+          "400": { "description": "email and problem are required", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
+          "500": { "description": "The inquiry could not be sent", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
         }
       }
     },
     "/book": {
       "post": {
         "operationId": "bookConsultation",
-        "summary": "Book a 30-min intro call",
+        "summary": "Request a meeting",
+        "description": "Sends a meeting request to Nrth AI and a confirmation email to the customer in Norwegian or English (lang). Nrth AI confirms the time by email within one business day. Confirm the details with the user before calling.",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": { "$ref": "#/components/schemas/Booking" }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": { "$ref": "#/components/schemas/Booking" }
             }
           }
         },
         "responses": {
-          "201": { "description": "Booked" }
+          "200": { "description": "Request received", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Ok" } } } },
+          "400": { "description": "Missing or invalid field", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
+          "500": { "description": "The request could not be sent", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
         }
       }
     },
@@ -138,17 +132,34 @@
           "company": { "type": "string" },
           "role": { "type": "string" },
           "problem": { "type": "string" },
-          "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] }
+          "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] },
+          "lang": { "type": "string", "enum": ["nb", "en"], "default": "nb", "description": "Language of the inquiry. Sets the email subject." }
         }
       },
       "Booking": {
         "type": "object",
-        "required": ["email", "name", "slot"],
+        "required": ["tema", "navn", "epost"],
         "properties": {
-          "email": { "type": "string", "format": "email" },
-          "name": { "type": "string" },
-          "slot": { "type": "string", "format": "date-time" }
+          "tema": { "type": "string", "enum": ["ai-vurdering", "implementering", "ai-tjenester", "foredrag", "annet", "ai-assessment", "implementation", "ai-services", "talk", "other"], "description": "Topic. Norwegian and English values are both accepted: AI assessment, implementation, AI services, talk or course, other." },
+          "navn": { "type": "string", "maxLength": 2000, "description": "Name" },
+          "epost": { "type": "string", "format": "email", "maxLength": 2000, "description": "Email address. The confirmation is sent here." },
+          "bedrift": { "type": "string", "maxLength": 2000, "description": "Company" },
+          "maal": { "type": "string", "enum": ["salg", "effektivitet", "kvalitet", "vet-ikke"], "description": "What they want to achieve: increase sales, work more efficiently, improve quality or customer experience, not sure yet." },
+          "naar": { "type": "string", "enum": ["denne-uken", "neste-uke", "senere"], "description": "When suits them: this week, next week, in two weeks or later." },
+          "tid": { "type": "string", "maxLength": 2000, "description": "Preferred time, free text, for example Tuesday morning." },
+          "form": { "type": "string", "enum": ["fysisk", "digitalt"], "description": "Meeting format: in person in Norway, or online." },
+          "lang": { "type": "string", "enum": ["nb", "en"], "default": "nb", "description": "Language of the confirmation email." }
         }
+      },
+      "Ok": {
+        "type": "object",
+        "required": ["ok"],
+        "properties": { "ok": { "type": "boolean", "const": true } }
+      },
+      "Error": {
+        "type": "object",
+        "required": ["error"],
+        "properties": { "error": { "type": "string" } }
       },
       "Message": {
         "type": "object",
