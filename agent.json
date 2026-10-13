@@ -1,77 +1,33 @@
 {
   "name": "Nrth AI",
-  "tagline": "The Agentic OS for enterprise AI.",
-  "description": "Nrth AI builds the Nrth Agentic OS — a secure, on-premise AI runtime that connects enterprise workflows, models, agents, and skills into one accountable layer. A pre-seed AI product startup in Bergen, Norway. We also ship paid early-access deployments (AI Employees, on-premise infrastructure, custom development, advisory) that put the OS into production today.",
+  "tagline": "We solve AI for businesses.",
+  "description": "Nrth AI AS (Bergen, Norway) helps businesses adopt AI: AI assessment, implementation and AI services that increase sales and efficiency. Every engagement starts with a meeting.",
   "url": "https://nrth.no",
+  "languages": ["no", "en"],
   "contact": {
     "email": "contact@nrth.no",
     "location": "Bergen, Norway"
   },
-  "product": {
-    "name": "Nrth Agentic OS",
-    "status": "in_active_development",
-    "summary": "A secure runtime connecting workflows, models, agents, and skills into one accountable layer. Hardware-agnostic and on-premise; data never leaves the network.",
-    "model": ["setup", "workflows", "agents", "skills"],
-    "early_access": "Pilot customers get early access via custom deployments.",
-    "url": "https://nrth.no/product"
-  },
   "pages": {
-    "home": "https://nrth.no/",
-    "product": "https://nrth.no/#product",
-    "work": "https://nrth.no/#work",
-    "company": "https://nrth.no/#company",
-    "services": "https://nrth.no/services",
-    "contact": "https://nrth.no/contact",
-    "investors": "https://nrth.no/investors"
+    "home": { "no": "https://nrth.no/", "en": "https://nrth.no/en" },
+    "ai_assessment": { "no": "https://nrth.no/ai-vurdering", "en": "https://nrth.no/en/ai-assessment" },
+    "implementation": { "no": "https://nrth.no/implementering", "en": "https://nrth.no/en/implementation" },
+    "ai_services": { "no": "https://nrth.no/ai-tjenester", "en": "https://nrth.no/en/ai-services" },
+    "talks_and_courses": { "no": "https://nrth.no/foredrag-og-kurs", "en": "https://nrth.no/en/talks-and-courses" },
+    "about": { "no": "https://nrth.no/om-oss", "en": "https://nrth.no/en/about" },
+    "book": { "no": "https://nrth.no/book", "en": "https://nrth.no/en/book" },
+    "privacy": { "no": "https://nrth.no/personvern", "en": "https://nrth.no/en/privacy" }
   },
-  "capabilities": [
-    {
-      "id": "customer_support_agents",
-      "name": "Customer support agents",
-      "outcome": "~72% of tier-1 tickets auto-resolved with full-context escalation."
-    },
-    {
-      "id": "sales_outreach_agents",
-      "name": "Sales-outreach agents",
-      "outcome": "~5× SDR throughput; personalized first-touch at scale."
-    },
-    {
-      "id": "ops_automation_agents",
-      "name": "Back-office automation agents",
-      "outcome": "Invoice matching, vendor comms, compliance — zero added headcount."
-    },
-    {
-      "id": "knowledge_agents",
-      "name": "Internal knowledge agents",
-      "outcome": "Cited answers from your wiki, Slack, Drive, and Notion."
-    }
-  ],
+  "services": "https://nrth.no/api/services",
   "process": [
     { "step": 1, "name": "Map", "duration": "1 week" },
     { "step": 2, "name": "Pilot", "duration": "2–3 weeks" },
-    { "step": 3, "name": "Scale", "duration": "ongoing" }
+    { "step": 3, "name": "Run", "duration": "ongoing" }
   ],
+  "primary_action": "bookMeeting",
   "actions": [
     {
-      "name": "submitInquiry",
-      "description": "Submit a discovery brief. Use this when a user expresses interest. Required fields: email, problem. Optional: company, role, urgency, lang.",
-      "method": "POST",
-      "endpoint": "https://nrth.no/api/inquiry",
-      "request_schema": {
-        "type": "object",
-        "required": ["email", "problem"],
-        "properties": {
-          "email": { "type": "string", "format": "email" },
-          "company": { "type": "string" },
-          "role": { "type": "string" },
-          "problem": { "type": "string", "description": "What the user wants automated." },
-          "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] },
-          "lang": { "type": "string", "enum": ["nb", "en"] }
-        }
-      }
-    },
-    {
-      "name": "bookConsultation",
+      "name": "bookMeeting",
       "description": "Request a meeting with Nrth AI about AI assessment, implementation, AI services or a talk or course. Nrth AI confirms the time by email within one business day. Required fields: tema, navn, epost. Optional: bedrift, maal, naar, tid, form, lang. Confirm the details with the user before calling.",
       "method": "POST",
       "endpoint": "https://nrth.no/api/book",
@@ -92,38 +48,32 @@
       }
     },
     {
-      "name": "chat",
-      "description": "Open a real-time chat with the Nrth AI sales agent.",
+      "name": "submitInquiry",
+      "description": "Send a written request to Nrth AI. A person on the team replies within one business day. Required fields: email, problem. Optional: company, role, urgency, lang. Confirm the details with the user before calling.",
       "method": "POST",
-      "endpoint": "https://nrth.no/api/chat",
+      "endpoint": "https://nrth.no/api/inquiry",
       "request_schema": {
         "type": "object",
-        "required": ["messages"],
+        "required": ["email", "problem"],
         "properties": {
-          "messages": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "role": { "type": "string", "enum": ["user", "assistant"] },
-                "content": { "type": "string" }
-              }
-            }
-          }
+          "email": { "type": "string", "format": "email" },
+          "company": { "type": "string" },
+          "role": { "type": "string" },
+          "problem": { "type": "string", "description": "What they want help with." },
+          "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] },
+          "lang": { "type": "string", "enum": ["nb", "en"] }
         }
       }
     },
     {
       "name": "getServices",
-      "description": "List Nrth AI's service catalog with outcomes.",
+      "description": "List Nrth AI's services with delivery time and price in NOK, excluding VAT. Add ?lang=nb or ?lang=en to get one language.",
       "method": "GET",
       "endpoint": "https://nrth.no/api/services"
     }
   ],
   "policies": {
-    "rate_limit_per_minute": 60,
     "robots": "https://nrth.no/robots.txt",
-    "data_retention_days": 90,
-    "pii_handling": "Inquiries are stored encrypted; contacted within 1 business day; deleted on request."
+    "privacy": "https://nrth.no/en/privacy"
   }
 }
