@@ -2,6 +2,9 @@
   "name": "nrthai-webpage",
   "private": true,
   "version": "1.0.0",
+  "scripts": {
+    "sjekk-priser": "node scripts/sjekk-priser.mjs"
+  },
   "dependencies": {
     "resend": "^4.0.0"
   }
