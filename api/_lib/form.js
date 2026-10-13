@@ -67,11 +67,8 @@ function sendPage(res, status, { lang, title, heading, text, link }) {
 <meta name="robots" content="noindex" />
 <title>${title}</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-13" />
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/assets/site.css" />
 </head>
 <body>
 <header class="site-nav">

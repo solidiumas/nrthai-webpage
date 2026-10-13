@@ -50,12 +50,16 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preload" href="/assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-13" />
+<!-- Satoshi (logoen) fra Fontshare, lastet uten å blokkere visningen. Lisensen tillater ikke filene i et offentlig repo. -->
 <link rel="preconnect" href="https://api.fontshare.com" />
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/assets/site.css" />
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" /></noscript>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -263,9 +267,9 @@
   <div class="right"><span lang="en">Built by agents</span> · <span class="star">▲</span></div>
 </footer>
 
-<script src="/assets/nav.js" defer></script>
+<script src="/assets/nav.js?v=2026-10-13" defer></script>
 <script src="/assets/booking-config.js" defer></script>
-<script src="/assets/booking.js" defer></script>
-<script src="/assets/brief-form.js" defer></script>
+<script src="/assets/booking.js?v=2026-10-13" defer></script>
+<script src="/assets/brief-form.js?v=2026-10-13" defer></script>
 </body>
 </html>
