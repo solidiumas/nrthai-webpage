@@ -781,6 +781,8 @@ section[id], [id].section { scroll-margin-top: 90px; }
 .booking--solo { padding-top: 0; scroll-margin-top: 90px; }
 
 /* ───────── Skjemaene (booking og forespørsel) ───────── */
+/* Panelhodet brytes over to linjer på smale skjermer (320 px), i stedet for å gi horisontal scroll */
+.brief-head { flex-wrap: wrap; gap: 4px 16px; }
 /* Fokus i feltene: understreken blir 2 px oransje i stedet for 1 px */
 .brief-form input:focus, .brief-form textarea:focus, .brief-form select:focus { box-shadow: 0 1px 0 var(--accent); }
 .brief-note a, .brief-error a { color: var(--fg); border-bottom: 1px solid var(--line-2); transition: border-color 0.15s; }
@@ -944,6 +946,21 @@ section[id], [id].section { scroll-margin-top: 90px; }
   .math-text p:not(.kicker) { font-size: 19px; }
   .math-block .stat-row { grid-template-columns: 1fr; }
   .contact-lines { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* Uten JavaScript under 721 px: menyknappen virker ikke, så lenkene står synlig på rader under logoen.
+   Menyen ligger da i flyten og ruller med siden, så den ikke dekker innholdet. */
+@media (max-width: 720px) {
+  html:not(.js) .site-nav { position: relative; flex-wrap: wrap; row-gap: 14px; }
+  html:not(.js) .nav-toggle { display: none; }
+  html:not(.js) .nav-right {
+    position: static; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center;
+    gap: 12px 18px; width: 100%; padding: 0; background: none; border: 0; box-shadow: none;
+    -webkit-backdrop-filter: none; backdrop-filter: none;
+  }
+  html:not(.js) .nav-link { padding: 0; border: 0; font-size: 12px; white-space: nowrap; }
+  html:not(.js) .nav-cta { margin-top: 0; padding: 8px 14px; white-space: nowrap; }
+  html:not(.js) .hero, html:not(.js) .page-hero { padding-top: 48px; }
 }
 
 /* ───────── Redusert bevegelse ───────── */
