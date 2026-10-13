@@ -1,13 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none">
+  <!-- Delingsbilde for norske sider (og.png), 1200×630. PNG-en lages fra denne med fontene fra nettstedet (Satoshi, Instrument Serif, Geist Mono). -->
   <rect width="1200" height="630" fill="#0a0a0b"/>
-  <rect x="0" y="0" width="1200" height="1" fill="#FF8A5B" opacity="0.3"/>
-  <rect x="0" y="629" width="1200" height="1" fill="#FF8A5B" opacity="0.3"/>
-  <!-- Mark -->
-  <text x="80" y="340" font-family="Satoshi, ui-sans-serif, system-ui, sans-serif" font-size="180" font-weight="900" fill="#FF8A5B" letter-spacing="-6">&lt;/&gt;</text>
-  <!-- Wordmark -->
-  <text x="80" y="440" font-family="Satoshi, ui-sans-serif, system-ui, sans-serif" font-size="72" font-weight="700" fill="#FFFFFF" letter-spacing="-2">Nrth AI</text>
-  <!-- Tagline -->
-  <text x="80" y="510" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="400" fill="#a8a49c" letter-spacing="0">Agents that actually do the work.</text>
-  <!-- Domain -->
-  <text x="1120" y="590" font-family="ui-monospace, monospace" font-size="22" font-weight="400" fill="#5c5a55" text-anchor="end">nrth.no</text>
+  <rect x="0" y="0" width="1200" height="4" fill="#ff8a5b"/>
+  <rect x="0" y="626" width="1200" height="4" fill="#ff8a5b"/>
+  <!-- Logo -->
+  <text x="80" y="136" font-family="Satoshi, ui-sans-serif, system-ui, sans-serif" font-size="48" font-weight="900" fill="#ff8a5b" letter-spacing="-1.9">&lt;/&gt;</text>
+  <text x="172" y="136" font-family="Satoshi, ui-sans-serif, system-ui, sans-serif" font-size="40" font-weight="700" fill="#f5f2ec" letter-spacing="-0.8">Nrth AI</text>
+  <!-- Overskrift -->
+  <text x="76" y="356" font-family="Instrument Serif, Times New Roman, serif" font-size="120" fill="#f5f2ec" letter-spacing="-2.4">Vi løser AI for</text>
+  <text x="76" y="476" font-family="Instrument Serif, Times New Roman, serif" font-size="120" letter-spacing="-2.4"><tspan fill="#ff8a5b" font-style="italic">norske bedrifter</tspan><tspan fill="#f5f2ec">.</tspan></text>
+  <!-- Domene -->
+  <text x="1120" y="566" font-family="Geist Mono, ui-monospace, monospace" font-size="24" fill="#a8a49c" letter-spacing="2.4" text-anchor="end">nrth.no</text>
 </svg>

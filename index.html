@@ -26,20 +26,32 @@
 <link rel="alternate" hreflang="nb" href="https://nrth.no/" />
 <link rel="alternate" hreflang="en" href="https://nrth.no/en" />
 <link rel="alternate" hreflang="x-default" href="https://nrth.no/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nrth AI" />
+<meta property="og:title" content="Nrth AI · Vi løser AI for norske bedrifter" />
+<meta property="og:description" content="Nrth AI i Bergen hjelper bedrifter å selge mer og jobbe mer effektivt med AI. AI-vurdering, implementering og AI-tjenester. Book et møte." />
+<meta property="og:url" content="https://nrth.no/" />
+<meta property="og:locale" content="nb_NO" />
+<meta property="og:locale:alternate" content="en_GB" />
+<meta property="og:image" content="https://nrth.no/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Nrth AI. Vi løser AI for norske bedrifter." />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
 <meta name="theme-color" content="#0a0a0b" />
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="Nrth AI for LLMs" />
 
-<!-- AI-native discovery hints (skrives om i PR 5, se 07-seo-og-agentlag.md) -->
+<!-- AI-native discovery hints. Sier det samme som agent.json, openapi.json og .well-known/ai-plugin.json (07 §6). -->
 <link rel="ai-plugin" href="/.well-known/ai-plugin.json" />
 <link rel="agent-manifest" href="/agent.json" />
 <link rel="openapi" type="application/json" href="/openapi.json" />
 <meta name="ai:plugin" content="/.well-known/ai-plugin.json" />
 <meta name="ai:agent-manifest" content="/agent.json" />
 <meta name="ai:llms" content="/llms.txt" />
-<meta name="ai:primary-action" content="submitInquiry" />
-<meta name="ai:supports" content="read,submit,book,chat" />
+<meta name="ai:primary-action" content="bookMeeting" />
+<meta name="ai:supports" content="read,submit,book" />
 <meta name="ai:contact" content="mailto:contact@nrth.no" />
 
 <!-- JSON-LD: Agent action descriptors (custom AI-action vocab) -->
@@ -48,18 +60,100 @@
   "version": "1.0",
   "agent_name": "Nrth AI",
   "actions": [
-    { "id": "submitInquiry", "label": "Submit a discovery brief", "method": "POST", "endpoint": "https://nrth.no/api/inquiry", "primary": true,
-      "input_schema": { "type": "object", "required": ["email", "problem"], "properties": {
-        "email": { "type": "string", "format": "email" }, "company": { "type": "string" }, "role": { "type": "string" },
-        "problem": { "type": "string" }, "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] }, "lang": { "type": "string", "enum": ["nb", "en"] } } } },
-    { "id": "bookConsultation", "label": "Request a meeting", "method": "POST", "endpoint": "https://nrth.no/api/book",
+    { "id": "bookMeeting", "label": "Request a meeting", "method": "POST", "endpoint": "https://nrth.no/api/book", "primary": true,
       "input_schema": { "type": "object", "required": ["tema", "navn", "epost"], "properties": {
-        "tema": { "type": "string", "enum": ["ai-vurdering", "implementering", "ai-tjenester", "foredrag", "annet", "ai-assessment", "implementation", "ai-services", "talk", "other"] }, "navn": { "type": "string" }, "epost": { "type": "string", "format": "email" },
-        "bedrift": { "type": "string" }, "maal": { "type": "string", "enum": ["salg", "effektivitet", "kvalitet", "vet-ikke"] },
-        "naar": { "type": "string", "enum": ["denne-uken", "neste-uke", "senere"] }, "tid": { "type": "string" },
-        "form": { "type": "string", "enum": ["fysisk", "digitalt"] }, "lang": { "type": "string", "enum": ["nb", "en"] } } } },
-    { "id": "chat", "label": "Chat with the Nrth AI sales agent", "method": "POST", "endpoint": "https://nrth.no/api/chat", "ui_anchor": "#contact" },
+        "tema": {"type": "string", "enum": ["ai-vurdering", "implementering", "ai-tjenester", "foredrag", "annet", "ai-assessment", "implementation", "ai-services", "talk", "other"]}, "navn": {"type": "string"}, "epost": {"type": "string", "format": "email"}, "bedrift": {"type": "string"}, "maal": {"type": "string", "enum": ["salg", "effektivitet", "kvalitet", "vet-ikke"]}, "naar": {"type": "string", "enum": ["denne-uken", "neste-uke", "senere"]}, "tid": {"type": "string"}, "form": {"type": "string", "enum": ["fysisk", "digitalt"]}, "lang": {"type": "string", "enum": ["nb", "en"]} } } },
+    { "id": "submitInquiry", "label": "Send a written request", "method": "POST", "endpoint": "https://nrth.no/api/inquiry",
+      "input_schema": { "type": "object", "required": ["email", "problem"], "properties": {
+        "email": {"type": "string", "format": "email"}, "company": {"type": "string"}, "role": {"type": "string"}, "problem": {"type": "string"}, "urgency": {"type": "string", "enum": ["exploring", "this_quarter", "asap"]}, "lang": {"type": "string", "enum": ["nb", "en"]} } } },
     { "id": "getServices", "label": "Read service catalog", "method": "GET", "endpoint": "https://nrth.no/api/services" }
+  ]
+}
+</script>
+
+<!-- Strukturerte data (07 §2). Tjenester og priser fra data/tjenester.json, sjekket av scripts/sjekk-priser.mjs. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://nrth.no/#organization",
+  "name": "Nrth AI",
+  "legalName": "Nrth AI AS",
+  "url": "https://nrth.no/",
+  "logo": "https://nrth.no/logo-light.png",
+  "email": "contact@nrth.no",
+  "description": "Nrth AI hjelper norske bedrifter å ta i bruk AI: AI-vurdering, implementering og AI-tjenester som gir mer salg og mer effektiv drift.",
+  "foundingDate": "2026",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bergen",
+    "addressCountry": "NO"
+  },
+  "areaServed": "NO",
+  "knowsLanguage": [
+    "nb",
+    "en"
+  ],
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Thomas Uthaug",
+      "jobTitle": "Medgründer, forretning, produkt og leveranse"
+    },
+    {
+      "@type": "Person",
+      "name": "Simen Uthaug",
+      "jobTitle": "Medgründer, teknologi og utvikling"
+    }
+  ],
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hva gjør Nrth AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vi hjelper bedrifter å ta i bruk AI: vi vurderer hvor AI gir mest, implementerer det, og bygger AI-tjenester som AI-medarbeidere og skreddersydde løsninger."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvordan starter vi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Med et møte. Book på nrth.no/book. Deretter følger vi tre steg: kartlegg (1 uke), pilot (2–3 uker) og drift."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hva koster det?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI-kartlegging fra 35 000 kr. AI-medarbeidere fra ca. 50 000 kr i oppsett og 5 000 kr per måned i drift. Skreddersydde løsninger fra ca. 150 000 kr. Alle priser står på nrth.no."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Holder dere foredrag og kurs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, for ledergrupper, ansatte og konferanser. Se nrth.no/foredrag-og-kurs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvor holder dere til?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I Bergen. Vi jobber med bedrifter i hele Norge."
+      }
+    }
   ]
 }
 </script>

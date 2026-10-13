@@ -11,10 +11,93 @@
 <link rel="alternate" hreflang="nb" href="https://nrth.no/implementering" />
 <link rel="alternate" hreflang="en" href="https://nrth.no/en/implementation" />
 <link rel="alternate" hreflang="x-default" href="https://nrth.no/implementering" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nrth AI" />
+<meta property="og:title" content="AI implementation for businesses · Nrth AI" />
+<meta property="og:description" content="We put AI into daily use: a 2–3 week pilot in production, AI tool rollout with training, and operations and improvement after." />
+<meta property="og:url" content="https://nrth.no/en/implementation" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:locale:alternate" content="nb_NO" />
+<meta property="og:image" content="https://nrth.no/og-en.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Nrth AI. We solve AI for businesses." />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
 <meta name="theme-color" content="#0a0a0b" />
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="Nrth AI for LLMs" />
+
+<!-- Strukturerte data (07 §2). Tjenester og priser fra data/tjenester.json, sjekket av scripts/sjekk-priser.mjs. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Nrth AI",
+      "item": "https://nrth.no/en"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Implementation",
+      "item": "https://nrth.no/en/implementation"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Pilot in production",
+  "serviceType": "Implementation",
+  "provider": {
+    "@id": "https://nrth.no/#organization"
+  },
+  "areaServed": "NO",
+  "url": "https://nrth.no/en/implementation#pilot"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Rolling out AI tools",
+  "serviceType": "Implementation",
+  "provider": {
+    "@id": "https://nrth.no/#organization"
+  },
+  "areaServed": "NO",
+  "url": "https://nrth.no/en/implementation#tools"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Operations and improvement",
+  "serviceType": "Implementation",
+  "provider": {
+    "@id": "https://nrth.no/#organization"
+  },
+  "areaServed": "NO",
+  "url": "https://nrth.no/en/implementation#operations",
+  "offers": {
+    "@type": "Offer",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "priceCurrency": "NOK",
+      "minPrice": 5000,
+      "unitCode": "MON",
+      "unitText": "month"
+    }
+  }
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
