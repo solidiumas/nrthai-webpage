@@ -1,0 +1,99 @@
+{
+  "valuta": "NOK",
+  "eksMva": true,
+  "tjenester": [
+    {
+      "id": "ai-kartlegging",
+      "dor": "ai-vurdering",
+      "navn": { "nb": "AI-kartlegging", "en": "AI assessment" },
+      "leveranse": { "nb": "3–5 dager", "en": "3–5 days" },
+      "fraPris": 35000,
+      "prisTekst": { "nb": "Fra 35 000 kr", "en": "From NOK 35,000" },
+      "url": { "nb": "https://nrth.no/ai-vurdering#kartlegging", "en": "https://nrth.no/en/ai-assessment#assessment" }
+    },
+    {
+      "id": "strategisprint",
+      "dor": "ai-vurdering",
+      "navn": { "nb": "Strategisprint", "en": "Strategy sprint" },
+      "leveranse": { "nb": "2 uker", "en": "2 weeks" },
+      "fraPris": 75000,
+      "prisTekst": { "nb": "Fra 75 000 kr", "en": "From NOK 75,000" },
+      "url": { "nb": "https://nrth.no/ai-vurdering#strategisprint", "en": "https://nrth.no/en/ai-assessment#sprint" }
+    },
+    {
+      "id": "ledersparring",
+      "dor": "ai-vurdering",
+      "navn": { "nb": "Ledersparring", "en": "Leadership advisory" },
+      "leveranse": { "nb": "Månedlig", "en": "Monthly" },
+      "fraPris": 25000,
+      "prisPer": { "nb": "måned", "en": "month" },
+      "prisTekst": { "nb": "Fra 25 000 kr per måned", "en": "From NOK 25,000 per month" },
+      "url": { "nb": "https://nrth.no/ai-vurdering#ledersparring", "en": "https://nrth.no/en/ai-assessment#advisory" }
+    },
+    {
+      "id": "pilot-i-drift",
+      "dor": "implementering",
+      "navn": { "nb": "Pilot i drift", "en": "Pilot in production" },
+      "leveranse": { "nb": "2–3 uker", "en": "2–3 weeks" },
+      "fraPris": null,
+      "prisTekst": null,
+      "url": { "nb": "https://nrth.no/implementering#pilot", "en": "https://nrth.no/en/implementation#pilot" }
+    },
+    {
+      "id": "innforing-av-ai-verktoy",
+      "dor": "implementering",
+      "navn": { "nb": "Innføring av AI-verktøy", "en": "Rolling out AI tools" },
+      "leveranse": null,
+      "fraPris": null,
+      "prisTekst": null,
+      "url": { "nb": "https://nrth.no/implementering#verktoy", "en": "https://nrth.no/en/implementation#tools" }
+    },
+    {
+      "id": "drift-og-forbedring",
+      "dor": "implementering",
+      "navn": { "nb": "Drift og forbedring", "en": "Operations and improvement" },
+      "leveranse": { "nb": "Løpende", "en": "Ongoing" },
+      "fraPris": 5000,
+      "prisPer": { "nb": "måned", "en": "month" },
+      "prisTekst": { "nb": "Fra 5 000 kr per måned", "en": "From NOK 5,000 per month" },
+      "url": { "nb": "https://nrth.no/implementering#drift", "en": "https://nrth.no/en/implementation#operations" }
+    },
+    {
+      "id": "ai-medarbeidere",
+      "dor": "ai-tjenester",
+      "navn": { "nb": "AI-medarbeidere", "en": "AI employees" },
+      "leveranse": { "nb": "1–3 uker", "en": "1–3 weeks" },
+      "fraPris": 50000,
+      "driftFraPrisPerMaaned": 5000,
+      "prisTekst": { "nb": "Oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned", "en": "Setup from about NOK 50,000, operations from NOK 5,000 per month" },
+      "url": { "nb": "https://nrth.no/ai-tjenester#ai-medarbeidere", "en": "https://nrth.no/en/ai-services#ai-employees" }
+    },
+    {
+      "id": "skreddersydde-losninger",
+      "dor": "ai-tjenester",
+      "navn": { "nb": "Skreddersydde løsninger", "en": "Custom solutions" },
+      "leveranse": { "nb": "4–16 uker", "en": "4–16 weeks" },
+      "fraPris": 150000,
+      "prisTekst": { "nb": "Små fra ca. 150 000 kr, mellomstore fra 400 000 kr, store fra 1 000 000 kr", "en": "Small from about NOK 150,000, mid-size from NOK 400,000, large from NOK 1,000,000" },
+      "url": { "nb": "https://nrth.no/ai-tjenester#skreddersydd", "en": "https://nrth.no/en/ai-services#custom" }
+    },
+    {
+      "id": "lokal-ai-infrastruktur",
+      "dor": "ai-tjenester",
+      "navn": { "nb": "Lokal AI-infrastruktur", "en": "Local AI infrastructure" },
+      "leveranse": { "nb": "2–4 uker", "en": "2–4 weeks" },
+      "fraPris": 100000,
+      "prisTekst": { "nb": "Typisk 100 000 til 1 000 000+ kr", "en": "Typically NOK 100,000 to 1,000,000+" },
+      "url": { "nb": "https://nrth.no/ai-tjenester#lokal-ai", "en": "https://nrth.no/en/ai-services#local-ai" }
+    },
+    {
+      "id": "foredrag-og-kurs",
+      "dor": "informasjon",
+      "navn": { "nb": "Foredrag og kurs", "en": "Talks and courses" },
+      "leveranse": null,
+      "fraPris": null,
+      "prisTekst": null,
+      "url": { "nb": "https://nrth.no/foredrag-og-kurs", "en": "https://nrth.no/en/talks-and-courses" }
+    }
+  ]
+}

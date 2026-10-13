@@ -2,24 +2,112 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Nrth AI Public API",
-    "version": "1.0.0",
-    "description": "AI-native API for Nrth AI — builder of the Nrth Agentic OS, a secure on-premise AI runtime for enterprise agents. Lets agents read service info, submit inquiries, book consultations, and chat with the sales agent.",
-    "contact": { "email": "contact@nrth.no", "name": "Nrth AI" }
+    "version": "2.0.0",
+    "description": "Public API for Nrth AI (https://nrth.no). Nrth AI AS in Bergen, Norway helps businesses adopt AI: AI assessment, implementation and AI services. Agents can read the service catalog, request a meeting and send a written request.",
+    "contact": {
+      "email": "contact@nrth.no",
+      "name": "Nrth AI"
+    }
   },
   "servers": [
-    { "url": "https://nrth.no/api", "description": "Production" }
+    {
+      "url": "https://nrth.no/api",
+      "description": "Production"
+    }
   ],
   "paths": {
     "/services": {
       "get": {
         "operationId": "getServices",
-        "summary": "List service catalog",
+        "summary": "List the service catalog",
+        "description": "All services with delivery time and price in NOK, excluding VAT. Fields with Norwegian and English text are objects with nb and en. With lang set, they are plain strings in that language.",
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "nb",
+                "en"
+              ]
+            },
+            "description": "Return only one language"
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Array of services",
+            "description": "The service catalog",
             "content": {
               "application/json": {
-                "schema": { "$ref": "#/components/schemas/ServiceList" }
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceCatalog"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "lang must be nb or en",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/book": {
+      "post": {
+        "operationId": "bookMeeting",
+        "summary": "Request a meeting",
+        "description": "Sends a meeting request to Nrth AI and a confirmation email to the customer in Norwegian or English (lang). Nrth AI confirms the time by email within one business day. Confirm the details with the user before calling.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Booking"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Booking"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Request received",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ok"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing or invalid field",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request could not be sent",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
               }
             }
           }
@@ -29,144 +117,401 @@
     "/inquiry": {
       "post": {
         "operationId": "submitInquiry",
-        "summary": "Submit a discovery brief",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/components/schemas/Inquiry" }
-            }
-          }
-        },
-        "responses": {
-          "200": { "description": "Inquiry received", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Ok" } } } },
-          "400": { "description": "email and problem are required", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
-          "500": { "description": "The inquiry could not be sent", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
-        }
-      }
-    },
-    "/book": {
-      "post": {
-        "operationId": "bookConsultation",
-        "summary": "Request a meeting",
-        "description": "Sends a meeting request to Nrth AI and a confirmation email to the customer in Norwegian or English (lang). Nrth AI confirms the time by email within one business day. Confirm the details with the user before calling.",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": { "$ref": "#/components/schemas/Booking" }
-            },
-            "application/x-www-form-urlencoded": {
-              "schema": { "$ref": "#/components/schemas/Booking" }
-            }
-          }
-        },
-        "responses": {
-          "200": { "description": "Request received", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Ok" } } } },
-          "400": { "description": "Missing or invalid field", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } },
-          "500": { "description": "The request could not be sent", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }
-        }
-      }
-    },
-    "/chat": {
-      "post": {
-        "operationId": "chat",
-        "summary": "Chat with the Nrth AI sales agent",
+        "summary": "Send a written request",
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "required": ["messages"],
-                "properties": {
-                  "messages": {
-                    "type": "array",
-                    "items": { "$ref": "#/components/schemas/Message" }
-                  }
-                }
+                "$ref": "#/components/schemas/Inquiry"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/Inquiry"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Assistant reply",
+            "description": "Inquiry received",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "reply": { "type": "string" },
-                    "next_action": {
-                      "type": "string",
-                      "enum": ["continue", "submitInquiry", "bookConsultation"]
-                    }
-                  }
+                  "$ref": "#/components/schemas/Ok"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "email and problem are required",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The inquiry could not be sent",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
                 }
               }
             }
           }
-        }
+        },
+        "description": "Sends a written request to Nrth AI (contact@nrth.no). A person on the team replies within one business day. Confirm the details with the user before calling."
       }
     }
   },
   "components": {
     "schemas": {
-      "ServiceList": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "id": { "type": "string" },
-            "name": { "type": "string" },
-            "outcome": { "type": "string" }
+      "ServiceCatalog": {
+        "type": "object",
+        "required": [
+          "valuta",
+          "eksMva",
+          "tjenester"
+        ],
+        "properties": {
+          "valuta": {
+            "type": "string",
+            "const": "NOK"
+          },
+          "eksMva": {
+            "type": "boolean",
+            "description": "Prices exclude VAT"
+          },
+          "lang": {
+            "type": "string",
+            "enum": [
+              "nb",
+              "en"
+            ],
+            "description": "Set when the request had lang"
+          },
+          "tjenester": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Service"
+            }
+          }
+        }
+      },
+      "Service": {
+        "type": "object",
+        "required": [
+          "id",
+          "dor",
+          "navn",
+          "leveranse",
+          "fraPris",
+          "prisTekst",
+          "url"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "ai-kartlegging"
+          },
+          "dor": {
+            "type": "string",
+            "enum": [
+              "ai-vurdering",
+              "implementering",
+              "ai-tjenester",
+              "informasjon"
+            ],
+            "description": "Which of the three doors the service belongs to: AI assessment, implementation, AI services, or information (talks and courses)."
+          },
+          "navn": {
+            "description": "Name",
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "nb",
+                  "en"
+                ],
+                "properties": {
+                  "nb": {
+                    "type": "string"
+                  },
+                  "en": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "string",
+                "description": "With lang set"
+              }
+            ]
+          },
+          "leveranse": {
+            "description": "Delivery time. null when it is not set yet.",
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "nb",
+                  "en"
+                ],
+                "properties": {
+                  "nb": {
+                    "type": "string"
+                  },
+                  "en": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "string",
+                "description": "With lang set"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "fraPris": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "Lowest price in NOK, excluding VAT. null until the price is set."
+          },
+          "prisPer": {
+            "description": "Price unit, when the price is per month",
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "nb",
+                  "en"
+                ],
+                "properties": {
+                  "nb": {
+                    "type": "string"
+                  },
+                  "en": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "string",
+                "description": "With lang set"
+              }
+            ]
+          },
+          "driftFraPrisPerMaaned": {
+            "type": "integer",
+            "description": "Lowest monthly price for operations in NOK, excluding VAT, when it comes on top of the setup price."
+          },
+          "prisTekst": {
+            "description": "The price as it is written on the website. null until the price is set.",
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "nb",
+                  "en"
+                ],
+                "properties": {
+                  "nb": {
+                    "type": "string"
+                  },
+                  "en": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "string",
+                "description": "With lang set"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "url": {
+            "description": "Page and anchor for the service",
+            "oneOf": [
+              {
+                "type": "object",
+                "required": [
+                  "nb",
+                  "en"
+                ],
+                "properties": {
+                  "nb": {
+                    "type": "string"
+                  },
+                  "en": {
+                    "type": "string"
+                  }
+                }
+              },
+              {
+                "type": "string",
+                "description": "With lang set"
+              }
+            ]
+          }
+        }
+      },
+      "Booking": {
+        "type": "object",
+        "required": [
+          "tema",
+          "navn",
+          "epost"
+        ],
+        "properties": {
+          "tema": {
+            "type": "string",
+            "enum": [
+              "ai-vurdering",
+              "implementering",
+              "ai-tjenester",
+              "foredrag",
+              "annet",
+              "ai-assessment",
+              "implementation",
+              "ai-services",
+              "talk",
+              "other"
+            ],
+            "description": "Topic. Norwegian and English values are both accepted: AI assessment, implementation, AI services, talk or course, other."
+          },
+          "navn": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "Name"
+          },
+          "epost": {
+            "type": "string",
+            "format": "email",
+            "maxLength": 2000,
+            "description": "Email address. The confirmation is sent here."
+          },
+          "bedrift": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "Company"
+          },
+          "maal": {
+            "type": "string",
+            "enum": [
+              "salg",
+              "effektivitet",
+              "kvalitet",
+              "vet-ikke"
+            ],
+            "description": "What they want to achieve: increase sales, work more efficiently, improve quality or customer experience, not sure yet."
+          },
+          "naar": {
+            "type": "string",
+            "enum": [
+              "denne-uken",
+              "neste-uke",
+              "senere"
+            ],
+            "description": "When suits them: this week, next week, in two weeks or later."
+          },
+          "tid": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "Preferred time, free text, for example Tuesday morning."
+          },
+          "form": {
+            "type": "string",
+            "enum": [
+              "fysisk",
+              "digitalt"
+            ],
+            "description": "Meeting format: in person in Norway, or online."
+          },
+          "lang": {
+            "type": "string",
+            "enum": [
+              "nb",
+              "en"
+            ],
+            "default": "nb",
+            "description": "Language of the confirmation email."
           }
         }
       },
       "Inquiry": {
         "type": "object",
-        "required": ["email", "problem"],
+        "required": [
+          "email",
+          "problem"
+        ],
         "properties": {
-          "email": { "type": "string", "format": "email" },
-          "company": { "type": "string" },
-          "role": { "type": "string" },
-          "problem": { "type": "string" },
-          "urgency": { "type": "string", "enum": ["exploring", "this_quarter", "asap"] },
-          "lang": { "type": "string", "enum": ["nb", "en"], "default": "nb", "description": "Language of the inquiry. Sets the email subject." }
-        }
-      },
-      "Booking": {
-        "type": "object",
-        "required": ["tema", "navn", "epost"],
-        "properties": {
-          "tema": { "type": "string", "enum": ["ai-vurdering", "implementering", "ai-tjenester", "foredrag", "annet", "ai-assessment", "implementation", "ai-services", "talk", "other"], "description": "Topic. Norwegian and English values are both accepted: AI assessment, implementation, AI services, talk or course, other." },
-          "navn": { "type": "string", "maxLength": 2000, "description": "Name" },
-          "epost": { "type": "string", "format": "email", "maxLength": 2000, "description": "Email address. The confirmation is sent here." },
-          "bedrift": { "type": "string", "maxLength": 2000, "description": "Company" },
-          "maal": { "type": "string", "enum": ["salg", "effektivitet", "kvalitet", "vet-ikke"], "description": "What they want to achieve: increase sales, work more efficiently, improve quality or customer experience, not sure yet." },
-          "naar": { "type": "string", "enum": ["denne-uken", "neste-uke", "senere"], "description": "When suits them: this week, next week, in two weeks or later." },
-          "tid": { "type": "string", "maxLength": 2000, "description": "Preferred time, free text, for example Tuesday morning." },
-          "form": { "type": "string", "enum": ["fysisk", "digitalt"], "description": "Meeting format: in person in Norway, or online." },
-          "lang": { "type": "string", "enum": ["nb", "en"], "default": "nb", "description": "Language of the confirmation email." }
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "company": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "problem": {
+            "type": "string",
+            "description": "What they want help with."
+          },
+          "urgency": {
+            "type": "string",
+            "enum": [
+              "exploring",
+              "this_quarter",
+              "asap"
+            ]
+          },
+          "lang": {
+            "type": "string",
+            "enum": [
+              "nb",
+              "en"
+            ],
+            "default": "nb",
+            "description": "Language of the inquiry. Sets the email subject."
+          }
         }
       },
       "Ok": {
         "type": "object",
-        "required": ["ok"],
-        "properties": { "ok": { "type": "boolean", "const": true } }
+        "required": [
+          "ok"
+        ],
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "const": true
+          }
+        }
       },
       "Error": {
         "type": "object",
-        "required": ["error"],
-        "properties": { "error": { "type": "string" } }
-      },
-      "Message": {
-        "type": "object",
-        "required": ["role", "content"],
+        "required": [
+          "error"
+        ],
         "properties": {
-          "role": { "type": "string", "enum": ["user", "assistant", "system"] },
-          "content": { "type": "string" }
+          "error": {
+            "type": "string"
+          }
         }
       }
     }

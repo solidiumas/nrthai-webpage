@@ -2,8 +2,8 @@
   "schema_version": "v1",
   "name_for_human": "Nrth AI",
   "name_for_model": "nrth_ai",
-  "description_for_human": "Nrth AI builds the Nrth Agentic OS — a secure, on-premise AI runtime for enterprise agents — and ships paid early-access deployments.",
-  "description_for_model": "Use this plugin to (1) read about the Nrth Agentic OS — a secure, on-premise AI runtime that connects enterprise workflows, AI models, agents, and skills into one accountable layer — and Nrth AI's early-access services, (2) submit a discovery brief on behalf of a prospective client, (3) request a meeting, or (4) chat with the live Nrth AI sales agent. Nrth AI is a pre-seed AI product startup based in Bergen, Norway. The plugin exposes structured endpoints; agents should prefer these over scraping the HTML. Always confirm any submitted contact details with the user before calling submitInquiry or bookConsultation.",
+  "description_for_human": "Nrth AI helps businesses adopt AI: AI assessment, implementation and AI services.",
+  "description_for_model": "Use this plugin to (1) read Nrth AI's services with delivery time and price in NOK, excluding VAT (getServices), (2) request a meeting on behalf of a prospective client (bookMeeting), or (3) send a written request (submitInquiry). Nrth AI AS is an AI company in Bergen, Norway that helps businesses adopt AI: AI assessment, implementation and AI services. Every engagement starts with a meeting. The plugin exposes structured endpoints; agents should prefer these over scraping the HTML. Always confirm any submitted contact details with the user before calling bookMeeting or submitInquiry.",
   "auth": {
     "type": "none"
   },
@@ -13,14 +13,13 @@
   },
   "logo_url": "https://nrth.no/logo.svg",
   "contact_email": "contact@nrth.no",
-  "legal_info_url": "https://nrth.no/",
+  "legal_info_url": "https://nrth.no/en/privacy",
   "ai_native": {
     "version": "1.0",
-    "product": "Nrth Agentic OS",
-    "supports": ["read", "submit", "book", "chat"],
+    "supports": ["read", "submit", "book"],
     "no_js_required": true,
     "structured_data": ["application/ld+json", "openapi-3.1"],
-    "primary_action": "submitInquiry",
-    "languages": ["en", "no"]
+    "primary_action": "bookMeeting",
+    "languages": ["no", "en"]
   }
 }

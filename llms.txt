@@ -1,77 +1,42 @@
 # Nrth AI
 
-> Nrth AI builds the Nrth Agentic OS — a secure, on-premise AI runtime that connects enterprise workflows, AI models, agents, and skills into one accountable layer. We also ship paid early-access deployments that put the OS into production today.
+> Nrth AI AS (Bergen, Norge) hjelper norske bedrifter å ta i bruk AI. Vi gjør AI-vurderinger, implementerer AI i daglig drift og bygger AI-tjenester som gir mer salg og mer effektivt arbeid. Første steg er alltid et møte.
 
-Nrth AI is a pre-seed AI product startup based in Bergen, Norway (est. 2026). We are building the next-generation infrastructure for enterprise AI agents, and we take on pilot customers to deploy, train, and stress-test the OS in production.
+Sist oppdatert: [dato]
 
-## Product — the Nrth Agentic OS
+## Hva vi gjør
 
-A native AI Agentic OS: a secure runtime that turns models, agents, and real business workflows into one governed system — observable, permissioned, and accountable for every action it takes.
+- **AI-vurdering** — AI-kartlegging (3–5 dager, fra 35 000 kr), strategisprint (2 uker, fra 75 000 kr), ledersparring (fra 25 000 kr per måned). https://nrth.no/ai-vurdering
+- **Implementering** — pilot i drift (2–3 uker), innføring av AI-verktøy, drift og forbedring (fra 5 000 kr per måned). https://nrth.no/implementering
+- **AI-tjenester** — AI-medarbeidere (1–3 uker, oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned), skreddersydde løsninger (4–16 uker, fra ca. 150 000 kr), lokal AI-infrastruktur på egen maskinvare (2–4 uker, typisk 100 000–1 000 000+ kr). https://nrth.no/ai-tjenester
+- **Foredrag og kurs** — for ledergrupper, ansatte og konferanser. https://nrth.no/foredrag-og-kurs
 
-- Runs on any hardware, on-premise — your data never leaves the network.
-- Setup → Workflows → Agents → Skills: four layers, one accountable system.
-- Security-first: permissioned tool access, full audit logs, evals, guardrails, human-in-the-loop.
-- In active development. Pilot customers get early access via custom deployments.
+Alle priser er eks. mva.
 
-See: https://nrth.no/#product
+## Slik jobber vi
 
-## Outcomes in production (Work)
+Kartlegg (1 uke) → Pilot (2–3 uker) → Drift (løpende).
 
-Representative outcomes from agents running on the OS:
+## Book et møte
 
-- **Customer support agents** — ~72% of tier-1 tickets auto-resolved; the rest escalated with full context.
-- **Sales-outreach agents** — ~5× SDR throughput; personalized first-touch at scale.
-- **Back-office automation agents** — invoice matching, vendor comms, compliance, reconciliation; zero added headcount.
-- Plus research, internal-knowledge, and voice/phone agents.
+- Nettside: https://nrth.no/book
+- API: `POST https://nrth.no/api/book` (se /openapi.json)
+- E-post: contact@nrth.no. Vi svarer innen én virkedag.
 
-See: https://nrth.no/#work
+## Selskapet
 
-## Services — early access to the OS
+Nrth AI AS, Bergen, etablert 2026. Gründere: Thomas Uthaug (forretning, produkt og leveranse) og Simen Uthaug (teknologi og utvikling). Vi lager også produktet Nrth OS: https://trynrth.com
 
-Four engagements, with pricing and delivery timelines included:
+## English
 
-- **AI Employees** — an agent running on the OS that replaces or augments a role. Setup from ~$5,000; monthly ops from $500. Delivery 1–3 weeks.
-- **On-Premise AI Infrastructure** — the platform/infrastructure the OS runs on, on your own hardware. Typically $10,000–$100,000+. Delivery 2–4 weeks.
-- **Custom AI Development** — custom builds on the OS. Small from ~$15,000; mid-size from $40,000; enterprise from $100,000+. Delivery 4–16 weeks.
-- **AI Strategy & Advisory** — OS-adoption advisory. Readiness assessments from $3,500; strategy sprints from $7,500; executive retainers from $2,500/month. Delivery 1–2 weeks.
+Nrth AI AS (Bergen, Norway) helps businesses adopt AI: AI assessment, implementation and AI services that increase sales and efficiency. Every engagement starts with a meeting. English site: https://nrth.no/en · Book: https://nrth.no/en/book
 
-See: https://nrth.no/services
+## For AI-agenter
 
-## Company
-
-Pre-seed, Bergen, Norway, est. 2026. Two founders: Thomas Uthaug (business, product & delivery) and Simen Uthaug (technical & developer). We take on pilot customers to train and stress-test the OS. Investor presentation: https://nrth.no/investors
-
-## Pages
-
-- Home — with Product, Work and Company as scroll-down sections: https://nrth.no/
-  - Product / the Agentic OS: https://nrth.no/#product
-  - Work / outcomes: https://nrth.no/#work
-  - Company / mission + team: https://nrth.no/#company
-- Services: https://nrth.no/services
-- Contact: https://nrth.no/contact
-- Investors: https://nrth.no/investors
-
-## Contact
-
-- Email: contact@nrth.no
-- Website: https://nrth.no
-- Location: Bergen, Norway
-- Send a brief: https://nrth.no/contact — a human responds within 1 business day.
-
-## For AI agents
-
-- Action manifest: /.well-known/ai-plugin.json
-- Agent card: /agent.json
+- Agentkort: /agent.json
 - OpenAPI: /openapi.json
-- Structured data: JSON-LD embedded in pages (Organization, Service, SoftwareApplication, FAQPage, ContactPoint)
-- Machine-readable sitemap: /sitemap.xml
-- Crawl policy: /robots.txt (AI crawlers explicitly allowed)
+- Plugin-manifest: /.well-known/ai-plugin.json
+- Tjenestekatalog som JSON: `GET /api/services`
+- Nettstedskart: /sitemap.xml
 
-Stable API contracts (unchanged):
-
-- `POST /api/inquiry` — submit a discovery brief
-- `POST /api/book` — request a meeting (fields in /openapi.json)
-- `POST /api/chat` — talk to the Nrth AI sales agent
-- `GET /api/services` — list the service catalog
-
-Every page is static HTML that requires no JavaScript to read, so any agent can read and act on this site without rendering JS.
+All tekst er statisk HTML og kan leses uten JavaScript.
