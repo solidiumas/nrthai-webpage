@@ -24,6 +24,8 @@
     if (reduce || !("IntersectionObserver" in window)) {
       items.forEach(function (el) { el.classList.add("is-in"); });
     } else {
+      // Tennes så snart første piksel er innenfor de øverste 88 % av vinduet. En høyere terskel
+      // lot blokker som så vidt stakk opp nederst stå usynlige til man rullet videre.
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
@@ -31,7 +33,7 @@
             io.unobserve(entry.target);
           }
         });
-      }, { rootMargin: "0px 0px -12% 0px", threshold: 0.15 });
+      }, { rootMargin: "0px 0px -12% 0px", threshold: 0 });
       items.forEach(function (el) { io.observe(el); });
     }
 
