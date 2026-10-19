@@ -1,20 +1,21 @@
 <!doctype html>
-<html lang="nb" data-theme="dark">
+<html lang="nb">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<script>document.documentElement.classList.add("js");</script>
+<!-- .js skrur på animasjonene (assets/reveal.js). Lastes ikke skriptet innen tre sekunder, fjernes klassen så alt vises. -->
+<script>
+  document.documentElement.classList.add("js");
+  setTimeout(function () { if (!window.nrthReveal) document.documentElement.classList.remove("js"); }, 3000);
+</script>
 <title>Siden finnes ikke · Nrth AI</title>
 <meta name="robots" content="noindex" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
-<meta name="theme-color" content="#0a0a0b" />
+<meta name="theme-color" content="#ffffff" />
 
-<link rel="preload" href="/assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="/assets/site.css?v=2026-10-13" />
+<link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-19" />
 <!-- Satoshi (logoen) fra Fontshare, lastet uten å blokkere visningen. Lisensen tillater ikke filene i et offentlig repo. -->
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
@@ -47,13 +48,15 @@
 
   <!-- ───────── 404 (norsk og engelsk på samme side, 02 §1) ───────── -->
   <section class="page-hero">
-    <h1>Siden finnes <em>ikke</em>.</h1>
-    <p class="lede">Den kan ha flyttet da vi fornyet nettsiden.</p>
-    <p class="lede" lang="en">Page not found. It may have moved when we rebuilt the site.</p>
-    <div class="hero-actions">
-      <a class="btn" href="/">Til forsiden →</a>
-      <a class="link-arrow" href="/book">Book et møte →</a>
-      <a class="link-arrow" href="/en" hreflang="en" lang="en">English →</a>
+    <div class="wrap">
+      <h1>Siden finnes <em>ikke</em>.</h1>
+      <p class="lede">Den kan ha flyttet da vi fornyet nettsiden.</p>
+      <p class="lede" lang="en">Page not found. It may have moved when we rebuilt the site.</p>
+      <div class="hero-actions">
+        <a class="btn" href="/">Til forsiden →</a>
+        <a class="link-arrow" href="/book">Book et møte →</a>
+        <a class="link-arrow" href="/en" hreflang="en" lang="en">English →</a>
+      </div>
     </div>
   </section>
 
@@ -61,27 +64,38 @@
 
 <!-- ───────── Footer ───────── -->
 <footer class="site-footer">
-  <div class="footer-top">
-    <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
-      <span class="logo-mark">&lt;/&gt;</span>
-      <span class="logo-word">Nrth AI</span>
-    </a>
-    <nav class="footer-links dots" aria-label="Bunntekst">
-      <ul>
-        <li><a href="/ai-vurdering">AI-vurdering</a></li>
-        <li><a href="/implementering">Implementering</a></li>
-        <li><a href="/ai-tjenester">AI-tjenester</a></li>
-        <li><a href="/foredrag-og-kurs">Foredrag og kurs</a></li>
-        <li><a href="/om-oss">Om oss</a></li>
-        <li><a href="/personvern">Personvern</a></li>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
+          <span class="logo-mark">&lt;/&gt;</span>
+          <span class="logo-word">Nrth AI</span>
+        </a>
+      </div>
+      <nav class="footer-links" aria-label="Bunntekst">
+        <ul>
+          <li><a href="/ai-vurdering">AI-vurdering</a></li>
+          <li><a href="/implementering">Implementering</a></li>
+          <li><a href="/ai-tjenester">AI-tjenester</a></li>
+          <li><a href="/foredrag-og-kurs">Foredrag og kurs</a></li>
+          <li><a href="/om-oss">Om oss</a></li>
+          <li><a href="/personvern">Personvern</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-extra">
+        <li data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></li>
+        <li><a href="/investors">Investorer</a></li>
+        <li><a href="/en" hreflang="en" lang="en">English</a></li>
       </ul>
-    </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="dots"><span>© 2026 Nrth AI AS</span> <span>Bergen</span> <span>Org.nr. [org.nr]</span></p>
+      <p><span lang="en">Built by agents</span> · ▲</p>
+    </div>
   </div>
-  <div class="dots"><p><span>© 2026 Nrth AI AS</span> <span>Bergen</span> <span>Org.nr. [org.nr]</span></p></div>
-  <div class="center dots"><p><span data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></span> <span><a href="/investors">Investorer</a></span> <span><a href="/en" hreflang="en" lang="en">English</a></span></p></div>
-  <div class="right"><span lang="en">Built by agents</span> · <span class="star">▲</span></div>
 </footer>
 
+<script src="/assets/reveal.js?v=2026-10-19" defer></script>
 <script src="/assets/nav.js?v=2026-10-13" defer></script>
 </body>
 </html>

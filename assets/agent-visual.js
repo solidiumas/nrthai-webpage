@@ -7,20 +7,31 @@
 
    Mounts onto every <canvas data-agent-visual>. Accent colour is read from the
    --accent CSS variable so it stays in sync with the design system.
+   Fargene kan overstyres med CSS-variabler på lerretet eller en forelder:
+   --viz-edge, --viz-edge-width, --viz-node, --viz-label, --viz-signal,
+   --viz-signal-warm og --viz-glow. Uten dem brukes fargene for mørk bakgrunn.
    ========================================================================== */
 (function () {
   "use strict";
   if (typeof window === "undefined") return;
 
-  function accentColor() {
-    var v = getComputedStyle(document.documentElement).getPropertyValue("--accent");
-    return (v && v.trim()) || "#ff8a5b";
+  function cssVar(el, name, fallback) {
+    var v = getComputedStyle(el).getPropertyValue(name);
+    return (v && v.trim()) || fallback;
   }
 
   function mount(canvas) {
     var ctx = canvas.getContext("2d");
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var accent = accentColor();
+    var accent = cssVar(canvas, "--viz-signal", cssVar(canvas, "--accent", "#ff8a5b"));
+    var colors = {
+      glow: cssVar(canvas, "--viz-glow", "rgba(111, 227, 255, 0.04)"),
+      edge: cssVar(canvas, "--viz-edge", "rgba(245, 242, 236, 0.06)"),
+      edgeWidth: parseFloat(cssVar(canvas, "--viz-edge-width", "1")) || 1,
+      node: cssVar(canvas, "--viz-node", "rgba(245, 242, 236, 0.85)"),
+      label: cssVar(canvas, "--viz-label", "rgba(168, 164, 156, 0.75)"),
+      warm: cssVar(canvas, "--viz-signal-warm", "#ff8a5b")
+    };
     var W = 0, H = 0;
     var ready = false;
 
@@ -89,14 +100,14 @@
 
       // subtle radial vignette
       var grd = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, Math.max(W, H) * 0.7);
-      grd.addColorStop(0, "rgba(111, 227, 255, 0.04)");
+      grd.addColorStop(0, colors.glow);
       grd.addColorStop(1, "rgba(0,0,0,0)");
       ctx.fillStyle = grd;
       ctx.fillRect(0, 0, W, H);
 
       // edges (static, faint)
-      ctx.lineWidth = 1;
-      ctx.strokeStyle = "rgba(245, 242, 236, 0.06)";
+      ctx.lineWidth = colors.edgeWidth;
+      ctx.strokeStyle = colors.edge;
       for (var i = 0; i < edges.length; i++) {
         var na = toPx(getNode(edges[i][0])), nb = toPx(getNode(edges[i][1]));
         ctx.beginPath();
@@ -128,7 +139,7 @@
         var x = (1 - t) * (1 - t) * a.x + 2 * (1 - t) * t * cx + t * t * b.x;
         var y = (1 - t) * (1 - t) * a.y + 2 * (1 - t) * t * cy + t * t * b.y;
 
-        var col = s.hue === "accent" ? accent : "#ff8a5b";
+        var col = s.hue === "accent" ? accent : colors.warm;
         for (var k = 0; k < 6; k++) {
           var tt = Math.max(0, t - k * 0.025);
           var xx = (1 - tt) * (1 - tt) * a.x + 2 * (1 - tt) * tt * cx + tt * tt * b.x;
@@ -168,11 +179,11 @@
         }
 
         ctx.beginPath();
-        ctx.fillStyle = isActive ? accent : "rgba(245, 242, 236, 0.85)";
+        ctx.fillStyle = isActive ? accent : colors.node;
         ctx.arc(p.x, p.y, n.r, 0, Math.PI * 2);
         ctx.fill();
 
-        ctx.fillStyle = isActive ? accent : "rgba(168, 164, 156, 0.75)";
+        ctx.fillStyle = isActive ? accent : colors.label;
         ctx.font = "500 10.5px Geist Mono, monospace";
         ctx.textAlign = "center";
         ctx.textBaseline = "top";
@@ -183,6 +194,37 @@
     }
     ready = true;
     raf = requestAnimationFrame(render);
+
+    // data-agent-visual="interactive": pekeren tenner nærmeste node, som sender signaler videre.
+    if (canvas.getAttribute("data-agent-visual") === "interactive") {
+      var lastPoke = 0;
+      var poke = function (e) {
+        var r = canvas.getBoundingClientRect();
+        var px = e.clientX - r.left, py = e.clientY - r.top;
+        var best = null, bestD = 60;
+        for (var q = 0; q < nodes.length; q++) {
+          var np = toPx(nodes[q]);
+          var d = Math.hypot(np.x - px, np.y - py);
+          if (d < bestD) { bestD = d; best = nodes[q]; }
+        }
+        var now = performance.now();
+        if (!best || now - lastPoke < 160) return;
+        lastPoke = now;
+        activeNode = best.id;
+        activeUntil = now + 600;
+        if (still()) { render(now); return; }
+        for (var w = 0; w < edges.length; w++) {
+          if (edges[w][0] === best.id || edges[w][1] === best.id) {
+            signals.push({
+              from: best.id, to: edges[w][0] === best.id ? edges[w][1] : edges[w][0],
+              t: 0, speed: 0.016 + Math.random() * 0.01, hue: "accent"
+            });
+          }
+        }
+      };
+      canvas.addEventListener("pointermove", poke);
+      canvas.addEventListener("pointerdown", poke);
+    }
 
     // Stillbildet tegnes på nytt når Geist Mono er lastet, så etikettene får riktig font.
     if (document.fonts && document.fonts.ready) {

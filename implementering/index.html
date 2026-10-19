@@ -1,9 +1,13 @@
 <!doctype html>
-<html lang="nb" data-theme="dark">
+<html lang="nb">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<script>document.documentElement.classList.add("js");</script>
+<!-- .js skrur på animasjonene (assets/reveal.js). Lastes ikke skriptet innen tre sekunder, fjernes klassen så alt vises. -->
+<script>
+  document.documentElement.classList.add("js");
+  setTimeout(function () { if (!window.nrthReveal) document.documentElement.classList.remove("js"); }, 3000);
+</script>
 <title>AI-implementering for bedrifter · Nrth AI</title>
 <meta name="description" content="Vi setter AI i drift i bedriften: pilot på 2–3 uker, innføring av AI-verktøy med opplæring, og drift og forbedring etterpå." />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -25,7 +29,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
-<meta name="theme-color" content="#0a0a0b" />
+<meta name="theme-color" content="#ffffff" />
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="Nrth AI for LLMs" />
 
 <!-- Strukturerte data (07 §2). Tjenester og priser fra data/tjenester.json, sjekket av scripts/sjekk-priser.mjs. -->
@@ -99,11 +103,8 @@
 }
 </script>
 
-<link rel="preload" href="/assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="/assets/site.css?v=2026-10-13" />
+<link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-19" />
 <!-- Satoshi (logoen) fra Fontshare, lastet uten å blokkere visningen. Lisensen tillater ikke filene i et offentlig repo. -->
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
@@ -136,156 +137,158 @@
 
   <!-- ───────── Sidehero ───────── -->
   <section class="page-hero">
-    <p class="kicker"><span class="star">✦</span> Implementering</p>
-    <h1>Fra plan til AI i <em>daglig bruk</em>.</h1>
-    <p class="lede">Mange AI-prosjekter stopper etter demoen. Vi setter løsningen i drift på en avgrenset del av arbeidet, lærer opp dem som skal bruke den, og blir med til den virker.</p>
-    <a class="btn" href="#book">Book et møte →</a>
+    <div class="wrap">
+      <p class="kicker">Implementering</p>
+      <h1>Fra plan til AI i <em>daglig bruk</em>.</h1>
+      <p class="lede">Mange AI-prosjekter stopper etter demoen. Vi setter løsningen i drift på en avgrenset del av arbeidet, lærer opp dem som skal bruke den, og blir med til den virker.</p>
+      <a class="btn" href="#book">Book et møte →</a>
+    </div>
   </section>
 
   <!-- ───────── Tjenester ───────── -->
-  <section class="section section--bordered">
-    <div class="card-grid card-grid--3">
-      <article class="service-card" id="pilot">
-        <div class="card-head"><span>01</span></div>
-        <h2>Pilot i drift</h2>
-        <p class="desc">Én løsning i drift på ekte arbeid, med et mål dere kan måle.</p>
-        <div>
-          <p class="included-label">Inkludert</p>
-          <ul class="included">
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Valg av et avgrenset område med tydelig mål</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Oppsett koblet til deres systemer og data</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Test med ekte brukere</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Måling mot målet, og anbefaling om neste steg</span></li>
-          </ul>
-        </div>
-        <dl class="service-meta-group">
-          <div class="service-meta"><dt class="label">Leveranse</dt><dd class="value">2–3 uker</dd></div>
-          <div class="service-meta"><dt class="label">Investering</dt><dd class="value">Fra [pris] kr</dd></div>
-          <div class="service-meta"><dt class="label">Passer for</dt><dd class="value">Bedrifter som vil se effekt før de skalerer.</dd></div>
-        </dl>
-      </article>
-      <article class="service-card" id="verktoy">
-        <div class="card-head"><span>02</span></div>
-        <h2>Innføring av AI-verktøy</h2>
-        <p class="desc">Riktig verktøy, riktig satt opp, og folk som faktisk bruker det.</p>
-        <div>
-          <p class="included-label">Inkludert</p>
-          <ul class="included">
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Valg av verktøy etter behov og krav til data</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Oppsett, tilganger og retningslinjer for bruk</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Opplæring av teamene som skal bruke det</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Oppfølging de første ukene</span></li>
-          </ul>
-        </div>
-        <dl class="service-meta-group">
-          <div class="service-meta"><dt class="label">Leveranse</dt><dd class="value">[varighet]</dd></div>
-          <div class="service-meta"><dt class="label">Investering</dt><dd class="value">Fra [pris] kr</dd></div>
-          <div class="service-meta"><dt class="label">Passer for</dt><dd class="value">Bedrifter som har kjøpt, eller skal kjøpe, AI-verktøy og vil få verdi ut av dem.</dd></div>
-        </dl>
-      </article>
-      <article class="service-card" id="drift">
-        <div class="card-head"><span>03</span></div>
-        <h2>Drift og forbedring</h2>
-        <p class="desc">Vi overvåker, forbedrer og utvider det som er satt i drift.</p>
-        <div>
-          <p class="included-label">Inkludert</p>
-          <ul class="included">
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Overvåking og logg</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Justering når arbeidet endrer seg</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Utvidelse til nye områder</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Månedlig gjennomgang av resultater</span></li>
-          </ul>
-        </div>
-        <dl class="service-meta-group">
-          <div class="service-meta"><dt class="label">Leveranse</dt><dd class="value">Løpende</dd></div>
-          <div class="service-meta"><dt class="label">Investering</dt><dd class="value">Fra 5&nbsp;000&nbsp;kr per måned</dd></div>
-          <div class="service-meta"><dt class="label">Passer for</dt><dd class="value">Alle som har AI i drift og vil at den skal fortsette å levere.</dd></div>
-        </dl>
-      </article>
+  <section class="section">
+    <div class="wrap">
+      <div class="card-grid">
+        <article class="service-card" id="pilot" data-reveal style="--d: 0">
+          <div class="card-head"><span>01</span></div>
+          <h2>Pilot i drift</h2>
+          <p class="desc">Én løsning i drift på ekte arbeid, med et mål dere kan måle.</p>
+          <div>
+            <p class="included-label">Inkludert</p>
+            <ul class="included">
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Valg av et avgrenset område med tydelig mål</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Oppsett koblet til deres systemer og data</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Test med ekte brukere</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Måling mot målet, og anbefaling om neste steg</span></li>
+            </ul>
+          </div>
+          <dl class="service-meta-group">
+            <div class="service-meta"><dt class="label">Leveranse</dt><dd class="value">2–3 uker</dd></div>
+            <div class="service-meta"><dt class="label">Investering</dt><dd class="value">Fra [pris] kr</dd></div>
+            <div class="service-meta"><dt class="label">Passer for</dt><dd class="value">Bedrifter som vil se effekt før de skalerer.</dd></div>
+          </dl>
+        </article>
+        <article class="service-card" id="verktoy" data-reveal style="--d: 1">
+          <div class="card-head"><span>02</span></div>
+          <h2>Innføring av AI-verktøy</h2>
+          <p class="desc">Riktig verktøy, riktig satt opp, og folk som faktisk bruker det.</p>
+          <div>
+            <p class="included-label">Inkludert</p>
+            <ul class="included">
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Valg av verktøy etter behov og krav til data</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Oppsett, tilganger og retningslinjer for bruk</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Opplæring av teamene som skal bruke det</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Oppfølging de første ukene</span></li>
+            </ul>
+          </div>
+          <dl class="service-meta-group">
+            <div class="service-meta"><dt class="label">Leveranse</dt><dd class="value">[varighet]</dd></div>
+            <div class="service-meta"><dt class="label">Investering</dt><dd class="value">Fra [pris] kr</dd></div>
+            <div class="service-meta"><dt class="label">Passer for</dt><dd class="value">Bedrifter som har kjøpt, eller skal kjøpe, AI-verktøy og vil få verdi ut av dem.</dd></div>
+          </dl>
+        </article>
+        <article class="service-card" id="drift" data-reveal style="--d: 2">
+          <div class="card-head"><span>03</span></div>
+          <h2>Drift og forbedring</h2>
+          <p class="desc">Vi overvåker, forbedrer og utvider det som er satt i drift.</p>
+          <div>
+            <p class="included-label">Inkludert</p>
+            <ul class="included">
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Overvåking og logg</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Justering når arbeidet endrer seg</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Utvidelse til nye områder</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Månedlig gjennomgang av resultater</span></li>
+            </ul>
+          </div>
+          <dl class="service-meta-group">
+            <div class="service-meta"><dt class="label">Leveranse</dt><dd class="value">Løpende</dd></div>
+            <div class="service-meta"><dt class="label">Investering</dt><dd class="value">Fra 5&nbsp;000&nbsp;kr per måned</dd></div>
+            <div class="service-meta"><dt class="label">Passer for</dt><dd class="value">Alle som har AI i drift og vil at den skal fortsette å levere.</dd></div>
+          </dl>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- ───────── Book et møte ───────── -->
-  <section class="section section--bordered booking" id="book" data-default-topic="implementering">
-    <div class="cta-grid">
-      <div class="cta-left">
-        <p class="kicker"><span class="star">✦</span> Book et møte</p>
-        <h2>Hvor kan AI gi dere <em>mest</em>?</h2>
-        <p class="lede">Book et møte med oss. Vi ser på hvordan dere jobber, og hvor AI kan øke salget, spare tid eller heve kvaliteten.</p>
-        <p class="included-label">I møtet</p>
-        <ul class="included">
-          <li><span class="arrow" aria-hidden="true">→</span> <span>Vi ser på hvordan dere jobber i dag.</span></li>
-          <li><span class="arrow" aria-hidden="true">→</span> <span>Vi peker på hvor AI kan øke salget eller spare tid.</span></li>
-          <li><span class="arrow" aria-hidden="true">→</span> <span>Dere får forslag til første steg, med pris og tidslinje.</span></li>
-        </ul>
-        <div class="booking-chips"><span>[30] minutter</span> <span>Fysisk i Norge eller digitalt</span></div>
-        <p class="booking-alt">Heller skrive? <a class="link-arrow" href="/book#skriv">Send en forespørsel →</a></p>
-      </div>
-      <div class="brief-panel booking-panel">
-        <div class="brief-head">
-          <div class="left"><span class="pdot"></span><span>nrth.book · velg tid</span></div>
-          <div class="ver">book.v1</div>
+  <section class="section booking" id="book" data-default-topic="implementering">
+    <div class="wrap">
+      <div class="cta-grid">
+        <div class="cta-left" data-reveal>
+          <p class="kicker">Book et møte</p>
+          <h2>Hvor kan AI gi dere <em>mest</em>?</h2>
+          <p class="lede">Book et møte med oss. Vi ser på hvordan dere jobber, og hvor AI kan øke salget, spare tid eller heve kvaliteten.</p>
+          <p class="included-label">I møtet</p>
+          <ul class="included">
+            <li><span class="arrow" aria-hidden="true">→</span> <span>Vi ser på hvordan dere jobber i dag.</span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span>Vi peker på hvor AI kan øke salget eller spare tid.</span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span>Dere får forslag til første steg, med pris og tidslinje.</span></li>
+          </ul>
+          <div class="booking-chips"><span>[30] minutter</span> <span>Fysisk i Norge eller digitalt</span></div>
+          <p class="booking-alt">Heller skrive? <a class="link-arrow" href="/book#skriv">Send en forespørsel →</a></p>
         </div>
-        <form class="brief-form booking-form" method="POST" action="/api/book">
-          <input type="hidden" name="lang" value="nb" />
-          <fieldset class="topic-picker">
-            <legend>Hva vil dere snakke om? <span class="req" aria-hidden="true">*</span></legend>
-            <div class="topic-options">
-              <label class="topic-chip"><input type="radio" name="tema" value="ai-vurdering" required /><span>AI-vurdering</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="implementering" required checked /><span>Implementering</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="ai-tjenester" required /><span>AI-tjenester</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="foredrag" required /><span>Foredrag eller kurs</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="annet" required /><span>Annet</span></label>
+        <div class="brief-panel booking-panel" data-reveal style="--d: 1">
+          <form class="brief-form booking-form" method="POST" action="/api/book">
+            <input type="hidden" name="lang" value="nb" />
+            <fieldset class="topic-picker">
+              <legend>Hva vil dere snakke om? <span class="req" aria-hidden="true">*</span></legend>
+              <div class="topic-options">
+                <label class="topic-chip"><input type="radio" name="tema" value="ai-vurdering" required /><span>AI-vurdering</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="implementering" required checked /><span>Implementering</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="ai-tjenester" required /><span>AI-tjenester</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="foredrag" required /><span>Foredrag eller kurs</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="annet" required /><span>Annet</span></label>
+              </div>
+            </fieldset>
+            <div class="booking-request">
+              <div class="booking-fields">
+                <label><span class="lbl">Navn <span class="req" aria-hidden="true">*</span></span><input type="text" name="navn" required maxlength="2000" autocomplete="name" /></label>
+                <label><span class="lbl">E-post <span class="req" aria-hidden="true">*</span></span><input type="email" name="epost" required maxlength="2000" autocomplete="email" /></label>
+                <label><span class="lbl">Bedrift</span><input type="text" name="bedrift" maxlength="2000" autocomplete="organization" /></label>
+                <label><span class="lbl">Hva vil dere oppnå?</span>
+                  <select name="maal">
+                    <option value="" label=" "></option>
+                    <option value="salg">Øke salget</option>
+                    <option value="effektivitet">Jobbe mer effektivt</option>
+                    <option value="kvalitet">Forbedre kvalitet eller kundeopplevelse</option>
+                    <option value="vet-ikke">Vet ikke ennå</option>
+                  </select>
+                </label>
+                <label><span class="lbl">Når passer det?</span>
+                  <select name="naar">
+                    <option value="" label=" "></option>
+                    <option value="denne-uken">Denne uken</option>
+                    <option value="neste-uke">Neste uke</option>
+                    <option value="senere">Om to uker eller senere</option>
+                  </select>
+                </label>
+                <label><span class="lbl">Foretrukket tidspunkt</span><input type="text" name="tid" maxlength="2000" placeholder="F.eks. tirsdag formiddag" /></label>
+                <label><span class="lbl">Møteform</span>
+                  <select name="form">
+                    <option value="" label=" "></option>
+                    <option value="fysisk">Fysisk i Norge</option>
+                    <option value="digitalt">Digitalt</option>
+                  </select>
+                </label>
+              </div>
+              <div class="visually-hidden" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
+              <button type="submit" class="brief-submit" data-sending="Sender …">Book møtet →</button>
+              <p class="brief-error" role="alert" hidden>Noe gikk galt. Prøv igjen, eller send e-post til <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
+              <p class="brief-note">Vi bekrefter tidspunktet på e-post innen én virkedag. Se <a href="/personvern">personvern</a>.</p>
             </div>
-          </fieldset>
-          <div class="booking-request">
-            <div class="booking-fields">
-              <label><span class="lbl">Navn <span class="req" aria-hidden="true">*</span></span><input type="text" name="navn" required maxlength="2000" autocomplete="name" /></label>
-              <label><span class="lbl">E-post <span class="req" aria-hidden="true">*</span></span><input type="email" name="epost" required maxlength="2000" autocomplete="email" /></label>
-              <label><span class="lbl">Bedrift</span><input type="text" name="bedrift" maxlength="2000" autocomplete="organization" /></label>
-              <label><span class="lbl">Hva vil dere oppnå?</span>
-                <select name="maal">
-                  <option value="" label=" "></option>
-                  <option value="salg">Øke salget</option>
-                  <option value="effektivitet">Jobbe mer effektivt</option>
-                  <option value="kvalitet">Forbedre kvalitet eller kundeopplevelse</option>
-                  <option value="vet-ikke">Vet ikke ennå</option>
-                </select>
-              </label>
-              <label><span class="lbl">Når passer det?</span>
-                <select name="naar">
-                  <option value="" label=" "></option>
-                  <option value="denne-uken">Denne uken</option>
-                  <option value="neste-uke">Neste uke</option>
-                  <option value="senere">Om to uker eller senere</option>
-                </select>
-              </label>
-              <label><span class="lbl">Foretrukket tidspunkt</span><input type="text" name="tid" maxlength="2000" placeholder="F.eks. tirsdag formiddag" /></label>
-              <label><span class="lbl">Møteform</span>
-                <select name="form">
-                  <option value="" label=" "></option>
-                  <option value="fysisk">Fysisk i Norge</option>
-                  <option value="digitalt">Digitalt</option>
-                </select>
-              </label>
-            </div>
-            <div class="visually-hidden" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
-            <button type="submit" class="brief-submit" data-sending="Sender …">Book møtet →</button>
-            <p class="brief-error" role="alert" hidden>Noe gikk galt. Prøv igjen, eller send e-post til <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
-            <p class="brief-note">Vi bekrefter tidspunktet på e-post innen én virkedag. Se <a href="/personvern">personvern</a>.</p>
+          </form>
+          <div class="brief-sent">
+            <h3 tabindex="-1">Takk.<br /> <em>Vi bekrefter tiden.</em></h3>
+            <p>Du får svar fra contact@nrth.no innen én virkedag med forslag til tidspunkt.</p>
+            <button type="button" class="btn-ghost brief-reset">Book et nytt møte →</button>
           </div>
-        </form>
-        <div class="brief-sent">
-          <h3 tabindex="-1">Takk.<br /> <em>Vi bekrefter tiden.</em></h3>
-          <p>Du får svar fra contact@nrth.no innen én virkedag med forslag til tidspunkt.</p>
-          <button type="button" class="btn-ghost brief-reset">Book et nytt møte →</button>
+          <template class="booking-calendar-tpl" data-notes-prefix="Tema:">
+            <div class="booking-calendar">
+              <iframe class="booking-frame" title="Velg tid for møte med Nrth AI" loading="lazy"></iframe>
+              <p><a class="link-arrow">Åpne kalenderen i ny fane ↗</a></p>
+            </div>
+          </template>
         </div>
-        <template class="booking-calendar-tpl" data-notes-prefix="Tema:">
-          <div class="booking-calendar">
-            <iframe class="booking-frame" title="Velg tid for møte med Nrth AI" loading="lazy"></iframe>
-            <p><a class="link-arrow">Åpne kalenderen i ny fane ↗</a></p>
-          </div>
-        </template>
       </div>
     </div>
   </section>
@@ -294,27 +297,38 @@
 
 <!-- ───────── Footer ───────── -->
 <footer class="site-footer">
-  <div class="footer-top">
-    <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
-      <span class="logo-mark">&lt;/&gt;</span>
-      <span class="logo-word">Nrth AI</span>
-    </a>
-    <nav class="footer-links dots" aria-label="Bunntekst">
-      <ul>
-        <li><a href="/ai-vurdering">AI-vurdering</a></li>
-        <li><a href="/implementering">Implementering</a></li>
-        <li><a href="/ai-tjenester">AI-tjenester</a></li>
-        <li><a href="/foredrag-og-kurs">Foredrag og kurs</a></li>
-        <li><a href="/om-oss">Om oss</a></li>
-        <li><a href="/personvern">Personvern</a></li>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
+          <span class="logo-mark">&lt;/&gt;</span>
+          <span class="logo-word">Nrth AI</span>
+        </a>
+      </div>
+      <nav class="footer-links" aria-label="Bunntekst">
+        <ul>
+          <li><a href="/ai-vurdering">AI-vurdering</a></li>
+          <li><a href="/implementering">Implementering</a></li>
+          <li><a href="/ai-tjenester">AI-tjenester</a></li>
+          <li><a href="/foredrag-og-kurs">Foredrag og kurs</a></li>
+          <li><a href="/om-oss">Om oss</a></li>
+          <li><a href="/personvern">Personvern</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-extra">
+        <li data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></li>
+        <li><a href="/investors">Investorer</a></li>
+        <li><a href="/en/implementation" hreflang="en" lang="en">English</a></li>
       </ul>
-    </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="dots"><span>© 2026 Nrth AI AS</span> <span>Bergen</span> <span>Org.nr. [org.nr]</span></p>
+      <p><span lang="en">Built by agents</span> · ▲</p>
+    </div>
   </div>
-  <div class="dots"><p><span>© 2026 Nrth AI AS</span> <span>Bergen</span> <span>Org.nr. [org.nr]</span></p></div>
-  <div class="center dots"><p><span data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></span> <span><a href="/investors">Investorer</a></span> <span><a href="/en/implementation" hreflang="en" lang="en">English</a></span></p></div>
-  <div class="right"><span lang="en">Built by agents</span> · <span class="star">▲</span></div>
 </footer>
 
+<script src="/assets/reveal.js?v=2026-10-19" defer></script>
 <script src="/assets/nav.js?v=2026-10-13" defer></script>
 <script src="/assets/booking-config.js" defer></script>
 <script src="/assets/booking.js?v=2026-10-13" defer></script>

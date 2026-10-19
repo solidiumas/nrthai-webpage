@@ -1,9 +1,13 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<script>document.documentElement.classList.add("js");</script>
+<!-- .js skrur på animasjonene (assets/reveal.js). Lastes ikke skriptet innen tre sekunder, fjernes klassen så alt vises. -->
+<script>
+  document.documentElement.classList.add("js");
+  setTimeout(function () { if (!window.nrthReveal) document.documentElement.classList.remove("js"); }, 3000);
+</script>
 <title>About Nrth AI · AI company in Bergen, Norway</title>
 <meta name="description" content="Nrth AI AS is an AI company in Bergen, Norway, founded in 2026. We help businesses put AI to work, and we build Nrth OS." />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -25,7 +29,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
-<meta name="theme-color" content="#0a0a0b" />
+<meta name="theme-color" content="#ffffff" />
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="Nrth AI for LLMs" />
 
 <!-- Strukturerte data (07 §2). Tjenester og priser fra data/tjenester.json, sjekket av scripts/sjekk-priser.mjs. -->
@@ -50,11 +54,8 @@
 }
 </script>
 
-<link rel="preload" href="/assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="/assets/site.css?v=2026-10-13" />
+<link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-19" />
 <!-- Satoshi (logoen) fra Fontshare, lastet uten å blokkere visningen. Lisensen tillater ikke filene i et offentlig repo. -->
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
@@ -87,157 +88,163 @@
 
   <!-- ───────── Sidehero ───────── -->
   <section class="page-hero">
-    <p class="kicker"><span class="star">✦</span> About</p>
-    <h1>Two founders in <em>Bergen</em>.</h1>
-    <p class="lede">Nrth AI AS was founded in 2026. We help businesses adopt AI in a way that delivers results, and we build the product Nrth OS.</p>
+    <div class="wrap">
+      <p class="kicker">About</p>
+      <h1>Two founders in <em>Bergen</em>.</h1>
+      <p class="lede">Nrth AI AS was founded in 2026. We help businesses adopt AI in a way that delivers results, and we build the product Nrth OS.</p>
+    </div>
   </section>
 
   <!-- ───────── Team ───────── -->
-  <section class="section section--bordered">
-    <div class="team-grid">
-      <article class="member">
-        <div class="avatar" aria-hidden="true">TU</div>
-        <h2>Thomas Uthaug</h2>
-        <div class="role">Co-founder · business, product and delivery</div>
-        <p>A decade across finance, quality leadership and technology delivery at Storebrand and Sopra Steria. MSc in Finance from NHH, with exchange studies at UC Berkeley and Copenhagen Business School. A career spent turning complex technology into bottom-line results.</p>
-        <div class="tags"><span>NHH MSc Finance</span> <span>UC Berkeley</span> <span>Storebrand</span> <span>Sopra Steria</span></div>
-      </article>
-      <article class="member">
-        <div class="avatar" aria-hidden="true">SU</div>
-        <h2>Simen Uthaug</h2>
-        <div class="role">Co-founder · technology and development</div>
-        <p>BSc in Information Science from the University of Bergen and a master's degree in UX and development. Full-stack developer working in TypeScript, React, Python, API integration, databases and machine learning.</p>
-        <div class="tags"><span>UiB Information Science</span> <span>TypeScript / React</span> <span>Python / ML</span> <span>Full-stack</span></div>
-      </article>
+  <section class="section">
+    <div class="wrap">
+      <div class="team-grid">
+        <article class="member" data-reveal style="--d: 0">
+          <div class="avatar" aria-hidden="true">TU</div>
+          <h2>Thomas Uthaug</h2>
+          <div class="role">Co-founder · business, product and delivery</div>
+          <p>A decade across finance, quality leadership and technology delivery at Storebrand and Sopra Steria. MSc in Finance from NHH, with exchange studies at UC Berkeley and Copenhagen Business School. A career spent turning complex technology into bottom-line results.</p>
+          <div class="tags"><span>NHH MSc Finance</span> <span>UC Berkeley</span> <span>Storebrand</span> <span>Sopra Steria</span></div>
+        </article>
+        <article class="member" data-reveal style="--d: 1">
+          <div class="avatar" aria-hidden="true">SU</div>
+          <h2>Simen Uthaug</h2>
+          <div class="role">Co-founder · technology and development</div>
+          <p>BSc in Information Science from the University of Bergen and a master's degree in UX and development. Full-stack developer working in TypeScript, React, Python, API integration, databases and machine learning.</p>
+          <div class="tags"><span>UiB Information Science</span> <span>TypeScript / React</span> <span>Python / ML</span> <span>Full-stack</span></div>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- ───────── What to expect ───────── -->
-  <section class="section section--bordered">
-    <div class="section-header">
-      <p class="kicker"><span class="star">✦</span> What to expect</p>
-      <h2>How we <em>work</em>.</h2>
-    </div>
-    <div class="card-grid card-grid--2">
-      <article class="card card--compact">
-        <div class="card-head"><span>01</span></div>
-        <h3>We run what we build.</h3>
-        <p>The work doesn't end at handover.</p>
-      </article>
-      <article class="card card--compact">
-        <div class="card-head"><span>02</span></div>
-        <h3>Prices and timelines are on the site.</h3>
-        <p>No “contact us for a quote”.</p>
-      </article>
-      <article class="card card--compact">
-        <div class="card-head"><span>03</span></div>
-        <h3>We tell you when AI is the wrong tool.</h3>
-        <p>That saves you more than it costs us.</p>
-      </article>
-      <article class="card card--compact">
-        <div class="card-head"><span>04</span></div>
-        <h3>Measured on what matters.</h3>
-        <p>Every solution gets a goal you can measure: more sales, fewer hours or better quality.</p>
-      </article>
-    </div>
-    <!-- Nrth OS-blokken (data-nrth-os). Legg på «hidden» for å skjule den. -->
-    <div class="os-note" data-nrth-os>
-      <span class="os-note-label">Nrth OS</span>
-      <p>We also build Nrth OS: the workspace where companies put AI to work themselves.</p>
-      <a href="https://trynrth.com" rel="noopener">trynrth.com ↗</a>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-header" data-reveal>
+        <p class="kicker">What to expect</p>
+        <h2>How we <em>work</em>.</h2>
+      </div>
+      <div class="card-grid card-grid--2">
+        <article class="card card--compact" data-reveal style="--d: 0">
+          <div class="card-head"><span>01</span></div>
+          <h3>We run what we build.</h3>
+          <p>The work doesn't end at handover.</p>
+        </article>
+        <article class="card card--compact" data-reveal style="--d: 1">
+          <div class="card-head"><span>02</span></div>
+          <h3>Prices and timelines are on the site.</h3>
+          <p>No “contact us for a quote”.</p>
+        </article>
+        <article class="card card--compact" data-reveal style="--d: 2">
+          <div class="card-head"><span>03</span></div>
+          <h3>We tell you when AI is the wrong tool.</h3>
+          <p>That saves you more than it costs us.</p>
+        </article>
+        <article class="card card--compact" data-reveal style="--d: 3">
+          <div class="card-head"><span>04</span></div>
+          <h3>Measured on what matters.</h3>
+          <p>Every solution gets a goal you can measure: more sales, fewer hours or better quality.</p>
+        </article>
+      </div>
+      <!-- Nrth OS-blokken (data-nrth-os). Legg på «hidden» for å skjule den. -->
+      <div class="os-note" data-nrth-os data-reveal>
+        <span class="os-note-label">Nrth OS</span>
+        <p>We also build Nrth OS: the workspace where companies put AI to work themselves.</p>
+        <a href="https://trynrth.com" rel="noopener">trynrth.com ↗</a>
+      </div>
     </div>
   </section>
 
   <!-- ───────── Contact ───────── -->
-  <section class="section section--bordered section--compact">
-    <dl class="contact-lines">
-      <div><dt>Email</dt><dd><a href="mailto:contact@nrth.no">contact@nrth.no</a></dd></div>
-      <div><dt>Location</dt><dd>Bergen, Norway</dd></div>
-      <div><dt>Company</dt><dd>Nrth AI AS · Org. no. [org.nr]</dd></div>
-    </dl>
+  <section class="section section--compact">
+    <div class="wrap">
+      <dl class="contact-lines" data-reveal>
+        <div><dt>Email</dt><dd><a href="mailto:contact@nrth.no">contact@nrth.no</a></dd></div>
+        <div><dt>Location</dt><dd>Bergen, Norway</dd></div>
+        <div><dt>Company</dt><dd>Nrth AI AS · Org. no. [org.nr]</dd></div>
+      </dl>
+    </div>
   </section>
 
   <!-- ───────── Book et møte ───────── -->
-  <section class="section section--bordered booking" id="book">
-    <div class="cta-grid">
-      <div class="cta-left">
-        <p class="kicker"><span class="star">✦</span> Book a meeting</p>
-        <h2>Where can AI do the <em>most</em> for you?</h2>
-        <p class="lede">Book a meeting with us. We look at how you work today, and where AI can increase sales, save time or raise quality.</p>
-        <p class="included-label">In the meeting</p>
-        <ul class="included">
-          <li><span class="arrow" aria-hidden="true">→</span> <span>We look at how you work today.</span></li>
-          <li><span class="arrow" aria-hidden="true">→</span> <span>We point out where AI can increase sales or save time.</span></li>
-          <li><span class="arrow" aria-hidden="true">→</span> <span>You leave with a proposed first step, with price and timeline.</span></li>
-        </ul>
-        <div class="booking-chips"><span>[30] minutes</span> <span>In person in Norway or online</span></div>
-        <p class="booking-alt">Prefer to write? <a class="link-arrow" href="/en/book#write">Send a request →</a></p>
-      </div>
-      <div class="brief-panel booking-panel">
-        <div class="brief-head">
-          <div class="left"><span class="pdot"></span><span>nrth.book · pick a time</span></div>
-          <div class="ver">book.v1</div>
+  <section class="section booking" id="book">
+    <div class="wrap">
+      <div class="cta-grid">
+        <div class="cta-left" data-reveal>
+          <p class="kicker">Book a meeting</p>
+          <h2>Where can AI do the <em>most</em> for you?</h2>
+          <p class="lede">Book a meeting with us. We look at how you work today, and where AI can increase sales, save time or raise quality.</p>
+          <p class="included-label">In the meeting</p>
+          <ul class="included">
+            <li><span class="arrow" aria-hidden="true">→</span> <span>We look at how you work today.</span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span>We point out where AI can increase sales or save time.</span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span>You leave with a proposed first step, with price and timeline.</span></li>
+          </ul>
+          <div class="booking-chips"><span>[30] minutes</span> <span>In person in Norway or online</span></div>
+          <p class="booking-alt">Prefer to write? <a class="link-arrow" href="/en/book#write">Send a request →</a></p>
         </div>
-        <form class="brief-form booking-form" method="POST" action="/api/book">
-          <input type="hidden" name="lang" value="en" />
-          <fieldset class="topic-picker">
-            <legend>What would you like to talk about? <span class="req" aria-hidden="true">*</span></legend>
-            <div class="topic-options">
-              <label class="topic-chip"><input type="radio" name="tema" value="ai-assessment" required /><span>AI assessment</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="implementation" required /><span>Implementation</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="ai-services" required /><span>AI services</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="talk" required /><span>Talk or course</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="other" required /><span>Other</span></label>
+        <div class="brief-panel booking-panel" data-reveal style="--d: 1">
+          <form class="brief-form booking-form" method="POST" action="/api/book">
+            <input type="hidden" name="lang" value="en" />
+            <fieldset class="topic-picker">
+              <legend>What would you like to talk about? <span class="req" aria-hidden="true">*</span></legend>
+              <div class="topic-options">
+                <label class="topic-chip"><input type="radio" name="tema" value="ai-assessment" required /><span>AI assessment</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="implementation" required /><span>Implementation</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="ai-services" required /><span>AI services</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="talk" required /><span>Talk or course</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="other" required /><span>Other</span></label>
+              </div>
+            </fieldset>
+            <div class="booking-request">
+              <div class="booking-fields">
+                <label><span class="lbl">Name <span class="req" aria-hidden="true">*</span></span><input type="text" name="navn" required maxlength="2000" autocomplete="name" /></label>
+                <label><span class="lbl">Email <span class="req" aria-hidden="true">*</span></span><input type="email" name="epost" required maxlength="2000" autocomplete="email" /></label>
+                <label><span class="lbl">Company</span><input type="text" name="bedrift" maxlength="2000" autocomplete="organization" /></label>
+                <label><span class="lbl">What do you want to achieve?</span>
+                  <select name="maal">
+                    <option value="" label=" "></option>
+                    <option value="salg">Increase sales</option>
+                    <option value="effektivitet">Work more efficiently</option>
+                    <option value="kvalitet">Improve quality or customer experience</option>
+                    <option value="vet-ikke">Not sure yet</option>
+                  </select>
+                </label>
+                <label><span class="lbl">When suits you?</span>
+                  <select name="naar">
+                    <option value="" label=" "></option>
+                    <option value="denne-uken">This week</option>
+                    <option value="neste-uke">Next week</option>
+                    <option value="senere">In two weeks or later</option>
+                  </select>
+                </label>
+                <label><span class="lbl">Preferred time</span><input type="text" name="tid" maxlength="2000" placeholder="E.g. Tuesday morning" /></label>
+                <label><span class="lbl">Meeting format</span>
+                  <select name="form">
+                    <option value="" label=" "></option>
+                    <option value="fysisk">In person in Norway</option>
+                    <option value="digitalt">Online</option>
+                  </select>
+                </label>
+              </div>
+              <div class="visually-hidden" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
+              <button type="submit" class="brief-submit" data-sending="Sending…">Request the meeting →</button>
+              <p class="brief-error" role="alert" hidden>Something went wrong. Please try again, or email <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
+              <p class="brief-note">We confirm the time by email within one business day. See <a href="/en/privacy">privacy</a>.</p>
             </div>
-          </fieldset>
-          <div class="booking-request">
-            <div class="booking-fields">
-              <label><span class="lbl">Name <span class="req" aria-hidden="true">*</span></span><input type="text" name="navn" required maxlength="2000" autocomplete="name" /></label>
-              <label><span class="lbl">Email <span class="req" aria-hidden="true">*</span></span><input type="email" name="epost" required maxlength="2000" autocomplete="email" /></label>
-              <label><span class="lbl">Company</span><input type="text" name="bedrift" maxlength="2000" autocomplete="organization" /></label>
-              <label><span class="lbl">What do you want to achieve?</span>
-                <select name="maal">
-                  <option value="" label=" "></option>
-                  <option value="salg">Increase sales</option>
-                  <option value="effektivitet">Work more efficiently</option>
-                  <option value="kvalitet">Improve quality or customer experience</option>
-                  <option value="vet-ikke">Not sure yet</option>
-                </select>
-              </label>
-              <label><span class="lbl">When suits you?</span>
-                <select name="naar">
-                  <option value="" label=" "></option>
-                  <option value="denne-uken">This week</option>
-                  <option value="neste-uke">Next week</option>
-                  <option value="senere">In two weeks or later</option>
-                </select>
-              </label>
-              <label><span class="lbl">Preferred time</span><input type="text" name="tid" maxlength="2000" placeholder="E.g. Tuesday morning" /></label>
-              <label><span class="lbl">Meeting format</span>
-                <select name="form">
-                  <option value="" label=" "></option>
-                  <option value="fysisk">In person in Norway</option>
-                  <option value="digitalt">Online</option>
-                </select>
-              </label>
-            </div>
-            <div class="visually-hidden" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
-            <button type="submit" class="brief-submit" data-sending="Sending…">Request the meeting →</button>
-            <p class="brief-error" role="alert" hidden>Something went wrong. Please try again, or email <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
-            <p class="brief-note">We confirm the time by email within one business day. See <a href="/en/privacy">privacy</a>.</p>
+          </form>
+          <div class="brief-sent">
+            <h3 tabindex="-1">Thanks.<br /> <em>We'll confirm the time.</em></h3>
+            <p>You'll hear from contact@nrth.no within one business day with a proposed time.</p>
+            <button type="button" class="btn-ghost brief-reset">Book another →</button>
           </div>
-        </form>
-        <div class="brief-sent">
-          <h3 tabindex="-1">Thanks.<br /> <em>We'll confirm the time.</em></h3>
-          <p>You'll hear from contact@nrth.no within one business day with a proposed time.</p>
-          <button type="button" class="btn-ghost brief-reset">Book another →</button>
+          <template class="booking-calendar-tpl" data-notes-prefix="Topic:">
+            <div class="booking-calendar">
+              <iframe class="booking-frame" title="Pick a time for a meeting with Nrth AI" loading="lazy"></iframe>
+              <p><a class="link-arrow">Open the calendar in a new tab ↗</a></p>
+            </div>
+          </template>
         </div>
-        <template class="booking-calendar-tpl" data-notes-prefix="Topic:">
-          <div class="booking-calendar">
-            <iframe class="booking-frame" title="Pick a time for a meeting with Nrth AI" loading="lazy"></iframe>
-            <p><a class="link-arrow">Open the calendar in a new tab ↗</a></p>
-          </div>
-        </template>
       </div>
     </div>
   </section>
@@ -246,27 +253,38 @@
 
 <!-- ───────── Footer ───────── -->
 <footer class="site-footer">
-  <div class="footer-top">
-    <a class="logo" href="/en" aria-label="Nrth AI, home">
-      <span class="logo-mark">&lt;/&gt;</span>
-      <span class="logo-word">Nrth AI</span>
-    </a>
-    <nav class="footer-links dots" aria-label="Footer">
-      <ul>
-        <li><a href="/en/ai-assessment">AI assessment</a></li>
-        <li><a href="/en/implementation">Implementation</a></li>
-        <li><a href="/en/ai-services">AI services</a></li>
-        <li><a href="/en/talks-and-courses">Talks and courses</a></li>
-        <li><a href="/en/about">About</a></li>
-        <li><a href="/en/privacy">Privacy</a></li>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="/en" aria-label="Nrth AI, home">
+          <span class="logo-mark">&lt;/&gt;</span>
+          <span class="logo-word">Nrth AI</span>
+        </a>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <ul>
+          <li><a href="/en/ai-assessment">AI assessment</a></li>
+          <li><a href="/en/implementation">Implementation</a></li>
+          <li><a href="/en/ai-services">AI services</a></li>
+          <li><a href="/en/talks-and-courses">Talks and courses</a></li>
+          <li><a href="/en/about">About</a></li>
+          <li><a href="/en/privacy">Privacy</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-extra">
+        <li data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></li>
+        <li><a href="/investors">Investors</a></li>
+        <li><a href="/om-oss" hreflang="nb" lang="nb">Norsk</a></li>
       </ul>
-    </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="dots"><span>© 2026 Nrth AI AS</span> <span>Bergen, Norway</span> <span>Org. no. [org.nr]</span></p>
+      <p><span lang="en">Built by agents</span> · ▲</p>
+    </div>
   </div>
-  <div class="dots"><p><span>© 2026 Nrth AI AS</span> <span>Bergen, Norway</span> <span>Org. no. [org.nr]</span></p></div>
-  <div class="center dots"><p><span data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></span> <span><a href="/investors">Investors</a></span> <span><a href="/om-oss" hreflang="nb" lang="nb">Norsk</a></span></p></div>
-  <div class="right"><span lang="en">Built by agents</span> · <span class="star">▲</span></div>
 </footer>
 
+<script src="/assets/reveal.js?v=2026-10-19" defer></script>
 <script src="/assets/nav.js?v=2026-10-13" defer></script>
 <script src="/assets/booking-config.js" defer></script>
 <script src="/assets/booking.js?v=2026-10-13" defer></script>

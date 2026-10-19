@@ -1,9 +1,13 @@
 <!doctype html>
-<html lang="nb" data-theme="dark">
+<html lang="nb">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<script>document.documentElement.classList.add("js");</script>
+<!-- .js skrur på animasjonene (assets/reveal.js). Lastes ikke skriptet innen tre sekunder, fjernes klassen så alt vises. -->
+<script>
+  document.documentElement.classList.add("js");
+  setTimeout(function () { if (!window.nrthReveal) document.documentElement.classList.remove("js"); }, 3000);
+</script>
 <title>Personvern · Nrth AI</title>
 <meta name="description" content="Hvordan Nrth AI AS behandler opplysningene du gir oss når du booker et møte eller sender en forespørsel." />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -25,7 +29,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
-<meta name="theme-color" content="#0a0a0b" />
+<meta name="theme-color" content="#ffffff" />
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="Nrth AI for LLMs" />
 
 <!-- Strukturerte data (07 §2). Tjenester og priser fra data/tjenester.json, sjekket av scripts/sjekk-priser.mjs. -->
@@ -50,11 +54,8 @@
 }
 </script>
 
-<link rel="preload" href="/assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="/assets/site.css?v=2026-10-13" />
+<link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-19" />
 <!-- Satoshi (logoen) fra Fontshare, lastet uten å blokkere visningen. Lisensen tillater ikke filene i et offentlig repo. -->
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
@@ -87,27 +88,31 @@
 
   <!-- ───────── Sidehero ───────── -->
   <section class="page-hero">
-    <h1>Personvern</h1>
+    <div class="wrap">
+      <h1>Personvern</h1>
+    </div>
   </section>
 
-  <section class="section section--bordered">
-    <!-- Utkast. Må godkjennes av Thomas eller en advokat før publisering (03-tekst-norsk.md). -->
-    <div class="prose">
-      <h2>Behandlingsansvarlig</h2>
-      <p>Nrth AI AS, Bergen. Org.nr. [org.nr]. Kontakt: <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
-      <h2>Hva vi samler inn</h2>
-      <p>Navn, e-post, bedrift, rolle og det du skriver i skjemaet eller bookingen. Ingenting annet.</p>
-      <h2>Hvorfor</h2>
-      <p>For å svare deg og avtale møter. Grunnlaget er vår berettigede interesse i å svare på henvendelser (GDPR art. 6 nr. 1 bokstav f).</p>
-      <h2>Hvor det lagres</h2>
-      <p>E-post sendes via Resend til innboksen vår. Bookinger lagres i [Google Kalender / Cal.com].</p>
-      <h2>Hvor lenge</h2>
-      <p>Til henvendelsen er avsluttet, og senest [12] måneder etter siste kontakt, med mindre dere blir kunde.</p>
-      <h2>Informasjonskapsler og sporing</h2>
-      <p>[Vi bruker ikke informasjonskapsler til sporing. / Vi bruker Plausible, som ikke setter informasjonskapsler.]</p>
-      <h2>Dine rettigheter</h2>
-      <p>Innsyn, retting, sletting og klage til Datatilsynet. Send e-post til <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
-      <p>Sist oppdatert: [dato]</p>
+  <section class="section">
+    <div class="wrap">
+      <!-- Utkast. Må godkjennes av Thomas eller en advokat før publisering (03-tekst-norsk.md). -->
+      <div class="prose" data-reveal>
+        <h2>Behandlingsansvarlig</h2>
+        <p>Nrth AI AS, Bergen. Org.nr. [org.nr]. Kontakt: <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
+        <h2>Hva vi samler inn</h2>
+        <p>Navn, e-post, bedrift, rolle og det du skriver i skjemaet eller bookingen. Ingenting annet.</p>
+        <h2>Hvorfor</h2>
+        <p>For å svare deg og avtale møter. Grunnlaget er vår berettigede interesse i å svare på henvendelser (GDPR art. 6 nr. 1 bokstav f).</p>
+        <h2>Hvor det lagres</h2>
+        <p>E-post sendes via Resend til innboksen vår. Bookinger lagres i [Google Kalender / Cal.com].</p>
+        <h2>Hvor lenge</h2>
+        <p>Til henvendelsen er avsluttet, og senest [12] måneder etter siste kontakt, med mindre dere blir kunde.</p>
+        <h2>Informasjonskapsler og sporing</h2>
+        <p>[Vi bruker ikke informasjonskapsler til sporing. / Vi bruker Plausible, som ikke setter informasjonskapsler.]</p>
+        <h2>Dine rettigheter</h2>
+        <p>Innsyn, retting, sletting og klage til Datatilsynet. Send e-post til <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
+        <p>Sist oppdatert: [dato]</p>
+      </div>
     </div>
   </section>
 
@@ -115,27 +120,38 @@
 
 <!-- ───────── Footer ───────── -->
 <footer class="site-footer">
-  <div class="footer-top">
-    <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
-      <span class="logo-mark">&lt;/&gt;</span>
-      <span class="logo-word">Nrth AI</span>
-    </a>
-    <nav class="footer-links dots" aria-label="Bunntekst">
-      <ul>
-        <li><a href="/ai-vurdering">AI-vurdering</a></li>
-        <li><a href="/implementering">Implementering</a></li>
-        <li><a href="/ai-tjenester">AI-tjenester</a></li>
-        <li><a href="/foredrag-og-kurs">Foredrag og kurs</a></li>
-        <li><a href="/om-oss">Om oss</a></li>
-        <li><a href="/personvern">Personvern</a></li>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
+          <span class="logo-mark">&lt;/&gt;</span>
+          <span class="logo-word">Nrth AI</span>
+        </a>
+      </div>
+      <nav class="footer-links" aria-label="Bunntekst">
+        <ul>
+          <li><a href="/ai-vurdering">AI-vurdering</a></li>
+          <li><a href="/implementering">Implementering</a></li>
+          <li><a href="/ai-tjenester">AI-tjenester</a></li>
+          <li><a href="/foredrag-og-kurs">Foredrag og kurs</a></li>
+          <li><a href="/om-oss">Om oss</a></li>
+          <li><a href="/personvern">Personvern</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-extra">
+        <li data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></li>
+        <li><a href="/investors">Investorer</a></li>
+        <li><a href="/en/privacy" hreflang="en" lang="en">English</a></li>
       </ul>
-    </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="dots"><span>© 2026 Nrth AI AS</span> <span>Bergen</span> <span>Org.nr. [org.nr]</span></p>
+      <p><span lang="en">Built by agents</span> · ▲</p>
+    </div>
   </div>
-  <div class="dots"><p><span>© 2026 Nrth AI AS</span> <span>Bergen</span> <span>Org.nr. [org.nr]</span></p></div>
-  <div class="center dots"><p><span data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></span> <span><a href="/investors">Investorer</a></span> <span><a href="/en/privacy" hreflang="en" lang="en">English</a></span></p></div>
-  <div class="right"><span lang="en">Built by agents</span> · <span class="star">▲</span></div>
 </footer>
 
+<script src="/assets/reveal.js?v=2026-10-19" defer></script>
 <script src="/assets/nav.js?v=2026-10-13" defer></script>
 </body>
 </html>
