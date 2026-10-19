@@ -168,14 +168,19 @@ body.nav-open .nav-toggle .bar:nth-child(2) { opacity: 0; }
 body.nav-open .nav-toggle .bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* ───────── Forsidehero ───────── */
+/* Heroen glir opp ved lasting, uten å tone inn: tittelen er sidens største innhold (LCP),
+   og nettleseren teller den først når den er synlig. Starter den usynlig, måles LCP over ett sekund senere. */
 .hero { padding: 104px 0 0; text-align: center; }
-.hero .wrap > * { animation: reveal 0.9s var(--ease) both; }
+.hero .wrap > * { animation: rise 0.9s var(--ease) both; }
 .hero .eyebrow { animation-delay: 0.05s; }
 .hero h1 { animation-delay: 0.12s; }
 .hero .lede { animation-delay: 0.22s; }
 .hero .hero-actions { animation-delay: 0.32s; }
 .hero .hero-subtag { animation-delay: 0.4s; }
-.hero .hero-stage { animation-delay: 0.5s; animation-duration: 1.2s; }
+@keyframes rise {
+  from { translate: 0 28px; }
+  to { translate: 0 0; }
+}
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
@@ -207,24 +212,9 @@ h1 {
 .hero .hero-actions { justify-content: center; }
 .hero-subtag { margin-top: 20px; font-size: 14px; color: var(--fg-dim); }
 
-/* Agentfiguren på hvit bunn. Fargene leses av assets/agent-visual.js, og pekeren tenner nærmeste node. */
-.hero-stage { margin-top: 40px; display: flex; justify-content: center; }
-.hero-visual {
-  position: relative; width: min(100%, 540px); aspect-ratio: 1 / 1;
-  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.035), rgba(0, 0, 0, 0));
-  --viz-glow: rgba(0, 0, 0, 0);
-  --viz-edge: rgba(10, 10, 10, 0.3);
-  --viz-edge-width: 1.25;
-  --viz-node: #0a0a0a;
-  --viz-label: rgba(10, 10, 10, 0.7);
-  --viz-signal: var(--accent-ink);
-  --viz-signal-warm: var(--accent-ink);
-}
-.hero-visual canvas { display: block; width: 100%; height: 100%; }
-
 /* ───────── Sidehero (undersider) ───────── */
 .page-hero { padding: 88px 0 0; }
-.page-hero .wrap > * { animation: reveal 0.9s var(--ease) both; }
+.page-hero .wrap > * { animation: rise 0.9s var(--ease) both; }
 .page-hero .kicker { animation-delay: 0.05s; }
 .page-hero h1 { animation-delay: 0.12s; }
 .page-hero .lede { animation-delay: 0.22s; }
@@ -631,7 +621,7 @@ h2 {
 .brief-form select:focus,
 .brief-form textarea:focus { border-color: var(--ink); background-color: #fff; }
 .brief-form input::placeholder,
-.brief-form textarea::placeholder { color: #767676; }
+.brief-form textarea::placeholder { color: #6f6f6f; } /* 4,8:1 på #fafafa */
 .brief-form input:disabled,
 .brief-form select:disabled,
 .brief-form textarea:disabled { opacity: 0.5; }
