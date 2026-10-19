@@ -60,14 +60,16 @@ const LOGO = {
 function sendPage(res, status, { lang, title, heading, text, link }) {
   const logo = LOGO[lang] || LOGO.nb;
   const html = `<!doctype html>
-<html lang="${lang}" data-theme="dark">
+<html lang="${lang}">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex" />
 <title>${title}</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="stylesheet" href="/assets/site.css?v=2026-10-13" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-19" />
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -79,9 +81,11 @@ function sendPage(res, status, { lang, title, heading, text, link }) {
 </header>
 <main id="main">
   <section class="page-hero">
-    <h1>${heading}</h1>
-    <p class="lede">${text}</p>
-    <a class="btn-ghost" href="${link.href}">${link.text}</a>
+    <div class="wrap">
+      <h1>${heading}</h1>
+      <p class="lede">${text}</p>
+      <a class="btn-ghost" href="${link.href}">${link.text}</a>
+    </div>
   </section>
 </main>
 </body>

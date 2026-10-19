@@ -1,5 +1,7 @@
 # 05 · Komponenter og design
 
+> **Utdatert siden 19. oktober 2026.** Dette dokumentet beskriver det mørke designet (v2). nrth.no bruker nå det lyse designet (v3): hvit bakgrunn, Figtree, svarte knapper og innhold som kommer mens man ruller. Fasiten er `assets/site.css` og designdokumentet «Nrth AI designsystem» (Claude-dokument, lenke i prosjektminnet og i PR-en). Seksjon 2–5 under gjelder fortsatt for rekkefølge, komponentnavn og tilgjengelighet, men ikke for farger, fonter og hjørner.
+
 ## 1. Fasit
 
 `assets/site.css` er fasit for utseendet. Farger, fonter, avstander og hover-effekter skal se ut som i dag.

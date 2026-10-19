@@ -1,9 +1,13 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<script>document.documentElement.classList.add("js");</script>
+<!-- .js skrur på animasjonene (assets/reveal.js). Lastes ikke skriptet innen tre sekunder, fjernes klassen så alt vises. -->
+<script>
+  document.documentElement.classList.add("js");
+  setTimeout(function () { if (!window.nrthReveal) document.documentElement.classList.remove("js"); }, 3000);
+</script>
 <title>AI services and AI employees for businesses · Nrth AI</title>
 <meta name="description" content="AI employees from NOK 50,000, custom AI solutions and local AI infrastructure on your own hardware. Prices and timelines on the site." />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -25,7 +29,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
-<meta name="theme-color" content="#0a0a0b" />
+<meta name="theme-color" content="#ffffff" />
 <link rel="alternate" type="text/markdown" href="/llms.txt" title="Nrth AI for LLMs" />
 
 <!-- Strukturerte data (07 §2). Tjenester og priser fra data/tjenester.json, sjekket av scripts/sjekk-priser.mjs. -->
@@ -124,11 +128,8 @@
 }
 </script>
 
-<link rel="preload" href="/assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="/assets/site.css?v=2026-10-13" />
+<link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-19" />
 <!-- Satoshi (logoen) fra Fontshare, lastet uten å blokkere visningen. Lisensen tillater ikke filene i et offentlig repo. -->
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
@@ -161,179 +162,183 @@
 
   <!-- ───────── Sidehero ───────── -->
   <section class="page-hero">
-    <p class="kicker"><span class="star">✦</span> AI services</p>
-    <h1>Solutions that <em>sell more</em> and save time.</h1>
-    <p class="lede">We build AI solutions around your processes and data. From a single AI employee that takes routine work, to custom systems and AI that runs on your own hardware.</p>
-    <a class="btn" href="#book">Book a meeting →</a>
+    <div class="wrap">
+      <p class="kicker">AI services</p>
+      <h1>Solutions that <em>sell more</em> and save time.</h1>
+      <p class="lede">We build AI solutions around your processes and data. From a single AI employee that takes routine work, to custom systems and AI that runs on your own hardware.</p>
+      <a class="btn" href="#book">Book a meeting →</a>
+    </div>
   </section>
 
   <!-- ───────── Tjenester ───────── -->
-  <section class="section section--bordered">
-    <div class="card-grid card-grid--3">
-      <article class="service-card" id="ai-employees">
-        <div class="card-head"><span>01</span></div>
-        <h2>AI employees</h2>
-        <p class="desc">An AI employee takes on a specific role or workflow: document processing, customer service, analysis, internal knowledge or sales follow-up. Around the clock, at a fraction of the cost of a hire.</p>
-        <div>
-          <p class="included-label">Included</p>
-          <ul class="included">
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Mapping of the role or workflow</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>An AI employee built around your processes</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Integration with your existing tools and data</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Deployment on local infrastructure when your data requires it</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Ongoing improvement and monitoring</span></li>
-          </ul>
-        </div>
-        <dl class="service-meta-group">
-          <div class="service-meta"><dt class="label">Delivery</dt><dd class="value">1–3 weeks</dd></div>
-          <div class="service-meta"><dt class="label">Investment</dt><dd class="value">Setup from about NOK&nbsp;50,000, operations from NOK&nbsp;5,000 per month. Typically <span class="nowrap">15–35%</span> of the cost of a hire.</dd></div>
-          <div class="service-meta"><dt class="label">Best fit</dt><dd class="value">Companies that want more capacity without hiring, especially in roles with repetitive knowledge work or high volumes.</dd></div>
-        </dl>
-      </article>
-      <article class="service-card" id="custom">
-        <div class="card-head"><span>02</span></div>
-        <h2>Custom solutions</h2>
-        <p class="desc">When off-the-shelf tools don't fit, we design and build the solution that does. From first idea to solution in production.</p>
-        <div>
-          <p class="included-label">Included</p>
-          <ul class="included">
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Discovery and scoping</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Architecture and solution design</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Development, adaptation and integration</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Testing, deployment and documentation</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Further development when needed</span></li>
-          </ul>
-        </div>
-        <dl class="service-meta-group">
-          <div class="service-meta"><dt class="label">Delivery</dt><dd class="value">4–16 weeks</dd></div>
-          <div class="service-meta"><dt class="label">Investment</dt><dd class="value">Fixed price per project. Small from about NOK&nbsp;150,000, mid-size from NOK&nbsp;400,000, large from NOK&nbsp;1,000,000.</dd></div>
-          <div class="service-meta"><dt class="label">Best fit</dt><dd class="value">Companies with a specific problem where existing tools fall short on data sensitivity, integration or domain.</dd></div>
-        </dl>
-      </article>
-      <article class="service-card" id="local-ai">
-        <div class="card-head"><span>03</span></div>
-        <h2>Local AI infrastructure</h2>
-        <p class="desc">AI that runs on your own hardware, inside your network. We choose the hardware, set up the models and secure the solution.</p>
-        <div>
-          <p class="included-label">Included</p>
-          <ul class="included">
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Hardware specification and purchasing support</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Language model setup, open-source or licensed</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Adaptation to your data</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Security architecture and access control</span></li>
-            <li><span class="arrow" aria-hidden="true">→</span> <span>Documentation, handover and training</span></li>
-          </ul>
-        </div>
-        <dl class="service-meta-group">
-          <div class="service-meta"><dt class="label">Delivery</dt><dd class="value">2–4 weeks</dd></div>
-          <div class="service-meta"><dt class="label">Investment</dt><dd class="value">Typically NOK&nbsp;100,000 to 1,000,000+, depending on scale.</dd></div>
-          <div class="service-meta"><dt class="label">Best fit</dt><dd class="value">Regulated industries and companies that treat control over their own data as a strategic choice, not a box to tick.</dd></div>
-        </dl>
-      </article>
+  <section class="section">
+    <div class="wrap">
+      <div class="card-grid">
+        <article class="service-card" id="ai-employees" data-reveal style="--d: 0">
+          <div class="card-head"><span>01</span></div>
+          <h2>AI employees</h2>
+          <p class="desc">An AI employee takes on a specific role or workflow: document processing, customer service, analysis, internal knowledge or sales follow-up. Around the clock, at a fraction of the cost of a hire.</p>
+          <div>
+            <p class="included-label">Included</p>
+            <ul class="included">
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Mapping of the role or workflow</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>An AI employee built around your processes</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Integration with your existing tools and data</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Deployment on local infrastructure when your data requires it</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Ongoing improvement and monitoring</span></li>
+            </ul>
+          </div>
+          <dl class="service-meta-group">
+            <div class="service-meta"><dt class="label">Delivery</dt><dd class="value">1–3 weeks</dd></div>
+            <div class="service-meta"><dt class="label">Investment</dt><dd class="value">Setup from about NOK&nbsp;50,000, operations from NOK&nbsp;5,000 per month. Typically <span class="nowrap">15–35%</span> of the cost of a hire.</dd></div>
+            <div class="service-meta"><dt class="label">Best fit</dt><dd class="value">Companies that want more capacity without hiring, especially in roles with repetitive knowledge work or high volumes.</dd></div>
+          </dl>
+        </article>
+        <article class="service-card" id="custom" data-reveal style="--d: 1">
+          <div class="card-head"><span>02</span></div>
+          <h2>Custom solutions</h2>
+          <p class="desc">When off-the-shelf tools don't fit, we design and build the solution that does. From first idea to solution in production.</p>
+          <div>
+            <p class="included-label">Included</p>
+            <ul class="included">
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Discovery and scoping</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Architecture and solution design</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Development, adaptation and integration</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Testing, deployment and documentation</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Further development when needed</span></li>
+            </ul>
+          </div>
+          <dl class="service-meta-group">
+            <div class="service-meta"><dt class="label">Delivery</dt><dd class="value">4–16 weeks</dd></div>
+            <div class="service-meta"><dt class="label">Investment</dt><dd class="value">Fixed price per project. Small from about NOK&nbsp;150,000, mid-size from NOK&nbsp;400,000, large from NOK&nbsp;1,000,000.</dd></div>
+            <div class="service-meta"><dt class="label">Best fit</dt><dd class="value">Companies with a specific problem where existing tools fall short on data sensitivity, integration or domain.</dd></div>
+          </dl>
+        </article>
+        <article class="service-card" id="local-ai" data-reveal style="--d: 2">
+          <div class="card-head"><span>03</span></div>
+          <h2>Local AI infrastructure</h2>
+          <p class="desc">AI that runs on your own hardware, inside your network. We choose the hardware, set up the models and secure the solution.</p>
+          <div>
+            <p class="included-label">Included</p>
+            <ul class="included">
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Hardware specification and purchasing support</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Language model setup, open-source or licensed</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Adaptation to your data</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Security architecture and access control</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Documentation, handover and training</span></li>
+            </ul>
+          </div>
+          <dl class="service-meta-group">
+            <div class="service-meta"><dt class="label">Delivery</dt><dd class="value">2–4 weeks</dd></div>
+            <div class="service-meta"><dt class="label">Investment</dt><dd class="value">Typically NOK&nbsp;100,000 to 1,000,000+, depending on scale.</dd></div>
+            <div class="service-meta"><dt class="label">Best fit</dt><dd class="value">Regulated industries and companies that treat control over their own data as a strategic choice, not a box to tick.</dd></div>
+          </dl>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- ───────── Regnestykket ───────── -->
-  <section class="section section--bordered">
-    <div class="math-block">
-      <div class="math-text">
-        <p class="kicker"><span class="star">✦</span> The math</p>
-        <p>A skilled employee in Norway costs <span class="nowrap">NOK 1–1.5</span> million a year. An AI employee typically costs <span class="nowrap">15–35%</span> of that, and works around the clock.</p>
-      </div>
-      <div class="stat-row">
-        <div class="stat-cell">
-          <div class="big">NOK 1–1.5M</div>
-          <div class="lbl">Employee per year</div>
+  <section class="section">
+    <div class="wrap">
+      <div class="math-block on-dark" data-reveal>
+        <div class="math-text">
+          <p class="kicker">The math</p>
+          <p>A skilled employee in Norway costs <span class="nowrap">NOK 1–1.5</span> million a year. An AI employee typically costs <span class="nowrap">15–35%</span> of that, and works around the clock.</p>
         </div>
-        <div class="stat-cell stat-cell--accent">
-          <div class="big">15–35%</div>
-          <div class="lbl">AI employee</div>
+        <div class="compare">
+          <div class="compare-row">
+            <div class="compare-head"><span class="lbl">Employee per year</span> <span class="big">NOK 1–1.5M</span></div>
+            <div class="compare-bar" aria-hidden="true"><span class="full"></span></div>
+          </div>
+          <div class="compare-row compare-row--ai">
+            <div class="compare-head"><span class="lbl">AI employee</span> <span class="big">15–35%</span></div>
+            <div class="compare-bar" aria-hidden="true"><span class="hi"></span><span class="lo"></span></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ───────── Book et møte ───────── -->
-  <section class="section section--bordered booking" id="book" data-default-topic="ai-services">
-    <div class="cta-grid">
-      <div class="cta-left">
-        <p class="kicker"><span class="star">✦</span> Book a meeting</p>
-        <h2>Where can AI do the <em>most</em> for you?</h2>
-        <p class="lede">Book a meeting with us. We look at how you work today, and where AI can increase sales, save time or raise quality.</p>
-        <p class="included-label">In the meeting</p>
-        <ul class="included">
-          <li><span class="arrow" aria-hidden="true">→</span> <span>We look at how you work today.</span></li>
-          <li><span class="arrow" aria-hidden="true">→</span> <span>We point out where AI can increase sales or save time.</span></li>
-          <li><span class="arrow" aria-hidden="true">→</span> <span>You leave with a proposed first step, with price and timeline.</span></li>
-        </ul>
-        <div class="booking-chips"><span>[30] minutes</span> <span>In person in Norway or online</span></div>
-        <p class="booking-alt">Prefer to write? <a class="link-arrow" href="/en/book#write">Send a request →</a></p>
-      </div>
-      <div class="brief-panel booking-panel">
-        <div class="brief-head">
-          <div class="left"><span class="pdot"></span><span>nrth.book · pick a time</span></div>
-          <div class="ver">book.v1</div>
+  <section class="section booking" id="book" data-default-topic="ai-services">
+    <div class="wrap">
+      <div class="cta-grid">
+        <div class="cta-left" data-reveal>
+          <p class="kicker">Book a meeting</p>
+          <h2>Where can AI do the <em>most</em> for you?</h2>
+          <p class="lede">Book a meeting with us. We look at how you work today, and where AI can increase sales, save time or raise quality.</p>
+          <p class="included-label">In the meeting</p>
+          <ul class="included">
+            <li><span class="arrow" aria-hidden="true">→</span> <span>We look at how you work today.</span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span>We point out where AI can increase sales or save time.</span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span>You leave with a proposed first step, with price and timeline.</span></li>
+          </ul>
+          <div class="booking-chips"><span>[30] minutes</span> <span>In person in Norway or online</span></div>
+          <p class="booking-alt">Prefer to write? <a class="link-arrow" href="/en/book#write">Send a request →</a></p>
         </div>
-        <form class="brief-form booking-form" method="POST" action="/api/book">
-          <input type="hidden" name="lang" value="en" />
-          <fieldset class="topic-picker">
-            <legend>What would you like to talk about? <span class="req" aria-hidden="true">*</span></legend>
-            <div class="topic-options">
-              <label class="topic-chip"><input type="radio" name="tema" value="ai-assessment" required /><span>AI assessment</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="implementation" required /><span>Implementation</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="ai-services" required checked /><span>AI services</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="talk" required /><span>Talk or course</span></label>
-              <label class="topic-chip"><input type="radio" name="tema" value="other" required /><span>Other</span></label>
+        <div class="brief-panel booking-panel" data-reveal style="--d: 1">
+          <form class="brief-form booking-form" method="POST" action="/api/book">
+            <input type="hidden" name="lang" value="en" />
+            <fieldset class="topic-picker">
+              <legend>What would you like to talk about? <span class="req" aria-hidden="true">*</span></legend>
+              <div class="topic-options">
+                <label class="topic-chip"><input type="radio" name="tema" value="ai-assessment" required /><span>AI assessment</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="implementation" required /><span>Implementation</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="ai-services" required checked /><span>AI services</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="talk" required /><span>Talk or course</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="other" required /><span>Other</span></label>
+              </div>
+            </fieldset>
+            <div class="booking-request">
+              <div class="booking-fields">
+                <label><span class="lbl">Name <span class="req" aria-hidden="true">*</span></span><input type="text" name="navn" required maxlength="2000" autocomplete="name" /></label>
+                <label><span class="lbl">Email <span class="req" aria-hidden="true">*</span></span><input type="email" name="epost" required maxlength="2000" autocomplete="email" /></label>
+                <label><span class="lbl">Company</span><input type="text" name="bedrift" maxlength="2000" autocomplete="organization" /></label>
+                <label><span class="lbl">What do you want to achieve?</span>
+                  <select name="maal">
+                    <option value="" label=" "></option>
+                    <option value="salg">Increase sales</option>
+                    <option value="effektivitet">Work more efficiently</option>
+                    <option value="kvalitet">Improve quality or customer experience</option>
+                    <option value="vet-ikke">Not sure yet</option>
+                  </select>
+                </label>
+                <label><span class="lbl">When suits you?</span>
+                  <select name="naar">
+                    <option value="" label=" "></option>
+                    <option value="denne-uken">This week</option>
+                    <option value="neste-uke">Next week</option>
+                    <option value="senere">In two weeks or later</option>
+                  </select>
+                </label>
+                <label><span class="lbl">Preferred time</span><input type="text" name="tid" maxlength="2000" placeholder="E.g. Tuesday morning" /></label>
+                <label><span class="lbl">Meeting format</span>
+                  <select name="form">
+                    <option value="" label=" "></option>
+                    <option value="fysisk">In person in Norway</option>
+                    <option value="digitalt">Online</option>
+                  </select>
+                </label>
+              </div>
+              <div class="visually-hidden" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
+              <button type="submit" class="brief-submit" data-sending="Sending…">Request the meeting →</button>
+              <p class="brief-error" role="alert" hidden>Something went wrong. Please try again, or email <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
+              <p class="brief-note">We confirm the time by email within one business day. See <a href="/en/privacy">privacy</a>.</p>
             </div>
-          </fieldset>
-          <div class="booking-request">
-            <div class="booking-fields">
-              <label><span class="lbl">Name <span class="req" aria-hidden="true">*</span></span><input type="text" name="navn" required maxlength="2000" autocomplete="name" /></label>
-              <label><span class="lbl">Email <span class="req" aria-hidden="true">*</span></span><input type="email" name="epost" required maxlength="2000" autocomplete="email" /></label>
-              <label><span class="lbl">Company</span><input type="text" name="bedrift" maxlength="2000" autocomplete="organization" /></label>
-              <label><span class="lbl">What do you want to achieve?</span>
-                <select name="maal">
-                  <option value="" label=" "></option>
-                  <option value="salg">Increase sales</option>
-                  <option value="effektivitet">Work more efficiently</option>
-                  <option value="kvalitet">Improve quality or customer experience</option>
-                  <option value="vet-ikke">Not sure yet</option>
-                </select>
-              </label>
-              <label><span class="lbl">When suits you?</span>
-                <select name="naar">
-                  <option value="" label=" "></option>
-                  <option value="denne-uken">This week</option>
-                  <option value="neste-uke">Next week</option>
-                  <option value="senere">In two weeks or later</option>
-                </select>
-              </label>
-              <label><span class="lbl">Preferred time</span><input type="text" name="tid" maxlength="2000" placeholder="E.g. Tuesday morning" /></label>
-              <label><span class="lbl">Meeting format</span>
-                <select name="form">
-                  <option value="" label=" "></option>
-                  <option value="fysisk">In person in Norway</option>
-                  <option value="digitalt">Online</option>
-                </select>
-              </label>
-            </div>
-            <div class="visually-hidden" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
-            <button type="submit" class="brief-submit" data-sending="Sending…">Request the meeting →</button>
-            <p class="brief-error" role="alert" hidden>Something went wrong. Please try again, or email <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
-            <p class="brief-note">We confirm the time by email within one business day. See <a href="/en/privacy">privacy</a>.</p>
+          </form>
+          <div class="brief-sent">
+            <h3 tabindex="-1">Thanks.<br /> <em>We'll confirm the time.</em></h3>
+            <p>You'll hear from contact@nrth.no within one business day with a proposed time.</p>
+            <button type="button" class="btn-ghost brief-reset">Book another →</button>
           </div>
-        </form>
-        <div class="brief-sent">
-          <h3 tabindex="-1">Thanks.<br /> <em>We'll confirm the time.</em></h3>
-          <p>You'll hear from contact@nrth.no within one business day with a proposed time.</p>
-          <button type="button" class="btn-ghost brief-reset">Book another →</button>
+          <template class="booking-calendar-tpl" data-notes-prefix="Topic:">
+            <div class="booking-calendar">
+              <iframe class="booking-frame" title="Pick a time for a meeting with Nrth AI" loading="lazy"></iframe>
+              <p><a class="link-arrow">Open the calendar in a new tab ↗</a></p>
+            </div>
+          </template>
         </div>
-        <template class="booking-calendar-tpl" data-notes-prefix="Topic:">
-          <div class="booking-calendar">
-            <iframe class="booking-frame" title="Pick a time for a meeting with Nrth AI" loading="lazy"></iframe>
-            <p><a class="link-arrow">Open the calendar in a new tab ↗</a></p>
-          </div>
-        </template>
       </div>
     </div>
   </section>
@@ -342,27 +347,38 @@
 
 <!-- ───────── Footer ───────── -->
 <footer class="site-footer">
-  <div class="footer-top">
-    <a class="logo" href="/en" aria-label="Nrth AI, home">
-      <span class="logo-mark">&lt;/&gt;</span>
-      <span class="logo-word">Nrth AI</span>
-    </a>
-    <nav class="footer-links dots" aria-label="Footer">
-      <ul>
-        <li><a href="/en/ai-assessment">AI assessment</a></li>
-        <li><a href="/en/implementation">Implementation</a></li>
-        <li><a href="/en/ai-services">AI services</a></li>
-        <li><a href="/en/talks-and-courses">Talks and courses</a></li>
-        <li><a href="/en/about">About</a></li>
-        <li><a href="/en/privacy">Privacy</a></li>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="/en" aria-label="Nrth AI, home">
+          <span class="logo-mark">&lt;/&gt;</span>
+          <span class="logo-word">Nrth AI</span>
+        </a>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <ul>
+          <li><a href="/en/ai-assessment">AI assessment</a></li>
+          <li><a href="/en/implementation">Implementation</a></li>
+          <li><a href="/en/ai-services">AI services</a></li>
+          <li><a href="/en/talks-and-courses">Talks and courses</a></li>
+          <li><a href="/en/about">About</a></li>
+          <li><a href="/en/privacy">Privacy</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-extra">
+        <li data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></li>
+        <li><a href="/investors">Investors</a></li>
+        <li><a href="/ai-tjenester" hreflang="nb" lang="nb">Norsk</a></li>
       </ul>
-    </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="dots"><span>© 2026 Nrth AI AS</span> <span>Bergen, Norway</span> <span>Org. no. [org.nr]</span></p>
+      <p><span lang="en">Built by agents</span> · ▲</p>
+    </div>
   </div>
-  <div class="dots"><p><span>© 2026 Nrth AI AS</span> <span>Bergen, Norway</span> <span>Org. no. [org.nr]</span></p></div>
-  <div class="center dots"><p><span data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></span> <span><a href="/investors">Investors</a></span> <span><a href="/ai-tjenester" hreflang="nb" lang="nb">Norsk</a></span></p></div>
-  <div class="right"><span lang="en">Built by agents</span> · <span class="star">▲</span></div>
 </footer>
 
+<script src="/assets/reveal.js?v=2026-10-19" defer></script>
 <script src="/assets/nav.js?v=2026-10-13" defer></script>
 <script src="/assets/booking-config.js" defer></script>
 <script src="/assets/booking.js?v=2026-10-13" defer></script>
