@@ -24,7 +24,7 @@ Hver tjeneste er en **seksjon med anker** på tjenestesiden, ikke en egen side. 
 |---|---|---|
 | AI-vurdering | `#kartlegging`, `#strategisprint`, `#ledersparring` | `#assessment`, `#sprint`, `#advisory` |
 | Implementering | `#pilot`, `#verktoy`, `#drift` | `#pilot`, `#tools`, `#operations` |
-| AI-tjenester | `#ai-medarbeidere`, `#skreddersydd`, `#lokal-ai` | `#ai-employees`, `#custom`, `#local-ai` |
+| AI-tjenester | `#ai-assistenter`, `#skreddersydd`, `#lokal-ai` | `#ai-assistants`, `#custom`, `#local-ai` |
 
 Alle sider unntatt `/book`, `/personvern` og 404 har bookingseksjonen nederst med `id="book"`.
 

@@ -6,7 +6,7 @@ nrth.no skal få norske bedrifter til å **booke et møte** med Nrth AI. Møtet 
 
 1. **AI-vurdering**: hvor AI gir mest, og hva som bør gjøres først.
 2. **Implementering**: få AI i daglig bruk.
-3. **AI-tjenester**: løsninger Nrth bygger, som AI-medarbeidere, skreddersydde løsninger og lokal AI-infrastruktur.
+3. **AI-tjenester**: løsninger Nrth bygger, som AI-assistenter, skreddersydde løsninger og lokal AI-infrastruktur.
 
 Resultatet kunden kjøper er **bedre drift, mer salg og mer effektivt arbeid**. Teksten skal si det rett ut.
 
@@ -51,13 +51,13 @@ Kroneprisene er hentet fra commit `3d11de7`, før tjenestene ble gjort om til US
 | Ledersparring | AI-vurdering | Månedlig | Fra 25 000 kr per måned |
 | Pilot i drift | Implementering | 2–3 uker | **[pris]** |
 | Innføring av AI-verktøy | Implementering | **[varighet]** | **[pris]** |
-| Drift og forbedring | Implementering | Løpende | Fra 5 000 kr per måned (driftsprisen for AI-medarbeidere) |
-| AI-medarbeidere | AI-tjenester | 1–3 uker | Oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned |
+| Drift og forbedring | Implementering | Løpende | Fra 5 000 kr per måned (driftsprisen for AI-assistenter) |
+| AI-assistenter | AI-tjenester | 1–3 uker | Oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned |
 | Skreddersydde løsninger | AI-tjenester | 4–16 uker | Fastpris. Små fra ca. 150 000 kr, mellomstore fra 400 000 kr, store fra 1 000 000 kr |
 | Lokal AI-infrastruktur | AI-tjenester | 2–4 uker | Typisk 100 000 til 1 000 000+ kr |
 | Foredrag og kurs | Informasjon | **[varighet]** | **[pris]** eller «etter avtale» |
 
-«Fra-prisen» på dørkortene på forsiden er prisen for første steg i hver dør, ikke den laveste månedsprisen: AI-vurdering «Fra 35 000 kr» (kartlegging), Implementering «Fra [pris] kr» (pilot) og AI-tjenester «Fra 50 000 kr» (oppsett av AI-medarbeider).
+«Fra-prisen» på dørkortene på forsiden er prisen for første steg i hver dør, ikke den laveste månedsprisen: AI-vurdering «Fra 35 000 kr» (kartlegging), Implementering «Fra [pris] kr» (pilot) og AI-tjenester «Fra 50 000 kr» (oppsett av AI-assistent).
 
 ## 6. Tone og språk
 

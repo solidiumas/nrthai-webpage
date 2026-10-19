@@ -484,8 +484,8 @@ h2 {
   transform-origin: left; transition: transform 1.1s var(--ease);
 }
 .compare-bar .full { width: 100%; background: rgba(255, 255, 255, 0.9); transition-delay: 0.35s; }
-.compare-bar .hi { width: 35%; background: rgba(255, 138, 91, 0.4); transition-delay: 0.75s; }
-.compare-bar .lo { width: 15%; background: var(--accent); transition-delay: 0.75s; }
+.compare-bar .hi { width: 40%; background: rgba(255, 138, 91, 0.4); transition-delay: 0.75s; }
+.compare-bar .lo { width: 20%; background: var(--accent); transition-delay: 0.75s; }
 .js .math-block:not(.is-in) .compare-bar > span { transform: scaleX(0); }
 
 /* ───────── Om oss ───────── */
