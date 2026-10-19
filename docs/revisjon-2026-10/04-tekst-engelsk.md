@@ -55,12 +55,12 @@ The English site is for international visitors and Norwegian companies with Engl
 - Eyebrow: AI for businesses · Bergen, Norway
 - H1: **We solve AI for *businesses*.**
 - Subtag: ✦ Prices and timelines are on the site.
-- Intro: We find where AI can increase your sales and make you more efficient, put it into daily use, and build the AI services you need.
+- Intro: We find where AI can make every employee better at their job, streamline and automate the work, and raise quality. Then we put it into daily use and build the AI services you need.
 - Button: **Book a meeting →**
 - Link: See what we do ↓
 
 ### Marquee
-AI assessment ✦ Implementation ✦ AI services ✦ More sales ✦ Less manual work ✦ AI employees ✦ Strategy sprints ✦ Local AI ✦
+AI assessment ✦ Implementation ✦ AI services ✦ More sales ✦ Less manual work ✦ AI assistants ✦ Strategy sprints ✦ Local AI ✦
 
 ### 01 · What we do (`id="services"`)
 - Kicker: ✦ 01 · What we do
@@ -83,8 +83,8 @@ AI assessment ✦ Implementation ✦ AI services ✦ More sales ✦ Less manual 
 
 **Card 3** · 03 · AI services
 - Title: Solutions that sell more and save time.
-- Text: We build AI solutions around your processes and data: AI employees that take routine work, custom solutions, and AI on your own hardware.
-- List: AI employees · 1–3 weeks / Custom solutions · 4–16 weeks / Local AI infrastructure · 2–4 weeks
+- Text: We build AI solutions around your processes and data: AI assistants that support your team and automate routine work, custom solutions, and AI on your own hardware.
+- List: AI assistants · 1–3 weeks / Custom solutions · 4–16 weeks / Local AI infrastructure · 2–4 weeks
 - Price: From NOK 50,000
 - Link: Read more → `/en/ai-services`
 
@@ -99,9 +99,9 @@ Below the cards: button **Book a meeting →** and «Not sure where to start? We
 
 ### The math
 - Kicker: ✦ The math
-- Text: A skilled employee in Norway costs NOK 1–1.5 million a year. An AI employee typically costs 15–35% of that, and works around the clock.
+- Text: A skilled employee in Norway costs NOK 1–1.5 million a year. When AI supports your people and takes the routine work, your team can gain the capacity of one or more extra employees, and quality goes up. AI typically costs 20–40% of what one employee costs.
 - Figure 1: NOK 1–1.5M · Employee per year
-- Figure 2 (orange): 15–35% · AI employee
+- Figure 2 (orange): 20–40% · Cost of AI
 
 ### 03 · About
 - Kicker: ✦ 03 · About
@@ -194,21 +194,21 @@ Below the cards: button **Book a meeting →** and «Not sure where to start? We
 
 ## AI services `/en/ai-services`
 
-**Title:** AI services and AI employees for businesses · Nrth AI
-**Description:** AI employees from NOK 50,000, custom AI solutions and local AI infrastructure on your own hardware. Prices and timelines on the site.
+**Title:** AI services and AI assistants for businesses · Nrth AI
+**Description:** AI assistants from NOK 50,000, custom AI solutions and local AI infrastructure on your own hardware. Prices and timelines on the site.
 
 ### Page hero
 - Kicker: ✦ AI services
 - H1: **Solutions that *sell more* and save time.**
-- Intro: We build AI solutions around your processes and data. From a single AI employee that takes routine work, to custom systems and AI that runs on your own hardware.
+- Intro: We build AI solutions around your processes and data. From a single AI assistant that supports your team and automates routine work, to custom systems and AI that runs on your own hardware.
 - Button: **Book a meeting →**
 
-**01 · AI employees** (`id="ai-employees"`)
-- Text: An AI employee takes on a specific role or workflow: document processing, customer service, analysis, internal knowledge or sales follow-up. Around the clock, at a fraction of the cost of a hire.
-- Included: Mapping of the role or workflow / An AI employee built around your processes / Integration with your existing tools and data / Deployment on local infrastructure when your data requires it / Ongoing improvement and monitoring
+**01 · AI assistants** (`id="ai-assistants"`)
+- Text: An AI assistant works alongside your people in a specific workflow: document processing, customer service, analysis, internal knowledge or sales follow-up. It takes the routine work, so people get more time for the work that needs them, and quality goes up.
+- Included: Mapping of the workflow and the people who use it / An AI assistant built around your processes / Integration with your existing tools and data / Deployment on local infrastructure when your data requires it / Ongoing improvement and monitoring
 - Delivery: 1–3 weeks
-- Investment: Setup from about NOK 50,000, operations from NOK 5,000 per month. Typically 15–35% of the cost of a hire.
-- Best fit: Companies that want more capacity without hiring, especially in roles with repetitive knowledge work or high volumes.
+- Investment: Setup from about NOK 50,000, operations from NOK 5,000 per month. Typically 20–40% of the cost of one employee.
+- Best fit: Companies that want their team to get more done and deliver better work, especially where there is a lot of repetitive knowledge work or high volumes.
 
 **02 · Custom solutions** (`id="custom"`)
 - Text: When off-the-shelf tools don't fit, we design and build the solution that does. From first idea to solution in production.

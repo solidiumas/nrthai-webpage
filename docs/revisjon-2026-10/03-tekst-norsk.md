@@ -61,12 +61,12 @@ Brukes nederst på alle sider unntatt `/book` og `/personvern`. Tema forhåndsve
 - Eyebrow: AI for norske bedrifter · Bergen
 - H1: **Vi løser AI for *norske bedrifter*.**
 - Undertekst (`hero-subtag`): ✦ Priser og tidslinjer står på siden.
-- Ingress: Vi finner ut hvor AI kan øke salget og gjøre dere mer effektive, implementerer det og bygger AI-tjenestene dere trenger.
+- Ingress: Vi finner ut hvor AI kan gjøre hver ansatt bedre i jobben, effektivisere og automatisere arbeidet og heve kvaliteten. Så implementerer vi det og bygger AI-tjenestene dere trenger.
 - Knapp: **Book et møte →** (til `#book`)
 - Lenke: Se hva vi gjør ↓ (til `#tjenester`)
 
 ### Marquee
-AI-vurdering ✦ Implementering ✦ AI-tjenester ✦ Mer salg ✦ Mindre manuelt arbeid ✦ AI-medarbeidere ✦ Strategisprint ✦ Lokal AI ✦
+AI-vurdering ✦ Implementering ✦ AI-tjenester ✦ Mer salg ✦ Mindre manuelt arbeid ✦ AI-assistenter ✦ Strategisprint ✦ Lokal AI ✦
 
 ### 01 · Hva vi gjør (`id="tjenester"`, `card-grid--3` med `door-card`)
 - Kicker: ✦ 01 · Hva vi gjør
@@ -92,8 +92,8 @@ AI-vurdering ✦ Implementering ✦ AI-tjenester ✦ Mer salg ✦ Mindre manuelt
 **Kort 3**
 - Topp: 03 · AI-tjenester
 - Tittel: Løsninger som selger mer og sparer tid.
-- Tekst: Vi bygger AI-løsninger rundt deres prosesser og data: AI-medarbeidere som tar rutinearbeid, skreddersydde løsninger og AI på egen maskinvare.
-- Liste: AI-medarbeidere · 1–3 uker / Skreddersydde løsninger · 4–16 uker / Lokal AI-infrastruktur · 2–4 uker
+- Tekst: Vi bygger AI-løsninger rundt deres prosesser og data: AI-assistenter som avlaster teamet og automatiserer rutinearbeid, skreddersydde løsninger og AI på egen maskinvare.
+- Liste: AI-assistenter · 1–3 uker / Skreddersydde løsninger · 4–16 uker / Lokal AI-infrastruktur · 2–4 uker
 - Pris: Fra 50 000 kr
 - Lenke: Les mer → `/ai-tjenester`
 
@@ -108,9 +108,9 @@ Under kortene: knapp **Book et møte →** og teksten «Usikre på hvor dere ska
 
 ### Regnestykket (`math-block`)
 - Kicker: ✦ Regnestykket
-- Tekst: En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året. En AI-medarbeider koster typisk 15–35 % av det, og jobber døgnet rundt.
+- Tekst: En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året. Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tilsvarende én til flere ekstra ansatte, og kvaliteten går opp. AI koster typisk 20–40 % av det én ansatt koster.
 - Tall 1: 1–1,5 MNOK · Ansatt per år
-- Tall 2 (oransje): 15–35 % · AI-medarbeider
+- Tall 2 (oransje): 20–40 % · Kostnad for AI
 
 ### 03 · Om oss (dagens `team-grid`)
 - Kicker: ✦ 03 · Om oss
@@ -232,28 +232,28 @@ Under kortene: knapp **Book et møte →** og teksten «Usikre på hvor dere ska
 
 ## AI-tjenester `/ai-tjenester`
 
-**Title:** AI-tjenester og AI-medarbeidere for bedrifter · Nrth AI
-**Description:** AI-medarbeidere fra 50 000 kr, skreddersydde AI-løsninger og lokal AI-infrastruktur på egen maskinvare. Priser og tidslinjer på siden.
+**Title:** AI-tjenester og AI-assistenter for bedrifter · Nrth AI
+**Description:** AI-assistenter fra 50 000 kr, skreddersydde AI-løsninger og lokal AI-infrastruktur på egen maskinvare. Priser og tidslinjer på siden.
 
 ### Sidehero
 - Kicker: ✦ AI-tjenester
 - H1: **Løsninger som *selger mer* og sparer tid.**
-- Ingress: Vi bygger AI-løsninger rundt deres prosesser og data. Fra én AI-medarbeider som tar rutinearbeid, til skreddersydde systemer og AI som kjører på egen maskinvare.
+- Ingress: Vi bygger AI-løsninger rundt deres prosesser og data. Fra én AI-assistent som avlaster teamet og automatiserer rutinearbeid, til skreddersydde systemer og AI som kjører på egen maskinvare.
 - Knapp: **Book et møte →**
 
 ### Tjenester
 
-**01 · AI-medarbeidere** (`id="ai-medarbeidere"`)
-- Tekst: En AI-medarbeider tar en bestemt rolle eller arbeidsflyt: dokumentbehandling, kundeservice, analyse, intern kunnskap eller salgsoppfølging. Døgnet rundt, til en brøkdel av prisen for en ansatt.
+**01 · AI-assistenter** (`id="ai-assistenter"`)
+- Tekst: En AI-assistent jobber sammen med de ansatte i en bestemt arbeidsflyt: dokumentbehandling, kundeservice, analyse, intern kunnskap eller salgsoppfølging. Den tar rutinearbeidet, så folk får mer tid til det som krever dem, og kvaliteten går opp.
 - Inkludert:
-  - Kartlegging av rollen eller arbeidsflyten
-  - AI-medarbeider bygget rundt deres prosesser
+  - Kartlegging av arbeidsflyten og dem som bruker den
+  - AI-assistent bygget rundt deres prosesser
   - Kobling til verktøyene og dataene dere har
   - Drift på lokal infrastruktur når dataene krever det
   - Løpende forbedring og overvåking
 - Leveranse: 1–3 uker
-- Investering: Oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned. Typisk 15–35 % av kostnaden for en ansatt.
-- Passer for: Bedrifter som vil øke kapasiteten uten å ansette, særlig i roller med repeterende kunnskapsarbeid eller store volum.
+- Investering: Oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned. Typisk 20–40 % av kostnaden for en ansatt.
+- Passer for: Bedrifter som vil at teamet skal rekke mer og levere bedre, særlig der det er mye repeterende kunnskapsarbeid eller store volum.
 
 **02 · Skreddersydde løsninger** (`id="skreddersydd"`)
 - Tekst: Når standardverktøy ikke passer, designer og bygger vi løsningen som gjør det. Fra første idé til løsning i drift.
