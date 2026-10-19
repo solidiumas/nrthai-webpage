@@ -7,12 +7,11 @@
    ========================================================================== */
 
 /* ───── Fonter ───── */
-/* Figtree og Geist Mono ligger på nrth.no (assets/fonts/, SIL Open Font License, se OFL-*.txt).
-   Samme filer og tegnsett som Google Fonts leverte. Figtree er en variabel font (vekt 300–900) og brukes i alt;
-   Geist Mono bare til etikettene i agentfiguren på forsiden. Satoshi (logoen) kommer fra Fontshare, se <head>. */
+/* Figtree ligger på nrth.no (assets/fonts/, SIL Open Font License, se OFL-Figtree.txt).
+   Samme filer og tegnsett som Google Fonts leverte, en variabel font (vekt 300–900) som brukes i alt.
+   Satoshi (logoen) kommer fra Fontshare, se <head>. */
 @font-face { font-family: "Figtree"; font-style: normal; font-weight: 300 900; font-display: swap; src: url("/assets/fonts/figtree-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 @font-face { font-family: "Figtree"; font-style: normal; font-weight: 300 900; font-display: swap; src: url("/assets/fonts/figtree-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: "Geist Mono"; font-style: normal; font-weight: 400 500; font-display: swap; src: url("/assets/fonts/geist-mono-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 :root {
   --bg: #ffffff;
@@ -30,7 +29,6 @@
   --accent-ink: #e2562b;
   --on-dark-dim: rgba(255, 255, 255, 0.66);
   --sans: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono: "Geist Mono", ui-monospace, monospace;
   --maxw: 1140px;
   --gutter: 32px;
   --gap: 160px;
@@ -729,7 +727,6 @@ h2 {
   .hero-actions { flex-direction: column; align-items: stretch; gap: 18px; }
   .hero-actions .btn { width: 100%; }
   .hero-actions .link-arrow { text-align: center; }
-  .hero-stage { margin-top: 24px; }
   .page-hero { padding-top: 56px; }
   .page-hero .btn,
   .page-hero .btn-ghost { width: 100%; }
