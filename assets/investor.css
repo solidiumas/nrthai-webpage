@@ -1,0 +1,94 @@
+/* ============================================================================
+   Nrth AI — investorsiden og pitchdecken
+   Komponentene som bare finnes på /investors og /pitchdeck. Bygger på
+   assets/site.css og bruker bare variablene derfra.
+   Endres denne filen: bytt ?v=… i lenken på begge sidene.
+   ========================================================================== */
+
+/* ───── Språkvalg på siden (uten JavaScript vises norsk) ───── */
+body.lang-en .lang-no { display: none !important; }
+body:not(.lang-en) .lang-en { display: none !important; }
+
+/* ───── Kort ───── */
+.card > h3:first-child { margin-top: 0; }
+.card .tags { padding-top: 12px; }
+
+/* ───── To kolonner: liste eller søyler til venstre, panel til høyre ───── */
+.inv-split { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: start; }
+
+/* ───── Punkter med hake, lengre tekst enn i «Inkludert» ───── */
+.included--long { margin-top: 0; }
+.included--long li { align-items: flex-start; gap: 16px; padding: 20px 0; font-size: 16.5px; color: var(--fg-dim); }
+.included--long .arrow { margin-top: 3px; }
+.included--long strong { font-weight: 600; color: var(--ink); }
+
+/* ───── Paneler med etikett og verdi (Regnestykket, Hva 250 000 kr gir oss) ───── */
+.inv-panel { padding: 40px; border-radius: var(--r-panel); background: var(--bg-soft); }
+.inv-panel h3 { font-size: 24px; font-weight: 700; letter-spacing: -0.03em; }
+.inv-panel dl { margin-top: 18px; }
+.inv-panel dl > div {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+  padding: 16px 0; border-top: 1px solid var(--line-2);
+}
+.inv-panel dt { font-size: 15.5px; color: var(--fg-dim); }
+.inv-panel dd { font-size: clamp(20px, 2vw, 24px); font-weight: 700; letter-spacing: -0.03em; text-align: right; }
+.inv-panel--dark { background: var(--ink); color: #fff; }
+.inv-panel--dark dl > div { border-top-color: rgba(255, 255, 255, 0.1); }
+.inv-panel--dark dt { color: var(--on-dark-dim); }
+.inv-panel--dark em { color: var(--accent); }
+
+/* ───── Nøkkeltall og vilkår ───── */
+.inv-figures { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.inv-figures--3 { grid-template-columns: repeat(3, 1fr); }
+.inv-figures + .card-grid { margin-top: 20px; }
+.inv-figure {
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 28px; border: 1px solid var(--line); border-radius: var(--r-card); background: #fff;
+}
+.inv-figure .big { font-size: clamp(40px, 4vw, 52px); font-weight: 700; line-height: 1; letter-spacing: -0.045em; }
+.inv-figure .unit { font-size: 0.6em; letter-spacing: -0.02em; }
+.inv-figure .lbl { font-size: 15px; color: var(--fg-dim); line-height: 1.4; }
+.inv-figure .lbl--top { font-size: 14px; font-weight: 600; }
+.inv-figure .sub { font-size: 14px; color: var(--fg-dim); }
+.inv-figures--3 .big { font-size: clamp(32px, 3.2vw, 40px); letter-spacing: -0.04em; }
+
+/* ───── Bruk av midler: søylene ─────
+   Sidene bestemmer selv når søylene fylles (investors: når listen er synlig, pitchdeck: når lysbildet vises). */
+.inv-funds { list-style: none; display: grid; gap: 22px; padding-top: 8px; }
+.inv-fund-top { display: flex; justify-content: space-between; gap: 16px; font-size: 16px; color: var(--fg-2); }
+.inv-fund-top .pct { font-weight: 700; color: var(--ink); }
+.inv-fund-bar {
+  position: relative; display: block; height: 10px; margin-top: 10px;
+  border-radius: 999px; background: var(--bg-soft); overflow: hidden;
+}
+.inv-fund-bar > span {
+  position: absolute; top: 0; bottom: 0; left: 0; width: var(--w);
+  border-radius: 999px; background: var(--ink);
+  transform-origin: left; transition: transform 1.1s var(--ease);
+  transition-delay: calc(var(--i, 0) * 90ms + 0.3s);
+}
+
+/* ───── Merknad og forbehold ───── */
+.inv-note {
+  padding: 24px 28px;
+  border-radius: 18px; background: var(--bg-soft);
+  font-size: 17px; color: var(--fg-2);
+}
+.inv-note strong { font-weight: 700; color: var(--ink); }
+.inv-risk { margin-top: 32px; max-width: 80ch; font-size: 14px; line-height: 1.7; color: var(--fg-dim); }
+.inv-risk strong { font-weight: 600; color: var(--fg-2); }
+
+/* ───── Responsivt ───── */
+@media (max-width: 1000px) {
+  .inv-split { grid-template-columns: 1fr; gap: 40px; }
+  .inv-figures { grid-template-columns: repeat(2, 1fr); }
+  .inv-figures--3 { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .inv-panel { padding: 32px 22px; border-radius: var(--r-card); }
+  .inv-panel dl > div { flex-direction: column; gap: 4px; }
+  .inv-panel dd { text-align: left; }
+  .inv-figures { gap: 12px; }
+  .inv-figure { padding: 24px 20px; }
+  .inv-note { padding: 20px 22px; }
+}
