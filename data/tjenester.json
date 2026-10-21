@@ -35,17 +35,17 @@
       "dor": "implementering",
       "navn": { "nb": "Pilot i drift", "en": "Pilot in production" },
       "leveranse": { "nb": "2–3 uker", "en": "2–3 weeks" },
-      "fraPris": null,
-      "prisTekst": null,
+      "fraPris": 60000,
+      "prisTekst": { "nb": "Fra 60 000 kr", "en": "From NOK 60,000" },
       "url": { "nb": "https://nrth.no/implementering#pilot", "en": "https://nrth.no/en/implementation#pilot" }
     },
     {
       "id": "innforing-av-ai-verktoy",
       "dor": "implementering",
       "navn": { "nb": "Innføring av AI-verktøy", "en": "Rolling out AI tools" },
-      "leveranse": null,
-      "fraPris": null,
-      "prisTekst": null,
+      "leveranse": { "nb": "2–4 uker", "en": "2–4 weeks" },
+      "fraPris": 30000,
+      "prisTekst": { "nb": "Fra 30 000 kr", "en": "From NOK 30,000" },
       "url": { "nb": "https://nrth.no/implementering#verktoy", "en": "https://nrth.no/en/implementation#tools" }
     },
     {
@@ -90,9 +90,9 @@
       "id": "foredrag-og-kurs",
       "dor": "informasjon",
       "navn": { "nb": "Foredrag og kurs", "en": "Talks and courses" },
-      "leveranse": null,
-      "fraPris": null,
-      "prisTekst": null,
+      "leveranse": { "nb": "45 minutter til en hel dag", "en": "45 minutes to a full day" },
+      "fraPris": 20000,
+      "prisTekst": { "nb": "Foredrag fra 20 000 kr", "en": "Talks from NOK 20,000" },
       "url": { "nb": "https://nrth.no/foredrag-og-kurs", "en": "https://nrth.no/en/talks-and-courses" }
     }
   ]

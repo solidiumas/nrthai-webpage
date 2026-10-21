@@ -2,114 +2,128 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nrth.no/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/" />
   </url>
   <url>
     <loc>https://nrth.no/en</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/" />
   </url>
   <url>
     <loc>https://nrth.no/ai-vurdering</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/ai-vurdering" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/ai-assessment" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/ai-vurdering" />
   </url>
   <url>
     <loc>https://nrth.no/en/ai-assessment</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/ai-vurdering" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/ai-assessment" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/ai-vurdering" />
   </url>
   <url>
     <loc>https://nrth.no/implementering</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/implementering" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/implementation" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/implementering" />
   </url>
   <url>
     <loc>https://nrth.no/en/implementation</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/implementering" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/implementation" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/implementering" />
   </url>
   <url>
     <loc>https://nrth.no/ai-tjenester</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/ai-tjenester" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/ai-services" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/ai-tjenester" />
   </url>
   <url>
     <loc>https://nrth.no/en/ai-services</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/ai-tjenester" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/ai-services" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/ai-tjenester" />
   </url>
   <url>
     <loc>https://nrth.no/om-oss</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/om-oss" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/about" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/om-oss" />
   </url>
   <url>
     <loc>https://nrth.no/en/about</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/om-oss" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/about" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/om-oss" />
   </url>
   <url>
     <loc>https://nrth.no/book</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/book" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/book" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/book" />
   </url>
   <url>
     <loc>https://nrth.no/en/book</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/book" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/book" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/book" />
   </url>
   <url>
     <loc>https://nrth.no/foredrag-og-kurs</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/foredrag-og-kurs" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/talks-and-courses" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/foredrag-og-kurs" />
   </url>
   <url>
     <loc>https://nrth.no/en/talks-and-courses</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/foredrag-og-kurs" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/talks-and-courses" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/foredrag-og-kurs" />
   </url>
   <url>
     <loc>https://nrth.no/personvern</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/personvern" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/privacy" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/personvern" />
   </url>
   <url>
     <loc>https://nrth.no/en/privacy</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/personvern" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/privacy" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/personvern" />
+  </url>
+  <url>
+    <loc>https://nrth.no/sporsmal-og-svar</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/sporsmal-og-svar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/sporsmal-og-svar" />
+  </url>
+  <url>
+    <loc>https://nrth.no/en/faq</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/sporsmal-og-svar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/sporsmal-og-svar" />
   </url>
 </urlset>

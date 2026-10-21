@@ -15,6 +15,7 @@
     "ai_services": { "no": "https://nrth.no/ai-tjenester", "en": "https://nrth.no/en/ai-services" },
     "talks_and_courses": { "no": "https://nrth.no/foredrag-og-kurs", "en": "https://nrth.no/en/talks-and-courses" },
     "about": { "no": "https://nrth.no/om-oss", "en": "https://nrth.no/en/about" },
+    "faq": { "no": "https://nrth.no/sporsmal-og-svar", "en": "https://nrth.no/en/faq" },
     "book": { "no": "https://nrth.no/book", "en": "https://nrth.no/en/book" },
     "privacy": { "no": "https://nrth.no/personvern", "en": "https://nrth.no/en/privacy" }
   },

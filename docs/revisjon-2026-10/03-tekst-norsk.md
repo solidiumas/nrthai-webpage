@@ -29,7 +29,7 @@ Brukes nederst på alle sider unntatt `/book` og `/personvern`. Tema forhåndsve
   - Vi ser på hvordan dere jobber i dag.
   - Vi peker på hvor AI kan øke salget eller spare tid.
   - Dere får forslag til første steg, med pris og tidslinje.
-- Brikker: [30] minutter · [Digitalt eller i Bergen]
+- Brikker: 30 minutter · Fysisk i Norge eller digitalt
 - Lenke under: Heller skrive? **Send en forespørsel →** (til `/book#skriv`)
 - Skjema og kalender: se `06-booking-og-skjema.md`
 
@@ -45,9 +45,9 @@ Brukes nederst på alle sider unntatt `/book` og `/personvern`. Tema forhåndsve
 - Lenke: **Les om foredrag og kurs →** (til `/foredrag-og-kurs`)
 
 ### Footer
-- Lenker: AI-vurdering · Implementering · AI-tjenester · Foredrag og kurs · Om oss · Personvern
-- © 2026 Nrth AI AS · Bergen · Org.nr. [org.nr]
-- Nrth OS ↗ · Investorer · English
+- Lenker: AI-vurdering · Implementering · AI-tjenester · Foredrag og kurs · Om oss · Spørsmål og svar · Personvern
+- © 2026 Nrth AI AS · Bergen · Org.nr. 937 872 038
+- Nrth OS ↗ · LinkedIn ↗ (til `https://www.linkedin.com/company/nrth-ai/`) · Investorer · English
 - Built by agents · ▲
 
 ---
@@ -85,8 +85,8 @@ AI-vurdering ✦ Implementering ✦ AI-tjenester ✦ Mer salg ✦ Mindre manuelt
 - Topp: 02 · Implementering
 - Tittel: Fra plan til AI i daglig bruk.
 - Tekst: Vi setter AI i drift på en avgrenset del av arbeidet, lærer opp dem som skal bruke det, og følger opp til det virker.
-- Liste: Pilot i drift · 2–3 uker / Innføring av AI-verktøy / Drift og forbedring · løpende
-- Pris: Fra [pris] kr
+- Liste: Pilot i drift · 2–3 uker / Innføring av AI-verktøy · 2–4 uker / Drift og forbedring · løpende
+- Pris: Fra 30 000 kr
 - Lenke: Les mer → `/implementering`
 
 **Kort 3**
@@ -118,9 +118,11 @@ Under kortene: knapp **Book et møte →** og teksten «Usikre på hvor dere ska
 - Thomas Uthaug · Medgründer · forretning, produkt og leveranse
   Ti år innen finans, kvalitetsledelse og teknologileveranser i Storebrand og Sopra Steria. MSc i finans fra NHH, med utveksling ved UC Berkeley og Copenhagen Business School. Hele karrieren har handlet om å gjøre kompleks teknologi om til resultater på bunnlinjen.
   Merker: NHH MSc finans · UC Berkeley · Storebrand · Sopra Steria
+  Lenke: LinkedIn ↗ (`https://www.linkedin.com/in/thomas-uthaug`, aria-label `Thomas Uthaug på LinkedIn`)
 - Simen Uthaug · Medgründer · teknologi og utvikling
   Bachelor i informasjonsvitenskap fra UiB og master i UX og utvikling. Fullstack-utvikler med TypeScript, React, Python, API-integrasjon, databaser og maskinlæring.
   Merker: UiB informasjonsvitenskap · TypeScript / React · Python / ML · Fullstack
+  Lenke: LinkedIn ↗ (`https://www.linkedin.com/in/simen-uthaug`, aria-label `Simen Uthaug på LinkedIn`)
 - Under: `os-note`
 
 ### Infoboks: foredrag og kurs
@@ -201,7 +203,7 @@ Under kortene: knapp **Book et møte →** og teksten «Usikre på hvor dere ska
   - Test med ekte brukere
   - Måling mot målet, og anbefaling om neste steg
 - Leveranse: 2–3 uker
-- Investering: Fra [pris] kr
+- Investering: Fra 60 000 kr
 - Passer for: Bedrifter som vil se effekt før de skalerer.
 
 **02 · Innføring av AI-verktøy** (`id="verktoy"`)
@@ -211,8 +213,8 @@ Under kortene: knapp **Book et møte →** og teksten «Usikre på hvor dere ska
   - Oppsett, tilganger og retningslinjer for bruk
   - Opplæring av teamene som skal bruke det
   - Oppfølging de første ukene
-- Leveranse: [varighet]
-- Investering: Fra [pris] kr
+- Leveranse: 2–4 uker
+- Investering: Fra 30 000 kr
 - Passer for: Bedrifter som har kjøpt, eller skal kjøpe, AI-verktøy og vil få verdi ut av dem.
 
 **03 · Drift og forbedring** (`id="drift"`)
@@ -289,12 +291,12 @@ Under kortene: knapp **Book et møte →** og teksten «Usikre på hvor dere ska
 ## Om oss `/om-oss`
 
 **Title:** Om Nrth AI · AI-selskap i Bergen
-**Description:** Nrth AI AS er et AI-selskap i Bergen, etablert i 2026. Vi hjelper norske bedrifter å ta AI i bruk, og vi bygger Nrth OS.
+**Description:** Nrth AI AS er et AI-selskap i Bergen, etablert i 2026. Vi hjelper norske bedrifter å ta AI i bruk.
 
 ### Sidehero
 - Kicker: ✦ Om oss
 - H1: **To gründere i *Bergen*.**
-- Ingress: Nrth AI AS ble etablert i 2026. Vi hjelper norske bedrifter å ta i bruk AI på en måte som gir resultater, og vi bygger produktet Nrth OS.
+- Ingress: Nrth AI AS ble etablert i 2026. Vi hjelper norske bedrifter å ta i bruk AI på en måte som gir resultater.
 
 ### Team
 (samme kort som på forsiden)
@@ -312,7 +314,7 @@ Under kortene: knapp **Book et møte →** og teksten «Usikre på hvor dere ska
 ### Kontakt (`contact-lines`)
 - E-post: contact@nrth.no
 - Sted: Bergen, Norge
-- Selskap: Nrth AI AS · Org.nr. [org.nr]
+- Selskap: Nrth AI AS · Org.nr. 937 872 038
 
 ### Book et møte
 
@@ -361,14 +363,37 @@ Bookingseksjonen uten overskrift (overskriften står i sidehero). Tema fra `?tem
 - Ingress: Vi holder foredrag og kurs for ledergrupper, ansatte og konferanser. Praktisk, konkret og tilpasset bransjen deres.
 
 ### Formater (`card-grid--3`)
-1. **Foredrag** · [varighet] · For ansatte, kunder eller konferanser. Hva AI kan gjøre i dag, og hva det betyr for dere.
-2. **Bedriftskurs** · [varighet] · For team som skal bruke AI i jobben, med egne oppgaver som øvingsstoff.
-3. **Workshop for ledergrupper** · [varighet] · Ledergruppen finner de første stedene AI skal inn, og går ut med en prioritert liste.
+1. **Foredrag** · 45–60 min · For ansatte, kunder eller konferanser. Hva AI kan gjøre i dag, og hva det betyr for dere.
+2. **Bedriftskurs** · Halv dag · For team som skal bruke AI i jobben, med egne oppgaver som øvingsstoff.
+3. **Workshop for ledergrupper** · Hel dag · Ledergruppen finner de første stedene AI skal inn, og går ut med en prioritert liste.
 
-- Pris: [pris eller «Pris etter avtale»]
+- Pris: Foredrag fra 20 000 kr, bedriftskurs fra 30 000 kr og workshop fra 45 000 kr. Reise utenfor Bergen kommer i tillegg.
 - Knapp: **Spør om et foredrag →** (til `/book?tema=foredrag#book`)
 
 ### Book et møte (tema: Foredrag eller kurs)
+
+---
+
+## Spørsmål og svar `/sporsmal-og-svar`
+
+Lagt til 21. oktober 2026 (Thomas: lenke i footeren, lik på norsk og engelsk). Samme fem spørsmål som `FAQPage` i `07` §2, som står i JSON-LD på denne siden.
+
+**Title:** Spørsmål og svar om AI for bedrifter · Nrth AI
+**Description:** Svar på det bedrifter oftest spør oss om: hva vi gjør, hvordan vi starter, hva det koster, foredrag og kurs, og hvor vi holder til.
+
+### Sidehero
+- Kicker: Spørsmål og svar
+- H1: **Spørsmål og *svar*.**
+- Ingress: Det bedrifter oftest spør oss om.
+
+### Spørsmål (`prose`, H2 per spørsmål)
+1. **Hva gjør Nrth AI?** Vi hjelper bedrifter å ta i bruk AI: vi vurderer hvor AI gir mest, implementerer det, og bygger AI-tjenester som AI-assistenter og skreddersydde løsninger.
+2. **Hvordan starter vi?** Med et møte. Book på nrth.no/book. Deretter følger vi tre steg: kartlegg (1 uke), pilot (2–3 uker) og drift.
+3. **Hva koster det?** AI-kartlegging fra 35 000 kr. AI-assistenter fra ca. 50 000 kr i oppsett og 5 000 kr per måned i drift. Skreddersydde løsninger fra ca. 150 000 kr. Alle priser står på nrth.no.
+4. **Holder dere foredrag og kurs?** Ja, for ledergrupper, ansatte og konferanser. Se nrth.no/foredrag-og-kurs.
+5. **Hvor holder dere til?** I Bergen. Vi møter bedrifter fysisk i hele Norge, og digitalt med kunder i utlandet.
+
+### Book et møte (tema: ingen forhåndsvalgt)
 
 ---
 
@@ -377,16 +402,53 @@ Bookingseksjonen uten overskrift (overskriften står i sidehero). Tema fra `?tem
 **Title:** Personvern · Nrth AI
 **Description:** Hvordan Nrth AI AS behandler opplysningene du gir oss når du booker et møte eller sender en forespørsel.
 
-Siden skrives som vanlig tekst (`prose`). Dette er et **utkast** som Thomas eller en advokat må godkjenne før publisering.
+Siden skrives som vanlig tekst (`prose`), med H2 per del. Skrevet 21. oktober 2026. Thomas får den gjennomgått av en advokat ved behov.
 
-- **Behandlingsansvarlig:** Nrth AI AS, Bergen. Org.nr. [org.nr]. Kontakt: contact@nrth.no.
-- **Hva vi samler inn:** Navn, e-post, bedrift, rolle og det du skriver i skjemaet eller bookingen. Ingenting annet.
-- **Hvorfor:** For å svare deg og avtale møter. Grunnlaget er vår berettigede interesse i å svare på henvendelser (GDPR art. 6 nr. 1 bokstav f).
-- **Hvor det lagres:** E-post sendes via Resend til innboksen vår. Bookinger lagres i [Google Kalender / Cal.com].
-- **Hvor lenge:** Til henvendelsen er avsluttet, og senest [12] måneder etter siste kontakt, med mindre dere blir kunde.
-- **Informasjonskapsler og sporing:** [Vi bruker ikke informasjonskapsler til sporing. / Vi bruker Plausible, som ikke setter informasjonskapsler.]
-- **Dine rettigheter:** Innsyn, retting, sletting og klage til Datatilsynet. Send e-post til contact@nrth.no.
-- Sist oppdatert: [dato]
+### Behandlingsansvarlig
+- Tekst: Nrth AI AS (org.nr. 937 872 038) er ansvarlig for opplysningene vi samler inn på nrth.no. Kontakt oss på contact@nrth.no.
+
+### Hva vi samler inn
+- Liste:
+  - **Når du ber om et møte:** navn, e-post, bedrift og det du velger eller skriver om tema, mål, tidspunkt og møteform.
+  - **Når du sender en forespørsel:** e-post, bedrift, rolle, hva dere vil ha hjelp med og hvor mye det haster.
+  - **Når du booker i kalenderen:** navn, e-post og det du skriver i bookingen. Kalenderen er fra Google.
+  - **Når du besøker nettsiden:** tekniske opplysninger som IP-adresse, nettleser og hvilke sider som er åpnet. De havner i loggene hos leverandøren som drifter nettsiden.
+- Tekst: Vi ber ikke om sensitive opplysninger. Ikke skriv slike opplysninger i skjemaene.
+
+### Hvorfor, og med hvilket grunnlag
+- Liste:
+  - For å svare deg, avtale møter og lage tilbud. Grunnlaget er at du ber om det før en eventuell avtale (GDPR art. 6 nr. 1 bokstav b), og vår berettigede interesse i å svare på henvendelser (bokstav f).
+  - For å drifte og sikre nettsiden. Grunnlaget er vår berettigede interesse (bokstav f).
+  - Blir dere kunde, behandler vi opplysningene for å oppfylle avtalen (bokstav b) og regnskapsplikten vår (bokstav c).
+- Tekst: Vi bruker ikke opplysningene til markedsføring uten at du har bedt om det, og vi selger dem ikke.
+
+### Hvem som behandler opplysningene for oss
+- Tekst: Disse leverandørene behandler opplysninger på våre vegne og etter våre instrukser:
+- Liste:
+  - **Vercel** drifter nettsiden og skjemaene.
+  - **Resend** sender e-posten fra skjemaene til oss, og kvitteringen til deg.
+  - **Google** leverer e-post og kalender (Google Workspace), også bookingen.
+- Tekst: Skrifttypen i logoen hentes fra Fontshare. Da får Fontshare IP-adressen din, slik nettleseren alltid oppgir den når den henter innhold.
+
+### Overføring utenfor EU/EØS
+- Tekst: Vercel, Resend og Google kan behandle opplysninger i USA. Overføringen bygger på rammeverket for personvern mellom EU og USA (EU-U.S. Data Privacy Framework) eller på EUs standard personvernbestemmelser.
+
+### Hvor lenge
+- Liste:
+  - Henvendelser og bookinger sletter vi når saken er avsluttet, og senest 12 måneder etter siste kontakt, med mindre dere blir kunde.
+  - Blir dere kunde, beholder vi det som trengs for avtalen. Regnskapsopplysninger oppbevarer vi så lenge bokføringsloven krever, i dag fem år.
+  - Tekniske logger lagres bare en kort periode hos Vercel.
+
+### Informasjonskapsler og sporing
+- Tekst: nrth.no setter ingen informasjonskapsler og bruker ikke analyse- eller sporingsverktøy. Når bookingkalenderen fra Google vises på siden, kan Google sette egne informasjonskapsler i kalenderen. Da gjelder Googles personvernerklæring.
+
+### Dine rettigheter
+- Tekst: Du kan be om innsyn i opplysningene vi har om deg, og be oss rette eller slette dem. Du kan også be oss begrense behandlingen, protestere mot den og få opplysningene utlevert i et vanlig format. Send e-post til contact@nrth.no, så svarer vi innen én måned.
+- Tekst: Mener du at vi behandler opplysningene dine feil, kan du klage til Datatilsynet. (Lenke til `https://www.datatilsynet.no`.)
+
+### Endringer
+- Tekst: Vi oppdaterer denne siden når vi endrer hvordan vi behandler opplysninger.
+- Sist oppdatert: 21. oktober 2026
 
 ---
 
