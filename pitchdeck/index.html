@@ -6,23 +6,23 @@
 <!-- .js slår på lysbildemodus. Uten JavaScript, og ved utskrift, står lysbildene under hverandre. -->
 <script>document.documentElement.classList.add("js");</script>
 <title>Nrth AI — Pitch deck</title>
-<meta name="description" content="Nrth AI — investorpresentasjon. Nrth Agentic OS: sikker, lokal AI-infrastruktur for bedrifter." />
+<meta name="description" content="Nrth AI — investorpresentasjon. Vi bygger Nrth OS, der bedrifter tar i bruk AI." />
 <meta name="robots" content="noindex, nofollow" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
 <meta name="theme-color" content="#ffffff" />
 
 <link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="/assets/site.css?v=2026-10-19c" />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-21" />
 <!-- Satoshi (logoen) fra Fontshare, lastet uten å blokkere visningen. Lisensen tillater ikke filene i et offentlig repo. -->
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" media="print" onload="this.media='all'" />
 <noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" /></noscript>
-<link rel="stylesheet" href="/assets/investor.css?v=2026-10-21" />
+<link rel="stylesheet" href="/assets/investor.css?v=2026-10-21b" />
 
 <!-- Det som bare finnes i pitchdecken: rammen rundt lysbildene og lysbildeoppsettet.
-     Felles komponenter med investorsiden ligger i assets/investor.css. -->
+     Felles komponenter med investorsiden, også lagene i OS-et, ligger i assets/investor.css. -->
 <style>
   /* ---------- Rammen: logo, språk, fremdrift, teller og knapper ---------- */
   .chrome-top {
@@ -78,7 +78,7 @@
   .slide .kicker { margin-bottom: 14px; }
   .slide h2 { max-width: 22ch; font-size: clamp(32px, 3.8vw, 50px); }
   .slide h2 em { white-space: nowrap; }
-  .slide .lead { margin-top: 18px; max-width: 64ch; font-size: clamp(16px, 1.4vw, 18px); line-height: 1.55; color: var(--fg-dim); text-wrap: pretty; }
+  .slide .lead { margin-top: 18px; max-width: 72ch; font-size: clamp(16px, 1.4vw, 18px); line-height: 1.55; color: var(--fg-dim); text-wrap: pretty; }
   .slide .lead + *,
   .slide h2 + * { margin-top: 32px; }
   .slide .lead + .lead { margin-top: 18px; }
@@ -98,16 +98,12 @@
   .slide .card p { font-size: 15px; }
   .slide .card-grid--1 .card { gap: 8px; padding: 22px 24px; }
 
-  /* Lagene i OS-et */
-  .os-stack { list-style: none; border: 1px solid var(--line); border-radius: var(--r-card); overflow: hidden; }
-  .os-layer { display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: baseline; padding: 18px 28px; }
-  .os-layer + .os-layer { border-top: 1px solid var(--line); }
-  .layer-id { display: block; font-size: 13px; font-weight: 600; color: var(--fg-dim); }
-  .layer-name { display: block; margin-top: 2px; font-size: clamp(20px, 2vw, 24px); font-weight: 700; letter-spacing: -0.03em; }
-  .os-layer p { font-size: 15.5px; color: var(--fg-dim); }
+  /* Delene i Nrth OS: nummer og navn på samme linje, så fem rader får plass. */
+  .slide .os-layer .layer-id { display: inline; margin-right: 10px; }
+  .slide .os-layer .layer-name { display: inline; }
 
   /* Veikart */
-  .deck-timeline { list-style: none; position: relative; }
+  .deck-timeline { --tl-gap: 26px; list-style: none; position: relative; }
   .deck-timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
   .deck-timeline li { position: relative; padding-left: 44px; }
   .deck-timeline li + li { margin-top: 24px; }
@@ -120,13 +116,23 @@
   .deck-timeline h3 { margin-top: 4px; font-size: clamp(19px, 1.8vw, 22px); font-weight: 700; line-height: 1.2; letter-spacing: -0.03em; }
   .deck-timeline p { margin-top: 6px; max-width: 68ch; font-size: 15.5px; color: var(--fg-dim); }
 
+  /* Seks steg: to kolonner på brede skjermer, med linje fra hvert steg til det neste. */
+  @media screen and (min-width: 1001px) {
+    .deck-timeline { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, auto); grid-auto-flow: column; gap: var(--tl-gap) 56px; }
+    .deck-timeline::before { display: none; }
+    .deck-timeline li + li { margin-top: 0; }
+    .deck-timeline li::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: calc(-1 * var(--tl-gap) - 8px); width: 2px; background: var(--line); }
+    .deck-timeline li:nth-child(3n)::before { display: none; }
+  }
+
   /* Team og Hardanger */
   .slide .team-grid + .lead { margin-top: 20px; font-size: 16px; }
   .slide .member { padding: 30px; }
   .deck-quote { font-size: clamp(23px, 2.5vw, 32px); font-weight: 600; line-height: 1.25; letter-spacing: -0.025em; text-wrap: balance; }
   .deck-quote + .lead { margin-top: 24px; }
 
-  /* Runden */
+  /* Forretningsmodellen, status og runden */
+  .inv-figures + .inv-note { margin-top: 20px; }
   .inv-figures + .inv-split { margin-top: 28px; }
   .inv-split--even { grid-template-columns: 1fr 1fr; }
 
@@ -202,6 +208,7 @@
     .slide .card-grid--1 .card { padding: 16px 20px; }
     .os-layer { padding: 12px 24px; }
     .layer-name { font-size: 20px; }
+    .deck-timeline { --tl-gap: 16px; }
     .deck-timeline li + li { margin-top: 12px; }
     .deck-timeline p { margin-top: 4px; }
     .deck-timeline h3 { font-size: 19px; }
@@ -229,14 +236,12 @@
   @media (max-width: 1000px) {
     .card-grid--4 { grid-template-columns: repeat(2, 1fr); max-width: none; }
     .card-grid { max-width: none; }
-    .os-layer { grid-template-columns: 1fr; gap: 8px; }
     .inv-split--even { grid-template-columns: 1fr; }
     .js .slide-dots { display: none; }
   }
   @media (max-width: 600px) {
     .card-grid--4 { grid-template-columns: 1fr; }
     .chrome-right .tag { display: none; }
-    .os-layer { padding: 20px 22px; }
     .slide .card { padding: 24px 22px; }
     .slide .member { padding: 28px 22px; }
     .js .slide { padding: 96px var(--gutter) 92px; }
@@ -281,12 +286,12 @@
         <span class="lang-en">Investor presentation · Bergen &amp; Hardanger · <b>2026</b></span>
       </p>
       <h1 class="r d1">
-        <span class="lang-no">Vi bygger operativ&shy;systemet for <em>sikker AI</em> i bedrifter.</span>
-        <span class="lang-en">We're building the operating system for <em>secure enterprise AI</em>.</span>
+        <span class="lang-no">Vi bygger Nrth OS.<br /> Der bedrifter tar i bruk AI.</span>
+        <span class="lang-en">We're building Nrth OS.<br /> Where businesses put AI to work.</span>
       </h1>
       <p class="lede r d2">
-        <span class="lang-no">Nrth Agentic OS er en sikker AI-plattform som kjører på bedriftens egen maskinvare — der dataene aldri forlater huset, og hver handling kan etterprøves.</span>
-        <span class="lang-en">The Nrth Agentic OS is a secure AI runtime that runs on the company's own hardware — data never leaves the building, and every action is auditable.</span>
+        <span class="lang-no">Nrth OS er arbeidsrommet for å ta i bruk AI. Bedriften setter opp assistenter for hver del av virksomheten, kobler dem til dokumentene sine og lar dem kjøre arbeidet på plan. Dataene behandles i EU eller USA og brukes aldri til trening.</span>
+        <span class="lang-en">Nrth OS is the workspace for putting AI to work. Companies set up assistants for every part of the business, connect them to their documents and let them run processes on schedule. Data is processed in the EU or the US, and never used for training.</span>
       </p>
       <div class="booking-chips r d3">
         <span class="lang-no">Produktselskap · pre-seed</span><span class="lang-en">Product company · pre-seed</span>
@@ -312,8 +317,8 @@
         <article class="card r d2">
           <div class="card-head"><span>01</span></div>
           <h3><span class="lang-no">Datasuverenitet er ikke valgfritt</span><span class="lang-en">Data sovereignty isn't optional</span></h3>
-          <p><span class="lang-no">For regulerte bransjer, industri, energi og maritim sektor er det uaktuelt å sende sensitive data til servere i utlandet. Dagens AI-tjenester krever nettopp det.</span><span class="lang-en">For regulated industries, manufacturing, energy and maritime, sending sensitive data to servers abroad is a non-starter. Today's AI services demand exactly that.</span></p>
-          <div class="tags"><span class="lang-no">Skyen er ikke et alternativ</span><span class="lang-en">The cloud is not an option</span></div>
+          <p><span class="lang-no">For regulerte bransjer, industri, energi og maritim sektor må det være klart hvor sensitive data behandles, og av hvem. Mange AI-tjenester gir ikke det valget.</span><span class="lang-en">For regulated industries, manufacturing, energy and maritime, it has to be clear where sensitive data is processed, and by whom. Many AI services don't offer that choice.</span></p>
+          <div class="tags"><span class="lang-no">Hvor går dataene?</span><span class="lang-en">Where does the data go?</span></div>
         </article>
         <article class="card r d3">
           <div class="card-head"><span>02</span></div>
@@ -331,40 +336,44 @@
     </div>
   </section>
 
-  <!-- 03 · Løsningen -->
+  <!-- 03 · Løsningen (de fem delene fra trynrth.com) -->
   <section class="slide" data-title="Produktet">
     <div class="inner">
       <p class="kicker r"><span class="lang-no">Løsningen</span><span class="lang-en">The solution</span></p>
       <h2 class="r d1">
-        <span class="lang-no">Nrth <em>Agentic OS</em> — ett sikkert lag mellom AI og arbeidet.</span>
-        <span class="lang-en">The Nrth <em>Agentic OS</em> — one secure layer between AI and the work.</span>
+        <span class="lang-no">Nrth OS. Fem ting, og det er <em>hele produktet</em>.</span>
+        <span class="lang-en">Nrth OS. Five ideas, and that's <em>the whole product</em>.</span>
       </h2>
       <p class="lead r d2">
-        <span class="lang-no">Et operativsystem for AI-agenter: en sikker kjøretid som kobler bedriftens arbeidsprosesser, AI-modeller, agenter og ferdigheter sammen i ett etterprøvbart system — på bedriftens egen maskinvare.</span>
-        <span class="lang-en">An operating system for AI agents: a secure runtime connecting the company's workflows, AI models, agents and skills into one auditable system — on the company's own hardware.</span>
+        <span class="lang-no">Assistenter for hver del av bedriften, koblet til dokumentene og satt til å kjøre arbeidet på plan. I et grensesnitt alle i teamet kan bruke, uten prosjekt og uten kode.</span>
+        <span class="lang-en">Assistants for every part of the business, connected to your documents and running your processes on schedule. In an interface anyone on your team can use, with no project and no code.</span>
       </p>
       <ol class="os-stack r d3">
         <li class="os-layer">
-          <div><span class="layer-id"><span class="lang-no">Lag 01</span><span class="lang-en">Layer 01</span></span><span class="layer-name">Setup</span></div>
-          <p><span class="lang-no">Koble til systemer, data og modeller. OS-et installeres i bedriftens miljø og kartlegger verktøy, tilganger og grenser hver agent får lov til å bruke.</span><span class="lang-en">Connect systems, data and models. The OS deploys into the company's environment and maps the tools, permissions and guardrails each agent may use.</span></p>
+          <div><span class="layer-id">01</span><span class="layer-name"><span class="lang-no">Assistenter</span><span class="lang-en">Assistants</span></span></div>
+          <p><span class="lang-no">AI-agenter for hvert område av bedriften, hver med egen instruks, egne kilder og egen datapolicy.</span><span class="lang-en">AI agents for each area of your business, each with its own instructions, sources and data policy.</span></p>
         </li>
         <li class="os-layer">
-          <div><span class="layer-id"><span class="lang-no">Lag 02</span><span class="lang-en">Layer 02</span></span><span class="layer-name">Workflows</span></div>
-          <p><span class="lang-no">Definer arbeidet. Reelle forretningsprosesser blir strukturerte, observerbare arbeidsflyter OS-et kan kjøre, overvåke og forbedre.</span><span class="lang-en">Define the work. Real business processes become structured, observable workflows the OS can run, monitor and improve.</span></p>
+          <div><span class="layer-id">02</span><span class="layer-name"><span class="lang-no">Oppgaver</span><span class="lang-en">Tasks</span></span></div>
+          <p><span class="lang-no">Kjør nå eller på plan. Resultatene kommer i appen og på e-post.</span><span class="lang-en">Run now or on a schedule. Results arrive in the app and by email.</span></p>
         </li>
         <li class="os-layer">
-          <div><span class="layer-id"><span class="lang-no">Lag 03</span><span class="lang-en">Layer 03</span></span><span class="layer-name">Agents</span></div>
-          <p><span class="lang-no">Sett agentene i arbeid. Navngitte agenter utfører arbeidsflytene ende til ende — og eskalerer til et menneske i det øyeblikket en oppgave krever det.</span><span class="lang-en">Put agents to work. Named agents execute workflows end to end — escalating to a human the moment a task requires one.</span></p>
+          <div><span class="layer-id">03</span><span class="layer-name"><span class="lang-no">Ferdigheter</span><span class="lang-en">Skills</span></span></div>
+          <p><span class="lang-no">Når en oppgave virker, blir den en ferdighet med ett klikk. Uten kode.</span><span class="lang-en">When a task works, turn it into a skill with one click. No code.</span></p>
         </li>
         <li class="os-layer">
-          <div><span class="layer-id"><span class="lang-no">Lag 04</span><span class="lang-en">Layer 04</span></span><span class="layer-name">Skills</span></div>
-          <p><span class="lang-no">Utvid hva agentene kan. Gjenbrukbare ferdigheter — søk, uthenting, beregning, integrasjoner — deles på tvers, så kapasiteten vokser i stedet for å bygges på nytt hver gang.</span><span class="lang-en">Extend what agents can do. Reusable skills — search, retrieval, compute, integrations — are shared across the system, so capability compounds instead of being rebuilt.</span></p>
+          <div><span class="layer-id">04</span><span class="layer-name"><span class="lang-no">Kunnskap</span><span class="lang-en">Knowledge</span></span></div>
+          <p><span class="lang-no">Mapper i Google Drive, biblioteker i SharePoint eller opplastede filer. Holdes synkronisert.</span><span class="lang-en">Google Drive folders, SharePoint libraries or uploaded files. Kept in sync.</span></p>
+        </li>
+        <li class="os-layer">
+          <div><span class="layer-id">05</span><span class="layer-name"><span class="lang-no">Minne</span><span class="lang-en">Memory</span></span></div>
+          <p><span class="lang-no">Det den har lært av tilbakemeldingene. Synlig, redigerbart, slettbart.</span><span class="lang-en">What it has learned from your feedback. Visible, editable, deletable.</span></p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- 04 · Hvorfor vi vinner -->
+  <!-- 04 · Hvorfor vi vinner (data og sikkerhet fra trynrth.com/data) -->
   <section class="slide" data-title="Fortrinn">
     <div class="inner">
       <p class="kicker r"><span class="lang-no">Hvorfor vi vinner</span><span class="lang-en">Why we win</span></p>
@@ -374,28 +383,28 @@
       </h2>
       <div class="card-grid card-grid--4">
         <article class="card r d1">
-          <div class="card-head"><span>01 · Hardware</span></div>
-          <h3><span class="lang-no">Kjører på alt</span><span class="lang-en">Runs on anything</span></h3>
-          <p><span class="lang-no">GPU-server, arbeidsstasjon eller infrastrukturen bedriften allerede eier. Ingen innlåsing til én leverandør eller sky.</span><span class="lang-en">A GPU server, a workstation, or infrastructure the company already owns. No vendor or cloud lock-in.</span></p>
-          <div class="tags"><span class="lang-no">On-prem eller sky</span><span class="lang-en">On-prem or cloud</span></div>
+          <div class="card-head"><span>01 · <span class="lang-no">For alle</span><span class="lang-en">For everyone</span></span></div>
+          <h3><span class="lang-no">Første resultat på ti minutter</span><span class="lang-en">A first result in ten minutes</span></h3>
+          <p><span class="lang-no">Målet vårt: en regnskapsfører uten teknisk bakgrunn setter opp en assistent og får første nyttige resultat på under ti minutter, uten å lese noe.</span><span class="lang-en">Our bar: someone without a technical background sets up an assistant and gets a first useful result in under ten minutes, without reading anything.</span></p>
+          <div class="tags"><span class="lang-no">Uten prosjekt, uten kode</span><span class="lang-en">No project, no code</span></div>
         </article>
         <article class="card r d2">
           <div class="card-head"><span>02 · <span class="lang-no">Suverenitet</span><span class="lang-en">Sovereignty</span></span></div>
-          <h3><span class="lang-no">Data forlater aldri huset</span><span class="lang-en">Data never leaves</span></h3>
-          <p><span class="lang-no">Installert on-premise blir data, prompts og resultater innenfor bedriftens eget nettverk. Ingenting sendes til servere andre kontrollerer.</span><span class="lang-en">Deployed on-premise, data, prompts and outputs stay inside the company's own network. Nothing is sent to servers others control.</span></p>
-          <div class="tags"><span class="lang-no">Dine vegger · dine data</span><span class="lang-en">Your walls · your data</span></div>
+          <h3><span class="lang-no">Dere velger hvor dataene går</span><span class="lang-en">You choose where the data goes</span></h3>
+          <p><span class="lang-no">Hjemregion i EU (Frankfurt) eller USA, og datapolicy for hver assistent: i EU, kun europeiske leverandører eller egen modell. Hver modell er merket.</span><span class="lang-en">A home region in the EU (Frankfurt) or the US, and a data policy for each assistant: in the EU, European providers only, or your own model. Every model is labelled.</span></p>
+          <div class="tags"><span class="lang-no">EU eller USA</span><span class="lang-en">EU or US</span></div>
         </article>
         <article class="card r d3">
-          <div class="card-head"><span>03 · <span class="lang-no">Sikkerhet</span><span class="lang-en">Security</span></span></div>
-          <h3><span class="lang-no">Ansvarlig by design</span><span class="lang-en">Accountable by design</span></h3>
-          <p><span class="lang-no">Tilgangsstyrt verktøybruk, full revisjonslogg, evalueringer og rekkverk på hver agenthandling — med menneske i løkka der det betyr noe.</span><span class="lang-en">Permissioned tool access, full audit logs, evals and guardrails on every agent action — with a human in the loop where it matters.</span></p>
-          <div class="tags"><span class="lang-no">Logget · tilgangsstyrt</span><span class="lang-en">Audited · permissioned</span></div>
+          <div class="card-head"><span>03 · <span class="lang-no">Læring</span><span class="lang-en">Learning</span></span></div>
+          <h3><span class="lang-no">Lærer uten å trenes</span><span class="lang-en">Learns without training</span></h3>
+          <p><span class="lang-no">Nrth OS lærer av kunnskapen dere kobler til, minnet dere kan lese og ferdighetene dere godkjenner. Ingen modell trenes på dataene.</span><span class="lang-en">Nrth OS learns from the knowledge you connect, the memory you can read and the skills you approve. No model is trained on your data.</span></p>
+          <div class="tags"><span class="lang-no">Synlig · kan angres</span><span class="lang-en">Visible · can be undone</span></div>
         </article>
         <article class="card r d4">
-          <div class="card-head"><span>04 · <span class="lang-no">Eierskap</span><span class="lang-en">Ownership</span></span></div>
-          <h3><span class="lang-no">Kunden eier stacken</span><span class="lang-en">You own the stack</span></h3>
-          <p><span class="lang-no">Modellen, dataene og IP-en blir hos kunden. Agentene jobber som ansvarlige medlemmer av teamet — ikke en svart boks man leier per sete.</span><span class="lang-en">The model, the data and the IP stay with the customer. Agents work as accountable team members — not a black box rented by the seat.</span></p>
-          <div class="tags"><span class="lang-no">Modell · data · IP</span><span class="lang-en">Model · data · IP</span></div>
+          <div class="card-head"><span>04 · <span class="lang-no">Sikkerhet</span><span class="lang-en">Security</span></span></div>
+          <h3><span class="lang-no">Bygget for kontroll</span><span class="lang-en">Built for control</span></h3>
+          <p><span class="lang-no">Hver oppgave kjører i sitt eget isolerte miljø. Handlinger utenfor Nrth OS krever godkjenning, og det er harde grenser for forbruk.</span><span class="lang-en">Every task runs in its own isolated environment. Actions outside Nrth OS require approval, and there are hard limits on usage.</span></p>
+          <div class="tags"><span class="lang-no">Isolert · godkjent · begrenset</span><span class="lang-en">Isolated · approved · capped</span></div>
         </article>
       </div>
     </div>
@@ -412,9 +421,9 @@
       <div class="inv-split">
         <ul class="included included--long r d2">
           <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Mer kapasitet per ansatt.</span><span class="lang-en">More capacity per employee.</span></strong> <span class="lang-no">En dyktig ansatt i Norge koster 1–1,5 MNOK i året. Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tilsvarende én til flere ekstra ansatte, og kvaliteten går opp. AI koster typisk 20–40 % av det én ansatt koster.</span><span class="lang-en">A skilled employee in Norway costs NOK 1–1.5M per year. When AI supports the people and takes the routine work, the team can gain the capacity of one or more extra employees, and quality goes up. AI typically costs 20–40% of what one employee costs.</span></div></li>
-          <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Regulering presser AI hjem.</span><span class="lang-en">Regulation pushes AI back home.</span></strong> <span class="lang-no">GDPR, EUs AI-forordning og bransjekrav gjør lokal kjøring til et krav — ikke en preferanse — for store deler av norsk nærings- og arbeidsliv.</span><span class="lang-en">GDPR, the EU AI Act and industry requirements make local deployment a requirement — not a preference — for large parts of Nordic industry.</span></div></li>
+          <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Regulering krever kontroll.</span><span class="lang-en">Regulation demands control.</span></strong> <span class="lang-no">GDPR, EUs AI-forordning og bransjekrav gjør det til et krav — ikke en preferanse — å vite hvor dataene behandles og hva AI-en gjør.</span><span class="lang-en">GDPR, the EU AI Act and industry requirements make it a requirement — not a preference — to know where data is processed and what the AI does.</span></div></li>
           <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Verdien flytter seg til laget vårt.</span><span class="lang-en">The value is moving to our layer.</span></strong> <span class="lang-no">Modellene blir billigere og byttbare. Det varige laget er systemet som kobler AI til faktisk arbeid — sikkert og etterprøvbart. Det er det vi bygger.</span><span class="lang-en">Models get cheaper and interchangeable. The durable layer is the system connecting AI to real work — securely and auditably. That's what we're building.</span></div></li>
-          <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Internasjonalt fra dag én.</span><span class="lang-en">International from day one.</span></strong> <span class="lang-no">Programvare kjenner ingen kommunegrenser. Pilotdialogene våre spenner allerede fra Norge til Sverige og Australia.</span><span class="lang-en">Software knows no municipal borders. Our pilot dialogues already span Norway, Sweden and Australia.</span></div></li>
+          <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Internasjonalt fra dag én.</span><span class="lang-en">International from day one.</span></strong> <span class="lang-no">Nrth OS lanseres for Norden og USA fra start, med priser i NOK, EUR og USD.</span><span class="lang-en">Nrth OS launches for the Nordics and the US from the start, priced in NOK, EUR and USD.</span></div></li>
         </ul>
         <div class="inv-panel inv-panel--dark on-dark r d3">
           <h3><span class="lang-no">Regnestykket</span><span class="lang-en">The math</span></h3>
@@ -422,81 +431,69 @@
             <div><dt><span class="lang-no">Ansatt i Norge / år</span><span class="lang-en">Employee in Norway / yr</span></dt> <dd>1–1,5 MNOK</dd></div>
             <div><dt><span class="lang-no">Gevinst for teamet</span><span class="lang-en">Gain for the team</span></dt> <dd><span class="lang-no">1+ ansatte</span><span class="lang-en">1+ employees</span></dd></div>
             <div><dt><span class="lang-no">Kostnad for AI</span><span class="lang-en">Cost of AI</span></dt> <dd><em>20–40 %</em></dd></div>
-            <div><dt><span class="lang-no">Eierskap til data &amp; modell</span><span class="lang-en">Data &amp; model ownership</span></dt> <dd>100 %</dd></div>
+            <div><dt><span class="lang-no">Nrth OS fra</span><span class="lang-en">Nrth OS from</span></dt> <dd><span class="lang-no">kr 1&nbsp;490 / mnd</span><span class="lang-en">€129 / month</span></dd></div>
           </dl>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 06 · Forretningsmodellen -->
+  <!-- 06 · Forretningsmodellen (priser fra trynrth.com) -->
   <section class="slide" data-title="Forretningsmodell">
     <div class="inner">
       <p class="kicker r"><span class="lang-no">Forretningsmodellen</span><span class="lang-en">Business model</span></p>
       <h2 class="r d1">
-        <span class="lang-no">Pilotkundene <em>betaler</em> for tidlig tilgang — og herder produktet.</span>
-        <span class="lang-en">Pilot customers <em>pay</em> for early access — and harden the product.</span>
+        <span class="lang-no">Abonnement, med <em>kreditter inkludert</em>.</span>
+        <span class="lang-en">Subscriptions, with <em>credits included</em>.</span>
       </h2>
       <p class="lead r d2">
-        <span class="lang-no">Frem til OS-et er selvbetjent selger vi det som skreddersydde utrullinger. Hver leveranse gir inntekt i dag, og gjør produktet mer standardisert og skalerbart i morgen.</span>
-        <span class="lang-en">Until the OS is self-serve, we sell it as custom deployments. Every engagement earns revenue today and makes the product more standardised and scalable tomorrow.</span>
+        <span class="lang-no">Nrth OS selges i tre nivåer med kreditter inkludert hver måned, i NOK, EUR og USD. Kunden ser et estimat før hver oppgave, og forbruket stopper ved grensen. Prisene er ekskl. mva.</span>
+        <span class="lang-en">Nrth OS is sold in three tiers with credits included each month, in NOK, EUR and USD. Customers see an estimate before every task, and usage stops at their limit. Prices exclude VAT.</span>
       </p>
-      <div class="card-grid card-grid--4">
-        <article class="card r d2">
-          <div class="card-head"><span>01</span></div>
-          <h3><span class="lang-no">AI-assistenter</span><span class="lang-en">AI assistants</span></h3>
-          <p><span class="lang-no">En agent på OS-et som jobber sammen med de ansatte og tar rutinearbeidet i en arbeidsflyt. Etablering fra ~50 000 kr, deretter løpende drift månedlig.</span><span class="lang-en">An agent on the OS that works alongside the team and takes the routine work in a workflow. Setup from ~$5,000, then monthly operations.</span></p>
-          <div class="tags"><span class="lang-no">Repeterende inntekt</span><span class="lang-en">Recurring revenue</span></div>
-        </article>
-        <article class="card r d3">
-          <div class="card-head"><span>02</span></div>
-          <h3><span class="lang-no">On-prem infrastruktur</span><span class="lang-en">On-prem infrastructure</span></h3>
-          <p><span class="lang-no">Plattformen OS-et kjører på, installert på kundens egen maskinvare. Typisk 100 000 – 1 000 000 kr+ per utrulling.</span><span class="lang-en">The platform the OS runs on, installed on the customer's own hardware. Typically $10,000–$100,000+ per deployment.</span></p>
-          <div class="tags"><span class="lang-no">Størst kontraktsverdi</span><span class="lang-en">Largest contract value</span></div>
-        </article>
-        <article class="card r d4">
-          <div class="card-head"><span>03</span></div>
-          <h3><span class="lang-no">Skreddersydd utvikling</span><span class="lang-en">Custom development</span></h3>
-          <p><span class="lang-no">Spesialbygde løsninger oppå OS-et for kunder med særegne behov — fra avgrensede prosjekter til større løp.</span><span class="lang-en">Purpose-built solutions on top of the OS for customers with specific needs — from bounded projects to larger programmes.</span></p>
-          <div class="tags"><span class="lang-no">Prosjektinntekt</span><span class="lang-en">Project revenue</span></div>
-        </article>
-        <article class="card r d5">
-          <div class="card-head"><span>04</span></div>
-          <h3><span class="lang-no">Rådgivning &amp; kurs</span><span class="lang-en">Advisory &amp; courses</span></h3>
-          <p><span class="lang-no">AI-strategi, kurs og foredrag. Gir inntekt fra dag én — og fyller samtidig pipeline med nye kundeemner.</span><span class="lang-en">AI strategy, courses and talks. Revenue from day one — and a pipeline of new leads at the same time.</span></p>
-          <div class="tags"><span class="lang-no">Inntekt + synlighet</span><span class="lang-en">Revenue + visibility</span></div>
-        </article>
+      <div class="inv-figures inv-figures--3 r d2">
+        <div class="inv-figure"><p class="lbl lbl--top">Start</p><p class="big"><span class="lang-no">kr 1&nbsp;490</span><span class="lang-en">€129</span></p><p class="sub"><span class="lang-no">per måned · én assistent · 1&nbsp;000 kreditter</span><span class="lang-en">per month · one assistant · 1,000 credits</span></p></div>
+        <div class="inv-figure"><p class="lbl lbl--top">Team</p><p class="big"><span class="lang-no">kr 4&nbsp;590</span><span class="lang-en">€399</span></p><p class="sub"><span class="lang-no">per måned · flere assistenter · 4&nbsp;000 kreditter</span><span class="lang-en">per month · several assistants · 4,000 credits</span></p></div>
+        <div class="inv-figure"><p class="lbl lbl--top"><span class="lang-no">Bedrift</span><span class="lang-en">Business</span></p><p class="big"><span class="lang-no">kr 11&nbsp;490</span><span class="lang-en">€999</span></p><p class="sub"><span class="lang-no">per måned · flere assistenter · 12&nbsp;000 kreditter</span><span class="lang-en">per month · several assistants · 12,000 credits</span></p></div>
       </div>
+      <p class="inv-note r d3">
+        <span class="lang-no"><strong>Ved siden av: AI-tjenester på nrth.no.</strong> Vi hjelper norske bedrifter med AI-vurdering, implementering og AI-tjenester, og holder kurs og foredrag. Det gir inntekt mens Nrth OS bygges, og holder oss tett på bedriftene som skal bruke det.</span>
+        <span class="lang-en"><strong>Alongside: AI services on nrth.no.</strong> We help Norwegian companies with AI assessments, implementation and AI services, and run courses and talks. It brings in revenue while Nrth OS is being built, and keeps us close to the companies that will use it.</span>
+      </p>
     </div>
   </section>
 
-  <!-- 07 · Status -->
+  <!-- 07 · Status (fra trynrth.com/pilot) -->
   <section class="slide" data-title="Status">
     <div class="inner">
       <p class="kicker r"><span class="lang-no">Status så langt</span><span class="lang-en">Traction so far</span></p>
       <h2 class="r d1">
-        <span class="lang-no">Tidlig — men <em>reell</em> trekkraft.</span>
-        <span class="lang-en">Early — but <em>real</em> momentum.</span>
+        <span class="lang-no">Pilotprogrammet er <em>åpent</em>.</span>
+        <span class="lang-en">The pilot program is <em>open</em>.</span>
       </h2>
       <p class="lead r d2">
-        <span class="lang-no">Vi er ærlige på hvor vi står: selskapet er pre-revenue. Men produktet er i aktiv utvikling, og pilotdialogene er i gang i tre land — før vi har lansert noe som helst.</span>
-        <span class="lang-en">We're honest about where we are: the company is pre-revenue. But the product is in active development, and pilot dialogues are underway in three countries — before we've launched anything at all.</span>
+        <span class="lang-no">Selskapet er nystartet, og vi har ennå ingen betalende kunder. Plan og arkitektur for Nrth OS ble ferdig i september 2026, og nå tester vi tre prototyper for motoren. Vi tar inn de første bedriftene i Norden og USA før åpen lansering i 4.&nbsp;kvartal 2026.</span>
+        <span class="lang-en">The company is newly founded, and we don't yet have paying customers. Plan and architecture for Nrth OS were done in September 2026, and we're now testing three prototypes for the engine. We're onboarding the first companies in the Nordics and the US before open launch in Q4 2026.</span>
       </p>
       <div class="inv-figures r d3">
-        <div class="inv-figure"><p class="big"><span class="count" data-to="4">4</span></p><p class="lbl"><span class="lang-no">aktive kundedialoger — Australia, Sverige, Norge ×2</span><span class="lang-en">active customer dialogues — Australia, Sweden, Norway ×2</span></p></div>
-        <div class="inv-figure"><p class="big"><span class="count" data-to="1">1</span></p><p class="lbl"><span class="lang-no">pilotavtale nær signering (NO)</span><span class="lang-en">pilot agreement near signing (NO)</span></p></div>
-        <div class="inv-figure"><p class="big"><span class="count" data-to="3">3</span></p><p class="lbl"><span class="lang-no">land i pipeline før lansering</span><span class="lang-en">countries in the pipeline pre-launch</span></p></div>
-        <div class="inv-figure"><p class="big"><span class="count" data-to="100">100</span><span class="unit">%</span></p><p class="lbl"><span class="lang-no">merkevare &amp; AI-native plattform live på nrth.no</span><span class="lang-en">brand &amp; AI-native platform live on nrth.no</span></p></div>
+        <div class="inv-figure"><p class="big"><span class="count" data-to="3">3</span></p><p class="lbl"><span class="lang-no">prototyper for motoren testes nå</span><span class="lang-en">engine prototypes being tested now</span></p></div>
+        <div class="inv-figure"><p class="big"><span class="count" data-to="2">2</span></p><p class="lbl"><span class="lang-no">markeder fra start: Norden og USA</span><span class="lang-en">markets from the start: the Nordics and the US</span></p></div>
+        <div class="inv-figure"><p class="big"><span class="lang-no">0 kr</span><span class="lang-en">€0</span></p><p class="lbl"><span class="lang-no">for pilotkundene i pilotperioden, deretter 50 % rabatt det første året</span><span class="lang-en">for pilots during the pilot, then 50% off the first year</span></p></div>
+        <div class="inv-figure"><p class="big"><span class="lang-no">4.&nbsp;kv.</span><span class="lang-en">Q4</span></p><p class="lbl"><span class="lang-no">2026: åpen lansering</span><span class="lang-en">2026: open launch</span></p></div>
       </div>
-      <div class="card-grid">
-        <article class="card card--compact r d4"><h3><span class="lang-no">Kjøretiden virker</span><span class="lang-en">The runtime works</span></h3><p><span class="lang-no">Kjernen, arbeidsflytene og agentlaget kjører i skreddersydde pilotoppsett — mot reelt arbeid, på partnerens maskinvare.</span><span class="lang-en">The core runtime, workflows and agent layer run in custom pilot setups — against real work, on partner hardware.</span></p></article>
-        <article class="card card--compact r d4"><h3><span class="lang-no">Internasjonal pipeline</span><span class="lang-en">International pipeline</span></h3><p><span class="lang-no">Dialoger på tvers av tre land før lansering viser at behovet er reelt og grenseløst.</span><span class="lang-en">Dialogues across three countries before launch show the need is real and borderless.</span></p></article>
-        <article class="card card--compact r d5"><h3><span class="lang-no">Vi praktiserer det vi selger</span><span class="lang-en">We practice what we sell</span></h3><p><span class="lang-no">nrth.no er bygget som en AI-native plattform med maskinlesbare grensesnitt — selskapets eget utstillingsvindu for teknologien.</span><span class="lang-en">nrth.no is built as an AI-native platform with machine-readable interfaces — our own showcase for the technology.</span></p></article>
+      <div class="card-grid card-grid--2">
+        <article class="card card--compact r d4">
+          <h3><span class="lang-no">Dette får pilotkundene</span><span class="lang-en">What pilots get</span></h3>
+          <p><span class="lang-no">Oppsett sammen med teamet vårt, en direkte linje til dem som bygger det, og innflytelse på hva som bygges videre.</span><span class="lang-en">Setup together with our team, a direct line to the people building it, and a say in what gets built next.</span></p>
+        </article>
+        <article class="card card--compact r d5">
+          <h3><span class="lang-no">Dette ber vi om</span><span class="lang-en">What we ask</span></h3>
+          <p><span class="lang-no">At de bruker det hver uke i 8 uker, sier fra når noe er feil, og tar en kort samtale med oss hver andre uke.</span><span class="lang-en">That they use it every week for 8 weeks, tell us when something is wrong, and have a short call with us every two weeks.</span></p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- 08 · Veikart -->
+  <!-- 08 · Veikart (trynrth.com/pilot, og målet for 2027) -->
   <section class="slide" data-title="Veikart">
     <div class="inner">
       <p class="kicker r"><span class="lang-no">Veien videre</span><span class="lang-en">The road ahead</span></p>
@@ -507,27 +504,38 @@
       <ol class="deck-timeline r d2">
         <li>
           <span class="dot" aria-hidden="true"></span>
-          <p class="when"><span class="lang-no">Nå · H2 2026</span><span class="lang-en">Now · H2 2026</span></p>
-          <h3><span class="lang-no">Signere og levere pilotkunder</span><span class="lang-en">Sign and deliver pilot customers</span></h3>
-          <p><span class="lang-no">Konvertere dialogene i Australia, Sverige og Norge til betalte pilotutrullinger av OS-et — parallelt med kurs og foredrag som bygger synlighet.</span><span class="lang-en">Convert the dialogues in Australia, Sweden and Norway into paid pilot deployments of the OS — alongside courses and talks that build visibility.</span></p>
+          <p class="when"><span class="lang-no">Ferdig · september 2026</span><span class="lang-en">Done · September 2026</span></p>
+          <h3><span class="lang-no">Plan og arkitektur</span><span class="lang-en">Plan and architecture</span></h3>
         </li>
         <li>
           <span class="dot" aria-hidden="true"></span>
-          <p class="when"><span class="lang-no">Vinter 2026/27</span><span class="lang-en">Winter 2026/27</span></p>
-          <h3><span class="lang-no">Første betalende OS-kunder i produksjon</span><span class="lang-en">First paying OS customers in production</span></h3>
-          <p><span class="lang-no">Piloter blir løpende kundeforhold med drift og lisens. OS-et herdes der det må: mot ekte arbeid hos ekte kunder.</span><span class="lang-en">Pilots become ongoing customer relationships with operations and licensing. The OS hardens where it must: against real work at real customers.</span></p>
-        </li>
-        <li>
-          <span class="dot" aria-hidden="true"></span>
-          <p class="when">2027</p>
-          <h3><span class="lang-no">Delt ferdighetsbibliotek + styringskonsoll</span><span class="lang-en">Shared skills library + governance console</span></h3>
-          <p><span class="lang-no">Et voksende bibliotek av gjenbrukbare ferdigheter og en konsoll for evalueringer, revisjonslogger og rekkverk — slik at kundene selv ser og styrer hva hver agent gjør.</span><span class="lang-en">A growing library of reusable skills and a console for evals, audit logs and guardrails — so customers can see and govern exactly what every agent does.</span></p>
+          <p class="when"><span class="lang-no">Nå</span><span class="lang-en">Now</span></p>
+          <h3><span class="lang-no">Valg av motor</span><span class="lang-en">Choosing the engine</span></h3>
+          <p><span class="lang-no">Vi tester tre prototyper.</span><span class="lang-en">Testing three prototypes.</span></p>
         </li>
         <li class="soft">
           <span class="dot" aria-hidden="true"></span>
-          <p class="when"><span class="lang-no">Senere</span><span class="lang-en">Later</span></p>
-          <h3><span class="lang-no">Selvbetjent utrulling</span><span class="lang-en">Self-serve deployment</span></h3>
-          <p><span class="lang-no">OS-et pakkes slik at bedrifter kan sette det opp i eget miljø med kort onboarding — det er da skalaen kommer.</span><span class="lang-en">The OS gets packaged so companies can stand it up in their own environment with short onboarding — that's where the scale comes.</span></p>
+          <p class="when"><span class="lang-no">Neste</span><span class="lang-en">Next</span></p>
+          <h3><span class="lang-no">Arbeidsrommet</span><span class="lang-en">The workspace</span></h3>
+          <p><span class="lang-no">Assistenter, oppgaver, ferdigheter og kunnskap fra bedriftens egne filer.</span><span class="lang-en">Assistants, tasks, skills and knowledge from the company's own files.</span></p>
+        </li>
+        <li class="soft">
+          <span class="dot" aria-hidden="true"></span>
+          <p class="when"><span class="lang-no">Deretter</span><span class="lang-en">Then</span></p>
+          <h3><span class="lang-no">Læring og koblinger</span><span class="lang-en">Learning and connections</span></h3>
+          <p><span class="lang-no">Minne, ferdighetsbygger, Google Drive og Microsoft 365. Pilotene starter.</span><span class="lang-en">Memory, skill builder, Google Drive and Microsoft 365. Pilots start.</span></p>
+        </li>
+        <li class="soft">
+          <span class="dot" aria-hidden="true"></span>
+          <p class="when"><span class="lang-no">4.&nbsp;kvartal 2026</span><span class="lang-en">Q4 2026</span></p>
+          <h3><span class="lang-no">Åpen lansering</span><span class="lang-en">Open launch</span></h3>
+          <p><span class="lang-no">Norden og USA.</span><span class="lang-en">Nordics and US.</span></p>
+        </li>
+        <li class="soft">
+          <span class="dot" aria-hidden="true"></span>
+          <p class="when"><span class="lang-no">Sommer 2027</span><span class="lang-en">Summer 2027</span></p>
+          <h3><span class="lang-no">Selvgående drift med 1–3 ansatte</span><span class="lang-en">Self-sustaining operations with 1–3 employees</span></h3>
+          <p><span class="lang-no">Det store målet: et selskap som drifter seg selv på egne inntekter, med et lite team på plass.</span><span class="lang-en">The big goal: a company that sustains itself on its own revenue, with a small team in place.</span></p>
         </li>
       </ol>
     </div>
@@ -555,10 +563,10 @@
         <article class="member r d3">
           <div class="avatar" aria-hidden="true">SU</div>
           <h3>Simen Uthaug</h3>
-          <div class="role">Co-founder · <span class="lang-no">Teknisk &amp; utvikler</span><span class="lang-en">Technical &amp; developer</span></div>
+          <div class="role">Co-founder · <span class="lang-no">Teknologi og utvikling</span><span class="lang-en">Technology and development</span></div>
           <p>
-            <span class="lang-no">Bachelor i informasjonsvitenskap (UiB) og mastergrad i UX og Utvikling. Full-stack-utvikler med erfaring i TypeScript, React, Python, API-integrasjon, databaser og maskinlæring (nevrale nett, NLP). Bygger kjernen i Nrth Agentic OS.</span>
-            <span class="lang-en">BSc in Information Science (UiB) plus a master's degree in UX and Development. Full-stack developer experienced in TypeScript, React, Python, API integration, databases and machine learning (neural nets, NLP). Building the core of the Nrth Agentic OS.</span>
+            <span class="lang-no">Bachelor i informasjonsvitenskap fra Universitetet i Bergen og master i UX og utvikling. Fullstack-utvikler som jobber med TypeScript, React, Python og maskinlæring.</span>
+            <span class="lang-en">BSc in Information Science from the University of Bergen and a master's degree in UX and development. Full-stack developer working in TypeScript, React, Python and machine learning.</span>
           </p>
           <div class="tags"><span>UiB Info. Science</span> <span>MSc UX &amp; Dev</span> <span>TypeScript / React</span> <span>Python / ML</span></div>
         </article>
@@ -619,8 +627,8 @@
         <span class="lang-en">We're raising <em>NOK 2–4M</em> to go full-time.</span>
       </h2>
       <p class="lead r d2">
-        <span class="lang-no">Kapitalen tar begge gründerne over i fulltid og gir 24 måneders runway — nok til å levere pilotene, lande de første betalende kundene og bygge OS-et mot selvbetjening.</span>
-        <span class="lang-en">The capital takes both founders full-time and provides 24 months of runway — enough to deliver the pilots, land the first paying customers and build the OS toward self-serve.</span>
+        <span class="lang-no">Kapitalen tar begge gründerne over i fulltid og gir 24 måneders runway — nok til å levere pilotene, lande de første betalende kundene og lansere Nrth OS for Norden og USA.</span>
+        <span class="lang-en">The capital takes both founders full-time and provides 24 months of runway — enough to deliver the pilots, land the first paying customers and launch Nrth OS for the Nordics and the US.</span>
       </p>
       <div class="inv-figures inv-figures--3 r d2">
         <div class="inv-figure"><p class="lbl lbl--top"><span class="lang-no">Beløp</span><span class="lang-en">Amount</span></p><p class="big">2–4 <em>MNOK</em></p><p class="sub"><span class="lang-no">Såkornrunde</span><span class="lang-en">Seed round</span></p></div>
@@ -663,11 +671,12 @@
         <span class="lang-en">Let's build this — <em>from the west</em>.</span>
       </h2>
       <p class="lead r d2">
-        <span class="lang-no">Vi ser frem til dialogen. Ta kontakt for datarom, referanser eller en teknisk gjennomgang av OS-et.</span>
-        <span class="lang-en">We look forward to the dialogue. Get in touch for the data room, references, or a technical walkthrough of the OS.</span>
+        <span class="lang-no">Vi ser frem til dialogen. Ta kontakt for datarom, referanser eller en gjennomgang av Nrth OS.</span>
+        <span class="lang-en">We look forward to the dialogue. Get in touch for the data room, references, or a walkthrough of Nrth OS.</span>
       </p>
       <div class="deck-actions r d3">
         <a class="btn" href="mailto:thomas@nrth.no?subject=Nrth%20AI%20%E2%80%94%20Investering">thomas@nrth.no</a>
+        <a class="btn-ghost lang-no" href="https://trynrth.com/no" rel="noopener">trynrth.com ↗</a><a class="btn-ghost lang-en" href="https://trynrth.com" rel="noopener">trynrth.com ↗</a>
         <a class="btn-ghost" href="/">nrth.no →</a>
       </div>
       <p class="inv-risk r d4">

@@ -78,11 +78,20 @@ body:not(.lang-en) .lang-en { display: none !important; }
 .inv-risk { margin-top: 32px; max-width: 80ch; font-size: 14px; line-height: 1.7; color: var(--fg-dim); }
 .inv-risk strong { font-weight: 600; color: var(--fg-2); }
 
+/* ───── Liste med navn og forklaring (lagene i OS-et, de fem delene i Nrth OS) ───── */
+.os-stack { list-style: none; border: 1px solid var(--line); border-radius: var(--r-card); overflow: hidden; }
+.os-layer { display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: baseline; padding: 18px 28px; }
+.os-layer + .os-layer { border-top: 1px solid var(--line); }
+.layer-id { display: block; font-size: 13px; font-weight: 600; color: var(--fg-dim); }
+.layer-name { display: block; margin-top: 2px; font-size: clamp(20px, 2vw, 24px); font-weight: 700; letter-spacing: -0.03em; }
+.os-layer p { font-size: 15.5px; color: var(--fg-dim); }
+
 /* ───── Responsivt ───── */
 @media (max-width: 1000px) {
   .inv-split { grid-template-columns: 1fr; gap: 40px; }
   .inv-figures { grid-template-columns: repeat(2, 1fr); }
   .inv-figures--3 { grid-template-columns: 1fr; }
+  .os-layer { grid-template-columns: 1fr; gap: 8px; }
 }
 @media (max-width: 600px) {
   .inv-panel { padding: 32px 22px; border-radius: var(--r-card); }
@@ -91,4 +100,5 @@ body:not(.lang-en) .lang-en { display: none !important; }
   .inv-figures { gap: 12px; }
   .inv-figure { padding: 24px 20px; }
   .inv-note { padding: 20px 22px; }
+  .os-layer { padding: 20px 22px; }
 }
