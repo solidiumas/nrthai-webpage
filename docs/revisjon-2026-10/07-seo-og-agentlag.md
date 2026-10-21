@@ -65,19 +65,19 @@ Fyll `sameAs` med LinkedIn-siden og Proff-oppføringen når de finnes. `vatID` /
 }
 ```
 
-Tjenester uten pris (`[pris]`) får ingen `offers` før prisen er satt.
+Tjenester uten pris (`[pris]`) får ingen `offers` før prisen er satt. Alle har pris fra 21. oktober 2026.
 
 **Undersider:** `BreadcrumbList` (Forside → siden). Forsidens `BreadcrumbList` med ankre fjernes.
 
-**FAQPage** på forsiden, norsk:
+**FAQPage** på `/sporsmal-og-svar` (flyttet fra forsiden 21. oktober 2026: Google krever at spørsmålene står synlig på siden), norsk:
 
 1. **Hva gjør Nrth AI?** Vi hjelper bedrifter å ta i bruk AI: vi vurderer hvor AI gir mest, implementerer det, og bygger AI-tjenester som AI-assistenter og skreddersydde løsninger.
 2. **Hvordan starter vi?** Med et møte. Book på nrth.no/book. Deretter følger vi tre steg: kartlegg (1 uke), pilot (2–3 uker) og drift.
 3. **Hva koster det?** AI-kartlegging fra 35 000 kr. AI-assistenter fra ca. 50 000 kr i oppsett og 5 000 kr per måned i drift. Skreddersydde løsninger fra ca. 150 000 kr. Alle priser står på nrth.no.
 4. **Holder dere foredrag og kurs?** Ja, for ledergrupper, ansatte og konferanser. Se nrth.no/foredrag-og-kurs.
-5. **Hvor holder dere til?** I Bergen. Vi jobber med bedrifter i hele Norge.
+5. **Hvor holder dere til?** I Bergen. Vi møter bedrifter fysisk i hele Norge, og digitalt med kunder i utlandet.
 
-Engelsk FAQ på `/en` er de samme fem spørsmålene på engelsk, med «NOK» foran beløpene.
+Engelsk FAQ på `/en/faq` er de samme fem spørsmålene på engelsk, med «NOK» foran beløpene.
 
 ## 3. `llms.txt` (erstatt hele filen)
 
@@ -86,14 +86,14 @@ Engelsk FAQ på `/en` er de samme fem spørsmålene på engelsk, med «NOK» for
 
 > Nrth AI AS (Bergen, Norge) hjelper norske bedrifter å ta i bruk AI. Vi gjør AI-vurderinger, implementerer AI i daglig drift og bygger AI-tjenester som gir mer salg og mer effektivt arbeid. Første steg er alltid et møte.
 
-Sist oppdatert: [dato]
+Sist oppdatert: 21. oktober 2026
 
 ## Hva vi gjør
 
 - **AI-vurdering** — AI-kartlegging (3–5 dager, fra 35 000 kr), strategisprint (2 uker, fra 75 000 kr), ledersparring (fra 25 000 kr per måned). https://nrth.no/ai-vurdering
-- **Implementering** — pilot i drift (2–3 uker), innføring av AI-verktøy, drift og forbedring (fra 5 000 kr per måned). https://nrth.no/implementering
+- **Implementering** — pilot i drift (2–3 uker, fra 60 000 kr), innføring av AI-verktøy (2–4 uker, fra 30 000 kr), drift og forbedring (fra 5 000 kr per måned). https://nrth.no/implementering
 - **AI-tjenester** — AI-assistenter (1–3 uker, oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned), skreddersydde løsninger (4–16 uker, fra ca. 150 000 kr), lokal AI-infrastruktur på egen maskinvare (2–4 uker, typisk 100 000–1 000 000+ kr). https://nrth.no/ai-tjenester
-- **Foredrag og kurs** — for ledergrupper, ansatte og konferanser. https://nrth.no/foredrag-og-kurs
+- **Foredrag og kurs** — for ledergrupper, ansatte og konferanser. Foredrag fra 20 000 kr, bedriftskurs (halv dag) fra 30 000 kr, workshop for ledergrupper (hel dag) fra 45 000 kr. https://nrth.no/foredrag-og-kurs
 
 Alle priser er eks. mva.
 
@@ -109,11 +109,11 @@ Kartlegg (1 uke) → Pilot (2–3 uker) → Drift (løpende).
 
 ## Selskapet
 
-Nrth AI AS, Bergen, etablert 2026. Gründere: Thomas Uthaug (forretning, produkt og leveranse) og Simen Uthaug (teknologi og utvikling). Vi lager også produktet Nrth OS: https://trynrth.com
+Nrth AI AS (org.nr. 937 872 038), Bergen, etablert 2026. Gründere: Thomas Uthaug (forretning, produkt og leveranse) og Simen Uthaug (teknologi og utvikling). Vi lager også produktet Nrth OS: https://trynrth.com
 
 ## English
 
-Nrth AI AS (Bergen, Norway) helps businesses adopt AI: AI assessment, implementation and AI services that increase sales and efficiency. Every engagement starts with a meeting. English site: https://nrth.no/en · Book: https://nrth.no/en/book
+Nrth AI AS (Bergen, Norway) helps businesses adopt AI: AI assessment, implementation and AI services that increase sales and efficiency. Every engagement starts with a meeting. English site: https://nrth.no/en · Book: https://nrth.no/en/book · FAQ: https://nrth.no/en/faq
 
 ## For AI-agenter
 
@@ -121,6 +121,7 @@ Nrth AI AS (Bergen, Norway) helps businesses adopt AI: AI assessment, implementa
 - OpenAPI: /openapi.json
 - Plugin-manifest: /.well-known/ai-plugin.json
 - Tjenestekatalog som JSON: `GET /api/services`
+- Spørsmål og svar: https://nrth.no/sporsmal-og-svar
 - Nettstedskart: /sitemap.xml
 
 All tekst er statisk HTML og kan leses uten JavaScript.

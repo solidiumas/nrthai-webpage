@@ -506,6 +506,7 @@ h2 {
 .member h3 { margin-top: 12px; font-size: 24px; font-weight: 700; letter-spacing: -0.03em; }
 .member .role { margin-top: -6px; font-size: 15px; font-weight: 500; color: var(--fg-dim); }
 .member p { font-size: 16px; color: var(--fg-dim); }
+.member .member-link { margin-top: 14px; }
 .tags { margin-top: auto; padding-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
 .tags span {
   padding: 6px 12px; border-radius: 999px; background: var(--bg-soft);
@@ -554,6 +555,10 @@ h2 {
 .prose p { margin-top: 12px; color: var(--fg-2); }
 .prose a { text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 4px; }
 .prose a:hover { text-decoration-color: currentColor; }
+.prose ul { margin-top: 12px; padding-left: 22px; list-style: disc; }
+.prose li { margin-top: 8px; color: var(--fg-2); }
+.prose li::marker { color: var(--fg-dim); }
+.prose strong { color: var(--fg); font-weight: 600; }
 
 /* ───────── Book et møte ───────── */
 .cta-grid { display: grid; grid-template-columns: 1fr 1.08fr; gap: 64px; align-items: start; }
@@ -687,14 +692,14 @@ h2 {
 }
 
 @media (max-width: 860px) {
-  /* Uten JavaScript ligger lenkene synlig på en egen rad under logoen. */
-  .site-nav { flex-wrap: wrap; row-gap: 6px; padding-top: 14px; padding-bottom: 14px; }
+  /* Uten JavaScript ligger lenkene synlig på en egen rad under logoen. Menyen blir da høy, så den ruller bort med siden. */
+  .site-nav { position: relative; flex-wrap: wrap; row-gap: 6px; padding-top: 14px; padding-bottom: 14px; }
   .nav-right { flex-basis: 100%; flex-wrap: wrap; gap: 6px 20px; }
   .nav-right > .nav-link:first-child,
   .nav-link.lang-switch { margin-left: 0; }
 
   /* Med JavaScript: hamburgermeny. */
-  .js .site-nav { flex-wrap: nowrap; padding-top: 0; padding-bottom: 0; }
+  .js .site-nav { position: sticky; flex-wrap: nowrap; padding-top: 0; padding-bottom: 0; }
   .js .nav-toggle { display: block; }
   .js .nav-right {
     display: none;
