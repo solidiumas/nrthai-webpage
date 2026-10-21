@@ -63,12 +63,20 @@
     "@id": "https://nrth.no/#organization"
   },
   "areaServed": "NO",
-  "url": "https://nrth.no/foredrag-og-kurs"
+  "url": "https://nrth.no/foredrag-og-kurs",
+  "offers": {
+    "@type": "Offer",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "priceCurrency": "NOK",
+      "minPrice": 20000
+    }
+  }
 }
 </script>
 
 <link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="/assets/site.css?v=2026-10-19c" />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-21" />
 <!-- Satoshi (logoen) fra Fontshare, lastet uten å blokkere visningen. Lisensen tillater ikke filene i et offentlig repo. -->
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
@@ -113,23 +121,23 @@
     <div class="wrap">
       <div class="card-grid">
         <article class="card card--compact" data-reveal style="--d: 0">
-          <div class="card-head"><span>01</span> <span class="tag">[varighet]</span></div>
+          <div class="card-head"><span>01</span> <span class="tag">45–60 min</span></div>
           <h2>Foredrag</h2>
           <p>For ansatte, kunder eller konferanser. Hva AI kan gjøre i dag, og hva det betyr for dere.</p>
         </article>
         <article class="card card--compact" data-reveal style="--d: 1">
-          <div class="card-head"><span>02</span> <span class="tag">[varighet]</span></div>
+          <div class="card-head"><span>02</span> <span class="tag">Halv dag</span></div>
           <h2>Bedriftskurs</h2>
           <p>For team som skal bruke AI i jobben, med egne oppgaver som øvingsstoff.</p>
         </article>
         <article class="card card--compact" data-reveal style="--d: 2">
-          <div class="card-head"><span>03</span> <span class="tag">[varighet]</span></div>
+          <div class="card-head"><span>03</span> <span class="tag">Hel dag</span></div>
           <h2>Workshop for ledergrupper</h2>
           <p>Ledergruppen finner de første stedene AI skal inn, og går ut med en prioritert liste.</p>
         </article>
       </div>
       <div class="section-actions" data-reveal>
-        <p>[pris eller «Pris etter avtale»]</p>
+        <p>Foredrag fra 20&nbsp;000&nbsp;kr, bedriftskurs fra 30&nbsp;000&nbsp;kr og workshop fra 45&nbsp;000&nbsp;kr. Reise utenfor Bergen kommer i tillegg.</p>
         <a class="btn" href="/book?tema=foredrag#book">Spør om et foredrag →</a>
       </div>
     </div>
@@ -149,7 +157,7 @@
             <li><span class="arrow" aria-hidden="true">→</span> <span>Vi peker på hvor AI kan øke salget eller spare tid.</span></li>
             <li><span class="arrow" aria-hidden="true">→</span> <span>Dere får forslag til første steg, med pris og tidslinje.</span></li>
           </ul>
-          <div class="booking-chips"><span>[30] minutter</span> <span>Fysisk i Norge eller digitalt</span></div>
+          <div class="booking-chips"><span>30 minutter</span> <span>Fysisk i Norge eller digitalt</span></div>
           <p class="booking-alt">Heller skrive? <a class="link-arrow" href="/book#skriv">Send en forespørsel →</a></p>
         </div>
         <div class="brief-panel booking-panel" data-reveal style="--d: 1">
@@ -237,17 +245,19 @@
           <li><a href="/ai-tjenester">AI-tjenester</a></li>
           <li><a href="/foredrag-og-kurs">Foredrag og kurs</a></li>
           <li><a href="/om-oss">Om oss</a></li>
+          <li><a href="/sporsmal-og-svar">Spørsmål og svar</a></li>
           <li><a href="/personvern">Personvern</a></li>
         </ul>
       </nav>
       <ul class="footer-extra">
         <li data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></li>
+        <li><a href="https://www.linkedin.com/company/nrth-ai/" rel="noopener">LinkedIn ↗</a></li>
         <li><a href="/investors">Investorer</a></li>
         <li><a href="/en/talks-and-courses" hreflang="en" lang="en">English</a></li>
       </ul>
     </div>
     <div class="footer-bottom">
-      <p class="dots"><span>© 2026 Nrth AI AS</span> <span>Bergen</span> <span>Org.nr. [org.nr]</span></p>
+      <p class="dots"><span>© 2026 Nrth AI AS</span> <span>Bergen</span> <span>Org.nr. 937&nbsp;872&nbsp;038</span></p>
       <p><span lang="en">Built by agents</span> · ▲</p>
     </div>
   </div>

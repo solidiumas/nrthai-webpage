@@ -13,9 +13,10 @@ Alle sider er statiske HTML-filer. `cleanUrls: true` og `trailingSlash: false` i
 | Om oss | `/om-oss` | `om-oss/index.html` | `/en/about` | `en/about/index.html` |
 | Book et møte | `/book` | `book/index.html` | `/en/book` | `en/book/index.html` |
 | Foredrag og kurs | `/foredrag-og-kurs` | `foredrag-og-kurs/index.html` | `/en/talks-and-courses` | `en/talks-and-courses/index.html` |
+| Spørsmål og svar | `/sporsmal-og-svar` | `sporsmal-og-svar/index.html` | `/en/faq` | `en/faq/index.html` |
 | Personvern | `/personvern` | `personvern/index.html` | `/en/privacy` | `en/privacy/index.html` |
 | 404 | – | `404.html` (norsk og engelsk på samme side) | – | – |
-| Investorer | `/investors` | uendret | – | – |
+| Investorer | `/investors` | uendret, `noindex` (21. oktober) | – | – |
 | Pitchdeck | `/pitchdeck` | uendret | – | – |
 
 Hver tjeneste er en **seksjon med anker** på tjenestesiden, ikke en egen side. Egne undersider kan komme senere, når det finnes innhold til dem.
@@ -36,15 +37,15 @@ Alle sider unntatt `/book`, `/personvern` og 404 har bookingseksjonen nederst me
 
 - `EN`/`NO` lenker til **samme side på det andre språket**, ikke til forsiden.
 - `aria-current="page"` på aktiv side (klassen finnes i `site.css`).
-- Foredrag og kurs står ikke i menyen, bare i footer og i infoboksen på forsiden.
+- Foredrag og kurs står ikke i menyen, bare i footer og i infoboksen på forsiden. Spørsmål og svar står bare i footer.
 - Dagens mobilmeny (`assets/nav.js`) gjenbrukes.
 
 ## 3. Footer
 
 ```
 </> Nrth AI
-AI-vurdering · Implementering · AI-tjenester · Foredrag og kurs · Om oss · Personvern
-© 2026 Nrth AI AS · Bergen · Org.nr. [org.nr]      Nrth OS ↗ · Investorer · English      Built by agents · ▲
+AI-vurdering · Implementering · AI-tjenester · Foredrag og kurs · Om oss · Spørsmål og svar · Personvern
+© 2026 Nrth AI AS · Bergen · Org.nr. 937 872 038      Nrth OS ↗ · LinkedIn ↗ · Investorer · English      Built by agents · ▲
 ```
 
 «Nrth OS ↗» lenker til `https://trynrth.com` med `rel="noopener"`. Det samme gjelder Nrth OS-blokken på forsiden og Om oss. Er trynrth.com ikke oppe når nrth.no publiseres, skjules lenkene og blokken til den er det (legg dem i HTML med `hidden`, så de er enkle å slå på).

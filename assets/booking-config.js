@@ -10,7 +10,7 @@
    opptil en time på å nå alle.
    ========================================================================== */
 window.NRTH_BOOKING = {
-  provider: "",        // "google" | "cal" | "" (tom = forespørselsmodus)
-  url: "",             // Lenke til avtaleplanen eller Cal.com-siden
-  durationMinutes: 30  // Møtelengden. Brikken «[30] minutter» står i HTML og endres for hånd
+  provider: "google",  // "google" | "cal". Valgt 21. oktober: Google Kalender-avtaleplan
+  url: "",             // Lim inn lenken fra Google Kalender her. Tom = forespørselsskjemaet vises
+  durationMinutes: 30  // Møtelengden. Brikken «30 minutter» står i HTML og endres for hånd
 };
