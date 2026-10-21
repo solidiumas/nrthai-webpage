@@ -9,7 +9,7 @@
   setTimeout(function () { if (!window.nrthReveal) document.documentElement.classList.remove("js"); }, 3000);
 </script>
 <title>Nrth AI — Investorpresentasjon</title>
-<meta name="description" content="Nrth AI — investorpresentasjon. Sikre, lokale AI-løsninger og egne AI-produkter. Vi henter kapital fra vår nære krets via SLIP." />
+<meta name="description" content="Nrth AI — investorpresentasjon. Vi bygger Nrth OS, der bedrifter tar i bruk AI. Vi henter kapital fra vår nære krets via SLIP." />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
 <meta name="theme-color" content="#ffffff" />
@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" media="print" onload="this.media='all'" />
 <noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" /></noscript>
 
-<link rel="stylesheet" href="/assets/investor.css?v=2026-10-21" />
+<link rel="stylesheet" href="/assets/investor.css?v=2026-10-21b" />
 <!-- Det som bare finnes på investorsiden. Felles komponenter med pitchdecken ligger i assets/investor.css. -->
 <style>
   /* ---------- Språkknappen viser det andre språket ---------- */
@@ -46,18 +46,28 @@
   .section-intro + .inv-split,
   .section-intro + .inv-figures,
   .section-intro + .team-grid,
+  .card-grid + .inv-split,
   .section-header + .process { margin-top: 56px; }
 
-  /* Søylene fylles når listen kommer inn i bildet. */
-  .js .inv-funds:not(.is-in) .inv-fund-bar > span { transform: scaleX(0); }
+  /* Produktet: de fem delene til venstre, dataene til høyre. */
+  .inv-sub { margin-bottom: 20px; font-size: clamp(22px, 2.2vw, 28px); font-weight: 700; line-height: 1.15; letter-spacing: -0.03em; }
+  .inv-split .os-layer { grid-template-columns: 120px 1fr; gap: 20px; padding: 16px 24px; }
+  .inv-split .layer-name { font-size: 19px; }
+  .inv-panel .link-arrow { display: inline-block; margin-top: 20px; font-size: 16px; }
+
+  /* Lister i kort (pilotprogrammet) og i Bruk av midler */
+  .card .included { margin-top: 4px; }
+  .card .included li,
+  .inv-split > .included li { font-size: 16.5px; }
+  .inv-split > .included { margin-top: 0; }
 
   /* Planen videre: samme tidslinje som «Slik jobber vi», uten illustrasjoner. */
-  .roadmap { --step-gap: 72px; }
+  .roadmap { --step-gap: 64px; }
   .roadmap .process-step { grid-template-columns: 1fr; }
   .roadmap .step-text { max-width: 640px; padding-top: 11px; }
   .roadmap .step-text .kicker { margin: 0 0 8px; }
 
-  /* Runden */
+  /* Forretningsmodellen og runden */
   .inv-figures + .inv-note { margin-top: 20px; }
   .inv-steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 56px; }
   .inv-steps .n {
@@ -78,6 +88,7 @@
   }
   @media (max-width: 600px) {
     .hero .booking-chips { margin-top: 32px; }
+    .inv-split .os-layer { grid-template-columns: 1fr; gap: 6px; padding: 18px 22px; }
     .inv-cta-actions { flex-direction: column; align-items: stretch; width: 100%; }
   }
 </style>
@@ -95,7 +106,7 @@
     <span class="bar"></span><span class="bar"></span><span class="bar"></span>
   </button>
   <nav class="nav-right" id="primary-nav" aria-label="Investorpresentasjon">
-    <a class="nav-link" href="#what"><span class="lang-no">Hva vi gjør</span><span class="lang-en">What we do</span></a>
+    <a class="nav-link" href="#nrth-os">Nrth OS</a>
     <a class="nav-link" href="#traction"><span class="lang-no">Status</span><span class="lang-en">Traction</span></a>
     <a class="nav-link" href="#team"><span class="lang-no">Team</span><span class="lang-en">Team</span></a>
     <a class="nav-link" href="#funds"><span class="lang-no">Bruk av midler</span><span class="lang-en">Use of funds</span></a>
@@ -117,16 +128,16 @@
         <span class="lang-en">Investor presentation · Bergen · est. 2026 · <b>Confidential</b></span>
       </p>
       <h1>
-        <span class="lang-no">Alle vil ha AI. Ingen leverer det ferdig. Det gjør vi.</span>
-        <span class="lang-en">Everyone wants AI. No one delivers it finished. We do.</span>
+        <span class="lang-no">Vi bygger Nrth OS.<br /> Der bedrifter tar i bruk AI.</span>
+        <span class="lang-en">We're building Nrth OS.<br /> Where businesses put AI to work.</span>
       </h1>
       <p class="lede">
-        <span class="lang-no">Nrth AI bygger sikre, lokale AI-løsninger og egne nøkkelferdige AI-produkter for bedrifter. Vi henter nå kapital fra vår nære krets for å ferdigstille vårt første produkt og lande de første kundene.</span>
-        <span class="lang-en">Nrth AI builds secure, local AI solutions and our own turnkey AI products for businesses. We're now raising capital from our close network to finish our first product and land our first customers.</span>
+        <span class="lang-no">Nrth OS er arbeidsrommet for å ta i bruk AI. Bedriften setter opp assistenter for hver del av virksomheten, kobler dem til dokumentene sine og lar dem kjøre arbeidet på plan. Vi henter nå kapital fra vår nære krets for å bygge produktet ferdig og lande de første kundene.</span>
+        <span class="lang-en">Nrth OS is the workspace for putting AI to work. Companies set up assistants for every part of the business, connect them to their documents and let them run processes on schedule. We're now raising capital from our close network to finish the product and land our first customers.</span>
       </p>
       <div class="hero-actions">
         <a class="btn" href="#round"><span class="lang-no">Bli med fra start</span><span class="lang-en">Join from day one</span> →</a>
-        <a class="link-arrow" href="#what"><span class="lang-no">Hva vi bygger</span><span class="lang-en">What we build</span> ↓</a>
+        <a class="link-arrow" href="#nrth-os"><span class="lang-no">Se Nrth OS</span><span class="lang-en">See Nrth OS</span> ↓</a>
       </div>
       <div class="booking-chips">
         <span class="lang-no">Bli medeier</span><span class="lang-en">Become a co-owner</span>
@@ -136,48 +147,64 @@
     </div>
   </section>
 
-  <!-- ───────── Hva vi gjør ───────── -->
-  <section class="section" id="what">
+  <!-- ───────── Produktet: Nrth OS (tekst fra trynrth.com) ───────── -->
+  <section class="section" id="nrth-os">
     <div class="wrap">
       <div class="section-header" data-reveal>
-        <p class="kicker"><span class="lang-no">Hva vi gjør</span><span class="lang-en">What we do</span></p>
+        <p class="kicker"><span class="lang-no">Produktet · Nrth OS</span><span class="lang-en">The product · Nrth OS</span></p>
         <h2>
-          <span class="lang-no">Et AI-studio som også bygger egne produkter.</span>
-          <span class="lang-en">An AI studio that also ships its own products.</span>
+          <span class="lang-no">Ta i bruk AI. Forbedre prosessene. Behold kontrollen.</span>
+          <span class="lang-en">Implement AI. Improve processes. Stay in control.</span>
         </h2>
       </div>
       <p class="section-intro" data-reveal style="--d: 1">
-        <span class="lang-no">Vi leverer skreddersydde AI-løsninger til bedrifter — og bygger samtidig nøkkelferdige AI-produkter for spesifikke nisjer. Felles nevner: AI som faktisk gir resultater, sikkert og under din kontroll.</span>
-        <span class="lang-en">We deliver custom AI solutions for businesses — while building turnkey AI products for specific niches. The common thread: AI that actually delivers results, securely and under your control.</span>
+        <span class="lang-no">Nrth OS er laget for hele teamet, ikke bare for de tekniske. Målet vårt: en regnskapsfører uten teknisk bakgrunn setter opp en assistent og får første nyttige resultat på under ti minutter, uten å lese noe.</span>
+        <span class="lang-en">Nrth OS is built for the whole team, not just the technical people. Our bar: someone without a technical background sets up an assistant and gets a first useful result in under ten minutes, without reading anything.</span>
       </p>
       <div class="card-grid">
         <article class="card" data-reveal style="--d: 0">
           <div class="card-head"><span>01</span></div>
-          <h3><span class="lang-no">Sikre, lokale AI-løsninger</span><span class="lang-en">Secure, local AI solutions</span></h3>
-          <p>
-            <span class="lang-no">Skreddersydde AI-agenter, modeller og infrastruktur — i skyen eller på bedriftens egen maskinvare. Dataene forlater aldri dine vegger. Du eier modellen, dataene og IP-en.</span>
-            <span class="lang-en">Custom AI agents, models and infrastructure — in the cloud or on the client's own hardware. Data never leaves your walls. You own the model, the data and the IP.</span>
-          </p>
-          <div class="tags"><span class="lang-no">Skreddersøm · on-prem eller sky</span><span class="lang-en">Bespoke · on-prem or cloud</span></div>
+          <h3><span class="lang-no">Ta i bruk AI.</span><span class="lang-en">Implement AI.</span></h3>
+          <p><span class="lang-no">Sett opp en assistent for en del av bedriften, koble den til dokumentene og sett den i arbeid. Uten prosjekt, uten kode.</span><span class="lang-en">Set up an assistant for any part of the business, connect it to your documents and put it to work. No project, no code.</span></p>
+          <div class="tags"><span class="lang-no">Regnskap · marked · tilbud · kundeservice</span><span class="lang-en">Accounting · marketing · quotes · customer service</span></div>
         </article>
         <article class="card" data-reveal style="--d: 1">
           <div class="card-head"><span>02</span></div>
-          <h3><span class="lang-no">Egne AI-produkter</span><span class="lang-en">Our own AI products</span></h3>
-          <p>
-            <span class="lang-no">Nøkkelferdige «alt-i-ett» AI-løsninger bygget for spesifikke nisjer. Vårt første produkt er en komplett AI-agentløsning for YouTube-skapere — og utgjør samtidig Simens masteroppgave. Flere nisjer følger.</span>
-            <span class="lang-en">Turnkey "all-in-one" AI solutions built for specific niches. Our first product is a complete AI-agent solution for YouTube creators — which also forms Simen's master's thesis. More niches to follow.</span>
-          </p>
-          <div class="tags"><span class="lang-no">Nisje #1: YouTube-skapere</span><span class="lang-en">Niche #1: YouTube creators</span></div>
+          <h3><span class="lang-no">Forbedre prosessene.</span><span class="lang-en">Improve processes.</span></h3>
+          <p><span class="lang-no">Arbeid som gjentar seg, går på plan. Når en oppgave virker, blir den en ferdighet alle assistentene kan bruke.</span><span class="lang-en">Recurring work runs on schedule. When a task works, it becomes a skill every assistant can reuse.</span></p>
+          <div class="tags"><span class="lang-no">Oppgaver på plan · ferdigheter</span><span class="lang-en">Scheduled tasks · skills</span></div>
         </article>
         <article class="card" data-reveal style="--d: 2">
           <div class="card-head"><span>03</span></div>
-          <h3><span class="lang-no">Modeller, rådgivning &amp; kurs</span><span class="lang-en">Models, advisory &amp; courses</span></h3>
-          <p>
-            <span class="lang-no">Vi utvikler og trener egne AI-modeller, og leverer AI-strategi og rådgivning, kurs og foredrag. Sistnevnte bygger også markedstilstedeværelse og skaper kundedialog.</span>
-            <span class="lang-en">We develop and train our own AI models, and provide AI strategy and advisory, courses and talks. The latter also builds market presence and generates customer dialogue.</span>
-          </p>
-          <div class="tags"><span class="lang-no">Inntekt + synlighet</span><span class="lang-en">Revenue + visibility</span></div>
+          <h3><span class="lang-no">Behold kontrollen.</span><span class="lang-en">Stay in control.</span></h3>
+          <p><span class="lang-no">Se hva hver assistent gjorde, hva det kostet og hvor dataene ble behandlet. Alt den lærer, er synlig og kan angres.</span><span class="lang-en">See what every assistant did, what it cost and where your data was processed. Everything it learns is visible and can be undone.</span></p>
+          <div class="tags"><span class="lang-no">Trenes aldri på dataene</span><span class="lang-en">Never trained on your data</span></div>
         </article>
+      </div>
+      <div class="inv-split">
+        <div data-reveal>
+          <h3 class="inv-sub"><span class="lang-no">Fem ting. Det er hele produktet.</span><span class="lang-en">Five ideas. That's the whole product.</span></h3>
+          <ul class="os-stack">
+            <li class="os-layer"><span class="layer-name"><span class="lang-no">Assistenter</span><span class="lang-en">Assistants</span></span><p><span class="lang-no">AI-agenter for hvert område av bedriften, hver med egen instruks, egne kilder og egen datapolicy.</span><span class="lang-en">AI agents for each area of your business, each with its own instructions, sources and data policy.</span></p></li>
+            <li class="os-layer"><span class="layer-name"><span class="lang-no">Oppgaver</span><span class="lang-en">Tasks</span></span><p><span class="lang-no">Kjør nå eller på plan. Resultatene kommer i appen og på e-post.</span><span class="lang-en">Run now or on a schedule. Results arrive in the app and by email.</span></p></li>
+            <li class="os-layer"><span class="layer-name"><span class="lang-no">Ferdigheter</span><span class="lang-en">Skills</span></span><p><span class="lang-no">Når en oppgave virker, blir den en ferdighet med ett klikk. Uten kode.</span><span class="lang-en">When a task works, turn it into a skill with one click. No code.</span></p></li>
+            <li class="os-layer"><span class="layer-name"><span class="lang-no">Kunnskap</span><span class="lang-en">Knowledge</span></span><p><span class="lang-no">Mapper i Google Drive, biblioteker i SharePoint eller opplastede filer. Holdes synkronisert.</span><span class="lang-en">Google Drive folders, SharePoint libraries or uploaded files. Kept in sync.</span></p></li>
+            <li class="os-layer"><span class="layer-name"><span class="lang-no">Minne</span><span class="lang-en">Memory</span></span><p><span class="lang-no">Det den har lært av tilbakemeldingene. Synlig, redigerbart, slettbart.</span><span class="lang-en">What it has learned from your feedback. Visible, editable, deletable.</span></p></li>
+          </ul>
+        </div>
+        <div class="inv-panel" data-reveal style="--d: 1">
+          <h3><span class="lang-no">Dataene</span><span class="lang-en">The data</span></h3>
+          <dl>
+            <div><dt><span class="lang-no">Hjemregion</span><span class="lang-en">Home region</span></dt> <dd><span class="lang-no">EU (Frankfurt) eller USA</span><span class="lang-en">EU (Frankfurt) or US</span></dd></div>
+            <div><dt><span class="lang-no">Datapolicy</span><span class="lang-en">Data policy</span></dt> <dd><span class="lang-no">Per assistent</span><span class="lang-en">Per assistant</span></dd></div>
+            <div><dt><span class="lang-no">Trening på dataene</span><span class="lang-en">Training on the data</span></dt> <dd><span class="lang-no">Aldri</span><span class="lang-en">Never</span></dd></div>
+            <div><dt><span class="lang-no">Egen maskinvare</span><span class="lang-en">Own hardware</span></dt> <dd><span class="lang-no">Senere, med Nrth Node</span><span class="lang-en">Later, with Nrth Node</span></dd></div>
+          </dl>
+          <a class="link-arrow lang-no" href="https://trynrth.com/no/data" rel="noopener">Slik behandles dataene ↗</a><a class="link-arrow lang-en" href="https://trynrth.com/data" rel="noopener">How the data is handled ↗</a>
+        </div>
+      </div>
+      <div class="section-actions" data-reveal>
+        <a class="btn-ghost lang-no" href="https://trynrth.com/no" rel="noopener">Se Nrth OS på trynrth.com ↗</a><a class="btn-ghost lang-en" href="https://trynrth.com" rel="noopener">See Nrth OS on trynrth.com ↗</a>
       </div>
     </div>
   </section>
@@ -193,15 +220,15 @@
         </h2>
       </div>
       <p class="section-intro" data-reveal style="--d: 1">
-        <span class="lang-no">Etterspørselen er enorm, men markedet har et hull: nesten ingen leverer sikre løsninger med mulighet for lokal kjøring, og svært få leverer ferdige nøkkelløsninger for en nisje. De fleste må kjøpe et AI-abonnement og selv få alt til å fungere. Vi leverer alt «out of the box» med kort onboarding.</span>
-        <span class="lang-en">Demand is enormous, but the market has a gap: almost no one delivers secure solutions with the option to run locally, and very few deliver finished turnkey solutions for a niche. Most have to buy an AI subscription and make everything work themselves. We deliver everything out of the box with short onboarding.</span>
+        <span class="lang-no">Etterspørselen er enorm, men markedet har et hull: de fleste bedrifter må kjøpe et AI-abonnement og selv få alt til å fungere. Nrth OS gjør AI til noe hele teamet kan sette i arbeid, med kort onboarding og kontroll på hvor dataene behandles.</span>
+        <span class="lang-en">Demand is enormous, but the market has a gap: most companies have to buy an AI subscription and make everything work themselves. Nrth OS makes AI something the whole team can put to work, with short onboarding and control over where the data is processed.</span>
       </p>
       <div class="inv-split">
         <ul class="included included--long" data-reveal>
-          <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Datasuverenitet er ikke valgfritt.</span><span class="lang-en">Data sovereignty isn't optional.</span></strong> <span class="lang-no">For regulerte bransjer, industri, energi og maritim sektor er det ikke et alternativ å sende data til servere i utlandet.</span><span class="lang-en">For regulated industries, manufacturing, energy and maritime, sending data to servers abroad is not an option.</span></div></li>
+          <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Datasuverenitet er ikke valgfritt.</span><span class="lang-en">Data sovereignty isn't optional.</span></strong> <span class="lang-no">For regulerte bransjer, industri, energi og maritim sektor må det være klart hvor dataene behandles. I Nrth OS velger bedriften hjemregion og datapolicy for hver assistent, og dataene brukes aldri til å trene modeller.</span><span class="lang-en">For regulated industries, manufacturing, energy and maritime, it has to be clear where data is processed. In Nrth OS the company chooses its home region and a data policy for each assistant, and the data is never used to train models.</span></div></li>
           <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Mer kapasitet per ansatt.</span><span class="lang-en">More capacity per employee.</span></strong> <span class="lang-no">En dyktig ansatt i Norge koster 1–1,5 MNOK i året. Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tilsvarende én til flere ekstra ansatte, og kvaliteten går opp. AI koster typisk 20–40% av det én ansatt koster.</span><span class="lang-en">A skilled employee in Norway costs 1–1.5 MNOK per year. When AI supports the people and takes the routine work, the team can gain the capacity of one or more extra employees, and quality goes up. AI typically costs 20–40% of what one employee costs.</span></div></li>
-          <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Tomt marked for nøkkelferdig.</span><span class="lang-en">An empty market for turnkey.</span></strong> <span class="lang-no">Skapere og småbedrifter får i dag verktøy, ikke løsninger. Vi leverer det ferdige systemet for nisjen deres.</span><span class="lang-en">Creators and small businesses get tools, not solutions. We deliver the finished system for their niche.</span></div></li>
-          <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Internasjonalt fra dag én.</span><span class="lang-en">International from day one.</span></strong> <span class="lang-no">Vi kan levere hvor som helst. Hovedproduktet vil sannsynligvis ha flest kunder utenfor Norge.</span><span class="lang-en">We can deliver anywhere. Our main product will likely have most of its customers outside Norway.</span></div></li>
+          <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Verktøy er ikke løsninger.</span><span class="lang-en">Tools are not solutions.</span></strong> <span class="lang-no">Bedrifter får i dag verktøy, ikke løsninger. Nrth OS er laget så noen uten teknisk bakgrunn kan sette opp en assistent og få et første resultat uten hjelp.</span><span class="lang-en">Companies get tools, not solutions. Nrth OS is built so that someone without a technical background can set up an assistant and get a first result without help.</span></div></li>
+          <li><span class="arrow" aria-hidden="true">→</span> <div><strong><span class="lang-no">Internasjonalt fra dag én.</span><span class="lang-en">International from day one.</span></strong> <span class="lang-no">Nrth OS lanseres for Norden og USA fra start, med priser i NOK, EUR og USD.</span><span class="lang-en">Nrth OS launches for the Nordics and the US from the start, priced in NOK, EUR and USD.</span></div></li>
         </ul>
         <div class="inv-panel inv-panel--dark on-dark" data-reveal style="--d: 1">
           <h3><span class="lang-no">Regnestykket</span><span class="lang-en">The math</span></h3>
@@ -209,38 +236,148 @@
             <div><dt><span class="lang-no">Ansatt i Norge / år</span><span class="lang-en">Employee in Norway / yr</span></dt> <dd>1–1,5 MNOK</dd></div>
             <div><dt><span class="lang-no">Gevinst for teamet</span><span class="lang-en">Gain for the team</span></dt> <dd><span class="lang-no">1+ ansatte</span><span class="lang-en">1+ employees</span></dd></div>
             <div><dt><span class="lang-no">Kostnad for AI</span><span class="lang-en">Cost of AI</span></dt> <dd><em>20–40%</em></dd></div>
-            <div><dt><span class="lang-no">Eierskap til data &amp; modell</span><span class="lang-en">Data &amp; model ownership</span></dt> <dd>100%</dd></div>
+            <div><dt><span class="lang-no">Nrth OS fra</span><span class="lang-en">Nrth OS from</span></dt> <dd><span class="lang-no">kr 1&nbsp;490 / mnd</span><span class="lang-en">€129 / month</span></dd></div>
           </dl>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ───────── Status ───────── -->
+  <!-- ───────── Forretningsmodellen (priser fra trynrth.com) ───────── -->
+  <section class="section" id="model">
+    <div class="wrap">
+      <div class="section-header" data-reveal>
+        <p class="kicker"><span class="lang-no">Forretningsmodellen</span><span class="lang-en">Business model</span></p>
+        <h2>
+          <span class="lang-no">Abonnement, med kreditter inkludert.</span>
+          <span class="lang-en">Subscriptions, with credits included.</span>
+        </h2>
+      </div>
+      <p class="section-intro" data-reveal style="--d: 1">
+        <span class="lang-no">Nrth OS selges i tre nivåer med kreditter inkludert hver måned, i NOK, EUR og USD. Kunden ser et estimat før hver oppgave, og forbruket stopper ved grensen. Prisene er ekskl. mva.</span>
+        <span class="lang-en">Nrth OS is sold in three tiers with credits included each month, in NOK, EUR and USD. Customers see an estimate before every task, and usage stops at their limit. Prices exclude VAT.</span>
+      </p>
+      <div class="inv-figures inv-figures--3">
+        <div class="inv-figure" data-reveal style="--d: 0"><p class="lbl lbl--top">Start</p><p class="big"><span class="lang-no">kr 1&nbsp;490</span><span class="lang-en">€129</span></p><p class="sub"><span class="lang-no">per måned · én assistent · 1&nbsp;000 kreditter</span><span class="lang-en">per month · one assistant · 1,000 credits</span></p></div>
+        <div class="inv-figure" data-reveal style="--d: 1"><p class="lbl lbl--top">Team</p><p class="big"><span class="lang-no">kr 4&nbsp;590</span><span class="lang-en">€399</span></p><p class="sub"><span class="lang-no">per måned · flere assistenter · 4&nbsp;000 kreditter</span><span class="lang-en">per month · several assistants · 4,000 credits</span></p></div>
+        <div class="inv-figure" data-reveal style="--d: 2"><p class="lbl lbl--top"><span class="lang-no">Bedrift</span><span class="lang-en">Business</span></p><p class="big"><span class="lang-no">kr 11&nbsp;490</span><span class="lang-en">€999</span></p><p class="sub"><span class="lang-no">per måned · flere assistenter · 12&nbsp;000 kreditter</span><span class="lang-en">per month · several assistants · 12,000 credits</span></p></div>
+      </div>
+      <p class="inv-note" data-reveal>
+        <span class="lang-no"><strong>Ved siden av: AI-tjenester på nrth.no.</strong> Vi hjelper norske bedrifter med AI-vurdering, implementering og AI-tjenester, og holder kurs og foredrag. Det gir inntekt mens Nrth OS bygges, og holder oss tett på bedriftene som skal bruke det.</span>
+        <span class="lang-en"><strong>Alongside: AI services on nrth.no.</strong> We help Norwegian companies with AI assessments, implementation and AI services, and run courses and talks. It brings in revenue while Nrth OS is being built, and keeps us close to the companies that will use it.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ───────── Status (fra trynrth.com/pilot) ───────── -->
   <section class="section" id="traction">
     <div class="wrap">
       <div class="section-header" data-reveal>
         <p class="kicker"><span class="lang-no">Status så langt</span><span class="lang-en">Traction so far</span></p>
         <h2>
-          <span class="lang-no">Tidlig, men reell trekkraft.</span>
-          <span class="lang-en">Early, but real momentum.</span>
+          <span class="lang-no">Pilotprogrammet er åpent.</span>
+          <span class="lang-en">The pilot program is open.</span>
         </h2>
       </div>
       <p class="section-intro" data-reveal style="--d: 1">
-        <span class="lang-no">Selskapet er nystartet. Vi har ennå ingen betalende kunder, men vi nærmer oss en pilotavtale i Australia og er i dialog med ett selskap i Sverige og to i Norge. Pilotkunden i Australia ønsker å starte før sommeren.</span>
-        <span class="lang-en">The company is newly founded. We don't yet have paying customers, but we're closing in on a pilot agreement in Australia and are in dialogue with one company in Sweden and two in Norway. The Australian pilot wants to start before summer.</span>
+        <span class="lang-no">Selskapet er nystartet, og vi har ennå ingen betalende kunder. Plan og arkitektur for Nrth OS ble ferdig i september 2026, og nå tester vi tre prototyper for motoren. Vi tar inn de første bedriftene i Norden og USA før åpen lansering i 4.&nbsp;kvartal 2026.</span>
+        <span class="lang-en">The company is newly founded, and we don't yet have paying customers. Plan and architecture for Nrth OS were done in September 2026, and we're now testing three prototypes for the engine. We're onboarding the first companies in the Nordics and the US before open launch in Q4 2026.</span>
       </p>
       <div class="inv-figures">
-        <div class="inv-figure" data-reveal style="--d: 0"><p class="big">4</p><p class="lbl"><span class="lang-no">aktive kundedialoger (AU, SE, NO×2)</span><span class="lang-en">active customer dialogues (AU, SE, NO×2)</span></p></div>
-        <div class="inv-figure" data-reveal style="--d: 1"><p class="big">1</p><p class="lbl"><span class="lang-no">pilotavtale nær signering</span><span class="lang-en">pilot near signing</span></p></div>
-        <div class="inv-figure" data-reveal style="--d: 2"><p class="big">1.</p><p class="lbl"><span class="lang-no">produkt under ferdigstilling (YouTube)</span><span class="lang-en">product nearing completion (YouTube)</span></p></div>
-        <div class="inv-figure" data-reveal style="--d: 3"><p class="big">100<span class="unit">%</span></p><p class="lbl"><span class="lang-no">merkevare &amp; AI-native plattform live</span><span class="lang-en">brand &amp; AI-native platform live</span></p></div>
+        <div class="inv-figure" data-reveal style="--d: 0"><p class="big">3</p><p class="lbl"><span class="lang-no">prototyper for motoren testes nå</span><span class="lang-en">engine prototypes being tested now</span></p></div>
+        <div class="inv-figure" data-reveal style="--d: 1"><p class="big">2</p><p class="lbl"><span class="lang-no">markeder fra start: Norden og USA</span><span class="lang-en">markets from the start: the Nordics and the US</span></p></div>
+        <div class="inv-figure" data-reveal style="--d: 2"><p class="big"><span class="lang-no">0 kr</span><span class="lang-en">€0</span></p><p class="lbl"><span class="lang-no">for pilotkundene i pilotperioden</span><span class="lang-en">for pilots during the pilot</span></p></div>
+        <div class="inv-figure" data-reveal style="--d: 3"><p class="big"><span class="lang-no">4.&nbsp;kv.</span><span class="lang-en">Q4</span></p><p class="lbl"><span class="lang-no">2026: åpen lansering</span><span class="lang-en">2026: open launch</span></p></div>
       </div>
-      <div class="card-grid">
-        <article class="card card--compact" data-reveal style="--d: 0"><h3><span class="lang-no">Produkt i utvikling</span><span class="lang-en">Product in build</span></h3><p><span class="lang-no">YouTube-skaperløsningen er under aktiv utvikling og kobles til en konkret masteroppgave — akademisk forankring og fart i ett.</span><span class="lang-en">The YouTube creator solution is in active development and tied to a concrete master's thesis — academic grounding and speed in one.</span></p></article>
-        <article class="card card--compact" data-reveal style="--d: 1"><h3><span class="lang-no">Internasjonal pipeline</span><span class="lang-en">International pipeline</span></h3><p><span class="lang-no">Dialoger på tvers av tre land allerede før lansering viser at behovet er reelt og grenseløst.</span><span class="lang-en">Dialogues across three countries before launch show the need is real and borderless.</span></p></article>
-        <article class="card card--compact" data-reveal style="--d: 2"><h3><span class="lang-no">AI-native fundament</span><span class="lang-en">AI-native foundation</span></h3><p><span class="lang-no">nrth.no er bygget som en AI-native plattform med maskinlesbare grensesnitt — selskapet praktiserer det vi selger.</span><span class="lang-en">nrth.no is built as an AI-native platform with machine-readable interfaces — we practice what we sell.</span></p></article>
+      <div class="card-grid card-grid--2">
+        <article class="card card--compact" data-reveal style="--d: 0">
+          <h3><span class="lang-no">Dette får pilotkundene</span><span class="lang-en">What pilots get</span></h3>
+          <ul class="included">
+            <li><span class="arrow" aria-hidden="true">→</span> <span><span class="lang-no">Oppsett sammen med teamet vårt</span><span class="lang-en">Setup together with our team</span></span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span><span class="lang-no">Direkte linje til dem som bygger det</span><span class="lang-en">A direct line to the people building it</span></span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span><span class="lang-no">Gratis i pilotperioden, deretter 50% rabatt det første året</span><span class="lang-en">Free during the pilot, then 50% off the first year</span></span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span><span class="lang-no">Innflytelse på hva som bygges videre</span><span class="lang-en">A say in what gets built next</span></span></li>
+          </ul>
+        </article>
+        <article class="card card--compact" data-reveal style="--d: 1">
+          <h3><span class="lang-no">Dette ber vi om</span><span class="lang-en">What we ask</span></h3>
+          <ul class="included">
+            <li><span class="arrow" aria-hidden="true">→</span> <span><span class="lang-no">Bruk det hver uke i 8 uker</span><span class="lang-en">Use it every week for 8 weeks</span></span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span><span class="lang-no">Si fra når noe er feil</span><span class="lang-en">Tell us when something is wrong</span></span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span><span class="lang-no">En kort samtale hver andre uke</span><span class="lang-en">A short call every two weeks</span></span></li>
+          </ul>
+        </article>
       </div>
+    </div>
+  </section>
+
+  <!-- ───────── Planen videre (trynrth.com/pilot, og målet for 2027) ─────────
+       Samme tidslinje som «Slik jobber vi» på forsiden: linjen fylles mens man ruller,
+       og sirkelen blir svart når steget er nådd (assets/reveal.js). -->
+  <section class="section" id="plan">
+    <div class="wrap">
+      <div class="section-header" data-reveal>
+        <p class="kicker"><span class="lang-no">Planen videre</span><span class="lang-en">The road ahead</span></p>
+        <h2>
+          <span class="lang-no">Fra pilot til selvgående drift på 12 måneder.</span>
+          <span class="lang-en">From pilot to self-sustaining in 12 months.</span>
+        </h2>
+      </div>
+      <ol class="process roadmap">
+        <li class="process-step">
+          <div class="numeral" aria-hidden="true">1</div>
+          <span class="step-line" aria-hidden="true"><span></span></span>
+          <div class="step-text" data-reveal>
+            <p class="kicker"><span class="lang-no">Ferdig · september 2026</span><span class="lang-en">Done · September 2026</span></p>
+            <h3 class="step-label"><span class="lang-no">Plan og arkitektur</span><span class="lang-en">Plan and architecture</span></h3>
+          </div>
+        </li>
+        <li class="process-step">
+          <div class="numeral" aria-hidden="true">2</div>
+          <span class="step-line" aria-hidden="true"><span></span></span>
+          <div class="step-text" data-reveal>
+            <p class="kicker"><span class="lang-no">Nå</span><span class="lang-en">Now</span></p>
+            <h3 class="step-label"><span class="lang-no">Valg av motor</span><span class="lang-en">Choosing the engine</span></h3>
+            <p><span class="lang-no">Vi tester tre prototyper.</span><span class="lang-en">Testing three prototypes.</span></p>
+          </div>
+        </li>
+        <li class="process-step">
+          <div class="numeral" aria-hidden="true">3</div>
+          <span class="step-line" aria-hidden="true"><span></span></span>
+          <div class="step-text" data-reveal>
+            <p class="kicker"><span class="lang-no">Neste</span><span class="lang-en">Next</span></p>
+            <h3 class="step-label"><span class="lang-no">Arbeidsrommet</span><span class="lang-en">The workspace</span></h3>
+            <p><span class="lang-no">Assistenter, oppgaver, ferdigheter og kunnskap fra bedriftens egne filer.</span><span class="lang-en">Assistants, tasks, skills and knowledge from the company's own files.</span></p>
+          </div>
+        </li>
+        <li class="process-step">
+          <div class="numeral" aria-hidden="true">4</div>
+          <span class="step-line" aria-hidden="true"><span></span></span>
+          <div class="step-text" data-reveal>
+            <p class="kicker"><span class="lang-no">Deretter</span><span class="lang-en">Then</span></p>
+            <h3 class="step-label"><span class="lang-no">Læring og koblinger</span><span class="lang-en">Learning and connections</span></h3>
+            <p><span class="lang-no">Minne, ferdighetsbygger, Google Drive og Microsoft 365. Pilotene starter.</span><span class="lang-en">Memory, skill builder, Google Drive and Microsoft 365. Pilots start.</span></p>
+          </div>
+        </li>
+        <li class="process-step">
+          <div class="numeral" aria-hidden="true">5</div>
+          <span class="step-line" aria-hidden="true"><span></span></span>
+          <div class="step-text" data-reveal>
+            <p class="kicker"><span class="lang-no">4.&nbsp;kvartal 2026</span><span class="lang-en">Q4 2026</span></p>
+            <h3 class="step-label"><span class="lang-no">Åpen lansering</span><span class="lang-en">Open launch</span></h3>
+            <p><span class="lang-no">Norden og USA.</span><span class="lang-en">Nordics and US.</span></p>
+          </div>
+        </li>
+        <li class="process-step">
+          <div class="numeral" aria-hidden="true">6</div>
+          <span class="step-line" aria-hidden="true"><span></span></span>
+          <div class="step-text" data-reveal>
+            <p class="kicker"><span class="lang-no">Sommer 2027</span><span class="lang-en">Summer 2027</span></p>
+            <h3 class="step-label"><span class="lang-no">Selvgående drift med 1–3 ansatte</span><span class="lang-en">Self-sustaining operations with 1–3 employees</span></h3>
+            <p><span class="lang-no">Det store målet: et selskap som drifter seg selv på egne inntekter, med et lite team på plass.</span><span class="lang-en">The big goal: a company that sustains itself on its own revenue, with a small team in place.</span></p>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -273,10 +410,10 @@
         <article class="member" data-reveal style="--d: 1">
           <div class="avatar" aria-hidden="true">SU</div>
           <h3>Simen Uthaug</h3>
-          <div class="role">Co-founder · <span class="lang-no">Teknisk &amp; utvikler</span><span class="lang-en">Technical &amp; developer</span></div>
+          <div class="role">Co-founder · <span class="lang-no">Teknologi og utvikling</span><span class="lang-en">Technology and development</span></div>
           <p>
-            <span class="lang-no">Bachelor i informasjonsvitenskap (UiB) og mastergrad i UX og Utvikling. Full-stack-utvikler med erfaring i TypeScript, React, Python, API-integrasjon, databaser og maskinlæring (nevrale nett, NLP). Bygger YouTube-produktet som del av sin masteroppgave.</span>
-            <span class="lang-en">BSc in Information Science (UiB) plus a master's degree in UX and Development. Full-stack developer experienced in TypeScript, React, Python, API integration, databases and machine learning (neural nets, NLP). Building the YouTube product as part of his master's thesis.</span>
+            <span class="lang-no">Bachelor i informasjonsvitenskap fra Universitetet i Bergen og master i UX og utvikling. Fullstack-utvikler som jobber med TypeScript, React, Python og maskinlæring.</span>
+            <span class="lang-en">BSc in Information Science from the University of Bergen and a master's degree in UX and development. Full-stack developer working in TypeScript, React, Python and machine learning.</span>
           </p>
           <div class="tags"><span>UiB Info. Science</span> <span>TypeScript / React</span> <span>Python / ML</span> <span>Full-stack</span></div>
           <p><a class="link-arrow" href="https://www.linkedin.com/in/simen-uthaug" target="_blank" rel="noopener">LinkedIn →</a></p>
@@ -285,7 +422,7 @@
     </div>
   </section>
 
-  <!-- ───────── Bruk av midler ───────── -->
+  <!-- ───────── Bruk av midler (uten fordeling i prosent) ───────── -->
   <section class="section" id="funds">
     <div class="wrap">
       <div class="section-header" data-reveal>
@@ -296,95 +433,25 @@
         </h2>
       </div>
       <p class="section-intro" data-reveal style="--d: 1">
-        <span class="lang-no">Oppstartskapitalen går til å ferdigstille YouTube-produktet, maskinvare vi utvikler produkter på, AI-utviklingsverktøy, noe lønn, samt salg og markedsføring. Hentes det inn totalt rundt 250 000 kr, gir det oss 1–1,5 års runway. Fordelingen under er veiledende.</span>
-        <span class="lang-en">Funds go to finishing the YouTube product, hardware we build products on, AI development tools, some salary, and sales and marketing. Raising around NOK 250,000 in total gives us 1–1.5 years of runway. The split below is indicative.</span>
+        <span class="lang-no">Oppstartskapitalen går til utvikling av Nrth OS, oppstarten av selskapet og drift. Hentes det inn totalt rundt 250 000 kr, gir det oss 1–1,5 års runway.</span>
+        <span class="lang-en">The funds go to developing Nrth OS, getting the company started and running it. Raising around NOK 250,000 in total gives us 1–1.5 years of runway.</span>
       </p>
       <div class="inv-split">
-        <ul class="inv-funds" data-reveal>
-          <li style="--w: 35%; --i: 0">
-            <div class="inv-fund-top"><span class="lang-no">Produktutvikling</span><span class="lang-en">Product development</span> <span class="pct">35%</span></div>
-            <span class="inv-fund-bar" aria-hidden="true"><span></span></span>
-          </li>
-          <li style="--w: 20%; --i: 1">
-            <div class="inv-fund-top"><span class="lang-no">Maskinvare</span><span class="lang-en">Hardware</span> <span class="pct">20%</span></div>
-            <span class="inv-fund-bar" aria-hidden="true"><span></span></span>
-          </li>
-          <li style="--w: 20%; --i: 2">
-            <div class="inv-fund-top"><span class="lang-no">Salg &amp; markedsføring</span><span class="lang-en">Sales &amp; marketing</span> <span class="pct">20%</span></div>
-            <span class="inv-fund-bar" aria-hidden="true"><span></span></span>
-          </li>
-          <li style="--w: 15%; --i: 3">
-            <div class="inv-fund-top"><span class="lang-no">Lønn</span><span class="lang-en">Salary</span> <span class="pct">15%</span></div>
-            <span class="inv-fund-bar" aria-hidden="true"><span></span></span>
-          </li>
-          <li style="--w: 10%; --i: 4">
-            <div class="inv-fund-top"><span class="lang-no">Verktøy &amp; infrastruktur</span><span class="lang-en">Tools &amp; infrastructure</span> <span class="pct">10%</span></div>
-            <span class="inv-fund-bar" aria-hidden="true"><span></span></span>
-          </li>
+        <ul class="included" data-reveal>
+          <li><span class="arrow" aria-hidden="true">→</span> <span><span class="lang-no">Utvikling av Nrth OS</span><span class="lang-en">Developing Nrth OS</span></span></li>
+          <li><span class="arrow" aria-hidden="true">→</span> <span><span class="lang-no">Oppstarten av selskapet</span><span class="lang-en">Getting the company started</span></span></li>
+          <li><span class="arrow" aria-hidden="true">→</span> <span><span class="lang-no">Drift</span><span class="lang-en">Running the company</span></span></li>
         </ul>
         <div class="inv-panel" data-reveal style="--d: 1">
           <h3><span class="lang-no">Hva 250 000 kr gir oss</span><span class="lang-en">What NOK 250,000 buys</span></h3>
           <dl>
-            <div><dt><span class="lang-no">Runway</span><span class="lang-en">Runway</span></dt> <dd>1–1,5 år</dd></div>
-            <div><dt><span class="lang-no">Første produkt ferdigstilt</span><span class="lang-en">First product shipped</span></dt> <dd>YouTube</dd></div>
-            <div><dt><span class="lang-no">Mål: pilotkunder</span><span class="lang-en">Goal: pilot customers</span></dt> <dd><span class="lang-no">Sommer 2026</span><span class="lang-en">Summer 2026</span></dd></div>
-            <div><dt><span class="lang-no">Mål: betalende kunder</span><span class="lang-en">Goal: paying customers</span></dt> <dd><span class="lang-no">Høst 2026</span><span class="lang-en">Autumn 2026</span></dd></div>
+            <div><dt><span class="lang-no">Runway</span><span class="lang-en">Runway</span></dt> <dd><span class="lang-no">1–1,5 år</span><span class="lang-en">1–1.5 years</span></dd></div>
+            <div><dt><span class="lang-no">Første produkt</span><span class="lang-en">First product</span></dt> <dd>Nrth OS</dd></div>
+            <div><dt><span class="lang-no">Pilotprogram</span><span class="lang-en">Pilot program</span></dt> <dd><span class="lang-no">Åpent nå</span><span class="lang-en">Open now</span></dd></div>
+            <div><dt><span class="lang-no">Åpen lansering</span><span class="lang-en">Open launch</span></dt> <dd><span class="lang-no">4.&nbsp;kvartal 2026</span><span class="lang-en">Q4 2026</span></dd></div>
           </dl>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ───────── Planen videre ─────────
-       Samme tidslinje som «Slik jobber vi» på forsiden: linjen fylles mens man ruller,
-       og sirkelen blir svart når steget er nådd (assets/reveal.js). -->
-  <section class="section" id="plan">
-    <div class="wrap">
-      <div class="section-header" data-reveal>
-        <p class="kicker"><span class="lang-no">Planen videre</span><span class="lang-en">The road ahead</span></p>
-        <h2>
-          <span class="lang-no">Fra pilot til selvgående drift på 12 måneder.</span>
-          <span class="lang-en">From pilot to self-sustaining in 12 months.</span>
-        </h2>
-      </div>
-      <ol class="process roadmap">
-        <li class="process-step">
-          <div class="numeral" aria-hidden="true">1</div>
-          <span class="step-line" aria-hidden="true"><span></span></span>
-          <div class="step-text" data-reveal>
-            <p class="kicker"><span class="lang-no">Nå · Q2 2026</span><span class="lang-en">Now · Q2 2026</span></p>
-            <h3 class="step-label"><span class="lang-no">Selskap, merkevare og plattform på plass</span><span class="lang-en">Company, brand and platform in place</span></h3>
-            <p><span class="lang-no">Nrth AI er etablert, merkevare og AI-native plattform er live, og pilotdialoger pågår i Australia, Sverige og Norge.</span><span class="lang-en">Nrth AI is established, brand and AI-native platform are live, and pilot dialogues are underway in Australia, Sweden and Norway.</span></p>
-          </div>
-        </li>
-        <li class="process-step">
-          <div class="numeral" aria-hidden="true">2</div>
-          <span class="step-line" aria-hidden="true"><span></span></span>
-          <div class="step-text" data-reveal>
-            <p class="kicker"><span class="lang-no">Sommer 2026</span><span class="lang-en">Summer 2026</span></p>
-            <h3 class="step-label"><span class="lang-no">Lande pilotkunder + første foredrag/kurs</span><span class="lang-en">Land pilot customers + first talks/courses</span></h3>
-            <p><span class="lang-no">Viktigste milepæl: signere pilotkunder før sommerferien. Parallelt holder vi foredrag og kurs for å bygge synlighet og hente inn nye kundeemner.</span><span class="lang-en">Key milestone: sign pilot customers before the summer break. In parallel we run talks and courses to build visibility and generate new leads.</span></p>
-          </div>
-        </li>
-        <li class="process-step">
-          <div class="numeral" aria-hidden="true">3</div>
-          <span class="step-line" aria-hidden="true"><span></span></span>
-          <div class="step-text" data-reveal>
-            <p class="kicker"><span class="lang-no">Høst 2026</span><span class="lang-en">Autumn 2026</span></p>
-            <h3 class="step-label"><span class="lang-no">Første betalende kunder + produktlansering</span><span class="lang-en">First paying customers + product launch</span></h3>
-            <p><span class="lang-no">Konvertere piloter til betalende kunder og lansere det ferdige YouTube-produktet for et bredere marked.</span><span class="lang-en">Convert pilots into paying customers and launch the finished YouTube product to a wider market.</span></p>
-          </div>
-        </li>
-        <li class="process-step">
-          <div class="numeral" aria-hidden="true">4</div>
-          <span class="step-line" aria-hidden="true"><span></span></span>
-          <div class="step-text" data-reveal>
-            <p class="kicker"><span class="lang-no">Sommer 2027</span><span class="lang-en">Summer 2027</span></p>
-            <h3 class="step-label"><span class="lang-no">Selvgående drift med 1–3 ansatte</span><span class="lang-en">Self-sustaining operations with 1–3 employees</span></h3>
-            <p><span class="lang-no">Det store målet: et selskap som drifter seg selv på egne inntekter, med et lille team på plass.</span><span class="lang-en">The big goal: a company that sustains itself on its own revenue, with a small team in place.</span></p>
-          </div>
-        </li>
-      </ol>
     </div>
   </section>
 
@@ -444,6 +511,7 @@
         </div>
         <div class="inv-cta-actions">
           <a class="btn" href="mailto:thomas@nrth.no?subject=Nrth%20AI%20%E2%80%94%20Investering">thomas@nrth.no</a>
+          <a class="btn-ghost lang-no" href="https://trynrth.com/no" rel="noopener">trynrth.com ↗</a><a class="btn-ghost lang-en" href="https://trynrth.com" rel="noopener">trynrth.com ↗</a>
           <a class="btn-ghost" href="/">nrth.no →</a>
         </div>
       </div>
@@ -468,6 +536,7 @@
       </div>
       <nav class="footer-links" aria-label="Bunntekst">
         <ul>
+          <li><a href="https://trynrth.com" rel="noopener">trynrth.com ↗</a></li>
           <li><a href="/">nrth.no</a></li>
           <li><a href="#round"><span class="lang-no">Runden</span><span class="lang-en">The round</span></a></li>
           <li><a href="#team">Team</a></li>
