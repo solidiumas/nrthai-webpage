@@ -747,6 +747,10 @@ h2 {
   .info-box .btn-ghost { width: 100%; }
   .brief-form { padding: 24px 20px; }
   .booking-fields { grid-template-columns: 1fr; }
+  /* Google-kalenderen trenger 286 px for å vise to dager med klokkeslett ved siden av hverandre.
+     Rammen går derfor helt ut til kanten av panelet (20 px padding i .brief-form over). */
+  .booking-calendar { padding: 20px 0; }
+  .booking-frame { width: calc(100% + 40px); margin: 0 -20px; }
   .brief-sent { padding: 44px 20px; }
   .site-footer { padding-top: 64px; }
   .footer-top { grid-template-columns: 1fr; gap: 32px; }

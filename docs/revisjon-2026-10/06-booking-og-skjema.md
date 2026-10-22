@@ -23,6 +23,8 @@ window.NRTH_BOOKING = {
 
 Thomas fyller inn `provider` og `url` når verktøyet er valgt. Ingen annen kode skal måtte endres.
 
+Valgt 21.–22. oktober 2026: Google Kalender-avtaleplan («30 min. med Thomas»). `url` er innebyggingsadressen `https://calendar.google.com/calendar/appointments/schedules/…?gv=true`. Delelenken `calendar.app.google/…` går til en side Google ikke lar vises i en iframe (`X-Frame-Options: SAMEORIGIN`).
+
 - **Google Kalender-avtaleplan:** bruk innebyggingslenken fra Google Kalender (Del → Nettsted-innebygging). Iframe med `title="Velg tid for møte med Nrth AI"`.
 - **Cal.com:** bruk `https://cal.com/<bruker>/<type>?embed=true` i iframe, eller Cal.com sin innebyggingskode. Send tema som `?notes=Tema:%20<tema>`.
 
