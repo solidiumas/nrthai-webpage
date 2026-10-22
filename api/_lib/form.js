@@ -69,7 +69,7 @@ function sendPage(res, status, { lang, title, heading, text, link }) {
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="theme-color" content="#ffffff" />
 <link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="/assets/site.css?v=2026-10-21" />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-22" />
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet" />
 </head>
 <body>

@@ -11,6 +11,8 @@
    ========================================================================== */
 window.NRTH_BOOKING = {
   provider: "google",  // "google" | "cal". Valgt 21. oktober: Google Kalender-avtaleplan
-  url: "",             // Lim inn lenken fra Google Kalender her. Tom = forespørselsskjemaet vises
+  // Innebyggingsadressen (…/calendar/appointments/schedules/…?gv=true). Delelenken calendar.app.google/…
+  // går til en side Google ikke lar vises i en iframe. Tom = forespørselsskjemaet vises.
+  url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0gzsf4_MsId8WpPDCOGBxjGmTdKaoNi2DCyRfM6KdxJBkZgsn9c9rGwo3xUomrbNHqJLEIrZQZ?gv=true",
   durationMinutes: 30  // Møtelengden. Brikken «30 minutter» står i HTML og endres for hånd
 };

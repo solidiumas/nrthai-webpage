@@ -376,7 +376,7 @@ Mirror of `/personvern`, in English. Written 21 October 2026, to be reviewed by 
   - Technical logs are kept only for a short period by Vercel.
 
 ### Cookies and tracking
-- Text: nrth.no sets no cookies and uses no analytics or tracking tools. When the booking calendar from Google is shown on the page, Google may set its own cookies in the calendar. Google's privacy policy then applies.
+- Text: nrth.no sets no cookies and uses no analytics or tracking tools. The booking calendar on the page comes from Google. When it loads, Google receives your IP address and may set its own cookies in the calendar. Google's privacy policy then applies.
 
 ### Your rights
 - Text: You can ask for access to the information we hold about you, and ask us to correct or delete it. You can also ask us to restrict the processing, object to it and receive the information in a common format. Email contact@nrth.no, and we will reply within one month.
@@ -384,4 +384,4 @@ Mirror of `/personvern`, in English. Written 21 October 2026, to be reviewed by 
 
 ### Changes
 - Text: We update this page when we change how we process information.
-- Last updated: 21 October 2026
+- Last updated: 22 October 2026

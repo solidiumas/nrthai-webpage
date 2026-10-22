@@ -440,7 +440,7 @@ Siden skrives som vanlig tekst (`prose`), med H2 per del. Skrevet 21. oktober 20
   - Tekniske logger lagres bare en kort periode hos Vercel.
 
 ### Informasjonskapsler og sporing
-- Tekst: nrth.no setter ingen informasjonskapsler og bruker ikke analyse- eller sporingsverktøy. Når bookingkalenderen fra Google vises på siden, kan Google sette egne informasjonskapsler i kalenderen. Da gjelder Googles personvernerklæring.
+- Tekst: nrth.no setter ingen informasjonskapsler og bruker ikke analyse- eller sporingsverktøy. Bookingkalenderen på siden kommer fra Google. Når den lastes, får Google IP-adressen din og kan sette egne informasjonskapsler i kalenderen. Da gjelder Googles personvernerklæring.
 
 ### Dine rettigheter
 - Tekst: Du kan be om innsyn i opplysningene vi har om deg, og be oss rette eller slette dem. Du kan også be oss begrense behandlingen, protestere mot den og få opplysningene utlevert i et vanlig format. Send e-post til contact@nrth.no, så svarer vi innen én måned.
@@ -448,7 +448,7 @@ Siden skrives som vanlig tekst (`prose`), med H2 per del. Skrevet 21. oktober 20
 
 ### Endringer
 - Tekst: Vi oppdaterer denne siden når vi endrer hvordan vi behandler opplysninger.
-- Sist oppdatert: 21. oktober 2026
+- Sist oppdatert: 22. oktober 2026
 
 ---
 
