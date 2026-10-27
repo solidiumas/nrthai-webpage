@@ -36,7 +36,6 @@ Alle priser er eksklusive mva. og står på sidene for [AI-vurdering](/ai-vurder
 - **Modellforbruk.** Betaling per bruk til modelleverandør, eller inkludert i en plattform. For en AI-assistent som behandler noen hundre dokumenter i uken: typisk 500–3 000 kroner i måneden.
 - **Lisenser.** Hvis løsningen skal brukes av mange ansatte, kommer eventuelle verktøylisenser i tillegg. Vi anbefaler sjelden å kjøpe lisenser til alle.
 - **Egen tid.** Regn med 2–4 timer i uken fra én person hos dere under pilot. Uten det stopper det.
-- **Maskinvare**, bare for lokal AI. Se [artikkelen om lokal AI](/innsikt/lokal-ai).
 
 ## Hva får dere igjen?
 

@@ -34,7 +34,7 @@ Kvaliteten på åpne modeller i 2026 er god nok for de fleste bedriftsoppgaver: 
 
 ## Hva koster det?
 
-En server som kjører en modell i 30–70 milliarder-parameterklassen for 10–50 samtidige brukere koster typisk fra 150 000 til 500 000 kroner i innkjøp, avhengig av grafikkort, pluss strøm og drift. Alternativet er å leie dedikert GPU i et norsk eller europeisk datasenter. Hos oss koster [lokal AI-infrastruktur](/ai-tjenester#lokal-ai) typisk 100 000 til 1 000 000+ kr eks. mva., avhengig av omfang, og tar to til fire uker, utenom maskinvare. Nøyaktige tall avhenger av modell og antall brukere, og vi gir et regnestykke i første møte.
+En server som kjører en modell i 30–70 milliarder-parameterklassen for 10–50 samtidige brukere koster typisk fra 150 000 til 500 000 kroner i innkjøp, avhengig av grafikkort, pluss strøm og drift. Alternativet er å leie dedikert GPU i et norsk eller europeisk datasenter. Hos oss koster [lokal AI-infrastruktur](/ai-tjenester#lokal-ai) typisk 100 000 til 1 000 000+ kr eks. mva., inkludert maskinvare, avhengig av omfang, og tar to til fire uker. Nøyaktige tall avhenger av modell og antall brukere, og vi gir et regnestykke i første møte.
 
 ## Hva med personvern og regelverk?
 

@@ -145,3 +145,10 @@ Hver endring fra utkastene i strategidokumentet (fanen «Artikler nrth.no», 6. 
 - **Termer.** «| Rutineoppgaver som gjentas ukentlig | AI-medarbeidere, ikke chat-lisenser |» → «| Rutineoppgaver som gjentas ukentlig | AI-assistenter, ikke chat-lisenser |» (/Users/thomas.uthaug/nrth-nettside/data/tjenester.json)
 - **Eksempel fjernet.** ««Sett inn eget eksempel: en bedrift der dere anbefalte å ikke kjøpe lisenser til alle, og hva de gjorde i stedet.»» → «(fjernet)» (/Users/thomas.uthaug/nrth-nettside/CLAUDE.md)
 - **Fakta.** «Vi vurderer verktøy og leverandører som en del av [AI-kartleggingen](https://nrth.no/ai-vurdering), og vi selger ingen av lisensene. [Book et møte](https://nrth.no/book).» → «Vi vurderer verktøy og leverandører som en del av [ledersparringen](/ai-vurdering#ledersparring), og vi selger ingen av lisensene. [Book et møte](/book).» (/Users/thomas.uthaug/nrth-nettside/ai-vurdering/index.html (id="ledersparring" har «Vurdering av verktøy og leverandører»; AI-kartleggingen har det ikke; samme i docs/revisjon-2026-10/03-tekst-norsk.md))
+
+## Etter svar fra Thomas 27. oktober 2026
+
+- **Pris.** «det første året koster typisk mellom 100 000 og 400 000 kroner alt inkludert» → «det første året koster typisk mellom 100 000 og 400 000 kroner» i /innsikt/ai-for-bedrifter. Spennet står, men «alt inkludert» stemte ikke med /innsikt/hva-koster-et-ai-prosjekt, der modellforbruket kommer i tillegg.
+- **Pris.** «typisk 100 000 til 1 000 000+ kr eks. mva., avhengig av omfang, og tar to til fire uker, utenom maskinvare» → «typisk 100 000 til 1 000 000+ kr eks. mva., inkludert maskinvare, avhengig av omfang, og tar to til fire uker» i /innsikt/lokal-ai. Thomas: maskinvaren er med i prisen.
+- **Pris.** Punktet «Maskinvare, bare for lokal AI» under «Hva kommer i tillegg?» er fjernet fra /innsikt/hva-koster-et-ai-prosjekt, av samme grunn.
+- Bekreftet uendret: modellforbruket kommer i tillegg til driften, fast pris etter kartleggingen, at kartleggingen vurderer personvernkonsekvenser og risikoklasse, at Nrth AI ikke selger lisenser, og 2–4 timer i uken fra kunden under pilot.

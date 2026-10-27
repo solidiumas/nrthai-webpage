@@ -13,7 +13,7 @@ en_tittel: AI for businesses in 2026: where to start, costs and pitfalls
 en_beskrivelse: How a Norwegian business can adopt AI without wasting money: where to start, what an assessment and a pilot cost, and what to avoid.
 ---
 
-De fleste norske bedrifter bør starte med AI på én avgrenset arbeidsoppgave som gjentas ukentlig, ikke med en strategi, et verktøykjøp eller en chatbot. En kartlegging tar tre til fem dager, en pilot i drift tar to til tre uker, og det første året koster typisk mellom 100 000 og 400 000 kroner alt inkludert. Det er langt mindre enn de fleste tror, og langt mer strukturert enn å gi alle en ChatGPT-lisens og håpe.
+De fleste norske bedrifter bør starte med AI på én avgrenset arbeidsoppgave som gjentas ukentlig, ikke med en strategi, et verktøykjøp eller en chatbot. En kartlegging tar tre til fem dager, en pilot i drift tar to til tre uker, og det første året koster typisk mellom 100 000 og 400 000 kroner. Det er langt mindre enn de fleste tror, og langt mer strukturert enn å gi alle en ChatGPT-lisens og håpe.
 
 ## Hvor står norske bedrifter i dag?
 
