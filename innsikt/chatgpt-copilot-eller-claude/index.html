@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- .js skrur på animasjonene (assets/reveal.js). Lastes ikke skriptet innen tre sekunder, fjernes klassen så alt vises. -->
+<script>
+  document.documentElement.classList.add("js");
+  setTimeout(function () { if (!window.nrthReveal) document.documentElement.classList.remove("js"); }, 3000);
+</script>
+<!-- Laget av scripts/innsikt.mjs fra docs/innsikt/. Endre kilden og kjør skriptet, ikke denne filen. -->
+<title>ChatGPT, Copilot eller Claude i bedriften? Slik velger du</title>
+<meta name="description" content="ChatGPT, Copilot eller Claude? Fem spørsmål avgjør, ikke hvilken modell som er «best»: hvor dataene behandles, hva avtalen sier og om det kjører oppgaver." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="https://nrth.no/innsikt/chatgpt-copilot-eller-claude" />
+<link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/chatgpt-copilot-eller-claude" />
+<link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/chatgpt-copilot-eller-claude" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Nrth AI" />
+<meta property="og:title" content="ChatGPT, Copilot eller Claude i bedriften? Slik velger du" />
+<meta property="og:description" content="ChatGPT, Copilot eller Claude? Fem spørsmål avgjør, ikke hvilken modell som er «best»: hvor dataene behandles, hva avtalen sier og om det kjører oppgaver." />
+<meta property="og:url" content="https://nrth.no/innsikt/chatgpt-copilot-eller-claude" />
+<meta property="og:locale" content="nb_NO" />
+<meta property="og:image" content="https://nrth.no/innsikt/chatgpt-copilot-eller-claude/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="ChatGPT, Copilot eller Claude i bedriften? Slik velger du" />
+<meta name="author" content="Simen Uthaug" />
+<meta property="article:published_time" content="2026-10-27" />
+<meta property="article:modified_time" content="2026-10-27" />
+<meta property="article:section" content="Verktøyvalg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="Nrth AI for LLMs" />
+<link rel="alternate" type="application/atom+xml" href="/innsikt/feed.xml" title="Innsikt · Nrth AI" />
+
+<!-- Strukturerte data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Nrth AI",
+      "item": "https://nrth.no/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Innsikt",
+      "item": "https://nrth.no/innsikt"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ChatGPT, Copilot eller Claude i bedriften? Slik velger du",
+      "item": "https://nrth.no/innsikt/chatgpt-copilot-eller-claude"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://nrth.no/innsikt/chatgpt-copilot-eller-claude#artikkel",
+  "headline": "ChatGPT, Copilot eller Claude i bedriften? En praktisk sammenligning for norske SMB-er",
+  "description": "ChatGPT, Copilot eller Claude? Fem spørsmål avgjør, ikke hvilken modell som er «best»: hvor dataene behandles, hva avtalen sier og om det kjører oppgaver.",
+  "url": "https://nrth.no/innsikt/chatgpt-copilot-eller-claude",
+  "mainEntityOfPage": "https://nrth.no/innsikt/chatgpt-copilot-eller-claude",
+  "inLanguage": "nb",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "articleSection": "Verktøyvalg",
+  "wordCount": 463,
+  "image": "https://nrth.no/innsikt/chatgpt-copilot-eller-claude/og.png",
+  "author": {
+    "@type": "Person",
+    "@id": "https://nrth.no/om-oss#simen-uthaug",
+    "name": "Simen Uthaug",
+    "url": "https://nrth.no/om-oss#simen-uthaug",
+    "jobTitle": "Medgründer, teknologi og utvikling",
+    "sameAs": [
+      "https://www.linkedin.com/in/simen-uthaug"
+    ],
+    "worksFor": {
+      "@id": "https://nrth.no/#organization"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://nrth.no/#organization",
+    "name": "Nrth AI",
+    "legalName": "Nrth AI AS",
+    "url": "https://nrth.no/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nrth.no/logo-light.png"
+    }
+  },
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "@id": "https://nrth.no/innsikt"
+  }
+}
+</script>
+
+<link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-27" />
+<!-- Satoshi (logoen) fra Fontshare, lastet uten å blokkere visningen. Lisensen tillater ikke filene i et offentlig repo. -->
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" /></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Hopp til innhold</a>
+
+<!-- ───────── Meny ───────── -->
+<header class="site-nav">
+  <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
+    <span class="logo-mark">&lt;/&gt;</span>
+    <span class="logo-word">Nrth AI</span>
+  </a>
+  <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="primary-nav">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
+  <nav class="nav-right" id="primary-nav" aria-label="Hovedmeny">
+    <a class="nav-link" href="/ai-vurdering">AI-vurdering</a>
+    <a class="nav-link" href="/implementering">Implementering</a>
+    <a class="nav-link" href="/ai-tjenester">AI-tjenester</a>
+    <a class="nav-link" href="/innsikt">Innsikt</a>
+    <a class="nav-link" href="/om-oss">Om oss</a>
+    <a class="nav-link lang-switch" href="/en/insights" hreflang="en" lang="en" aria-label="English version">EN</a>
+    <a class="nav-cta" href="#book">Book et møte →</a>
+  </nav>
+</header>
+
+<main id="main">
+  <article>
+    <!-- ───────── Sidehero ───────── -->
+    <header class="page-hero page-hero--article">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Brødsmulesti">
+          <ol><li><a href="/">Forside</a></li><li><a href="/innsikt">Innsikt</a></li></ol>
+        </nav>
+        <h1>ChatGPT, Copilot eller Claude i bedriften? En praktisk sammenligning for norske SMB-er</h1>
+        <p class="lede">Hvilket AI-verktøy bedriften bør velge, avgjøres av fem spørsmål om bedriften, ikke av hvilken modell som scorer høyest denne måneden. Modellene bytter plass hvert kvartal; avtalen deres, dataene deres og arbeidsflyten deres gjør ikke det. Her er de fem spørsmålene, og hva de typisk peker mot.</p>
+        <p class="byline dots"><span>Av <a href="/om-oss#simen-uthaug" rel="author">Simen Uthaug</a></span> <span>Publisert <time datetime="2026-10-27">27. oktober 2026</time></span></p>
+      </div>
+    </header>
+
+    <!-- ───────── Artikkelen ───────── -->
+    <div class="section">
+      <div class="wrap">
+        <div class="prose">
+          <p>Vi oppgir bevisst ikke priser og funksjonslister. De endres for ofte til at en artikkel kan være riktig i tre måneder. Sjekk leverandørens egen side, og les avtalen.</p>
+          <h2 id="1-hvor-bor-arbeidet-deres-i-dag">1. Hvor bor arbeidet deres i dag?</h2>
+          <p>Er hele bedriften i Microsoft 365, med e-post, dokumenter og Teams der, er Copilot det verktøyet som er nærmest arbeidet. Det er argumentet for Copilot, og det er et godt argument. Er dere på Google Workspace, har Gemini den samme fordelen, fordi Gemini er <a href="https://workspace.google.com/blog/product-announcements/empowering-businesses-with-AI" rel="noopener">inkludert i Workspace Business- og Enterprise-planene</a>. Er dere spredt på flere systemer, forsvinner den fordelen, og ChatGPT og Claude stiller likt.</p>
+          <h2 id="2-hva-sier-avtalen-om-dataene">2. Hva sier avtalen om dataene?</h2>
+          <p>Alle tre har bedriftsversjoner uten trening på dataene deres og med databehandleravtale. Ingen av forbrukerversjonene har databehandleravtale, og om samtalene brukes til trening, avhenger av leverandør og innstillinger. Sjekk tre ting: at avtalen faktisk er inngått for deres konto, hvilken region dataene behandles i, og hvor lenge de lagres. Se <a href="/innsikt/ai-og-personvern">personvernsjekklisten</a>.</p>
+          <h2 id="3-skal-det-svare-eller-skal-det-jobbe">3. Skal det svare, eller skal det jobbe?</h2>
+          <p>En chat svarer når noen spør. Det er nyttig for utkast, oppsummering og spørsmål, og alle tre er gode til det. Men de ukentlige oppgavene som faktisk tar tid, fakturakontroll, tilbudsutkast, rapporter, krever noe som kjører på plan, med faste datakilder og en logg. Det er et annet produkt enn en chat, uansett leverandør. Se <a href="/innsikt/ai-assistenter">hva en AI-assistent er</a>.</p>
+          <h2 id="4-hvem-skal-bruke-det">4. Hvem skal bruke det?</h2>
+          <p>Fem personer i ledelsen som skriver mye: en chat-lisens per person. Førti ansatte der de fleste gjør rutinearbeid: lisenser til alle er dyrt og gir lite. Da er det bedre å sette opp noen få AI-assistenter som alle får resultatene fra.</p>
+          <h2 id="5-hvor-last-vil-dere-vaere">5. Hvor låst vil dere være?</h2>
+          <p>Copilot binder dere til Microsoft, ChatGPT til OpenAI, Claude til Anthropic. Det er greit så lenge dere vet det. Alternativet er et arbeidsrom som kan bytte modell under panseret, og som kan koble til en lokal modell for de mest sensitive dataene. Det er grunnen til at vi bygger <a href="https://trynrth.com" rel="noopener">Nrth OS</a> modellagnostisk.</p>
+          <h2 id="hva-anbefaler-vi">Hva anbefaler vi?</h2>
+          <div class="table-wrap" role="region" tabindex="0" aria-labelledby="hva-anbefaler-vi">
+            <table>
+              <thead><tr><th scope="col">Bedriften</th><th scope="col">Typisk anbefaling</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Alt i Microsoft 365, mest skriving og møter</th><td>Copilot til de som skriver mest, ikke til alle</td></tr>
+                <tr><th scope="row">Mye arbeid med lange dokumenter, analyser og kode</th><td>Claude eller ChatGPT til de som gjør det arbeidet</td></tr>
+                <tr><th scope="row">Rutineoppgaver som gjentas ukentlig</th><td>AI-assistenter, ikke chat-lisenser</td></tr>
+                <tr><th scope="row">Sensitive data, krav om kontroll</th><td>EU-region med europeisk-eid leverandør, eller lokal AI</td></tr>
+                <tr><th scope="row">Vil kunne bytte leverandør og modell</th><td>Et modellagnostisk arbeidsrom</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h2 id="neste-steg">Neste steg</h2>
+          <p>Vi vurderer verktøy og leverandører som en del av <a href="/ai-vurdering#ledersparring">ledersparringen</a>, og vi selger ingen av lisensene. <a href="#book">Book et møte</a>.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ───────── Les også ───────── -->
+  <section class="section section--compact">
+    <div class="wrap">
+      <div class="section-header" data-reveal>
+        <p class="kicker">Innsikt</p>
+        <h2>Les <em>også</em>.</h2>
+      </div>
+      <div class="card-grid card-grid--2">
+        <article class="card card--link" data-reveal style="--d: 0">
+          <div class="card-head"><span>Regelverk og trygghet</span></div>
+          <h3><a href="/innsikt/ai-og-personvern">AI og personvern: 6 ting å ha på plass før kundedata</a></h3>
+          <p>AI og personvern: kan dere bruke ChatGPT eller Copilot på kundedata? Ja, med databehandleravtale, behandlingssted, ingen trening, tilgang, logg og rutine.</p>
+          <p class="card-meta">Thomas Uthaug · <time datetime="2026-10-27">27. oktober 2026</time></p>
+        </article>
+        <article class="card card--link" data-reveal style="--d: 1">
+          <div class="card-head"><span>AI-assistenter</span></div>
+          <h3><a href="/innsikt/ai-assistenter">AI-assistenter: oppgaver, kostnad og grenser</a></h3>
+          <p>En AI-assistent er en AI-agent som tar én avgrenset rutineoppgave, på plan, med logg og kontroll. Fire eksempler, regnestykket bak 20–40&nbsp;% og grensene.</p>
+          <p class="card-meta">Thomas Uthaug · <time datetime="2026-10-27">27. oktober 2026</time></p>
+        </article>
+      </div>
+      <div class="section-actions" data-reveal>
+        <a class="link-arrow" href="/innsikt">Alle artikler →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Book et møte ───────── -->
+  <section class="section booking" id="book">
+    <div class="wrap">
+      <div class="cta-grid">
+        <div class="cta-left" data-reveal>
+          <p class="kicker">Book et møte</p>
+          <h2>Hvor kan AI gi dere <em>mest</em>?</h2>
+          <p class="lede">Book et møte med oss. Vi ser på hvordan dere jobber, og hvor AI kan øke salget, spare tid eller heve kvaliteten.</p>
+          <p class="included-label">I møtet</p>
+          <ul class="included">
+            <li><span class="arrow" aria-hidden="true">→</span> <span>Vi ser på hvordan dere jobber i dag.</span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span>Vi peker på hvor AI kan øke salget eller spare tid.</span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span>Dere får forslag til første steg, med pris og tidslinje.</span></li>
+          </ul>
+          <div class="booking-chips"><span>30 minutter</span> <span>Fysisk i Norge eller digitalt</span></div>
+          <p class="booking-alt">Heller skrive? <a class="link-arrow" href="/book#skriv">Send en forespørsel →</a></p>
+        </div>
+        <div class="brief-panel booking-panel" data-reveal style="--d: 1">
+          <form class="brief-form booking-form" method="POST" action="/api/book">
+            <input type="hidden" name="lang" value="nb" />
+            <fieldset class="topic-picker">
+              <legend>Hva vil dere snakke om? <span class="req" aria-hidden="true">*</span></legend>
+              <div class="topic-options">
+                <label class="topic-chip"><input type="radio" name="tema" value="ai-vurdering" required /><span>AI-vurdering</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="implementering" required /><span>Implementering</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="ai-tjenester" required /><span>AI-tjenester</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="foredrag" required /><span>Foredrag eller kurs</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="annet" required /><span>Annet</span></label>
+              </div>
+            </fieldset>
+            <div class="booking-request">
+              <div class="booking-fields">
+                <label><span class="lbl">Navn <span class="req" aria-hidden="true">*</span></span><input type="text" name="navn" required maxlength="2000" autocomplete="name" /></label>
+                <label><span class="lbl">E-post <span class="req" aria-hidden="true">*</span></span><input type="email" name="epost" required maxlength="2000" autocomplete="email" /></label>
+                <label><span class="lbl">Bedrift</span><input type="text" name="bedrift" maxlength="2000" autocomplete="organization" /></label>
+                <label><span class="lbl">Hva vil dere oppnå?</span>
+                  <select name="maal">
+                    <option value="" label=" "></option>
+                    <option value="salg">Øke salget</option>
+                    <option value="effektivitet">Jobbe mer effektivt</option>
+                    <option value="kvalitet">Forbedre kvalitet eller kundeopplevelse</option>
+                    <option value="vet-ikke">Vet ikke ennå</option>
+                  </select>
+                </label>
+                <label><span class="lbl">Når passer det?</span>
+                  <select name="naar">
+                    <option value="" label=" "></option>
+                    <option value="denne-uken">Denne uken</option>
+                    <option value="neste-uke">Neste uke</option>
+                    <option value="senere">Om to uker eller senere</option>
+                  </select>
+                </label>
+                <label><span class="lbl">Foretrukket tidspunkt</span><input type="text" name="tid" maxlength="2000" placeholder="F.eks. tirsdag formiddag" /></label>
+                <label><span class="lbl">Møteform</span>
+                  <select name="form">
+                    <option value="" label=" "></option>
+                    <option value="fysisk">Fysisk i Norge</option>
+                    <option value="digitalt">Digitalt</option>
+                  </select>
+                </label>
+              </div>
+              <div class="visually-hidden" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
+              <button type="submit" class="brief-submit" data-sending="Sender …">Book møtet →</button>
+              <p class="brief-error" role="alert" hidden>Noe gikk galt. Prøv igjen, eller send e-post til <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
+              <p class="brief-note">Vi bekrefter tidspunktet på e-post innen én virkedag. Se <a href="/personvern">personvern</a>.</p>
+            </div>
+          </form>
+          <div class="brief-sent">
+            <h3 tabindex="-1">Takk.<br /> <em>Vi bekrefter tiden.</em></h3>
+            <p>Du får svar fra contact@nrth.no innen én virkedag med forslag til tidspunkt.</p>
+            <button type="button" class="btn-ghost brief-reset">Book et nytt møte →</button>
+          </div>
+          <template class="booking-calendar-tpl" data-notes-prefix="Tema:">
+            <div class="booking-calendar">
+              <iframe class="booking-frame" title="Velg tid for møte med Nrth AI" loading="lazy"></iframe>
+              <p><a class="link-arrow">Åpne kalenderen i ny fane ↗</a></p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ───────── Footer ───────── -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
+          <span class="logo-mark">&lt;/&gt;</span>
+          <span class="logo-word">Nrth AI</span>
+        </a>
+      </div>
+      <nav class="footer-links" aria-label="Bunntekst">
+        <ul>
+          <li><a href="/ai-vurdering">AI-vurdering</a></li>
+          <li><a href="/implementering">Implementering</a></li>
+          <li><a href="/ai-tjenester">AI-tjenester</a></li>
+          <li><a href="/foredrag-og-kurs">Foredrag og kurs</a></li>
+          <li><a href="/innsikt">Innsikt</a></li>
+          <li><a href="/om-oss">Om oss</a></li>
+          <li><a href="/sporsmal-og-svar">Spørsmål og svar</a></li>
+          <li><a href="/personvern">Personvern</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-extra">
+        <li data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></li>
+        <li><a href="https://www.linkedin.com/company/nrth-ai/" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="/investors">Investorer</a></li>
+        <li><a href="/en/insights" hreflang="en" lang="en">English</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p class="dots"><span>© 2026 Nrth AI AS</span> <span>Bergen</span> <span>Org.nr. 937&nbsp;872&nbsp;038</span></p>
+      <p><span lang="en">Built by agents</span> · ▲</p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/reveal.js?v=2026-10-19b" defer></script>
+<script src="/assets/nav.js?v=2026-10-13" defer></script>
+<script src="/assets/booking-config.js" defer></script>
+<script src="/assets/booking.js?v=2026-10-13" defer></script>
+<script src="/assets/brief-form.js?v=2026-10-13" defer></script>
+</body>
+</html>

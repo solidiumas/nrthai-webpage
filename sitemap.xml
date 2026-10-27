@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nrth.no/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/" />
   </url>
   <url>
     <loc>https://nrth.no/en</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/" />
@@ -126,4 +126,68 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/faq" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/sporsmal-og-svar" />
   </url>
+  <!-- innsikt:start (laget av scripts/innsikt.mjs fra docs/innsikt/) -->
+  <url>
+    <loc>https://nrth.no/innsikt</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/insights" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt" />
+  </url>
+  <url>
+    <loc>https://nrth.no/en/insights</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/insights" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt" />
+  </url>
+  <url>
+    <loc>https://nrth.no/innsikt/ai-for-bedrifter</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/ai-for-bedrifter" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/ai-for-bedrifter" />
+  </url>
+  <url>
+    <loc>https://nrth.no/innsikt/norske-bedrifter-bruker-ai</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/norske-bedrifter-bruker-ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/norske-bedrifter-bruker-ai" />
+  </url>
+  <url>
+    <loc>https://nrth.no/innsikt/lokal-ai</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/lokal-ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/lokal-ai" />
+  </url>
+  <url>
+    <loc>https://nrth.no/innsikt/hva-koster-et-ai-prosjekt</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/hva-koster-et-ai-prosjekt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/hva-koster-et-ai-prosjekt" />
+  </url>
+  <url>
+    <loc>https://nrth.no/innsikt/ai-assistenter</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/ai-assistenter" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/ai-assistenter" />
+  </url>
+  <url>
+    <loc>https://nrth.no/innsikt/ai-og-personvern</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/ai-og-personvern" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/ai-og-personvern" />
+  </url>
+  <url>
+    <loc>https://nrth.no/innsikt/ai-forordningen</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/ai-forordningen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/ai-forordningen" />
+  </url>
+  <url>
+    <loc>https://nrth.no/innsikt/chatgpt-copilot-eller-claude</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/chatgpt-copilot-eller-claude" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/chatgpt-copilot-eller-claude" />
+  </url>
+  <!-- innsikt:slutt -->
 </urlset>

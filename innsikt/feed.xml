@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Laget av scripts/innsikt.mjs fra docs/innsikt/. -->
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="nb">
+  <title>Innsikt · Nrth AI</title>
+  <subtitle>Artikler om AI i norske bedrifter: hva det koster, personvern, AI-forordningen, lokal AI, AI-assistenter og valg av verktøy.</subtitle>
+  <link rel="self" type="application/atom+xml" href="https://nrth.no/innsikt/feed.xml" />
+  <link rel="alternate" type="text/html" href="https://nrth.no/innsikt" />
+  <id>https://nrth.no/innsikt</id>
+  <updated>2026-10-27T00:00:00Z</updated>
+  <author><name>Nrth AI</name><uri>https://nrth.no/</uri></author>
+  <entry>
+    <title>AI for bedrifter i 2026: hvor du starter, hva det koster og hva du bør la være</title>
+    <link rel="alternate" type="text/html" href="https://nrth.no/innsikt/ai-for-bedrifter" />
+    <id>https://nrth.no/innsikt/ai-for-bedrifter</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <author><name>Thomas Uthaug</name><uri>https://nrth.no/om-oss#thomas-uthaug</uri></author>
+    <category term="Ta i bruk AI" />
+    <summary>AI for bedrifter: slik tar en norsk bedrift i bruk AI uten å kaste bort penger. Hvor du starter, hva kartlegging og pilot koster, og hva du bør la være.</summary>
+    <content type="html">&lt;p&gt;De fleste norske bedrifter bør starte med AI på én avgrenset arbeidsoppgave som gjentas ukentlig, ikke med en strategi, et verktøykjøp eller en chatbot. En kartlegging tar tre til fem dager, en pilot i drift tar to til tre uker, og det første året koster typisk mellom 100 000 og 400 000 kroner. Det er langt mindre enn de fleste tror, og langt mer strukturert enn å gi alle en ChatGPT-lisens og håpe.&lt;/p&gt;
+&lt;h2 id=&quot;hvor-star-norske-bedrifter-i-dag&quot;&gt;Hvor står norske bedrifter i dag?&lt;/h2&gt;
+&lt;p&gt;Nesten fem av ti norske foretak med minst ti ansatte brukte én eller flere AI-teknologier i 2026, opp fra tre av ti i 2025, to av ti i 2024 og én av ti i 2023, ifølge &lt;a href=&quot;https://www.ssb.no/teknologi-og-innovasjon/informasjons-og-kommunikasjonsteknologi-ikt/statistikk/bruk-av-ikt-i-naeringslivet/artikler/bruken-av-ki-i-naeringslivet-akselererer&quot; rel=&quot;noopener&quot;&gt;SSB&lt;/a&gt;. Store foretak med over 99 ansatte har gått fra 27 til 78 prosent på tre år. Små bedrifter henger etter, og avstanden øker. Blant foretakene som har vurdert å ta i bruk AI uten å gjøre det, sier 68 prosent at de mangler kompetanse, og fire av ti er bekymret for personvern og juss (&lt;a href=&quot;https://www.ssb.no/statbank/table/14944&quot; rel=&quot;noopener&quot;&gt;SSB, tabell 14944&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Det betyr to ting. Konkurrentene dine er i ferd med å ta i bruk AI, og hovedhinderet er ikke teknologi, men at ingen i bedriften vet hvor de skal begynne.&lt;/p&gt;
+&lt;h2 id=&quot;hvor-starter-du&quot;&gt;Hvor starter du?&lt;/h2&gt;
+&lt;p&gt;Start med å finne de tre til fem stedene i bedriften der AI faktisk endrer regnestykket. Det er sjelden der folk tror. Det er ikke kundeservice-chatboten, det er de ukentlige oppgavene som tar timer og krever lesing, sammenligning og skriving: fakturakontroll, tilbudsutkast, svar på standardhenvendelser, ukesrapporter, leverandøroppfølging.&lt;/p&gt;
+&lt;p&gt;En god test: kan oppgaven beskrives i en setning, gjentas den minst ukentlig, og finnes det dokumenter den bygger på? Da er den en kandidat. Oppgaver som krever skjønn i hvert tilfelle, eller som ingen kan beskrive, er det ikke.&lt;/p&gt;
+&lt;h2 id=&quot;hva-koster-det&quot;&gt;Hva koster det?&lt;/h2&gt;
+&lt;p&gt;Hos oss koster AI-kartlegging fra 35 000 kroner og tar tre til fem dager. En strategisprint på to uker koster fra 75 000 kroner. En pilot i drift tar to til tre uker og koster fra 60 000 kroner. AI-assistenter har oppsett fra ca. 50 000 kroner og drift fra 5 000 kroner per måned, og lokal AI-infrastruktur koster typisk 100 000 til 1 000 000+ kroner. Alle priser er eksklusive mva. og står på sidene om &lt;a href=&quot;https://nrth.no/ai-vurdering&quot;&gt;AI-vurdering&lt;/a&gt;, &lt;a href=&quot;https://nrth.no/implementering&quot;&gt;implementering&lt;/a&gt;, &lt;a href=&quot;https://nrth.no/ai-tjenester&quot;&gt;AI-tjenester&lt;/a&gt; og &lt;a href=&quot;https://nrth.no/foredrag-og-kurs&quot;&gt;foredrag og kurs&lt;/a&gt;. I tillegg kommer forbruk på modeller, som for de fleste SMB-er ligger på noen hundre til noen tusen kroner i måneden per løsning.&lt;/p&gt;
+&lt;p&gt;En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året. Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tilsvarende én til flere ekstra ansatte, og kvaliteten går opp. AI koster typisk 20–40 % av det én ansatt koster.&lt;/p&gt;
+&lt;h2 id=&quot;hva-bor-du-la-vaere&quot;&gt;Hva bør du la være?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Ikke kjøp lisenser til alle før dere vet hva de skal brukes til.&lt;/strong&gt; Copilot- eller ChatGPT-lisenser til 50 ansatte er fort et sekssifret beløp i året. Uten en plan brukes de til å skrive e-post litt raskere.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Ikke start med en chatbot på nettsiden.&lt;/strong&gt; Den er synlig, men sjelden der verdien ligger.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Ikke send kundedata til gratisverktøy.&lt;/strong&gt; Gratisversjonene av de fleste AI-tjenester bruker data til trening. Se &lt;a href=&quot;https://nrth.no/innsikt/ai-og-personvern&quot;&gt;AI og personvern&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Ikke vent på at alt skal bli klart.&lt;/strong&gt; Regelverket (AI-forordningen) gjelder i EU i hovedsak fra august 2026, men er ennå ikke gjennomført i norsk rett, og &lt;a href=&quot;https://www.regjeringen.no/no/aktuelt/tung-vil-sende-ki-loven-med-endringer-pa-horing/id3169693/&quot; rel=&quot;noopener&quot;&gt;regjeringen&lt;/a&gt; tar sikte på å fremme KI-loven for Stortinget våren 2027. De fleste bruksområder for SMB-er er lavrisiko.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;hva-skjer-etter-piloten&quot;&gt;Hva skjer etter piloten?&lt;/h2&gt;
+&lt;p&gt;En pilot som virker skal i drift, med logg, kontroll og et menneske i løkka der det betyr noe. Deretter utvides den til neste oppgave. Det er slik AI blir en del av driften i stedet for et prosjekt som dør når konsulenten drar. Hvis dere vil gjøre mesteparten selv, er det det &lt;a href=&quot;https://trynrth.com&quot; rel=&quot;noopener&quot;&gt;Nrth OS&lt;/a&gt; bygges for.&lt;/p&gt;
+&lt;h2 id=&quot;neste-steg&quot;&gt;Neste steg&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nrth.no/book&quot;&gt;Book et møte&lt;/a&gt;, 30 minutter, fysisk i Norge eller digitalt. Vi ser på hvordan dere jobber i dag og peker på hvor AI gir mest. Dere får et forslag til første steg med pris og tidslinje.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Nesten fem av ti norske bedrifter bruker AI. Hva mangler resten?</title>
+    <link rel="alternate" type="text/html" href="https://nrth.no/innsikt/norske-bedrifter-bruker-ai" />
+    <id>https://nrth.no/innsikt/norske-bedrifter-bruker-ai</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <author><name>Thomas Uthaug</name><uri>https://nrth.no/om-oss#thomas-uthaug</uri></author>
+    <category term="Ta i bruk AI" />
+    <summary>AI i norske bedrifter: SSB-tallene for 2026 viser at 48 % av foretak med minst ti ansatte bruker AI. Hva det betyr for små bedrifter, og hva som virker.</summary>
+    <content type="html">&lt;p&gt;Nesten fem av ti norske foretak med minst ti ansatte brukte AI-teknologi i 2026, og de store drar fra: 78 prosent av foretak med over 99 ansatte, mot 27 prosent tre år tidligere. Blant foretakene som har vurdert å ta i bruk AI uten å gjøre det, oppgir 68 prosent manglende kompetanse som hindring. Tallene er fra &lt;a href=&quot;https://www.ssb.no/teknologi-og-innovasjon/informasjons-og-kommunikasjonsteknologi-ikt/statistikk/bruk-av-ikt-i-naeringslivet/artikler/bruken-av-ki-i-naeringslivet-akselererer&quot; rel=&quot;noopener&quot;&gt;SSBs undersøkelse Bruk av IKT i næringslivet&lt;/a&gt;, publisert 25. september 2026.&lt;/p&gt;
+&lt;h2 id=&quot;hva-sier-tallene&quot;&gt;Hva sier tallene?&lt;/h2&gt;
+&lt;div class=&quot;table-wrap&quot; role=&quot;region&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;hva-sier-tallene&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;2023&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;2024&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;2025&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;2026&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Foretak med minst 10 ansatte som bruker AI&lt;/th&gt;&lt;td&gt;1 av 10&lt;/td&gt;&lt;td&gt;2 av 10&lt;/td&gt;&lt;td&gt;3 av 10&lt;/td&gt;&lt;td&gt;nesten 5 av 10&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Foretak med over 99 ansatte&lt;/th&gt;&lt;td&gt;27 %&lt;/td&gt;&lt;td&gt;42 %&lt;/td&gt;&lt;td&gt;58 %&lt;/td&gt;&lt;td&gt;78 %&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Befolkningen 16–79 år som brukte generativ AI siste tre måneder&lt;/th&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;36 %&lt;/td&gt;&lt;td&gt;54 %&lt;/td&gt;&lt;td&gt;69 %&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Kilde: SSB, september 2025 og september 2026. Små foretak under 50 ansatte har mer enn tredoblet bruken siden 2023, men fra et svært lavt nivå.&lt;/p&gt;
+&lt;p&gt;Veksten drives først og fremst av generativ AI: tekstanalyse, tekstgenerering og verktøy som ChatGPT og Copilot. Det er den typen AI som er lett å begynne med, og vanskelig å få verdi av uten en plan.&lt;/p&gt;
+&lt;h2 id=&quot;hvorfor-henger-sma-bedrifter-etter&quot;&gt;Hvorfor henger små bedrifter etter?&lt;/h2&gt;
+&lt;p&gt;SSB stilte spørsmålet. Av foretakene som har vurdert å ta i bruk AI, men ikke gjort det, svarte 68 prosent i 2026 at de mangler relevant kompetanse, ned fra 77 prosent året før. Fire av ti var bekymret for data- og personvern og uklare juridiske konsekvenser.&lt;/p&gt;
+&lt;p&gt;SSB-tallene gjelder foretak med minst ti ansatte. Det finnes ingen god nasjonal statistikk for de aller minste. Vår erfaring er at bildet er det samme der, men forsterket: én person eier alle beslutninger, og den personen har ikke tid til å finne ut hva som virker.&lt;/p&gt;
+&lt;h2 id=&quot;hva-skiller-de-som-lykkes&quot;&gt;Hva skiller de som lykkes?&lt;/h2&gt;
+&lt;p&gt;Det er ikke størrelse og ikke budsjett. Det er tre ting:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;De starter med én oppgave, ikke med verktøyet.&lt;/strong&gt; Bedrifter som kjøper lisenser først, bruker dem til å skrive e-post. Bedrifter som velger oppgave først, får en målbar gevinst.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Noen eier det.&lt;/strong&gt; Én person med mandat til å teste, feile og justere. I store foretak er det en avdeling. I små må det være en leder eller en som får tid frigjort.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dataene er avklart.&lt;/strong&gt; De vet hvor dataene behandles og hva som ikke skal sendes ut. Da forsvinner den juridiske bekymringen, og piloten kan starte.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;hva-betyr-det-for-deg&quot;&gt;Hva betyr det for deg?&lt;/h2&gt;
+&lt;p&gt;Hvis dere er blant de rundt halvparten som ennå ikke bruker AI, er dere ikke sent ute. Men gapet til de store vokser hvert år, og de store konkurrerer om de samme kundene. Det som skal til er ikke mer kompetanse i hele organisasjonen, men nok kompetanse til å velge riktig første steg. Det er det en &lt;a href=&quot;https://nrth.no/ai-vurdering#kartlegging&quot;&gt;AI-kartlegging&lt;/a&gt; på tre til fem dager er til for, og det er det en &lt;a href=&quot;https://nrth.no/foredrag-og-kurs&quot;&gt;workshop for ledergruppen&lt;/a&gt; gir dere selv.&lt;/p&gt;
+&lt;h2 id=&quot;neste-steg&quot;&gt;Neste steg&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nrth.no/book&quot;&gt;Book et møte&lt;/a&gt;, så ser vi på hvor dere står i forhold til tallene over, og hvor det er enklest å begynne.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Lokal AI: når bedriften bør kjøre AI på egen maskinvare, og når skyen holder</title>
+    <link rel="alternate" type="text/html" href="https://nrth.no/innsikt/lokal-ai" />
+    <id>https://nrth.no/innsikt/lokal-ai</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <author><name>Simen Uthaug</name><uri>https://nrth.no/om-oss#simen-uthaug</uri></author>
+    <category term="Lokal AI og datakontroll" />
+    <summary>Lokal AI betyr at modellen kjører på maskinvare dere eier eller leier alene. Når det lønner seg, hva det koster, og når EU-sky holder. Nrth AI, Bergen.</summary>
+    <content type="html">&lt;p&gt;Lokal AI betyr at språkmodellen kjører på maskinvare dere eier eller leier alene, slik at dokumenter, kundedata og spørsmål ikke sendes til OpenAI, Anthropic, Microsoft eller andre AI-leverandører. Det lønner seg for bedrifter med sensitive data, svært høyt og jevnt forbruk, eller krav fra kunder og tilsyn om at dataene skal behandles i Norge eller internt. For de fleste andre holder en modell som kjører i EU, med en avtale som sier at dataene ikke brukes til trening.&lt;/p&gt;
+&lt;h2 id=&quot;hva-er-lokal-ai&quot;&gt;Hva er lokal AI?&lt;/h2&gt;
+&lt;p&gt;En åpen språkmodell (for eksempel fra Meta, Mistral eller Alibaba) installeres på en server med ett eller flere grafikkort. Bedriftens egne verktøy snakker med den serveren i stedet for med OpenAI, Anthropic eller Microsoft.&lt;/p&gt;
+&lt;p&gt;Kvaliteten på åpne modeller i 2026 er god nok for de fleste bedriftsoppgaver: oppsummering, utkast, klassifisering, søk i egne dokumenter. De er fortsatt bak de beste skymodellene på komplekse resonnementer og lange oppgaver. Det er den avveiningen dere faktisk gjør.&lt;/p&gt;
+&lt;h2 id=&quot;nar-lonner-lokal-ai-seg&quot;&gt;Når lønner lokal AI seg?&lt;/h2&gt;
+&lt;div class=&quot;table-wrap&quot; role=&quot;region&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;nar-lonner-lokal-ai-seg&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Situasjon&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Lokal AI&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;EU-sky med databehandleravtale&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Helse-, advokat-, regnskaps- eller forsvarsdata&lt;/th&gt;&lt;td&gt;Ja&lt;/td&gt;&lt;td&gt;Ofte, men sjekk kundens krav&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Kunder krever at dataene behandles i Norge eller internt&lt;/th&gt;&lt;td&gt;Ja&lt;/td&gt;&lt;td&gt;Nei&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Jevnt høyt forbruk, mange brukere hele dagen&lt;/th&gt;&lt;td&gt;Kan bli billigere over tid ved svært høyt volum&lt;/td&gt;&lt;td&gt;Kan bli dyrt over tid med de kraftigste modellene&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Få brukere, sporadisk bruk&lt;/th&gt;&lt;td&gt;Nei, maskinvaren står stille&lt;/td&gt;&lt;td&gt;Ja&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Behov for de kraftigste modellene&lt;/th&gt;&lt;td&gt;Nei&lt;/td&gt;&lt;td&gt;Ja&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Ingen egen IT-drift&lt;/th&gt;&lt;td&gt;Krevende&lt;/td&gt;&lt;td&gt;Ja&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;hva-koster-det&quot;&gt;Hva koster det?&lt;/h2&gt;
+&lt;p&gt;En server som kjører en modell i 30–70 milliarder-parameterklassen for 10–50 samtidige brukere koster typisk fra 150 000 til 500 000 kroner i innkjøp, avhengig av grafikkort, pluss strøm og drift. Alternativet er å leie dedikert GPU i et norsk eller europeisk datasenter. Hos oss koster &lt;a href=&quot;https://nrth.no/ai-tjenester#lokal-ai&quot;&gt;lokal AI-infrastruktur&lt;/a&gt; typisk 100 000 til 1 000 000+ kr eks. mva., inkludert maskinvare, avhengig av omfang, og tar to til fire uker. Nøyaktige tall avhenger av modell og antall brukere, og vi gir et regnestykke i første møte.&lt;/p&gt;
+&lt;h2 id=&quot;hva-med-personvern-og-regelverk&quot;&gt;Hva med personvern og regelverk?&lt;/h2&gt;
+&lt;p&gt;Lokal AI løser ikke personvernet alene. Dere er fortsatt behandlingsansvarlig for dataene, og modellen må ikke få tilgang til mer enn den trenger. Men lokal AI fjerner det vanskeligste spørsmålet, nemlig overføring til tredjepart og til land utenfor EØS. For AI-forordningen er lokal AI i seg selv verken bedre eller verre; det er bruksområdet som avgjør risikoklassen.&lt;/p&gt;
+&lt;h2 id=&quot;et-mellomalternativ-eu-hosting-uten-trening&quot;&gt;Et mellomalternativ: EU-hosting uten trening&lt;/h2&gt;
+&lt;p&gt;For bedrifter som ikke har egen IT-drift, finnes et mellomalternativ: en tjeneste der modellene kjører i EU, med databehandleravtale, uten at dataene brukes til trening, og der dere kan velge kun europeiske leverandører. Det er slik &lt;a href=&quot;https://trynrth.com/no/data&quot; rel=&quot;noopener&quot;&gt;Nrth OS&lt;/a&gt; bygges, med mulighet til å koble på en egen lokal modell når dere er klare for det.&lt;/p&gt;
+&lt;h2 id=&quot;neste-steg&quot;&gt;Neste steg&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nrth.no/book&quot;&gt;Book et møte&lt;/a&gt; hvis dere vil ha et konkret regnestykke for deres datamengde og brukere. Vi sier fra hvis skyen er det riktige svaret.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hva koster et AI-prosjekt? Priser og tidslinjer for kartlegging, pilot og drift</title>
+    <link rel="alternate" type="text/html" href="https://nrth.no/innsikt/hva-koster-et-ai-prosjekt" />
+    <id>https://nrth.no/innsikt/hva-koster-et-ai-prosjekt</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <author><name>Thomas Uthaug</name><uri>https://nrth.no/om-oss#thomas-uthaug</uri></author>
+    <category term="Ta i bruk AI" />
+    <summary>Hva koster et AI-prosjekt? AI-kartlegging fra 35 000 kr, strategisprint fra 75 000 kr, pilot i drift på 2–3 uker. Hele regnestykket for en norsk SMB.</summary>
+    <content type="html">&lt;p&gt;Et AI-prosjekt i en norsk småbedrift koster typisk 100 000 til 400 000 kroner det første året, fordelt på kartlegging, pilot og de første månedene i drift. Modellforbruket kommer i tillegg og ligger for de fleste på noen hundre til noen tusen kroner i måneden per løsning. Her er tallene vi selv bruker, slik at dere kan regne på det før første møte.&lt;/p&gt;
+&lt;h2 id=&quot;vare-priser&quot;&gt;Våre priser&lt;/h2&gt;
+&lt;div class=&quot;table-wrap&quot; role=&quot;region&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;vare-priser&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Leveranse&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Tid&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Pris&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Passer for&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;AI-kartlegging&lt;/th&gt;&lt;td&gt;3–5 dager&lt;/td&gt;&lt;td&gt;Fra 35 000 kr&lt;/td&gt;&lt;td&gt;Bedrifter som vil vite hvor de skal begynne&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Strategisprint&lt;/th&gt;&lt;td&gt;2 uker&lt;/td&gt;&lt;td&gt;Fra 75 000 kr&lt;/td&gt;&lt;td&gt;Ledergrupper som skal ta en beslutning&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Ledersparring&lt;/th&gt;&lt;td&gt;Månedlig&lt;/td&gt;&lt;td&gt;Fra 25 000 kr per måned&lt;/td&gt;&lt;td&gt;Daglige ledere som vil ha en partner som sier fra&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Pilot i drift&lt;/th&gt;&lt;td&gt;2–3 uker&lt;/td&gt;&lt;td&gt;Fra 60 000 kr&lt;/td&gt;&lt;td&gt;Én løsning på én avgrenset oppgave&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Innføring av AI-verktøy&lt;/th&gt;&lt;td&gt;2–4 uker&lt;/td&gt;&lt;td&gt;Fra 30 000 kr&lt;/td&gt;&lt;td&gt;Bedrifter som har kjøpt, eller skal kjøpe, AI-verktøy og vil få verdi ut av dem&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Drift og forbedring&lt;/th&gt;&lt;td&gt;Løpende&lt;/td&gt;&lt;td&gt;Fra 5 000 kr per måned&lt;/td&gt;&lt;td&gt;Alle som har AI i drift og vil at den skal fortsette å levere&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;AI-assistenter&lt;/th&gt;&lt;td&gt;1–3 uker&lt;/td&gt;&lt;td&gt;Oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned&lt;/td&gt;&lt;td&gt;Rutineoppgaver som gjentas ukentlig&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Skreddersydde løsninger&lt;/th&gt;&lt;td&gt;4–16 uker&lt;/td&gt;&lt;td&gt;Små fra ca. 150 000 kr, mellomstore fra 400 000 kr, store fra 1 000 000 kr&lt;/td&gt;&lt;td&gt;Prosesser som krever integrasjon mot egne systemer&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Lokal AI-infrastruktur&lt;/th&gt;&lt;td&gt;2–4 uker&lt;/td&gt;&lt;td&gt;Typisk 100 000 til 1 000 000+ kr&lt;/td&gt;&lt;td&gt;Regulerte bransjer og bedrifter der kontroll over egne data er et strategisk valg, ikke et krav å krysse av for&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Alle priser er eksklusive mva. og står på sidene for &lt;a href=&quot;https://nrth.no/ai-vurdering&quot;&gt;AI-vurdering&lt;/a&gt;, &lt;a href=&quot;https://nrth.no/implementering&quot;&gt;implementering&lt;/a&gt; og &lt;a href=&quot;https://nrth.no/ai-tjenester&quot;&gt;AI-tjenester&lt;/a&gt;. Vi oppgir fast pris etter kartleggingen, ikke timer.&lt;/p&gt;
+&lt;h2 id=&quot;hva-kommer-i-tillegg&quot;&gt;Hva kommer i tillegg?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Modellforbruk.&lt;/strong&gt; Betaling per bruk til modelleverandør, eller inkludert i en plattform. For en AI-assistent som behandler noen hundre dokumenter i uken: typisk 500–3 000 kroner i måneden.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Lisenser.&lt;/strong&gt; Hvis løsningen skal brukes av mange ansatte, kommer eventuelle verktøylisenser i tillegg. Vi anbefaler sjelden å kjøpe lisenser til alle.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Egen tid.&lt;/strong&gt; Regn med 2–4 timer i uken fra én person hos dere under pilot. Uten det stopper det.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;hva-far-dere-igjen&quot;&gt;Hva får dere igjen?&lt;/h2&gt;
+&lt;p&gt;En dyktig medarbeider koster 1–1,5 millioner kroner i året. Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tilsvarende én til flere ekstra ansatte, og kvaliteten går opp. AI koster typisk 20–40 % av det én ansatt koster. Regnestykket er bare interessant hvis oppgaven faktisk tar tid i dag: finn timene først, så regn.&lt;/p&gt;
+&lt;h2 id=&quot;hva-koster-det-a-gjore-det-selv&quot;&gt;Hva koster det å gjøre det selv?&lt;/h2&gt;
+&lt;p&gt;En del bedrifter vil kunne gjøre det meste selv med et verktøy som bygges for det. &lt;a href=&quot;https://trynrth.com/no/pilot&quot; rel=&quot;noopener&quot;&gt;Nrth OS&lt;/a&gt; er i pilotfasen før åpen lansering i 4. kvartal 2026. Det skal ha månedlige nivåer med inkluderte kreditter i NOK, og en estimert kostnad skal vises før hver oppgave. Da trenger dere kartleggingen, ikke implementeringen.&lt;/p&gt;
+&lt;h2 id=&quot;neste-steg&quot;&gt;Neste steg&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nrth.no/book&quot;&gt;Book et møte&lt;/a&gt;. Dere får forslag til første steg med pris og tidslinje, og vi sier fra hvis det ikke lønner seg.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Hva er en AI-assistent? Fire oppgaver den tar, og regnestykket bak 20–40 %</title>
+    <link rel="alternate" type="text/html" href="https://nrth.no/innsikt/ai-assistenter" />
+    <id>https://nrth.no/innsikt/ai-assistenter</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <author><name>Thomas Uthaug</name><uri>https://nrth.no/om-oss#thomas-uthaug</uri></author>
+    <category term="AI-assistenter" />
+    <summary>En AI-assistent er en AI-agent som tar én avgrenset rutineoppgave, på plan, med logg og kontroll. Fire eksempler, regnestykket bak 20–40 % og grensene.</summary>
+    <content type="html">&lt;p&gt;En AI-assistent er en AI-agent satt opp for én avgrenset oppgave i bedriften: den har instruks, tilgang til bestemte dokumenter og systemer, kjører på plan eller på forespørsel, og leverer et resultat et menneske godkjenner. Den jobber sammen med de ansatte. Den tar de timene i uken som går med til å lese, sammenligne og skrive det samme om igjen. AI koster typisk 20–40 % av det én ansatt koster.&lt;/p&gt;
+&lt;h2 id=&quot;hva-skiller-en-ai-assistent-fra-chatgpt&quot;&gt;Hva skiller en AI-assistent fra ChatGPT?&lt;/h2&gt;
+&lt;p&gt;ChatGPT svarer når du spør. En AI-assistent jobber uten at du spør: hver mandag klokken 07.00 går den gjennom forrige ukes leverandørfakturaer og flagger det som ikke stemmer med avtalene. Den har fast tilgang til riktige mapper, den husker tilbakemeldingene dine, og alt den gjør logges. Forskjellen er ikke modellen. Forskjellen er at oppgaven, dataene og kontrollen er satt opp én gang.&lt;/p&gt;
+&lt;h2 id=&quot;fire-oppgaver-en-ai-assistent-tar&quot;&gt;Fire oppgaver en AI-assistent tar&lt;/h2&gt;
+&lt;div class=&quot;table-wrap&quot; role=&quot;region&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;fire-oppgaver-en-ai-assistent-tar&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Oppgave&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Jobber fra&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Leverer&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Typisk tid spart&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Fakturakontroll&lt;/th&gt;&lt;td&gt;Leverandørfakturaer i regnskapssystem eller mappe, leverandøravtaler&lt;/td&gt;&lt;td&gt;Ukentlig liste over avvik: dobbeltfakturaer, priser over avtalt nivå, manglende referanser&lt;/td&gt;&lt;td&gt;2–4 timer/uke&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Tilbudsutkast&lt;/th&gt;&lt;td&gt;Prisliste, tidligere tilbud, kundens forespørsel&lt;/td&gt;&lt;td&gt;Utkast med linjer og forutsetninger som må sjekkes før sending&lt;/td&gt;&lt;td&gt;1–3 timer per tilbud&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Supportoversikt&lt;/th&gt;&lt;td&gt;Innboks eller supportsystem, hjelpeartikler&lt;/td&gt;&lt;td&gt;Ukens vanligste spørsmål, svarutkast med kilder, forslag til ny hjelpeartikkel&lt;/td&gt;&lt;td&gt;3–5 timer/uke&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Konkurrent- og markedsbrief&lt;/th&gt;&lt;td&gt;Konkurrenters nettsider, nyheter, LinkedIn&lt;/td&gt;&lt;td&gt;Tre ting verdt å vite denne uken, med kilde, og ett utkast til innlegg&lt;/td&gt;&lt;td&gt;2–3 timer/uke&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Tidene er anslag for en bedrift med 10–50 ansatte, og avhenger av volum.&lt;/p&gt;
+&lt;h2 id=&quot;regnestykket-bak-20-40-prosent&quot;&gt;Regnestykket bak 20–40 prosent&lt;/h2&gt;
+&lt;p&gt;En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året inkludert sosiale kostnader. En AI-assistent for én oppgave koster oppsett (fra ca. 50 000 kroner hos oss, 1–3 uker) pluss drift (fra 5 000 kroner per måned) pluss forbruk (500–3 000 kroner i måneden) pluss tiden et menneske bruker på å godkjenne resultatene. AI koster typisk 20–40 % av det én ansatt koster.&lt;/p&gt;
+&lt;p&gt;Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tilsvarende én til flere ekstra ansatte, og kvaliteten går opp.&lt;/p&gt;
+&lt;h2 id=&quot;hva-kan-den-ikke&quot;&gt;Hva kan den ikke?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Oppgaver som krever skjønn i hvert enkelt tilfelle, uten regler å lene seg på.&lt;/li&gt;
+  &lt;li&gt;Oppgaver der ingen kan beskrive hva et godt resultat er.&lt;/li&gt;
+  &lt;li&gt;Oppgaver med data dere ikke har lov til å sende noe sted. Da må modellen kjøre lokalt, se &lt;a href=&quot;https://nrth.no/innsikt/lokal-ai&quot;&gt;lokal AI&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Å være uovervåket. Et menneske godkjenner, og en logg viser hva som ble gjort.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;hvordan-kommer-dere-i-gang&quot;&gt;Hvordan kommer dere i gang?&lt;/h2&gt;
+&lt;p&gt;Vi setter opp AI-assistenter som en &lt;a href=&quot;https://nrth.no/ai-tjenester#ai-assistenter&quot;&gt;tjeneste&lt;/a&gt;, 1–3 uker fra avtale til drift. Bedrifter som vil sette opp sine egne, kan søke om å bli pilotkunde i &lt;a href=&quot;https://trynrth.com/no/pilot&quot; rel=&quot;noopener&quot;&gt;Nrth OS&lt;/a&gt;, der assistenter, oppgaver, planlegging og logg bygges inn.&lt;/p&gt;
+&lt;h2 id=&quot;neste-steg&quot;&gt;Neste steg&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nrth.no/book&quot;&gt;Book et møte&lt;/a&gt;, så finner vi den ene oppgaven som bør gå først.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>AI og personvern: hva norske bedrifter må ha på plass før de bruker ChatGPT på kundedata</title>
+    <link rel="alternate" type="text/html" href="https://nrth.no/innsikt/ai-og-personvern" />
+    <id>https://nrth.no/innsikt/ai-og-personvern</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <author><name>Thomas Uthaug</name><uri>https://nrth.no/om-oss#thomas-uthaug</uri></author>
+    <category term="Regelverk og trygghet" />
+    <summary>AI og personvern: kan dere bruke ChatGPT eller Copilot på kundedata? Ja, med databehandleravtale, behandlingssted, ingen trening, tilgang, logg og rutine.</summary>
+    <content type="html">&lt;p&gt;Bedriften kan bruke AI-verktøy på kundedata og persondata, men bare med en bedriftsavtale som gir databehandleravtale, et avklart behandlingssted, og en garanti mot at dataene brukes til trening. Gratisversjoner og private kontoer gir ingen databehandleravtale, dere kan ikke velge hvor dataene behandles, og ingen av dem gir bedriften en avtale om at dataene ikke brukes til trening. Rundt fire av ti norske foretak som har vurdert å ta i bruk AI uten å gjøre det, oppgir bekymring for personvern (39 prosent) og uklare juridiske konsekvenser (39 prosent) som hindring (&lt;a href=&quot;https://www.ssb.no/statbank/table/14944&quot; rel=&quot;noopener&quot;&gt;SSB, 2026&lt;/a&gt;). Bekymringen er riktig; løsningen er ikke å la være, men å sette opp seks ting.&lt;/p&gt;
+&lt;p&gt;Dette er ikke juridisk rådgivning. Ved tvil, spør Datatilsynets veiledere eller en advokat.&lt;/p&gt;
+&lt;h2 id=&quot;1-databehandleravtale-med-ai-leverandoren&quot;&gt;1. Databehandleravtale med AI-leverandøren&lt;/h2&gt;
+&lt;p&gt;Når en ansatt limer kundens e-post inn i et AI-verktøy som bedriften har bedriftsavtale for, er leverandøren databehandler for bedriften. GDPR krever en skriftlig databehandleravtale. De store leverandørene tilbyr dette i bedriftsversjonene (Team, Business, Enterprise), ikke i forbrukerversjonene. Limes e-posten inn i en gratisversjon eller en privat konto, er leverandøren selv behandlingsansvarlig, og da er kundens opplysninger utlevert til en ny behandlingsansvarlig. Sjekk at avtalen faktisk er inngått, ikke bare tilgjengelig.&lt;/p&gt;
+&lt;h2 id=&quot;2-avklart-behandlingssted&quot;&gt;2. Avklart behandlingssted&lt;/h2&gt;
+&lt;p&gt;Finn ut hvor dataene behandles. I EU/EØS er det enkelt. Ved behandling i USA må det finnes et overføringsgrunnlag, som leverandørens sertifisering under EU–USA-rammeverket eller standardavtaler. Noen leverandører lar dere velge EU som region. Vær klar over at «behandlet i EU» hos en amerikansk-eid leverandør fortsatt kan omfattes av amerikansk lovgivning; for de mest sensitive dataene bør dere velge europeisk-eide leverandører eller &lt;a href=&quot;https://nrth.no/innsikt/lokal-ai&quot;&gt;lokal AI&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;3-ingen-trening-pa-dataene-deres&quot;&gt;3. Ingen trening på dataene deres&lt;/h2&gt;
+&lt;p&gt;Forbrukerversjoner av de fleste AI-tjenester bruker samtaler til å trene modellene som standard, med mindre det slås av. Bedriftsversjoner gjør det normalt ikke. Få det skriftlig. Det er den enkleste setningen å kreve, og den mest oversette.&lt;/p&gt;
+&lt;h2 id=&quot;4-tilgang-etter-behov&quot;&gt;4. Tilgang etter behov&lt;/h2&gt;
+&lt;p&gt;AI-verktøy som kobles til dokumentmapper og e-post, får tilgang til alt i dem. Gi hver bruk tilgang til de mappene oppgaven trenger, ikke hele SharePoint. Det er både personvern og sunn fornuft: en AI-assistent for fakturakontroll trenger ikke personalmappen.&lt;/p&gt;
+&lt;h2 id=&quot;5-logg-over-hva-som-ble-gjort&quot;&gt;5. Logg over hva som ble gjort&lt;/h2&gt;
+&lt;p&gt;Dere skal kunne svare på «hvilke data ble sendt hvor, og hva kom tilbake». Bedriftsverktøy har logg; limeklipping i en nettleser har det ikke. Loggen er også det som gjør det mulig å oppdage feil tidlig.&lt;/p&gt;
+&lt;h2 id=&quot;6-en-rutine-ansatte-faktisk-kan-folge&quot;&gt;6. En rutine ansatte faktisk kan følge&lt;/h2&gt;
+&lt;p&gt;Én side med tre regler: hvilke verktøy som er godkjent, hva som aldri skal limes inn (fødselsnummer, helseopplysninger, passord), og hvem man spør. Ingen rutine er verre enn en enkel rutine.&lt;/p&gt;
+&lt;h2 id=&quot;trenger-vi-en-personvernkonsekvensvurdering&quot;&gt;Trenger vi en personvernkonsekvensvurdering?&lt;/h2&gt;
+&lt;p&gt;Som hovedregel ja, når AI-verktøyet behandler personopplysninger. Det skriver &lt;a href=&quot;https://www.datatilsynet.no/regelverk-og-verktoy/rapporter-og-utredninger/rapporter-fra-sandkassa/ntnu-copilot-med-personvernbriller-pa/&quot; rel=&quot;noopener&quot;&gt;Datatilsynet&lt;/a&gt; om generativ AI, fordi det er ny teknologi og risikoen ennå er lite forstått. For behandling som systematisk vurderer enkeltpersoner, eller behandler sensitive opplysninger i stort omfang, er svaret ja. Datatilsynet har en veileder; kartleggingen vår tar stilling til det for hver oppgave.&lt;/p&gt;
+&lt;h2 id=&quot;neste-steg&quot;&gt;Neste steg&lt;/h2&gt;
+&lt;p&gt;Hvis dere vil ha behandlingssted, databehandleravtale og logg bygget inn fra start, er det slik &lt;a href=&quot;https://trynrth.com/no/data&quot; rel=&quot;noopener&quot;&gt;Nrth OS&lt;/a&gt; bygges. Hvis dere vil ha en gjennomgang av det dere bruker i dag, &lt;a href=&quot;https://nrth.no/book&quot;&gt;book et møte&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>AI-forordningen for norske bedrifter: hva gjelder fra 2026, og hva er utsatt</title>
+    <link rel="alternate" type="text/html" href="https://nrth.no/innsikt/ai-forordningen" />
+    <id>https://nrth.no/innsikt/ai-forordningen</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <author><name>Thomas Uthaug</name><uri>https://nrth.no/om-oss#thomas-uthaug</uri></author>
+    <category term="Regelverk og trygghet" />
+    <summary>EUs AI-forordning gjelder i hovedsak fra 2. august 2026, men høyrisikokravene er utsatt til 2027 og 2028. Hva en norsk SMB må gjøre, uten jus-språk.</summary>
+    <content type="html">&lt;p&gt;For de fleste norske småbedrifter vil AI-forordningen, når den blir norsk rett, bety tre konkrete plikter: dere skal sette i verk tiltak som støtter AI-kompetansen hos ansatte som bruker AI, kunder skal få vite når de snakker med en AI eller ser merkepliktig AI-generert innhold (som deepfakes), og AI skal ikke brukes til de forbudte formålene (som sosial poengsetting og manipulasjon). De tunge kravene gjelder bare «høyrisiko»-systemer, og de er utsatt til desember 2027 og august 2028. Det er ingen grunn til å vente med AI, og god grunn til å rydde i bruken.&lt;/p&gt;
+&lt;p&gt;Dette er en oversikt, ikke juridisk rådgivning. Forordningen er EØS-relevant og skal innføres i norsk rett gjennom EØS-avtalen, men per oktober 2026 er den ikke tatt inn i EØS-avtalen og ikke gjennomført i norsk rett. &lt;a href=&quot;https://www.regjeringen.no/no/aktuelt/tung-vil-sende-ki-loven-med-endringer-pa-horing/id3169693/&quot; rel=&quot;noopener&quot;&gt;Regjeringen&lt;/a&gt; har varslet at den norske KI-loven sendes på ny høring høsten 2026, med mål om å legge den fram for Stortinget våren 2027. Sjekk status for den norske gjennomføringen hos regjeringen.no og &lt;a href=&quot;https://nkom.no/ki/regulering/hvem-handhever&quot; rel=&quot;noopener&quot;&gt;Nkom&lt;/a&gt;, som skal være koordinerende markedstilsynsmyndighet og nasjonalt kontaktpunkt for AI-forordningen.&lt;/p&gt;
+&lt;h2 id=&quot;hva-gjelder-fra-nar&quot;&gt;Hva gjelder fra når?&lt;/h2&gt;
+&lt;div class=&quot;table-wrap&quot; role=&quot;region&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;hva-gjelder-fra-nar&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Dato&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Hva&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Gjelder det en SMB som bruker AI-verktøy?&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;2. februar 2025&lt;/th&gt;&lt;td&gt;Forbudte praksiser (art. 5) og krav om AI-kompetanse hos ansatte (art. 4, myket opp 27. juli 2026)&lt;/td&gt;&lt;td&gt;Ja, begge&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;2. august 2025&lt;/th&gt;&lt;td&gt;Plikter for leverandører av generelle AI-modeller (GPAI)&lt;/td&gt;&lt;td&gt;Nei, gjelder OpenAI, Google, Meta osv.&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;2. august 2026&lt;/th&gt;&lt;td&gt;Hoveddelen av forordningen, inkludert åpenhetskrav for AI-generert innhold og AI som snakker med mennesker (art. 50)&lt;/td&gt;&lt;td&gt;Ja, hvis dere har chatbot mot kunder eller publiserer AI-generert innhold&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;2. desember 2026&lt;/th&gt;&lt;td&gt;Nye forbud mot «nakenbilde-apper» og systemer som lager overgrepsmateriale&lt;/td&gt;&lt;td&gt;Nei, for normale bedrifter&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;2. desember 2027&lt;/th&gt;&lt;td&gt;Krav til frittstående høyrisikosystemer (vedlegg III), utsatt fra august 2026&lt;/td&gt;&lt;td&gt;Bare hvis dere bruker AI til rekruttering, kredittvurdering, utdanning eller lignende&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;2. august 2028&lt;/th&gt;&lt;td&gt;Krav til høyrisiko-AI innebygd i regulerte produkter (vedlegg I)&lt;/td&gt;&lt;td&gt;Bare produsenter av slike produkter&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Datoene gjelder i EU. I Norge gjelder pliktene først når forordningen er gjennomført i norsk rett. Utsettelsene kom med «Digital Omnibus on AI», vedtatt sommeren 2026. Kilder: &lt;a href=&quot;https://www.gibsondunn.com/eu-ai-act-omnibus-agreement-postponed-high-risk-deadlines-and-other-key-changes/&quot; rel=&quot;noopener&quot;&gt;Gibson Dunn&lt;/a&gt; og &lt;a href=&quot;https://www.goodwinlaw.com/en/insights/publications/2026/08/alerts-technology-dpc-eu-ai-act-transparency-obligations-now-in-force&quot; rel=&quot;noopener&quot;&gt;Goodwin&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;hva-ma-en-vanlig-bedrift-gjore&quot;&gt;Hva må en vanlig bedrift gjøre?&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Opplæring.&lt;/strong&gt; Dere skal sette i verk tiltak som støtter AI-kompetansen hos alle som bruker AI i jobben. Det betyr ikke et kurs i maskinlæring; det betyr at de vet hva verktøyet kan, hva det ikke kan, og hva de ikke skal lime inn. Et &lt;a href=&quot;https://nrth.no/foredrag-og-kurs&quot;&gt;bedriftskurs på en halv dag&lt;/a&gt; og en rutine på én side dekker det for de fleste.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Åpenhet.&lt;/strong&gt; Har dere en chatbot mot kunder, skal det være tydelig at det er en AI. Publiserer dere AI-generert tekst, bilde eller lyd, kan det utløse merkekrav. Det enkleste er å si det.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Ikke høyrisiko uten å vite det.&lt;/strong&gt; Bruker dere AI til å sortere jobbsøkere, vurdere kredittverdighet eller til andre formål som er listet i vedlegg III til forordningen, er dere i høyrisiko-kategorien fra desember 2027. Da må dere blant annet følge leverandørens bruksanvisning, la kompetente personer ha menneskelig kontroll, overvåke systemet, ta vare på logger i minst seks måneder og informere ansatte som berøres (&lt;a href=&quot;https://artificialintelligenceact.eu/article/26/&quot; rel=&quot;noopener&quot;&gt;art. 26&lt;/a&gt;). Vit det før dere setter det i drift.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;hva-betyr-det-for-ai-assistenter-og-rutineoppgaver&quot;&gt;Hva betyr det for AI-assistenter og rutineoppgaver?&lt;/h2&gt;
+&lt;p&gt;Fakturakontroll, tilbudsutkast, supportoversikter og markedsbrief er ikke høyrisiko. Det er intern bruk med et menneske som godkjenner. Det som kreves er opplæring. Logg og et menneske i løkka er i tillegg god praksis uavhengig av regelverket, og det er slik vi setter opp &lt;a href=&quot;https://nrth.no/innsikt/ai-assistenter&quot;&gt;AI-assistenter&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;hva-med-leverandorene&quot;&gt;Hva med leverandørene?&lt;/h2&gt;
+&lt;p&gt;Kravene til modellene (dokumentasjon, opphavsrett og sammendrag av treningsdata) ligger på leverandørene, ikke på dere. Det dere skal gjøre er å velge leverandører som oppfyller dem, og ha det skriftlig. Det henger sammen med &lt;a href=&quot;https://nrth.no/innsikt/ai-og-personvern&quot;&gt;personvernsjekklisten&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;neste-steg&quot;&gt;Neste steg&lt;/h2&gt;
+&lt;p&gt;En &lt;a href=&quot;https://nrth.no/ai-vurdering#kartlegging&quot;&gt;AI-kartlegging&lt;/a&gt; tar stilling til risikoklasse for hver oppgave vi foreslår, slik at dere vet hva som gjelder før dere starter. &lt;a href=&quot;https://nrth.no/book&quot;&gt;Book et møte&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>ChatGPT, Copilot eller Claude i bedriften? En praktisk sammenligning for norske SMB-er</title>
+    <link rel="alternate" type="text/html" href="https://nrth.no/innsikt/chatgpt-copilot-eller-claude" />
+    <id>https://nrth.no/innsikt/chatgpt-copilot-eller-claude</id>
+    <published>2026-10-27T00:00:00Z</published>
+    <updated>2026-10-27T00:00:00Z</updated>
+    <author><name>Simen Uthaug</name><uri>https://nrth.no/om-oss#simen-uthaug</uri></author>
+    <category term="Verktøyvalg" />
+    <summary>ChatGPT, Copilot eller Claude? Fem spørsmål avgjør, ikke hvilken modell som er «best»: hvor dataene behandles, hva avtalen sier og om det kjører oppgaver.</summary>
+    <content type="html">&lt;p&gt;Hvilket AI-verktøy bedriften bør velge, avgjøres av fem spørsmål om bedriften, ikke av hvilken modell som scorer høyest denne måneden. Modellene bytter plass hvert kvartal; avtalen deres, dataene deres og arbeidsflyten deres gjør ikke det. Her er de fem spørsmålene, og hva de typisk peker mot.&lt;/p&gt;
+&lt;p&gt;Vi oppgir bevisst ikke priser og funksjonslister. De endres for ofte til at en artikkel kan være riktig i tre måneder. Sjekk leverandørens egen side, og les avtalen.&lt;/p&gt;
+&lt;h2 id=&quot;1-hvor-bor-arbeidet-deres-i-dag&quot;&gt;1. Hvor bor arbeidet deres i dag?&lt;/h2&gt;
+&lt;p&gt;Er hele bedriften i Microsoft 365, med e-post, dokumenter og Teams der, er Copilot det verktøyet som er nærmest arbeidet. Det er argumentet for Copilot, og det er et godt argument. Er dere på Google Workspace, har Gemini den samme fordelen, fordi Gemini er &lt;a href=&quot;https://workspace.google.com/blog/product-announcements/empowering-businesses-with-AI&quot; rel=&quot;noopener&quot;&gt;inkludert i Workspace Business- og Enterprise-planene&lt;/a&gt;. Er dere spredt på flere systemer, forsvinner den fordelen, og ChatGPT og Claude stiller likt.&lt;/p&gt;
+&lt;h2 id=&quot;2-hva-sier-avtalen-om-dataene&quot;&gt;2. Hva sier avtalen om dataene?&lt;/h2&gt;
+&lt;p&gt;Alle tre har bedriftsversjoner uten trening på dataene deres og med databehandleravtale. Ingen av forbrukerversjonene har databehandleravtale, og om samtalene brukes til trening, avhenger av leverandør og innstillinger. Sjekk tre ting: at avtalen faktisk er inngått for deres konto, hvilken region dataene behandles i, og hvor lenge de lagres. Se &lt;a href=&quot;https://nrth.no/innsikt/ai-og-personvern&quot;&gt;personvernsjekklisten&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;3-skal-det-svare-eller-skal-det-jobbe&quot;&gt;3. Skal det svare, eller skal det jobbe?&lt;/h2&gt;
+&lt;p&gt;En chat svarer når noen spør. Det er nyttig for utkast, oppsummering og spørsmål, og alle tre er gode til det. Men de ukentlige oppgavene som faktisk tar tid, fakturakontroll, tilbudsutkast, rapporter, krever noe som kjører på plan, med faste datakilder og en logg. Det er et annet produkt enn en chat, uansett leverandør. Se &lt;a href=&quot;https://nrth.no/innsikt/ai-assistenter&quot;&gt;hva en AI-assistent er&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;4-hvem-skal-bruke-det&quot;&gt;4. Hvem skal bruke det?&lt;/h2&gt;
+&lt;p&gt;Fem personer i ledelsen som skriver mye: en chat-lisens per person. Førti ansatte der de fleste gjør rutinearbeid: lisenser til alle er dyrt og gir lite. Da er det bedre å sette opp noen få AI-assistenter som alle får resultatene fra.&lt;/p&gt;
+&lt;h2 id=&quot;5-hvor-last-vil-dere-vaere&quot;&gt;5. Hvor låst vil dere være?&lt;/h2&gt;
+&lt;p&gt;Copilot binder dere til Microsoft, ChatGPT til OpenAI, Claude til Anthropic. Det er greit så lenge dere vet det. Alternativet er et arbeidsrom som kan bytte modell under panseret, og som kan koble til en lokal modell for de mest sensitive dataene. Det er grunnen til at vi bygger &lt;a href=&quot;https://trynrth.com&quot; rel=&quot;noopener&quot;&gt;Nrth OS&lt;/a&gt; modellagnostisk.&lt;/p&gt;
+&lt;h2 id=&quot;hva-anbefaler-vi&quot;&gt;Hva anbefaler vi?&lt;/h2&gt;
+&lt;div class=&quot;table-wrap&quot; role=&quot;region&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;hva-anbefaler-vi&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Bedriften&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Typisk anbefaling&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Alt i Microsoft 365, mest skriving og møter&lt;/th&gt;&lt;td&gt;Copilot til de som skriver mest, ikke til alle&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Mye arbeid med lange dokumenter, analyser og kode&lt;/th&gt;&lt;td&gt;Claude eller ChatGPT til de som gjør det arbeidet&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Rutineoppgaver som gjentas ukentlig&lt;/th&gt;&lt;td&gt;AI-assistenter, ikke chat-lisenser&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Sensitive data, krav om kontroll&lt;/th&gt;&lt;td&gt;EU-region med europeisk-eid leverandør, eller lokal AI&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Vil kunne bytte leverandør og modell&lt;/th&gt;&lt;td&gt;Et modellagnostisk arbeidsrom&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;neste-steg&quot;&gt;Neste steg&lt;/h2&gt;
+&lt;p&gt;Vi vurderer verktøy og leverandører som en del av &lt;a href=&quot;https://nrth.no/ai-vurdering#ledersparring&quot;&gt;ledersparringen&lt;/a&gt;, og vi selger ingen av lisensene. &lt;a href=&quot;https://nrth.no/book&quot;&gt;Book et møte&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+</feed>

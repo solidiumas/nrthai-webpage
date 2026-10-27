@@ -12,7 +12,7 @@
 ## Felles deler
 
 ### Meny
-- Lenker: AI-vurdering · Implementering · AI-tjenester · Om oss
+- Lenker: AI-vurdering · Implementering · AI-tjenester · Innsikt · Om oss (Innsikt lagt til 27. oktober 2026)
 - Språk: `EN`
 - Knapp: **Book et møte →**
 - Mobilmeny-knapp, aria-label: «Åpne meny»
@@ -45,7 +45,7 @@ Brukes nederst på alle sider unntatt `/book` og `/personvern`. Tema forhåndsve
 - Lenke: **Les om foredrag og kurs →** (til `/foredrag-og-kurs`)
 
 ### Footer
-- Lenker: AI-vurdering · Implementering · AI-tjenester · Foredrag og kurs · Om oss · Spørsmål og svar · Personvern
+- Lenker: AI-vurdering · Implementering · AI-tjenester · Foredrag og kurs · Innsikt · Om oss · Spørsmål og svar · Personvern
 - © 2026 Nrth AI AS · Bergen · Org.nr. 937 872 038
 - Nrth OS ↗ · LinkedIn ↗ (til `https://www.linkedin.com/company/nrth-ai/`) · Investorer · English
 - Built by agents · ▲
@@ -125,10 +125,17 @@ Under kortene: knapp **Book et møte →** og teksten «Usikre på hvor dere ska
   Lenke: LinkedIn ↗ (`https://www.linkedin.com/in/simen-uthaug`, aria-label `Simen Uthaug på LinkedIn`)
 - Under: `os-note`
 
+### 04 · Innsikt (`id="innsikt"`, `card-grid` med de tre nyeste artiklene)
+Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsikt.mjs` fra `docs/innsikt/`.
+- Kicker: 04 · Innsikt
+- H2: **Artikler om AI i *bedriften*.**
+- Kort: tema · tittel (lenke til artikkelen) · beskrivelse · forfatter · dato
+- Knapp: Alle artikler →
+
 ### Infoboks: foredrag og kurs
 (se felles deler)
 
-### 04 · Book et møte
+### Book et møte
 (se felles deler, tema: ingen forhåndsvalgt)
 
 ---
@@ -394,6 +401,34 @@ Lagt til 21. oktober 2026 (Thomas: lenke i footeren, lik på norsk og engelsk). 
 5. **Hvor holder dere til?** I Bergen. Vi møter bedrifter fysisk i hele Norge, og digitalt med kunder i utlandet.
 
 ### Book et møte (tema: ingen forhåndsvalgt)
+
+---
+
+## Innsikt `/innsikt`
+
+Lagt til og godkjent av Thomas 27. oktober 2026. Engelsk motstykke: `/en/insights`. Sidene, kortene, `innsikt/feed.xml`, innsiktsdelen på forsidene, i `sitemap.xml` og i `llms.txt` lages av `node scripts/innsikt.mjs` fra `docs/innsikt/*.md`. Teksten til hver artikkel står i sin kildefil, som er fasit for artikkelen.
+
+**Title:** Innsikt om AI for bedrifter · Nrth AI
+**Description:** Artikler om AI i norske bedrifter: hva det koster, personvern, AI-forordningen, lokal AI, AI-assistenter og valg av verktøy.
+
+### Sidehero
+- Kicker: Innsikt
+- H1: **Innsikt om AI for *norske bedrifter*.**
+- Ingress: Artikler om å ta i bruk AI i bedriften: hva det koster, hva regelverket sier og hvor dere bør begynne.
+
+### Artikler (`card-grid--2`, nyeste først)
+Ett kort per artikkel: tema · tittel (lenke) · beskrivelse · forfatter · dato.
+
+### Book et møte (tema: ingen forhåndsvalgt)
+
+## Artikkel `/innsikt/<slug>`
+
+- Title og description: `tittel` og `beskrivelse` i kildefilen (maks 60 og 155 tegn)
+- Brødsmulesti (aria-label «Brødsmulesti»): Forside / Innsikt
+- H1, ingress og brødtekst fra kildefilen
+- Forfatterlinje: Av <forfatter> · Publisert <dato>, og · Oppdatert <dato> når artikkelen er endret. Forfatteren lenker til teamkortet på Om oss.
+- Les også: Kicker «Innsikt», H2 **Les *også*.**, kort for artiklene i `relaterte`, lenke «Alle artikler →»
+- Book et møte (tema: ingen forhåndsvalgt)
 
 ---
 
