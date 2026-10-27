@@ -126,7 +126,7 @@ Under kortene: knapp **Book et møte →** og teksten «Usikre på hvor dere ska
 - Under: `os-note`
 
 ### 04 · Innsikt (`id="innsikt"`, `card-grid` med de tre nyeste artiklene)
-Lagt til 27. oktober 2026, venter på godkjenning fra Thomas. Kortene lages av `scripts/innsikt.mjs` fra `docs/innsikt/`.
+Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsikt.mjs` fra `docs/innsikt/`.
 - Kicker: 04 · Innsikt
 - H2: **Artikler om AI i *bedriften*.**
 - Kort: tema · tittel (lenke til artikkelen) · beskrivelse · forfatter · dato
@@ -406,7 +406,7 @@ Lagt til 21. oktober 2026 (Thomas: lenke i footeren, lik på norsk og engelsk). 
 
 ## Innsikt `/innsikt`
 
-Lagt til 27. oktober 2026, venter på godkjenning fra Thomas. Engelsk motstykke: `/en/insights`. Sidene, kortene, `innsikt/feed.xml`, innsiktsdelen på forsidene, i `sitemap.xml` og i `llms.txt` lages av `node scripts/innsikt.mjs` fra `docs/innsikt/*.md`. Teksten til hver artikkel står i sin kildefil, som er fasit for artikkelen.
+Lagt til og godkjent av Thomas 27. oktober 2026. Engelsk motstykke: `/en/insights`. Sidene, kortene, `innsikt/feed.xml`, innsiktsdelen på forsidene, i `sitemap.xml` og i `llms.txt` lages av `node scripts/innsikt.mjs` fra `docs/innsikt/*.md`. Teksten til hver artikkel står i sin kildefil, som er fasit for artikkelen.
 
 **Title:** Innsikt om AI for bedrifter · Nrth AI
 **Description:** Artikler om AI i norske bedrifter: hva det koster, personvern, AI-forordningen, lokal AI, AI-assistenter og valg av verktøy.

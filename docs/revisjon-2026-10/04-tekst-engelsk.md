@@ -117,7 +117,7 @@ Below the cards: button **Book a meeting →** and «Not sure where to start? We
 - Below: `os-note`
 
 ### 04 · Insights (`id="insights"`, `card-grid` with the three newest articles)
-Added 27 October 2026, awaiting Thomas's approval. Made by `scripts/innsikt.mjs` from `docs/innsikt/`.
+Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` from `docs/innsikt/`.
 - Kicker: 04 · Insights
 - H2: **Articles on AI in *business*.**
 - Cards: topic · tag «In Norwegian» · English title (links to the Norwegian article) · English description · author · date
@@ -343,7 +343,7 @@ Added 21 October 2026. Mirror of `/sporsmal-og-svar`, with the same five questio
 
 ## Insights `/en/insights`
 
-Added 27 October 2026, awaiting Thomas's approval. Overview in English of the Norwegian articles on `/innsikt` (Thomas, 22 October 2026: English overview page, the articles stay Norwegian). The English title and description of each article are `en_tittel` and `en_beskrivelse` in `docs/innsikt/<slug>.md`.
+Added and approved by Thomas on 27 October 2026. Overview in English of the Norwegian articles on `/innsikt` (Thomas, 22 October 2026: English overview page, the articles stay Norwegian). The English title and description of each article are `en_tittel` and `en_beskrivelse` in `docs/innsikt/<slug>.md`.
 
 **Title:** Insights on AI for businesses in Norway · Nrth AI
 **Description:** Articles on AI in Norwegian businesses: costs, privacy, the EU AI Act, local AI, AI assistants and choosing tools. The articles are in Norwegian.
