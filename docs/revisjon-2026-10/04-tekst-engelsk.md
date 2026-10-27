@@ -9,7 +9,7 @@ The English site is for international visitors and Norwegian companies with Engl
 ## Shared parts
 
 ### Nav
-- Links: AI assessment · Implementation · AI services · About
+- Links: AI assessment · Implementation · AI services · Insights · About (Insights added 27 October 2026)
 - Language: `NO`
 - Button: **Book a meeting →**
 - Menu button aria-label: «Open menu»
@@ -39,7 +39,7 @@ The English site is for international visitors and Norwegian companies with Engl
 - Link: **About talks and courses →** (to `/en/talks-and-courses`)
 
 ### Footer
-- Links: AI assessment · Implementation · AI services · Talks and courses · About · FAQ · Privacy
+- Links: AI assessment · Implementation · AI services · Talks and courses · Insights · About · FAQ · Privacy
 - © 2026 Nrth AI AS · Bergen, Norway · Org. no. 937 872 038
 - Nrth OS ↗ · LinkedIn ↗ (to `https://www.linkedin.com/company/nrth-ai/`) · Investors · Norsk
 - Built by agents · ▲
@@ -115,6 +115,14 @@ Below the cards: button **Book a meeting →** and «Not sure where to start? We
   Tags: UiB Information Science · TypeScript / React · Python / ML · Full-stack
   Link: LinkedIn ↗ (`https://www.linkedin.com/in/simen-uthaug`, aria-label `Simen Uthaug on LinkedIn`)
 - Below: `os-note`
+
+### 04 · Insights (`id="insights"`, `card-grid` with the three newest articles)
+Added 27 October 2026, awaiting Thomas's approval. Made by `scripts/innsikt.mjs` from `docs/innsikt/`.
+- Kicker: 04 · Insights
+- H2: **Articles on AI in *business*.**
+- Cards: topic · tag «In Norwegian» · English title (links to the Norwegian article) · English description · author · date
+- Button: All articles →
+- Note: The articles are in Norwegian.
 
 ### Info box, talks and courses
 
@@ -328,6 +336,26 @@ Added 21 October 2026. Mirror of `/sporsmal-og-svar`, with the same five questio
 3. **What does it cost?** AI assessment from NOK 35,000. AI assistants from about NOK 50,000 in setup and NOK 5,000 per month in operations. Custom solutions from about NOK 150,000. All prices are on nrth.no.
 4. **Do you give talks and courses?** Yes, for leadership teams, staff and conferences. See nrth.no/en/talks-and-courses.
 5. **Where are you based?** In Bergen, Norway. We meet businesses in person across Norway, and online with clients abroad.
+
+### Book a meeting (no topic preselected)
+
+---
+
+## Insights `/en/insights`
+
+Added 27 October 2026, awaiting Thomas's approval. Overview in English of the Norwegian articles on `/innsikt` (Thomas, 22 October 2026: English overview page, the articles stay Norwegian). The English title and description of each article are `en_tittel` and `en_beskrivelse` in `docs/innsikt/<slug>.md`.
+
+**Title:** Insights on AI for businesses in Norway · Nrth AI
+**Description:** Articles on AI in Norwegian businesses: costs, privacy, the EU AI Act, local AI, AI assistants and choosing tools. The articles are in Norwegian.
+
+### Page hero
+- Kicker: Insights
+- H1: **Insights on AI for *Norwegian businesses*.**
+- Intro: Articles on putting AI to work in a business: what it costs, what the rules say and where to start. The articles are in Norwegian.
+
+### Articles (`card-grid--2`, newest first)
+One card per article: topic · tag «In Norwegian» · English title (links to the Norwegian article, `hreflang="nb"`) · English description · author · date.
+Topics: Getting started with AI · Local AI and data control · AI assistants · Rules and safety · Choosing tools
 
 ### Book a meeting (no topic preselected)
 

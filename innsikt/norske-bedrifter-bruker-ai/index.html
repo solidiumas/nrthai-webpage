@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- .js skrur på animasjonene (assets/reveal.js). Lastes ikke skriptet innen tre sekunder, fjernes klassen så alt vises. -->
+<script>
+  document.documentElement.classList.add("js");
+  setTimeout(function () { if (!window.nrthReveal) document.documentElement.classList.remove("js"); }, 3000);
+</script>
+<!-- Laget av scripts/innsikt.mjs fra docs/innsikt/. Endre kilden og kjør skriptet, ikke denne filen. -->
+<title>AI i norske bedrifter: hva mangler de som ikke er i gang?</title>
+<meta name="description" content="AI i norske bedrifter: SSB-tallene for 2026 viser at 48 % av foretak med minst ti ansatte bruker AI. Hva det betyr for små bedrifter, og hva som virker." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="https://nrth.no/innsikt/norske-bedrifter-bruker-ai" />
+<link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/norske-bedrifter-bruker-ai" />
+<link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/norske-bedrifter-bruker-ai" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Nrth AI" />
+<meta property="og:title" content="AI i norske bedrifter: hva mangler de som ikke er i gang?" />
+<meta property="og:description" content="AI i norske bedrifter: SSB-tallene for 2026 viser at 48 % av foretak med minst ti ansatte bruker AI. Hva det betyr for små bedrifter, og hva som virker." />
+<meta property="og:url" content="https://nrth.no/innsikt/norske-bedrifter-bruker-ai" />
+<meta property="og:locale" content="nb_NO" />
+<meta property="og:image" content="https://nrth.no/innsikt/norske-bedrifter-bruker-ai/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="AI i norske bedrifter: hva mangler de som ikke er i gang?" />
+<meta name="author" content="Thomas Uthaug" />
+<meta property="article:published_time" content="2026-10-27" />
+<meta property="article:modified_time" content="2026-10-27" />
+<meta property="article:section" content="Ta i bruk AI" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="mask-icon" href="/favicon.svg" color="#ff8a5b" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="alternate" type="text/markdown" href="/llms.txt" title="Nrth AI for LLMs" />
+<link rel="alternate" type="application/atom+xml" href="/innsikt/feed.xml" title="Innsikt · Nrth AI" />
+
+<!-- Strukturerte data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Nrth AI",
+      "item": "https://nrth.no/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Innsikt",
+      "item": "https://nrth.no/innsikt"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI i norske bedrifter: hva mangler de som ikke er i gang?",
+      "item": "https://nrth.no/innsikt/norske-bedrifter-bruker-ai"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://nrth.no/innsikt/norske-bedrifter-bruker-ai#artikkel",
+  "headline": "Nesten fem av ti norske bedrifter bruker AI. Hva mangler resten?",
+  "description": "AI i norske bedrifter: SSB-tallene for 2026 viser at 48 % av foretak med minst ti ansatte bruker AI. Hva det betyr for små bedrifter, og hva som virker.",
+  "url": "https://nrth.no/innsikt/norske-bedrifter-bruker-ai",
+  "mainEntityOfPage": "https://nrth.no/innsikt/norske-bedrifter-bruker-ai",
+  "inLanguage": "nb",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "articleSection": "Ta i bruk AI",
+  "wordCount": 486,
+  "image": "https://nrth.no/innsikt/norske-bedrifter-bruker-ai/og.png",
+  "author": {
+    "@type": "Person",
+    "@id": "https://nrth.no/om-oss#thomas-uthaug",
+    "name": "Thomas Uthaug",
+    "url": "https://nrth.no/om-oss#thomas-uthaug",
+    "jobTitle": "Medgründer, forretning, produkt og leveranse",
+    "sameAs": [
+      "https://www.linkedin.com/in/thomas-uthaug"
+    ],
+    "worksFor": {
+      "@id": "https://nrth.no/#organization"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://nrth.no/#organization",
+    "name": "Nrth AI",
+    "legalName": "Nrth AI AS",
+    "url": "https://nrth.no/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nrth.no/logo-light.png"
+    }
+  },
+  "isPartOf": {
+    "@type": "CollectionPage",
+    "@id": "https://nrth.no/innsikt"
+  }
+}
+</script>
+
+<link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/assets/site.css?v=2026-10-27" />
+<!-- Satoshi (logoen) fra Fontshare, lastet uten å blokkere visningen. Lisensen tillater ikke filene i et offentlig repo. -->
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" /></noscript>
+</head>
+<body>
+<a class="skip-link" href="#main">Hopp til innhold</a>
+
+<!-- ───────── Meny ───────── -->
+<header class="site-nav">
+  <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
+    <span class="logo-mark">&lt;/&gt;</span>
+    <span class="logo-word">Nrth AI</span>
+  </a>
+  <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="primary-nav">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
+  <nav class="nav-right" id="primary-nav" aria-label="Hovedmeny">
+    <a class="nav-link" href="/ai-vurdering">AI-vurdering</a>
+    <a class="nav-link" href="/implementering">Implementering</a>
+    <a class="nav-link" href="/ai-tjenester">AI-tjenester</a>
+    <a class="nav-link" href="/innsikt">Innsikt</a>
+    <a class="nav-link" href="/om-oss">Om oss</a>
+    <a class="nav-link lang-switch" href="/en/insights" hreflang="en" lang="en" aria-label="English version">EN</a>
+    <a class="nav-cta" href="#book">Book et møte →</a>
+  </nav>
+</header>
+
+<main id="main">
+  <article>
+    <!-- ───────── Sidehero ───────── -->
+    <header class="page-hero page-hero--article">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Brødsmulesti">
+          <ol><li><a href="/">Forside</a></li><li><a href="/innsikt">Innsikt</a></li></ol>
+        </nav>
+        <h1>Nesten fem av ti norske bedrifter bruker AI. Hva mangler resten?</h1>
+        <p class="lede">Nesten fem av ti norske foretak med minst ti ansatte brukte AI-teknologi i 2026, og de store drar fra: 78&nbsp;prosent av foretak med over 99 ansatte, mot 27&nbsp;prosent tre år tidligere. Blant foretakene som har vurdert å ta i bruk AI uten å gjøre det, oppgir 68&nbsp;prosent manglende kompetanse som hindring. Tallene er fra <a href="https://www.ssb.no/teknologi-og-innovasjon/informasjons-og-kommunikasjonsteknologi-ikt/statistikk/bruk-av-ikt-i-naeringslivet/artikler/bruken-av-ki-i-naeringslivet-akselererer" rel="noopener">SSBs undersøkelse Bruk av IKT i næringslivet</a>, publisert 25. september 2026.</p>
+        <p class="byline dots"><span>Av <a href="/om-oss#thomas-uthaug" rel="author">Thomas Uthaug</a></span> <span>Publisert <time datetime="2026-10-27">27. oktober 2026</time></span></p>
+      </div>
+    </header>
+
+    <!-- ───────── Artikkelen ───────── -->
+    <div class="section">
+      <div class="wrap">
+        <div class="prose">
+          <h2 id="hva-sier-tallene">Hva sier tallene?</h2>
+          <div class="table-wrap" role="region" tabindex="0" aria-labelledby="hva-sier-tallene">
+            <table>
+              <thead><tr><th scope="col"></th><th scope="col">2023</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">2026</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Foretak med minst 10 ansatte som bruker AI</th><td>1 av 10</td><td>2 av 10</td><td>3 av 10</td><td>nesten 5 av 10</td></tr>
+                <tr><th scope="row">Foretak med over 99 ansatte</th><td>27&nbsp;%</td><td>42&nbsp;%</td><td>58&nbsp;%</td><td>78&nbsp;%</td></tr>
+                <tr><th scope="row">Befolkningen 16–79 år som brukte generativ AI siste tre måneder</th><td></td><td>36&nbsp;%</td><td>54&nbsp;%</td><td>69&nbsp;%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Kilde: SSB, september 2025 og september 2026. Små foretak under 50 ansatte har mer enn tredoblet bruken siden 2023, men fra et svært lavt nivå.</p>
+          <p>Veksten drives først og fremst av generativ AI: tekstanalyse, tekstgenerering og verktøy som ChatGPT og Copilot. Det er den typen AI som er lett å begynne med, og vanskelig å få verdi av uten en plan.</p>
+          <h2 id="hvorfor-henger-sma-bedrifter-etter">Hvorfor henger små bedrifter etter?</h2>
+          <p>SSB stilte spørsmålet. Av foretakene som har vurdert å ta i bruk AI, men ikke gjort det, svarte 68&nbsp;prosent i 2026 at de mangler relevant kompetanse, ned fra 77&nbsp;prosent året før. Fire av ti var bekymret for data- og personvern og uklare juridiske konsekvenser.</p>
+          <p>SSB-tallene gjelder foretak med minst ti ansatte. Det finnes ingen god nasjonal statistikk for de aller minste. Vår erfaring er at bildet er det samme der, men forsterket: én person eier alle beslutninger, og den personen har ikke tid til å finne ut hva som virker.</p>
+          <h2 id="hva-skiller-de-som-lykkes">Hva skiller de som lykkes?</h2>
+          <p>Det er ikke størrelse og ikke budsjett. Det er tre ting:</p>
+          <ol>
+            <li><strong>De starter med én oppgave, ikke med verktøyet.</strong> Bedrifter som kjøper lisenser først, bruker dem til å skrive e-post. Bedrifter som velger oppgave først, får en målbar gevinst.</li>
+            <li><strong>Noen eier det.</strong> Én person med mandat til å teste, feile og justere. I store foretak er det en avdeling. I små må det være en leder eller en som får tid frigjort.</li>
+            <li><strong>Dataene er avklart.</strong> De vet hvor dataene behandles og hva som ikke skal sendes ut. Da forsvinner den juridiske bekymringen, og piloten kan starte.</li>
+          </ol>
+          <h2 id="hva-betyr-det-for-deg">Hva betyr det for deg?</h2>
+          <p>Hvis dere er blant de rundt halvparten som ennå ikke bruker AI, er dere ikke sent ute. Men gapet til de store vokser hvert år, og de store konkurrerer om de samme kundene. Det som skal til er ikke mer kompetanse i hele organisasjonen, men nok kompetanse til å velge riktig første steg. Det er det en <a href="/ai-vurdering#kartlegging">AI-kartlegging</a> på tre til fem dager er til for, og det er det en <a href="/foredrag-og-kurs">workshop for ledergruppen</a> gir dere selv.</p>
+          <h2 id="neste-steg">Neste steg</h2>
+          <p><a href="#book">Book et møte</a>, så ser vi på hvor dere står i forhold til tallene over, og hvor det er enklest å begynne.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ───────── Les også ───────── -->
+  <section class="section section--compact">
+    <div class="wrap">
+      <div class="section-header" data-reveal>
+        <p class="kicker">Innsikt</p>
+        <h2>Les <em>også</em>.</h2>
+      </div>
+      <div class="card-grid card-grid--2">
+        <article class="card card--link" data-reveal style="--d: 0">
+          <div class="card-head"><span>Ta i bruk AI</span></div>
+          <h3><a href="/innsikt/ai-for-bedrifter">AI for bedrifter i 2026: start, kostnad og fallgruver</a></h3>
+          <p>AI for bedrifter: slik tar en norsk bedrift i bruk AI uten å kaste bort penger. Hvor du starter, hva kartlegging og pilot koster, og hva du bør la være.</p>
+          <p class="card-meta">Thomas Uthaug · <time datetime="2026-10-27">27. oktober 2026</time></p>
+        </article>
+        <article class="card card--link" data-reveal style="--d: 1">
+          <div class="card-head"><span>Regelverk og trygghet</span></div>
+          <h3><a href="/innsikt/ai-forordningen">AI-forordningen for norske bedrifter: hva gjelder nå</a></h3>
+          <p>EUs AI-forordning gjelder i hovedsak fra 2. august 2026, men høyrisikokravene er utsatt til 2027 og 2028. Hva en norsk SMB må gjøre, uten jus-språk.</p>
+          <p class="card-meta">Thomas Uthaug · <time datetime="2026-10-27">27. oktober 2026</time></p>
+        </article>
+      </div>
+      <div class="section-actions" data-reveal>
+        <a class="link-arrow" href="/innsikt">Alle artikler →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Book et møte ───────── -->
+  <section class="section booking" id="book">
+    <div class="wrap">
+      <div class="cta-grid">
+        <div class="cta-left" data-reveal>
+          <p class="kicker">Book et møte</p>
+          <h2>Hvor kan AI gi dere <em>mest</em>?</h2>
+          <p class="lede">Book et møte med oss. Vi ser på hvordan dere jobber, og hvor AI kan øke salget, spare tid eller heve kvaliteten.</p>
+          <p class="included-label">I møtet</p>
+          <ul class="included">
+            <li><span class="arrow" aria-hidden="true">→</span> <span>Vi ser på hvordan dere jobber i dag.</span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span>Vi peker på hvor AI kan øke salget eller spare tid.</span></li>
+            <li><span class="arrow" aria-hidden="true">→</span> <span>Dere får forslag til første steg, med pris og tidslinje.</span></li>
+          </ul>
+          <div class="booking-chips"><span>30 minutter</span> <span>Fysisk i Norge eller digitalt</span></div>
+          <p class="booking-alt">Heller skrive? <a class="link-arrow" href="/book#skriv">Send en forespørsel →</a></p>
+        </div>
+        <div class="brief-panel booking-panel" data-reveal style="--d: 1">
+          <form class="brief-form booking-form" method="POST" action="/api/book">
+            <input type="hidden" name="lang" value="nb" />
+            <fieldset class="topic-picker">
+              <legend>Hva vil dere snakke om? <span class="req" aria-hidden="true">*</span></legend>
+              <div class="topic-options">
+                <label class="topic-chip"><input type="radio" name="tema" value="ai-vurdering" required /><span>AI-vurdering</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="implementering" required /><span>Implementering</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="ai-tjenester" required /><span>AI-tjenester</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="foredrag" required /><span>Foredrag eller kurs</span></label>
+                <label class="topic-chip"><input type="radio" name="tema" value="annet" required /><span>Annet</span></label>
+              </div>
+            </fieldset>
+            <div class="booking-request">
+              <div class="booking-fields">
+                <label><span class="lbl">Navn <span class="req" aria-hidden="true">*</span></span><input type="text" name="navn" required maxlength="2000" autocomplete="name" /></label>
+                <label><span class="lbl">E-post <span class="req" aria-hidden="true">*</span></span><input type="email" name="epost" required maxlength="2000" autocomplete="email" /></label>
+                <label><span class="lbl">Bedrift</span><input type="text" name="bedrift" maxlength="2000" autocomplete="organization" /></label>
+                <label><span class="lbl">Hva vil dere oppnå?</span>
+                  <select name="maal">
+                    <option value="" label=" "></option>
+                    <option value="salg">Øke salget</option>
+                    <option value="effektivitet">Jobbe mer effektivt</option>
+                    <option value="kvalitet">Forbedre kvalitet eller kundeopplevelse</option>
+                    <option value="vet-ikke">Vet ikke ennå</option>
+                  </select>
+                </label>
+                <label><span class="lbl">Når passer det?</span>
+                  <select name="naar">
+                    <option value="" label=" "></option>
+                    <option value="denne-uken">Denne uken</option>
+                    <option value="neste-uke">Neste uke</option>
+                    <option value="senere">Om to uker eller senere</option>
+                  </select>
+                </label>
+                <label><span class="lbl">Foretrukket tidspunkt</span><input type="text" name="tid" maxlength="2000" placeholder="F.eks. tirsdag formiddag" /></label>
+                <label><span class="lbl">Møteform</span>
+                  <select name="form">
+                    <option value="" label=" "></option>
+                    <option value="fysisk">Fysisk i Norge</option>
+                    <option value="digitalt">Digitalt</option>
+                  </select>
+                </label>
+              </div>
+              <div class="visually-hidden" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off" /></div>
+              <button type="submit" class="brief-submit" data-sending="Sender …">Book møtet →</button>
+              <p class="brief-error" role="alert" hidden>Noe gikk galt. Prøv igjen, eller send e-post til <a href="mailto:contact@nrth.no">contact@nrth.no</a>.</p>
+              <p class="brief-note">Vi bekrefter tidspunktet på e-post innen én virkedag. Se <a href="/personvern">personvern</a>.</p>
+            </div>
+          </form>
+          <div class="brief-sent">
+            <h3 tabindex="-1">Takk.<br /> <em>Vi bekrefter tiden.</em></h3>
+            <p>Du får svar fra contact@nrth.no innen én virkedag med forslag til tidspunkt.</p>
+            <button type="button" class="btn-ghost brief-reset">Book et nytt møte →</button>
+          </div>
+          <template class="booking-calendar-tpl" data-notes-prefix="Tema:">
+            <div class="booking-calendar">
+              <iframe class="booking-frame" title="Velg tid for møte med Nrth AI" loading="lazy"></iframe>
+              <p><a class="link-arrow">Åpne kalenderen i ny fane ↗</a></p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ───────── Footer ───────── -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="/" aria-label="Nrth AI, til forsiden">
+          <span class="logo-mark">&lt;/&gt;</span>
+          <span class="logo-word">Nrth AI</span>
+        </a>
+      </div>
+      <nav class="footer-links" aria-label="Bunntekst">
+        <ul>
+          <li><a href="/ai-vurdering">AI-vurdering</a></li>
+          <li><a href="/implementering">Implementering</a></li>
+          <li><a href="/ai-tjenester">AI-tjenester</a></li>
+          <li><a href="/foredrag-og-kurs">Foredrag og kurs</a></li>
+          <li><a href="/innsikt">Innsikt</a></li>
+          <li><a href="/om-oss">Om oss</a></li>
+          <li><a href="/sporsmal-og-svar">Spørsmål og svar</a></li>
+          <li><a href="/personvern">Personvern</a></li>
+        </ul>
+      </nav>
+      <ul class="footer-extra">
+        <li data-nrth-os><a href="https://trynrth.com" rel="noopener">Nrth OS ↗</a></li>
+        <li><a href="https://www.linkedin.com/company/nrth-ai/" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="/investors">Investorer</a></li>
+        <li><a href="/en/insights" hreflang="en" lang="en">English</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p class="dots"><span>© 2026 Nrth AI AS</span> <span>Bergen</span> <span>Org.nr. 937&nbsp;872&nbsp;038</span></p>
+      <p><span lang="en">Built by agents</span> · ▲</p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/reveal.js?v=2026-10-19b" defer></script>
+<script src="/assets/nav.js?v=2026-10-13" defer></script>
+<script src="/assets/booking-config.js" defer></script>
+<script src="/assets/booking.js?v=2026-10-13" defer></script>
+<script src="/assets/brief-form.js?v=2026-10-13" defer></script>
+</body>
+</html>

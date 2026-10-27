@@ -96,7 +96,7 @@ em { font-style: normal; }
 }
 
 /* ───────── Logo ───────── */
-.logo { display: inline-flex; align-items: center; gap: 8px; }
+.logo { display: inline-flex; flex-shrink: 0; align-items: center; gap: 8px; }
 .logo-mark {
   font-family: "Satoshi", var(--sans);
   font-weight: 900; font-size: 20px; line-height: 1;
@@ -143,7 +143,7 @@ em { font-style: normal; }
 }
 .js .site-nav:not(.is-scrolled) { border-bottom-color: transparent; }
 .nav-right { flex: 1; display: flex; align-items: center; gap: 30px; }
-.nav-link { font-size: 15.5px; font-weight: 500; color: var(--fg-2); transition: color 0.2s ease; }
+.nav-link { font-size: 15.5px; font-weight: 500; color: var(--fg-2); white-space: nowrap; transition: color 0.2s ease; }
 .nav-link:hover,
 .nav-link[aria-current="page"] { color: var(--ink); }
 .nav-link[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1.5px; }
@@ -560,6 +560,39 @@ h2 {
 .prose li::marker { color: var(--fg-dim); }
 .prose strong { color: var(--fg); font-weight: 600; }
 
+/* ───────── Innsikt (artikler) ───────── */
+/* Sidene lages av scripts/innsikt.mjs fra docs/innsikt/*.md. */
+.breadcrumb { margin-bottom: 16px; font-size: 14px; font-weight: 600; color: var(--fg-dim); }
+.breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; }
+.breadcrumb li + li::before { content: "/"; content: "/" / ""; margin: 0 8px; } /* Skilletegnet leses ikke opp */
+.breadcrumb a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; transition: text-decoration-color 0.2s ease; }
+.breadcrumb a:hover { color: var(--ink); text-decoration-color: currentColor; }
+.page-hero .breadcrumb { animation-delay: 0.05s; }
+.page-hero .byline { animation-delay: 0.32s; }
+.page-hero--article h1 { max-width: 900px; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.04; }
+.page-hero--article .lede { max-width: 68ch; }
+/* Lange norske ord (personvernkonsekvensvurdering) brytes i stedet for å gi sidelengs rulling på mobil.
+   Ikke hyphens: auto, det forsinker første visning mens Chrome laster ordboken. */
+.page-hero--article h1,
+.page-hero--article + .section .prose { overflow-wrap: break-word; }
+.byline { margin-top: 28px; font-size: 15px; color: var(--fg-dim); }
+.byline a { font-weight: 600; color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-2); text-underline-offset: 4px; }
+.byline a:hover { text-decoration-color: currentColor; }
+.prose ol { margin-top: 12px; padding-left: 24px; list-style: decimal; }
+.table-wrap { margin-top: 20px; overflow-x: auto; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 15.5px; line-height: 1.45; }
+.prose th,
+.prose td { padding: 12px 16px 12px 0; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.prose th:last-child,
+.prose td:last-child { padding-right: 0; }
+.prose thead th { font-size: 14px; font-weight: 700; color: var(--fg); border-bottom-color: var(--line-2); }
+.prose td { color: var(--fg-2); }
+.prose tbody th { font-weight: 600; color: var(--fg); }
+.card--link { position: relative; }
+.card--link h2 a::after,
+.card--link h3 a::after { content: ""; position: absolute; inset: 0; border-radius: var(--r-card); }
+.card .card-meta { margin-top: auto; padding-top: 8px; font-size: 14px; color: var(--fg-dim); }
+
 /* ───────── Book et møte ───────── */
 .cta-grid { display: grid; grid-template-columns: 1fr 1.08fr; gap: 64px; align-items: start; }
 .cta-left { position: sticky; top: 112px; }
@@ -689,6 +722,12 @@ h2 {
   .team-grid { grid-template-columns: 1fr; }
   .cta-grid { grid-template-columns: 1fr; gap: 48px; }
   .cta-left { position: static; }
+}
+
+/* Like over mobilmenyen er det trangt med fem lenker, språk og knapp på én linje. */
+@media (min-width: 861px) and (max-width: 960px) {
+  .site-nav,
+  .nav-right { gap: 18px; }
 }
 
 @media (max-width: 860px) {

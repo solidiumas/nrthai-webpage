@@ -3,7 +3,9 @@
 //  - prisTekst (norsk og engelsk) står på tjenestesiden den hører til
 //  - JSON-LD på samme side har samme fra-pris (minPrice), og tjenester uten pris har ingen pris i JSON-LD
 //  - fra-prisen står i llms.txt
-import { readFileSync, existsSync } from "node:fs";
+//  - innsiktsartiklene (docs/innsikt/*.md): en tabellrad som starter med et tjenestenavn har prisTekst og leveranse
+//    derfra, og «fra N kr» og «NOK N» i teksten er en pris som står i data/tjenester.json
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -52,6 +54,30 @@ for (const t of data.tjenester) {
     }
   }
   if (t.fraPris !== null) ok(llms.includes(nbNumber(t.fraPris)), `${t.id}: ${nbNumber(t.fraPris)} står ikke i llms.txt`);
+}
+
+// Innsiktsartiklene. Sidene lages fra kildene av scripts/innsikt.mjs, så det holder å sjekke kildene.
+if (existsSync(join(ROOT, "docs/innsikt"))) {
+  const tall = (s) => (s.match(/\d{1,3}(?: \d{3})+|\d+/g) || []).map((n) => Number(n.replace(/ /g, "")));
+  const kjente = new Set(data.tjenester.flatMap((t) => [t.fraPris, t.driftFraPrisPerMaaned, ...(t.prisTekst ? tall(t.prisTekst.nb) : [])]).filter(Boolean));
+  for (const f of readdirSync(join(ROOT, "docs/innsikt")).filter((f) => f.endsWith(".md") && !f.startsWith("_"))) {
+    const md = read(`docs/innsikt/${f}`);
+    for (const row of md.split("\n").filter((l) => l.trim().startsWith("|"))) {
+      // Første celle uten markdown, så «[AI-kartlegging](/ai-vurdering)» og «**AI-kartlegging**» også sjekkes
+      const first = row.trim().replace(/^\|/, "").split("|")[0].trim().replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/\*\*/g, "");
+      const t = data.tjenester.find((t) => t.navn.nb === first);
+      if (!t) continue;
+      if (t.prisTekst) ok(row.includes(t.prisTekst.nb), `docs/innsikt/${f}: raden for ${t.navn.nb} har ikke «${t.prisTekst.nb}»`);
+      ok(row.includes(t.leveranse.nb), `docs/innsikt/${f}: raden for ${t.navn.nb} har ikke leveransen «${t.leveranse.nb}»`);
+    }
+    for (const m of md.matchAll(/\bfra (?:ca\. )?(\d{1,3}(?: \d{3})+) (?:kr|kroner)(?![\wæøå])/gi)) {
+      ok(kjente.has(Number(m[1].replace(/ /g, ""))), `docs/innsikt/${f}: «${m[0]}» er ingen pris i data/tjenester.json`);
+    }
+    // Engelske priser i en_beskrivelse (vises på /en og /en/insights)
+    for (const m of md.matchAll(/\bNOK (\d{1,3}(?:,\d{3})+)/g)) {
+      ok(kjente.has(Number(m[1].replace(/,/g, ""))), `docs/innsikt/${f}: «${m[0]}» er ingen pris i data/tjenester.json`);
+    }
+  }
 }
 
 if (errors.length) {

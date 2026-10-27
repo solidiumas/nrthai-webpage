@@ -2,7 +2,7 @@
 
 > Nrth AI AS (Bergen, Norge) hjelper norske bedrifter å ta i bruk AI. Vi gjør AI-vurderinger, implementerer AI i daglig drift og bygger AI-tjenester som gir mer salg og mer effektivt arbeid. Første steg er alltid et møte.
 
-Sist oppdatert: 21. oktober 2026
+Sist oppdatert: 27. oktober 2026
 
 ## Hva vi gjør
 
@@ -27,9 +27,22 @@ Kartlegg (1 uke) → Pilot (2–3 uker) → Drift (løpende).
 
 Nrth AI AS (org.nr. 937 872 038), Bergen, etablert 2026. Gründere: Thomas Uthaug (forretning, produkt og leveranse) og Simen Uthaug (teknologi og utvikling). Vi lager også produktet Nrth OS: https://trynrth.com
 
+## Innsikt
+
+Artikler fra Nrth AI om AI i norske bedrifter, på norsk. Oversikt: https://nrth.no/innsikt · Atom-feed: https://nrth.no/innsikt/feed.xml
+
+- **AI for bedrifter i 2026: start, kostnad og fallgruver** (Thomas Uthaug, 27. oktober 2026): AI for bedrifter: slik tar en norsk bedrift i bruk AI uten å kaste bort penger. Hvor du starter, hva kartlegging og pilot koster, og hva du bør la være. https://nrth.no/innsikt/ai-for-bedrifter
+- **AI i norske bedrifter: hva mangler de som ikke er i gang?** (Thomas Uthaug, 27. oktober 2026): AI i norske bedrifter: SSB-tallene for 2026 viser at 48 % av foretak med minst ti ansatte bruker AI. Hva det betyr for små bedrifter, og hva som virker. https://nrth.no/innsikt/norske-bedrifter-bruker-ai
+- **Lokal AI for bedrifter: egen maskinvare eller sky?** (Simen Uthaug, 27. oktober 2026): Lokal AI betyr at modellen kjører på maskinvare dere eier eller leier alene. Når det lønner seg, hva det koster, og når EU-sky holder. Nrth AI, Bergen. https://nrth.no/innsikt/lokal-ai
+- **Hva koster et AI-prosjekt? Priser og tidslinjer 2026** (Thomas Uthaug, 27. oktober 2026): Hva koster et AI-prosjekt? AI-kartlegging fra 35 000 kr, strategisprint fra 75 000 kr, pilot i drift på 2–3 uker. Hele regnestykket for en norsk SMB. https://nrth.no/innsikt/hva-koster-et-ai-prosjekt
+- **AI-assistenter: oppgaver, kostnad og grenser** (Thomas Uthaug, 27. oktober 2026): En AI-assistent er en AI-agent som tar én avgrenset rutineoppgave, på plan, med logg og kontroll. Fire eksempler, regnestykket bak 20–40 % og grensene. https://nrth.no/innsikt/ai-assistenter
+- **AI og personvern: 6 ting å ha på plass før kundedata** (Thomas Uthaug, 27. oktober 2026): AI og personvern: kan dere bruke ChatGPT eller Copilot på kundedata? Ja, med databehandleravtale, behandlingssted, ingen trening, tilgang, logg og rutine. https://nrth.no/innsikt/ai-og-personvern
+- **AI-forordningen for norske bedrifter: hva gjelder nå** (Thomas Uthaug, 27. oktober 2026): EUs AI-forordning gjelder i hovedsak fra 2. august 2026, men høyrisikokravene er utsatt til 2027 og 2028. Hva en norsk SMB må gjøre, uten jus-språk. https://nrth.no/innsikt/ai-forordningen
+- **ChatGPT, Copilot eller Claude i bedriften? Slik velger du** (Simen Uthaug, 27. oktober 2026): ChatGPT, Copilot eller Claude? Fem spørsmål avgjør, ikke hvilken modell som er «best»: hvor dataene behandles, hva avtalen sier og om det kjører oppgaver. https://nrth.no/innsikt/chatgpt-copilot-eller-claude
+
 ## English
 
-Nrth AI AS (Bergen, Norway) helps businesses adopt AI: AI assessment, implementation and AI services that increase sales and efficiency. Every engagement starts with a meeting. English site: https://nrth.no/en · Book: https://nrth.no/en/book · FAQ: https://nrth.no/en/faq
+Nrth AI AS (Bergen, Norway) helps businesses adopt AI: AI assessment, implementation and AI services that increase sales and efficiency. Every engagement starts with a meeting. English site: https://nrth.no/en · Book: https://nrth.no/en/book · FAQ: https://nrth.no/en/faq · Insights (articles in Norwegian): https://nrth.no/en/insights
 
 ## For AI-agenter
 

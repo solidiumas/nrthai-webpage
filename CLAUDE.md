@@ -15,6 +15,7 @@ Tjenestesiden til Nrth AI AS for norske bedrifter. Hovedhandling: **Book et møt
 - Arbeidspakken i `docs/revisjon-2026-10/` er fasit for struktur og tekst.
 - `assets/site.css` er fasit for utseende.
 - `ANALYSE-SYNLIGHET.md` har SEO-analysen fra juni.
+- Artiklene på `/innsikt`: `docs/innsikt/<slug>.md` er fasit for teksten. Sidene, `/en/insights`, feeden og innsiktsdelene på forsidene, i `sitemap.xml` og i `llms.txt` lages med `node scripts/innsikt.mjs`. Rediger aldri de genererte filene for hånd. `node scripts/innsikt.mjs --sjekk` feiler hvis noe er utdatert eller bryter reglene under.
 
 ## Regler
 
