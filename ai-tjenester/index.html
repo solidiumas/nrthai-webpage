@@ -127,6 +127,19 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Egen AI-modell",
+  "serviceType": "AI-tjenester",
+  "provider": {
+    "@id": "https://nrth.no/#organization"
+  },
+  "areaServed": "NO",
+  "url": "https://nrth.no/ai-tjenester#egen-modell"
+}
+</script>
 
 <link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="/assets/site.css?v=2026-10-27" />
@@ -174,7 +187,7 @@
   <!-- ───────── Tjenester ───────── -->
   <section class="section">
     <div class="wrap">
-      <div class="card-grid">
+      <div class="card-grid card-grid--2">
         <article class="service-card" id="ai-assistenter" data-reveal style="--d: 0">
           <div class="card-head"><span>01</span></div>
           <h2>AI-assistenter</h2>
@@ -233,6 +246,26 @@
             <div class="service-meta"><dt class="label">Leveranse</dt><dd class="value">2–4 uker</dd></div>
             <div class="service-meta"><dt class="label">Investering</dt><dd class="value">Typisk 100&nbsp;000 til 1&nbsp;000&nbsp;000+&nbsp;kr, avhengig av omfang.</dd></div>
             <div class="service-meta"><dt class="label">Passer for</dt><dd class="value">Regulerte bransjer og bedrifter der kontroll over egne data er et strategisk valg, ikke et krav å krysse av for.</dd></div>
+          </dl>
+        </article>
+        <article class="service-card" id="egen-modell" data-reveal style="--d: 3">
+          <div class="card-head"><span>04</span></div>
+          <h2>Egen AI-modell</h2>
+          <p class="desc">Vi trener en AI-modell på deres egne data, så den kan fagområdet, språket og rutinene deres. Deretter drifter og vedlikeholder vi den, og trener den videre når dataene endrer seg.</p>
+          <div>
+            <p class="included-label">Inkludert</p>
+            <ul class="included">
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Vurdering av data, mål og om en egen modell lønner seg</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Klargjøring og anonymisering av treningsdata</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Trening på en åpen modell, testet mot deres egne eksempler</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Drift i EU-sky eller på egen maskinvare</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Overvåking, vedlikehold og jevnlig ny trening</span></li>
+            </ul>
+          </div>
+          <dl class="service-meta-group">
+            <div class="service-meta"><dt class="label">Leveranse</dt><dd class="value">6–16 uker</dd></div>
+            <div class="service-meta"><dt class="label">Investering</dt><dd class="value">Pris etter forespørsel. Fastpris etter kartleggingen.</dd></div>
+            <div class="service-meta"><dt class="label">Passer for</dt><dd class="value">Bedrifter med mye egne data og et tydelig fagområde, der en generell modell ikke treffer godt nok, eller der volumet gjør en egen modell billigere i drift.</dd></div>
           </dl>
         </article>
       </div>

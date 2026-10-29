@@ -127,6 +127,19 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Your own AI model",
+  "serviceType": "AI services",
+  "provider": {
+    "@id": "https://nrth.no/#organization"
+  },
+  "areaServed": "NO",
+  "url": "https://nrth.no/en/ai-services#own-model"
+}
+</script>
 
 <link rel="preload" href="/assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="/assets/site.css?v=2026-10-27" />
@@ -174,7 +187,7 @@
   <!-- ───────── Tjenester ───────── -->
   <section class="section">
     <div class="wrap">
-      <div class="card-grid">
+      <div class="card-grid card-grid--2">
         <article class="service-card" id="ai-assistants" data-reveal style="--d: 0">
           <div class="card-head"><span>01</span></div>
           <h2>AI assistants</h2>
@@ -233,6 +246,26 @@
             <div class="service-meta"><dt class="label">Delivery</dt><dd class="value">2–4 weeks</dd></div>
             <div class="service-meta"><dt class="label">Investment</dt><dd class="value">Typically NOK&nbsp;100,000 to 1,000,000+, depending on scale.</dd></div>
             <div class="service-meta"><dt class="label">Best fit</dt><dd class="value">Regulated industries and companies that treat control over their own data as a strategic choice, not a box to tick.</dd></div>
+          </dl>
+        </article>
+        <article class="service-card" id="own-model" data-reveal style="--d: 3">
+          <div class="card-head"><span>04</span></div>
+          <h2>Your own AI model</h2>
+          <p class="desc">We train an AI model on your own data, so it knows your field, your language and your routines. Then we run and maintain it, and keep training it as your data changes.</p>
+          <div>
+            <p class="included-label">Included</p>
+            <ul class="included">
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Assessment of your data, your goals and whether your own model pays off</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Preparation and anonymisation of training data</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Training on an open model, tested against your own examples</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Hosting in an EU cloud or on your own hardware</span></li>
+              <li><span class="arrow" aria-hidden="true">→</span> <span>Monitoring, maintenance and regular retraining</span></li>
+            </ul>
+          </div>
+          <dl class="service-meta-group">
+            <div class="service-meta"><dt class="label">Delivery</dt><dd class="value">6–16 weeks</dd></div>
+            <div class="service-meta"><dt class="label">Investment</dt><dd class="value">Price on request. Fixed price after the assessment.</dd></div>
+            <div class="service-meta"><dt class="label">Best fit</dt><dd class="value">Companies with plenty of their own data and a clear field, where a general-purpose model falls short, or where volume makes your own model cheaper to run.</dd></div>
           </dl>
         </article>
       </div>

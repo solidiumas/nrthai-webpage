@@ -87,6 +87,15 @@
       "url": { "nb": "https://nrth.no/ai-tjenester#lokal-ai", "en": "https://nrth.no/en/ai-services#local-ai" }
     },
     {
+      "id": "egen-ai-modell",
+      "dor": "ai-tjenester",
+      "navn": { "nb": "Egen AI-modell", "en": "Your own AI model" },
+      "leveranse": { "nb": "6–16 uker", "en": "6–16 weeks" },
+      "fraPris": null,
+      "prisTekst": null,
+      "url": { "nb": "https://nrth.no/ai-tjenester#egen-modell", "en": "https://nrth.no/en/ai-services#own-model" }
+    },
+    {
       "id": "foredrag-og-kurs",
       "dor": "informasjon",
       "navn": { "nb": "Foredrag og kurs", "en": "Talks and courses" },

@@ -30,7 +30,7 @@ let checks = 0;
 const ok = (cond, msg) => { checks++; if (!cond) errors.push(msg); };
 
 ok(data.valuta === "NOK" && data.eksMva === true, "valuta skal være NOK og eksMva true");
-ok(Array.isArray(data.tjenester) && data.tjenester.length === 10, `ventet ti tjenester, fant ${data.tjenester && data.tjenester.length}`);
+ok(Array.isArray(data.tjenester) && data.tjenester.length === 11, `ventet elleve tjenester, fant ${data.tjenester && data.tjenester.length}`);
 const llms = read("llms.txt").replace(/ /g, " ");
 
 for (const t of data.tjenester) {
