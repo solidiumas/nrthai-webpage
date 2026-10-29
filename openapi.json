@@ -285,7 +285,7 @@
               "integer",
               "null"
             ],
-            "description": "Lowest price in NOK, excluding VAT. null until the price is set."
+            "description": "Lowest price in NOK, excluding VAT. null when the price is on request."
           },
           "prisPer": {
             "description": "Price unit, when the price is per month",
@@ -316,7 +316,7 @@
             "description": "Lowest monthly price for operations in NOK, excluding VAT, when it comes on top of the setup price."
           },
           "prisTekst": {
-            "description": "The price as it is written on the website. null until the price is set.",
+            "description": "The price as it is written on the website. null when the price is on request.",
             "oneOf": [
               {
                 "type": "object",

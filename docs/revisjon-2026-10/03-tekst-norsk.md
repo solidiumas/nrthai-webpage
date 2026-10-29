@@ -93,7 +93,7 @@ AI-vurdering ✦ Implementering ✦ AI-tjenester ✦ Mer salg ✦ Mindre manuelt
 - Topp: 03 · AI-tjenester
 - Tittel: Løsninger som selger mer og sparer tid.
 - Tekst: Vi bygger AI-løsninger rundt deres prosesser og data: AI-assistenter som avlaster teamet og automatiserer rutinearbeid, skreddersydde løsninger og AI på egen maskinvare.
-- Liste: AI-assistenter · 1–3 uker / Skreddersydde løsninger · 4–16 uker / Lokal AI-infrastruktur · 2–4 uker
+- Liste: AI-assistenter · 1–3 uker / Skreddersydde løsninger · 4–16 uker / Lokal AI-infrastruktur · 2–4 uker / Egen AI-modell · 6–16 uker
 - Pris: Fra 50 000 kr
 - Lenke: Les mer → `/ai-tjenester`
 
@@ -287,6 +287,18 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
 - Leveranse: 2–4 uker
 - Investering: Typisk 100 000 til 1 000 000+ kr, avhengig av omfang.
 - Passer for: Regulerte bransjer og bedrifter der kontroll over egne data er et strategisk valg, ikke et krav å krysse av for.
+
+**04 · Egen AI-modell** (`id="egen-modell"`, fire kort i `card-grid--2`)
+- Tekst: Vi trener en AI-modell på deres egne data, så den kan fagområdet, språket og rutinene deres. Deretter drifter og vedlikeholder vi den, og trener den videre når dataene endrer seg.
+- Inkludert:
+  - Vurdering av data, mål og om en egen modell lønner seg
+  - Klargjøring og anonymisering av treningsdata
+  - Trening på en åpen modell, testet mot deres egne eksempler
+  - Drift i EU-sky eller på egen maskinvare
+  - Overvåking, vedlikehold og jevnlig ny trening
+- Leveranse: 6–16 uker
+- Investering: Pris etter forespørsel. Fastpris etter kartleggingen.
+- Passer for: Bedrifter med mye egne data og et tydelig fagområde, der en generell modell ikke treffer godt nok, eller der volumet gjør en egen modell billigere i drift.
 
 ### Regnestykket
 (samme blokk som på forsiden)

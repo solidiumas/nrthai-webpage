@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nrth.no/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/" />
   </url>
   <url>
     <loc>https://nrth.no/en</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/" />
@@ -44,14 +44,14 @@
   </url>
   <url>
     <loc>https://nrth.no/ai-tjenester</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/ai-tjenester" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/ai-services" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/ai-tjenester" />
   </url>
   <url>
     <loc>https://nrth.no/en/ai-services</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/ai-tjenester" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/ai-services" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/ai-tjenester" />

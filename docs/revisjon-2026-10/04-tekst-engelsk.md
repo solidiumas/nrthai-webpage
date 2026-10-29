@@ -84,7 +84,7 @@ AI assessment ✦ Implementation ✦ AI services ✦ More sales ✦ Less manual 
 **Card 3** · 03 · AI services
 - Title: Solutions that sell more and save time.
 - Text: We build AI solutions around your processes and data: AI assistants that support your team and automate routine work, custom solutions, and AI on your own hardware.
-- List: AI assistants · 1–3 weeks / Custom solutions · 4–16 weeks / Local AI infrastructure · 2–4 weeks
+- List: AI assistants · 1–3 weeks / Custom solutions · 4–16 weeks / Local AI infrastructure · 2–4 weeks / Your own AI model · 6–16 weeks
 - Price: From NOK 50,000
 - Link: Read more → `/en/ai-services`
 
@@ -233,6 +233,13 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 - Delivery: 2–4 weeks
 - Investment: Typically NOK 100,000 to 1,000,000+, depending on scale.
 - Best fit: Regulated industries and companies that treat control over their own data as a strategic choice, not a box to tick.
+
+**04 · Your own AI model** (`id="own-model"`, four cards in `card-grid--2`)
+- Text: We train an AI model on your own data, so it knows your field, your language and your routines. Then we run and maintain it, and keep training it as your data changes.
+- Included: Assessment of your data, your goals and whether your own model pays off / Preparation and anonymisation of training data / Training on an open model, tested against your own examples / Hosting in an EU cloud or on your own hardware / Monitoring, maintenance and regular retraining
+- Delivery: 6–16 weeks
+- Investment: Price on request. Fixed price after the assessment.
+- Best fit: Companies with plenty of their own data and a clear field, where a general-purpose model falls short, or where volume makes your own model cheaper to run.
 
 ### The math
 
