@@ -120,7 +120,7 @@ Under kortene: knapp **Book et møte →** og teksten «Usikre på hvor dere ska
   Merker: NHH MSc finans · UC Berkeley · Storebrand · Sopra Steria
   Lenke: LinkedIn ↗ (`https://www.linkedin.com/in/thomas-uthaug`, aria-label `Thomas Uthaug på LinkedIn`)
 - Simen Uthaug · Medgründer · teknologi og utvikling
-  Bachelor i informasjonsvitenskap fra UiB og master i UX og utvikling. Fullstack-utvikler med TypeScript, React, Python, API-integrasjon, databaser og maskinlæring.
+  Bachelor i informasjonsvitenskap fra UiB, og fullfører master i UX og utvikling våren 2027. Fullstack-utvikler med TypeScript, React, Python, API-integrasjon, databaser og maskinlæring.
   Merker: UiB informasjonsvitenskap · TypeScript / React · Python / ML · Fullstack
   Lenke: LinkedIn ↗ (`https://www.linkedin.com/in/simen-uthaug`, aria-label `Simen Uthaug på LinkedIn`)
 - Under: `os-note`
