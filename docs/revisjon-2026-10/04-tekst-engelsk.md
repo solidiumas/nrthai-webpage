@@ -111,7 +111,7 @@ Below the cards: button **Book a meeting →** and «Not sure where to start? We
   Tags: NHH MSc Finance · UC Berkeley · Storebrand · Sopra Steria
   Link: LinkedIn ↗ (`https://www.linkedin.com/in/thomas-uthaug`, aria-label `Thomas Uthaug on LinkedIn`)
 - Simen Uthaug · Co-founder · technology and development
-  BSc in Information Science from the University of Bergen and a master's degree in UX and development. Full-stack developer working in TypeScript, React, Python, API integration, databases and machine learning.
+  BSc in Information Science from the University of Bergen, now completing a master's in UX and development (spring 2027). Full-stack developer working in TypeScript, React, Python, API integration, databases and machine learning.
   Tags: UiB Information Science · TypeScript / React · Python / ML · Full-stack
   Link: LinkedIn ↗ (`https://www.linkedin.com/in/simen-uthaug`, aria-label `Simen Uthaug on LinkedIn`)
 - Below: `os-note`
