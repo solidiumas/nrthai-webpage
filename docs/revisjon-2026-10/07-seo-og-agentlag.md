@@ -109,7 +109,7 @@ Kartlegg (1 uke) → Pilot (2–3 uker) → Drift (løpende).
 
 ## Selskapet
 
-Nrth AI AS (org.nr. 937 872 038), Bergen, etablert 2026. Gründere: Thomas Uthaug (forretning, produkt og leveranse) og Simen Uthaug (teknologi og utvikling). Vi lager også produktet Nrth OS: https://trynrth.com
+Nrth AI AS (org.nr. 937 872 038), Bergen, etablert 2026. Gründere: Thomas Uthaug (forretning, produkt og leveranse) og Simen Uthaug (teknologi og utvikling). Vi lager også produktet Flow: https://trynrth.com
 
 ## English
 

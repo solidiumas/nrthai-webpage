@@ -45,10 +45,10 @@ Alle sider unntatt `/book`, `/personvern` og 404 har bookingseksjonen nederst me
 ```
 </> Nrth AI
 AI-vurdering · Implementering · AI-tjenester · Foredrag og kurs · Om oss · Spørsmål og svar · Personvern
-© 2026 Nrth AI AS · Bergen · Org.nr. 937 872 038      Nrth OS ↗ · LinkedIn ↗ · Investorer · English      Built by agents · ▲
+© 2026 Nrth AI AS · Bergen · Org.nr. 937 872 038      Flow ↗ · LinkedIn ↗ · Investorer · English      Built by agents · ▲
 ```
 
-«Nrth OS ↗» lenker til `https://trynrth.com` med `rel="noopener"`. Det samme gjelder Nrth OS-blokken på forsiden og Om oss. Er trynrth.com ikke oppe når nrth.no publiseres, skjules lenkene og blokken til den er det (legg dem i HTML med `hidden`, så de er enkle å slå på).
+«Flow ↗» lenker til `https://trynrth.com` med `rel="noopener"`. Det samme gjelder Flow-blokken på forsiden og Om oss. Er trynrth.com ikke oppe når nrth.no publiseres, skjules lenkene og blokken til den er det (legg dem i HTML med `hidden`, så de er enkle å slå på).
 
 ## 4. Videresendinger (`vercel.json`)
 

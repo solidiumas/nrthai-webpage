@@ -65,9 +65,9 @@ Legg nye stiler nederst i `site.css` under en egen kommentar: `/* ────�
 - Tittelen i serif 32 px. Ingen stor seksjonsoverskrift, dette skal være lavmælt.
 - Under 720 px: knappen går under teksten.
 
-### `os-note` (Nrth OS)
+### `os-note` (Flow)
 - Én rad med 1 px **stiplet** `--line-2`-kant.
-- Etiketten «Nrth OS» i mono og oransje, én setning i `--fg`, og lenken «trynrth.com ↗» i oransje til høyre.
+- Etiketten «Flow» i mono og oransje, én setning i `--fg`, og lenken «trynrth.com ↗» i oransje til høyre.
 
 ### `lang-switch`
 - I menyen, før «Book et møte»: `EN` eller `NO` i samme stil som `.nav-link`.
