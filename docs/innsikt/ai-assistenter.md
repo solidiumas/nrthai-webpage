@@ -45,7 +45,7 @@ Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tils
 
 ## Hvordan kommer dere i gang?
 
-Vi setter opp AI-assistenter som en [tjeneste](/ai-tjenester#ai-assistenter), 1–3 uker fra avtale til drift. Bedrifter som vil sette opp sine egne, kan søke om å bli pilotkunde i [Nrth OS](https://trynrth.com/no/pilot), der assistenter, oppgaver, planlegging og logg bygges inn.
+Vi setter opp AI-assistenter som en [tjeneste](/ai-tjenester#ai-assistenter), 1–3 uker fra avtale til drift. Bedrifter som vil sette opp sine egne, kan søke om å bli pilotkunde i [Flow](https://trynrth.com/no/pilot), der assistenter, oppgaver, planlegging og logg bygges inn.
 
 ## Neste steg
 
