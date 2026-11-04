@@ -78,7 +78,7 @@ body:not(.lang-en) .lang-en { display: none !important; }
 .inv-risk { margin-top: 32px; max-width: 80ch; font-size: 14px; line-height: 1.7; color: var(--fg-dim); }
 .inv-risk strong { font-weight: 600; color: var(--fg-2); }
 
-/* ───── Liste med navn og forklaring (lagene i OS-et, de fem delene i Nrth OS) ───── */
+/* ───── Liste med navn og forklaring (lagene i Flow, de fem delene i Flow) ───── */
 .os-stack { list-style: none; border: 1px solid var(--line); border-radius: var(--r-card); overflow: hidden; }
 .os-layer { display: grid; grid-template-columns: 200px 1fr; gap: 28px; align-items: baseline; padding: 18px 28px; }
 .os-layer + .os-layer { border-top: 1px solid var(--line); }

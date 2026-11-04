@@ -27,9 +27,9 @@ The English site is for international visitors and Norwegian companies with Engl
 - Chips: 30 minutes · In person in Norway or online
 - Link below: Prefer to write? **Send a request →** (to `/en/book#write`)
 
-### Nrth OS note (`os-note`)
-- Label: Nrth OS
-- Text: We also build Nrth OS: the workspace where companies put AI to work themselves.
+### Flow note (`os-note`)
+- Label: Flow
+- Text: We also build Flow: the workspace where companies put AI to work themselves.
 - Link: trynrth.com ↗
 
 ### Talks and courses info box (`info-box`)
@@ -41,7 +41,7 @@ The English site is for international visitors and Norwegian companies with Engl
 ### Footer
 - Links: AI assessment · Implementation · AI services · Talks and courses · Insights · About · FAQ · Privacy
 - © 2026 Nrth AI AS · Bergen, Norway · Org. no. 937 872 038
-- Nrth OS ↗ · LinkedIn ↗ (to `https://www.linkedin.com/company/nrth-ai/`) · Investors · Norsk
+- Flow ↗ · LinkedIn ↗ (to `https://www.linkedin.com/company/nrth-ai/`) · Investors · Norsk
 - Built by agents · ▲
 
 ---
@@ -267,7 +267,7 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 3. **We tell you when AI is the wrong tool.** That saves you more than it costs us.
 4. **Measured on what matters.** Every solution gets a goal you can measure: more sales, fewer hours or better quality.
 
-### Nrth OS note
+### Flow note
 
 ### Contact
 - Email: contact@nrth.no

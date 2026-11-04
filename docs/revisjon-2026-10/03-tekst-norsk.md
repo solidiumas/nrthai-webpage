@@ -33,9 +33,9 @@ Brukes nederst på alle sider unntatt `/book` og `/personvern`. Tema forhåndsve
 - Lenke under: Heller skrive? **Send en forespørsel →** (til `/book#skriv`)
 - Skjema og kalender: se `06-booking-og-skjema.md`
 
-### Nrth OS-blokk (`os-note`)
-- Etikett: Nrth OS
-- Tekst: Vi lager også Nrth OS: arbeidsrommet der bedrifter tar i bruk AI selv.
+### Flow-blokk (`os-note`)
+- Etikett: Flow
+- Tekst: Vi lager også Flow: arbeidsrommet der bedrifter tar i bruk AI selv.
 - Lenke: trynrth.com ↗
 
 ### Infoboks om foredrag og kurs (`info-box`)
@@ -47,7 +47,7 @@ Brukes nederst på alle sider unntatt `/book` og `/personvern`. Tema forhåndsve
 ### Footer
 - Lenker: AI-vurdering · Implementering · AI-tjenester · Foredrag og kurs · Innsikt · Om oss · Spørsmål og svar · Personvern
 - © 2026 Nrth AI AS · Bergen · Org.nr. 937 872 038
-- Nrth OS ↗ · LinkedIn ↗ (til `https://www.linkedin.com/company/nrth-ai/`) · Investorer · English
+- Flow ↗ · LinkedIn ↗ (til `https://www.linkedin.com/company/nrth-ai/`) · Investorer · English
 - Built by agents · ▲
 
 ---
@@ -328,7 +328,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
 3. **Vi sier fra når AI er feil verktøy.** Det sparer dere mer enn det koster oss.
 4. **Målt på det som teller.** Hver løsning får et mål dere kan måle: mer salg, færre timer eller bedre kvalitet.
 
-### Nrth OS-blokk
+### Flow-blokk
 
 ### Kontakt (`contact-lines`)
 - E-post: contact@nrth.no
