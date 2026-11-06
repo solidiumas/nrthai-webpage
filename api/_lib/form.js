@@ -32,7 +32,7 @@ function wantsHtml(req) {
   return type.startsWith('application/x-www-form-urlencoded') && accept.includes('text/html');
 }
 
-// req.body er en getter hos Vercel og kaster ved ugyldig JSON. Gir null da.
+// req.body er en getter hos Vercel (og i worker/vercel.js) og kaster ved ugyldig JSON. Gir null da.
 function readBody(req) {
   try {
     const body = req.body;

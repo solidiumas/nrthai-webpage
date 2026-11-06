@@ -6,7 +6,7 @@
      - Google Kalender-avtaleplan: lenken fra Del → Nettsted-innebygging
        (bare adressen i src="…", ikke hele iframe-koden).
      - Cal.com: https://cal.com/<bruker>/<type>. Valgt tema sendes med som notat.
-   /assets/ mellomlagres i én time (vercel.json), så en endring her kan bruke
+   /assets/ mellomlagres i én time (vercel.json og _headers), så en endring her kan bruke
    opptil en time på å nå alle.
    ========================================================================== */
 window.NRTH_BOOKING = {
