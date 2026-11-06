@@ -32,7 +32,7 @@ Tidene er anslag for en bedrift med 10–50 ansatte, og avhenger av volum.
 
 ## Regnestykket bak 20–40 prosent
 
-En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året inkludert sosiale kostnader. En AI-assistent for én oppgave koster oppsett (fra ca. 35 000 kroner hos oss, 1–3 uker) pluss drift (fra 5 000 kroner per måned) pluss forbruk (500–3 000 kroner i måneden) pluss tiden et menneske bruker på å godkjenne resultatene. AI koster typisk 20–40 % av det én ansatt koster.
+En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året inkludert sosiale kostnader. En AI-assistent for én oppgave koster oppsett (fra ca. 35 000 kroner hos oss, 1–3 uker) pluss drift (fra 3 490 kroner per måned) pluss forbruk (500–3 000 kroner i måneden) pluss tiden et menneske bruker på å godkjenne resultatene. AI koster typisk 20–40 % av det én ansatt koster.
 
 Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tilsvarende én til flere ekstra ansatte, og kvaliteten går opp.
 

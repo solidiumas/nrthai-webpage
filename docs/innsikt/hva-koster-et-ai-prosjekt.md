@@ -22,10 +22,10 @@ Et AI-prosjekt i en norsk småbedrift koster typisk 100 000 til 400 000 kroner d
 | AI-kartlegging | 3–5 dager | Fra 25 000 kr | Bedrifter som vil vite hvor de skal begynne |
 | Strategisprint | 2 uker | Fra 70 000 kr | Ledergrupper som skal ta en beslutning |
 | Ledersparring | Månedlig | Fra 25 000 kr per måned | Daglige ledere som vil ha en partner som sier fra |
-| Pilot i drift | 2–3 uker | Fra 60 000 kr | Én løsning på én avgrenset oppgave |
+| Pilot i drift | 2–3 uker | Fra 90 000 kr | Én løsning på én avgrenset oppgave |
 | Innføring av AI-verktøy | 2–4 uker | Fra 30 000 kr | Bedrifter som har kjøpt, eller skal kjøpe, AI-verktøy og vil få verdi ut av dem |
-| Drift og forbedring | Løpende | Fra 5 000 kr per måned | Alle som har AI i drift og vil at den skal fortsette å levere |
-| AI-assistenter | 1–3 uker | Oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned | Rutineoppgaver som gjentas ukentlig |
+| Drift og forbedring | Løpende | Fra 3 490 kr per måned | Alle som har AI i drift og vil at den skal fortsette å levere |
+| AI-assistenter | 1–3 uker | Oppsett fra ca. 35 000 kr, drift fra 3 490 kr per måned | Rutineoppgaver som gjentas ukentlig |
 | Skreddersydde løsninger | 4–16 uker | Små fra ca. 150 000 kr, mellomstore fra 400 000 kr, store fra 1 000 000 kr | Prosesser som krever integrasjon mot egne systemer |
 | Lokal AI-infrastruktur | 2–4 uker | Typisk 100 000 til 1 000 000+ kr | Regulerte bransjer og bedrifter der kontroll over egne data er et strategisk valg, ikke et krav å krysse av for |
 
