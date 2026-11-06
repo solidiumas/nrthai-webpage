@@ -210,7 +210,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
   - Test med ekte brukere
   - Måling mot målet, og anbefaling om neste steg
 - Leveranse: 2–3 uker
-- Investering: Fra 60 000 kr
+- Investering: Fra 90 000 kr
 - Passer for: Bedrifter som vil se effekt før de skalerer.
 
 **02 · Innføring av AI-verktøy** (`id="verktoy"`)
@@ -232,7 +232,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
   - Utvidelse til nye områder
   - Månedlig gjennomgang av resultater
 - Leveranse: Løpende
-- Investering: Fra 5 000 kr per måned
+- Investering: Fra 3 490 kr per måned
 - Passer for: Alle som har AI i drift og vil at den skal fortsette å levere.
 
 ### Book et møte (tema: Implementering)
@@ -261,7 +261,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
   - Drift på lokal infrastruktur når dataene krever det
   - Løpende forbedring og overvåking
 - Leveranse: 1–3 uker
-- Investering: Oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned. Typisk 20–40 % av kostnaden for en ansatt.
+- Investering: Oppsett fra ca. 35 000 kr, drift fra 3 490 kr per måned. Typisk 20–40 % av kostnaden for en ansatt.
 - Passer for: Bedrifter som vil at teamet skal rekke mer og levere bedre, særlig der det er mye repeterende kunnskapsarbeid eller store volum.
 
 **02 · Skreddersydde løsninger** (`id="skreddersydd"`)
@@ -408,7 +408,7 @@ Lagt til 21. oktober 2026 (Thomas: lenke i footeren, lik på norsk og engelsk). 
 ### Spørsmål (`prose`, H2 per spørsmål)
 1. **Hva gjør Nrth AI?** Vi hjelper bedrifter å ta i bruk AI: vi vurderer hvor AI gir mest, implementerer det, og bygger AI-tjenester som AI-assistenter og skreddersydde løsninger.
 2. **Hvordan starter vi?** Med et møte. Book på nrth.no/book. Deretter følger vi tre steg: kartlegg (1 uke), pilot (2–3 uker) og drift.
-3. **Hva koster det?** AI-kartlegging fra 25 000 kr. AI-assistenter fra ca. 35 000 kr i oppsett og 5 000 kr per måned i drift. Skreddersydde løsninger fra ca. 150 000 kr. Alle priser står på nrth.no.
+3. **Hva koster det?** AI-kartlegging fra 25 000 kr. AI-assistenter fra ca. 35 000 kr i oppsett og 3 490 kr per måned i drift. Skreddersydde løsninger fra ca. 150 000 kr. Alle priser står på nrth.no.
 4. **Holder dere foredrag og kurs?** Ja, for ledergrupper, ansatte og konferanser. Se nrth.no/foredrag-og-kurs.
 5. **Hvor holder dere til?** I Bergen. Vi møter bedrifter fysisk i hele Norge, og digitalt med kunder i utlandet.
 
