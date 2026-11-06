@@ -42,7 +42,7 @@ Lokal AI løser ikke personvernet alene. Dere er fortsatt behandlingsansvarlig f
 
 ## Et mellomalternativ: EU-hosting uten trening
 
-For bedrifter som ikke har egen IT-drift, finnes et mellomalternativ: en tjeneste der modellene kjører i EU, med databehandleravtale, uten at dataene brukes til trening, og der dere kan velge kun europeiske leverandører. Det er slik [Flow](https://nrthflow.com/no/data) bygges, med mulighet til å koble på en egen lokal modell når dere er klare for det.
+For bedrifter som ikke har egen IT-drift, finnes et mellomalternativ: en tjeneste der modellene kjører i EU, med databehandleravtale, uten at dataene brukes til trening, og der dere kan velge kun europeiske leverandører. Det er slik [Nrth Flow](https://nrthflow.com/no/data) bygges, med mulighet til å koble på en egen lokal modell når dere er klare for det.
 
 ## Neste steg
 
