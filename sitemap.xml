@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nrth.no/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/" />
   </url>
   <url>
     <loc>https://nrth.no/en</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/" />
   </url>
   <url>
     <loc>https://nrth.no/ai-vurdering</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/ai-vurdering" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/ai-assessment" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/ai-vurdering" />
   </url>
   <url>
     <loc>https://nrth.no/en/ai-assessment</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/ai-vurdering" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/ai-assessment" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/ai-vurdering" />
@@ -44,14 +44,14 @@
   </url>
   <url>
     <loc>https://nrth.no/ai-tjenester</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/ai-tjenester" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/ai-services" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/ai-tjenester" />
   </url>
   <url>
     <loc>https://nrth.no/en/ai-services</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/ai-tjenester" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/ai-services" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/ai-tjenester" />
@@ -114,14 +114,14 @@
   </url>
   <url>
     <loc>https://nrth.no/sporsmal-og-svar</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/sporsmal-og-svar" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/faq" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/sporsmal-og-svar" />
   </url>
   <url>
     <loc>https://nrth.no/en/faq</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/sporsmal-og-svar" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/faq" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/sporsmal-og-svar" />
@@ -129,21 +129,21 @@
   <!-- innsikt:start (laget av scripts/innsikt.mjs fra docs/innsikt/) -->
   <url>
     <loc>https://nrth.no/innsikt</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/insights" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt" />
   </url>
   <url>
     <loc>https://nrth.no/en/insights</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt" />
     <xhtml:link rel="alternate" hreflang="en" href="https://nrth.no/en/insights" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt" />
   </url>
   <url>
     <loc>https://nrth.no/innsikt/ai-for-bedrifter</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/ai-for-bedrifter" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/ai-for-bedrifter" />
   </url>
@@ -161,13 +161,13 @@
   </url>
   <url>
     <loc>https://nrth.no/innsikt/hva-koster-et-ai-prosjekt</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/hva-koster-et-ai-prosjekt" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/hva-koster-et-ai-prosjekt" />
   </url>
   <url>
     <loc>https://nrth.no/innsikt/ai-assistenter</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="nb" href="https://nrth.no/innsikt/ai-assistenter" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nrth.no/innsikt/ai-assistenter" />
   </url>

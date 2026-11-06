@@ -152,3 +152,12 @@ Hver endring fra utkastene i strategidokumentet (fanen «Artikler nrth.no», 6. 
 - **Pris.** «typisk 100 000 til 1 000 000+ kr eks. mva., avhengig av omfang, og tar to til fire uker, utenom maskinvare» → «typisk 100 000 til 1 000 000+ kr eks. mva., inkludert maskinvare, avhengig av omfang, og tar to til fire uker» i /innsikt/lokal-ai. Thomas: maskinvaren er med i prisen.
 - **Pris.** Punktet «Maskinvare, bare for lokal AI» under «Hva kommer i tillegg?» er fjernet fra /innsikt/hva-koster-et-ai-prosjekt, av samme grunn.
 - Bekreftet uendret: modellforbruket kommer i tillegg til driften, fast pris etter kartleggingen, at kartleggingen vurderer personvernkonsekvenser og risikoklasse, at Nrth AI ikke selger lisenser, og 2–4 timer i uken fra kunden under pilot.
+
+## Nye priser 6. november 2026
+
+Thomas satte nye priser. Artiklene følger tjenestesidene.
+
+- **Pris.** AI-kartlegging fra 35 000 kr → fra 25 000 kr i /innsikt/ai-for-bedrifter og /innsikt/hva-koster-et-ai-prosjekt (tabell og beskrivelse).
+- **Pris.** Strategisprint fra 75 000 kr → fra 70 000 kr i de samme to artiklene. Varigheten er fortsatt to uker.
+- **Pris.** Oppsett av AI-assistenter fra ca. 50 000 kr → fra ca. 35 000 kr i /innsikt/ai-assistenter, /innsikt/ai-for-bedrifter og /innsikt/hva-koster-et-ai-prosjekt.
+- Datoen «oppdatert» er satt til 6. november 2026 i de tre artiklene.

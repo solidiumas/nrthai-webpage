@@ -71,7 +71,7 @@ AI assessment ✦ Implementation ✦ AI services ✦ More sales ✦ Less manual 
 - Title: Find out where AI does the most for you.
 - Text: Before you spend money on tools, we find where AI actually increases sales or saves time in your business, and what to do first.
 - List: AI assessment · 3–5 days / Strategy sprint · 2 weeks / Leadership advisory · monthly
-- Price: From NOK 35,000
+- Price: From NOK 25,000
 - Link: Read more → `/en/ai-assessment`
 
 **Card 2** · 02 · Implementation
@@ -85,7 +85,7 @@ AI assessment ✦ Implementation ✦ AI services ✦ More sales ✦ Less manual 
 - Title: Solutions that sell more and save time.
 - Text: We build AI solutions around your processes and data: AI assistants that support your team and automate routine work, custom solutions, and AI on your own hardware.
 - List: AI assistants · 1–3 weeks / Custom solutions · 4–16 weeks / Local AI infrastructure · 2–4 weeks / Your own AI model · 6–16 weeks
-- Price: From NOK 50,000
+- Price: From NOK 35,000
 - Link: Read more → `/en/ai-services`
 
 Below the cards: button **Book a meeting →** and «Not sure where to start? We'll work that out in the meeting.»
@@ -133,7 +133,7 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 ## AI assessment `/en/ai-assessment`
 
 **Title:** AI assessment and AI strategy for businesses · Nrth AI
-**Description:** Find out where AI does the most for your business: a 3–5 day AI assessment, a 2-week strategy sprint and leadership advisory. From NOK 35,000.
+**Description:** Find out where AI does the most for your business: a 3–5 day AI assessment, a 2-week strategy sprint and leadership advisory. From NOK 25,000.
 
 ### Page hero
 - Kicker: ✦ AI assessment
@@ -145,14 +145,14 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 - Text: A written overview of where AI does the most in your business, and what to do first.
 - Included: Interviews with leadership and key people / Review of processes, systems and data / Assessment of where AI can increase sales or save time / A written roadmap with prioritised actions
 - Delivery: 3–5 days
-- Investment: From NOK 35,000
+- Investment: From NOK 25,000
 - Best fit: Companies that want to know where to start before they commit.
 
 **02 · Strategy sprint** (`id="sprint"`)
 - Text: Two intensive weeks that end in a plan you can carry out.
 - Included: Implementation plan / A model of gains and costs / Prioritised scope for the first pilot / A recommendation on what to buy and what to build
 - Delivery: 2 weeks
-- Investment: From NOK 75,000
+- Investment: From NOK 70,000
 - Best fit: Leadership teams about to make a decision on AI who want solid ground to stand on.
 
 **03 · Leadership advisory** (`id="advisory"`)
@@ -205,7 +205,7 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 ## AI services `/en/ai-services`
 
 **Title:** AI services and AI assistants for businesses · Nrth AI
-**Description:** AI assistants from NOK 50,000, custom AI solutions and local AI infrastructure on your own hardware. Prices and timelines on the site.
+**Description:** AI assistants from NOK 35,000, custom AI solutions and local AI infrastructure on your own hardware. Prices and timelines on the site.
 
 ### Page hero
 - Kicker: ✦ AI services
@@ -217,7 +217,7 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 - Text: An AI assistant works alongside your people in a specific workflow: document processing, customer service, analysis, internal knowledge or sales follow-up. It takes the routine work, so people get more time for the work that needs them, and quality goes up.
 - Included: Mapping of the workflow and the people who use it / An AI assistant built around your processes / Integration with your existing tools and data / Deployment on local infrastructure when your data requires it / Ongoing improvement and monitoring
 - Delivery: 1–3 weeks
-- Investment: Setup from about NOK 50,000, operations from NOK 5,000 per month. Typically 20–40% of the cost of one employee.
+- Investment: Setup from about NOK 35,000, operations from NOK 5,000 per month. Typically 20–40% of the cost of one employee.
 - Best fit: Companies that want their team to get more done and deliver better work, especially where there is a lot of repetitive knowledge work or high volumes.
 
 **02 · Custom solutions** (`id="custom"`)
@@ -340,7 +340,7 @@ Added 21 October 2026. Mirror of `/sporsmal-og-svar`, with the same five questio
 ### Questions (`prose`, H2 per question)
 1. **What does Nrth AI do?** We help businesses adopt AI: we assess where AI does the most, implement it, and build AI services such as AI assistants and custom solutions.
 2. **How do we get started?** With a meeting. Book at nrth.no/en/book. Then we follow three steps: map (1 week), pilot (2–3 weeks) and run.
-3. **What does it cost?** AI assessment from NOK 35,000. AI assistants from about NOK 50,000 in setup and NOK 5,000 per month in operations. Custom solutions from about NOK 150,000. All prices are on nrth.no.
+3. **What does it cost?** AI assessment from NOK 25,000. AI assistants from about NOK 35,000 in setup and NOK 5,000 per month in operations. Custom solutions from about NOK 150,000. All prices are on nrth.no.
 4. **Do you give talks and courses?** Yes, for leadership teams, staff and conferences. See nrth.no/en/talks-and-courses.
 5. **Where are you based?** In Bergen, Norway. We meet businesses in person across Norway, and online with clients abroad.
 

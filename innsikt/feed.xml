@@ -6,14 +6,14 @@
   <link rel="self" type="application/atom+xml" href="https://nrth.no/innsikt/feed.xml" />
   <link rel="alternate" type="text/html" href="https://nrth.no/innsikt" />
   <id>https://nrth.no/innsikt</id>
-  <updated>2026-10-27T00:00:00Z</updated>
+  <updated>2026-11-06T00:00:00Z</updated>
   <author><name>Nrth AI</name><uri>https://nrth.no/</uri></author>
   <entry>
     <title>AI for bedrifter i 2026: hvor du starter, hva det koster og hva du bør la være</title>
     <link rel="alternate" type="text/html" href="https://nrth.no/innsikt/ai-for-bedrifter" />
     <id>https://nrth.no/innsikt/ai-for-bedrifter</id>
     <published>2026-10-27T00:00:00Z</published>
-    <updated>2026-10-27T00:00:00Z</updated>
+    <updated>2026-11-06T00:00:00Z</updated>
     <author><name>Thomas Uthaug</name><uri>https://nrth.no/om-oss#thomas-uthaug</uri></author>
     <category term="Ta i bruk AI" />
     <summary>AI for bedrifter: slik tar en norsk bedrift i bruk AI uten å kaste bort penger. Hvor du starter, hva kartlegging og pilot koster, og hva du bør la være.</summary>
@@ -25,7 +25,7 @@
 &lt;p&gt;Start med å finne de tre til fem stedene i bedriften der AI faktisk endrer regnestykket. Det er sjelden der folk tror. Det er ikke kundeservice-chatboten, det er de ukentlige oppgavene som tar timer og krever lesing, sammenligning og skriving: fakturakontroll, tilbudsutkast, svar på standardhenvendelser, ukesrapporter, leverandøroppfølging.&lt;/p&gt;
 &lt;p&gt;En god test: kan oppgaven beskrives i en setning, gjentas den minst ukentlig, og finnes det dokumenter den bygger på? Da er den en kandidat. Oppgaver som krever skjønn i hvert tilfelle, eller som ingen kan beskrive, er det ikke.&lt;/p&gt;
 &lt;h2 id=&quot;hva-koster-det&quot;&gt;Hva koster det?&lt;/h2&gt;
-&lt;p&gt;Hos oss koster AI-kartlegging fra 35 000 kroner og tar tre til fem dager. En strategisprint på to uker koster fra 75 000 kroner. En pilot i drift tar to til tre uker og koster fra 60 000 kroner. AI-assistenter har oppsett fra ca. 50 000 kroner og drift fra 5 000 kroner per måned, og lokal AI-infrastruktur koster typisk 100 000 til 1 000 000+ kroner. Alle priser er eksklusive mva. og står på sidene om &lt;a href=&quot;https://nrth.no/ai-vurdering&quot;&gt;AI-vurdering&lt;/a&gt;, &lt;a href=&quot;https://nrth.no/implementering&quot;&gt;implementering&lt;/a&gt;, &lt;a href=&quot;https://nrth.no/ai-tjenester&quot;&gt;AI-tjenester&lt;/a&gt; og &lt;a href=&quot;https://nrth.no/foredrag-og-kurs&quot;&gt;foredrag og kurs&lt;/a&gt;. I tillegg kommer forbruk på modeller, som for de fleste SMB-er ligger på noen hundre til noen tusen kroner i måneden per løsning.&lt;/p&gt;
+&lt;p&gt;Hos oss koster AI-kartlegging fra 25 000 kroner og tar tre til fem dager. En strategisprint på to uker koster fra 70 000 kroner. En pilot i drift tar to til tre uker og koster fra 60 000 kroner. AI-assistenter har oppsett fra ca. 35 000 kroner og drift fra 5 000 kroner per måned, og lokal AI-infrastruktur koster typisk 100 000 til 1 000 000+ kroner. Alle priser er eksklusive mva. og står på sidene om &lt;a href=&quot;https://nrth.no/ai-vurdering&quot;&gt;AI-vurdering&lt;/a&gt;, &lt;a href=&quot;https://nrth.no/implementering&quot;&gt;implementering&lt;/a&gt;, &lt;a href=&quot;https://nrth.no/ai-tjenester&quot;&gt;AI-tjenester&lt;/a&gt; og &lt;a href=&quot;https://nrth.no/foredrag-og-kurs&quot;&gt;foredrag og kurs&lt;/a&gt;. I tillegg kommer forbruk på modeller, som for de fleste SMB-er ligger på noen hundre til noen tusen kroner i måneden per løsning.&lt;/p&gt;
 &lt;p&gt;En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året. Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tilsvarende én til flere ekstra ansatte, og kvaliteten går opp. AI koster typisk 20–40 % av det én ansatt koster.&lt;/p&gt;
 &lt;h2 id=&quot;hva-bor-du-la-vaere&quot;&gt;Hva bør du la være?&lt;/h2&gt;
 &lt;ul&gt;
@@ -118,23 +118,23 @@
     <link rel="alternate" type="text/html" href="https://nrth.no/innsikt/hva-koster-et-ai-prosjekt" />
     <id>https://nrth.no/innsikt/hva-koster-et-ai-prosjekt</id>
     <published>2026-10-27T00:00:00Z</published>
-    <updated>2026-10-27T00:00:00Z</updated>
+    <updated>2026-11-06T00:00:00Z</updated>
     <author><name>Thomas Uthaug</name><uri>https://nrth.no/om-oss#thomas-uthaug</uri></author>
     <category term="Ta i bruk AI" />
-    <summary>Hva koster et AI-prosjekt? AI-kartlegging fra 35 000 kr, strategisprint fra 75 000 kr, pilot i drift på 2–3 uker. Hele regnestykket for en norsk SMB.</summary>
+    <summary>Hva koster et AI-prosjekt? AI-kartlegging fra 25 000 kr, strategisprint fra 70 000 kr, pilot i drift på 2–3 uker. Hele regnestykket for en norsk SMB.</summary>
     <content type="html">&lt;p&gt;Et AI-prosjekt i en norsk småbedrift koster typisk 100 000 til 400 000 kroner det første året, fordelt på kartlegging, pilot og de første månedene i drift. Modellforbruket kommer i tillegg og ligger for de fleste på noen hundre til noen tusen kroner i måneden per løsning. Her er tallene vi selv bruker, slik at dere kan regne på det før første møte.&lt;/p&gt;
 &lt;h2 id=&quot;vare-priser&quot;&gt;Våre priser&lt;/h2&gt;
 &lt;div class=&quot;table-wrap&quot; role=&quot;region&quot; tabindex=&quot;0&quot; aria-labelledby=&quot;vare-priser&quot;&gt;
   &lt;table&gt;
     &lt;thead&gt;&lt;tr&gt;&lt;th scope=&quot;col&quot;&gt;Leveranse&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Tid&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Pris&lt;/th&gt;&lt;th scope=&quot;col&quot;&gt;Passer for&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
     &lt;tbody&gt;
-      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;AI-kartlegging&lt;/th&gt;&lt;td&gt;3–5 dager&lt;/td&gt;&lt;td&gt;Fra 35 000 kr&lt;/td&gt;&lt;td&gt;Bedrifter som vil vite hvor de skal begynne&lt;/td&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Strategisprint&lt;/th&gt;&lt;td&gt;2 uker&lt;/td&gt;&lt;td&gt;Fra 75 000 kr&lt;/td&gt;&lt;td&gt;Ledergrupper som skal ta en beslutning&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;AI-kartlegging&lt;/th&gt;&lt;td&gt;3–5 dager&lt;/td&gt;&lt;td&gt;Fra 25 000 kr&lt;/td&gt;&lt;td&gt;Bedrifter som vil vite hvor de skal begynne&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Strategisprint&lt;/th&gt;&lt;td&gt;2 uker&lt;/td&gt;&lt;td&gt;Fra 70 000 kr&lt;/td&gt;&lt;td&gt;Ledergrupper som skal ta en beslutning&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Ledersparring&lt;/th&gt;&lt;td&gt;Månedlig&lt;/td&gt;&lt;td&gt;Fra 25 000 kr per måned&lt;/td&gt;&lt;td&gt;Daglige ledere som vil ha en partner som sier fra&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Pilot i drift&lt;/th&gt;&lt;td&gt;2–3 uker&lt;/td&gt;&lt;td&gt;Fra 60 000 kr&lt;/td&gt;&lt;td&gt;Én løsning på én avgrenset oppgave&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Innføring av AI-verktøy&lt;/th&gt;&lt;td&gt;2–4 uker&lt;/td&gt;&lt;td&gt;Fra 30 000 kr&lt;/td&gt;&lt;td&gt;Bedrifter som har kjøpt, eller skal kjøpe, AI-verktøy og vil få verdi ut av dem&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Drift og forbedring&lt;/th&gt;&lt;td&gt;Løpende&lt;/td&gt;&lt;td&gt;Fra 5 000 kr per måned&lt;/td&gt;&lt;td&gt;Alle som har AI i drift og vil at den skal fortsette å levere&lt;/td&gt;&lt;/tr&gt;
-      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;AI-assistenter&lt;/th&gt;&lt;td&gt;1–3 uker&lt;/td&gt;&lt;td&gt;Oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned&lt;/td&gt;&lt;td&gt;Rutineoppgaver som gjentas ukentlig&lt;/td&gt;&lt;/tr&gt;
+      &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;AI-assistenter&lt;/th&gt;&lt;td&gt;1–3 uker&lt;/td&gt;&lt;td&gt;Oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned&lt;/td&gt;&lt;td&gt;Rutineoppgaver som gjentas ukentlig&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Skreddersydde løsninger&lt;/th&gt;&lt;td&gt;4–16 uker&lt;/td&gt;&lt;td&gt;Små fra ca. 150 000 kr, mellomstore fra 400 000 kr, store fra 1 000 000 kr&lt;/td&gt;&lt;td&gt;Prosesser som krever integrasjon mot egne systemer&lt;/td&gt;&lt;/tr&gt;
       &lt;tr&gt;&lt;th scope=&quot;row&quot;&gt;Lokal AI-infrastruktur&lt;/th&gt;&lt;td&gt;2–4 uker&lt;/td&gt;&lt;td&gt;Typisk 100 000 til 1 000 000+ kr&lt;/td&gt;&lt;td&gt;Regulerte bransjer og bedrifter der kontroll over egne data er et strategisk valg, ikke et krav å krysse av for&lt;/td&gt;&lt;/tr&gt;
     &lt;/tbody&gt;
@@ -159,7 +159,7 @@
     <link rel="alternate" type="text/html" href="https://nrth.no/innsikt/ai-assistenter" />
     <id>https://nrth.no/innsikt/ai-assistenter</id>
     <published>2026-10-27T00:00:00Z</published>
-    <updated>2026-10-27T00:00:00Z</updated>
+    <updated>2026-11-06T00:00:00Z</updated>
     <author><name>Thomas Uthaug</name><uri>https://nrth.no/om-oss#thomas-uthaug</uri></author>
     <category term="AI-assistenter" />
     <summary>En AI-assistent er en AI-agent som tar én avgrenset rutineoppgave, på plan, med logg og kontroll. Fire eksempler, regnestykket bak 20–40 % og grensene.</summary>
@@ -180,7 +180,7 @@
 &lt;/div&gt;
 &lt;p&gt;Tidene er anslag for en bedrift med 10–50 ansatte, og avhenger av volum.&lt;/p&gt;
 &lt;h2 id=&quot;regnestykket-bak-20-40-prosent&quot;&gt;Regnestykket bak 20–40 prosent&lt;/h2&gt;
-&lt;p&gt;En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året inkludert sosiale kostnader. En AI-assistent for én oppgave koster oppsett (fra ca. 50 000 kroner hos oss, 1–3 uker) pluss drift (fra 5 000 kroner per måned) pluss forbruk (500–3 000 kroner i måneden) pluss tiden et menneske bruker på å godkjenne resultatene. AI koster typisk 20–40 % av det én ansatt koster.&lt;/p&gt;
+&lt;p&gt;En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året inkludert sosiale kostnader. En AI-assistent for én oppgave koster oppsett (fra ca. 35 000 kroner hos oss, 1–3 uker) pluss drift (fra 5 000 kroner per måned) pluss forbruk (500–3 000 kroner i måneden) pluss tiden et menneske bruker på å godkjenne resultatene. AI koster typisk 20–40 % av det én ansatt koster.&lt;/p&gt;
 &lt;p&gt;Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tilsvarende én til flere ekstra ansatte, og kvaliteten går opp.&lt;/p&gt;
 &lt;h2 id=&quot;hva-kan-den-ikke&quot;&gt;Hva kan den ikke?&lt;/h2&gt;
 &lt;ul&gt;
