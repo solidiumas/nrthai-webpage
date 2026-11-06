@@ -1,0 +1,13 @@
+# Videresendinger på Cloudflare. Samme liste som redirects i vercel.json: endres den ene, endres den andre.
+# Cloudflare legger ikke til varianten med skråstrek selv, så begge står her.
+# Omskrivingen av /investors/* i vercel.json er ikke tatt med. Den gir 404 på Vercel i dag.
+/services /ai-tjenester 308
+/services/ /ai-tjenester 308
+/work /ai-tjenester 308
+/work/ /ai-tjenester 308
+/company /om-oss 308
+/company/ /om-oss 308
+/contact /book 308
+/contact/ /book 308
+/product https://nrthflow.com 308
+/product/ https://nrthflow.com 308

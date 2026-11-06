@@ -6,3 +6,10 @@ ANALYSE-SYNLIGHET.md
 nrth-runden-omskriving-brief.md
 innsikt/*/og.json
 .github
+
+# Cloudflare-oppsettet (wrangler.jsonc, _redirects, _headers, .assetsignore og worker/)
+worker/
+wrangler.jsonc
+_redirects
+_headers
+.assetsignore

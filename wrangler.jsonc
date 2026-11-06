@@ -1,0 +1,23 @@
+// Cloudflare Workers: nrth.no som statiske filer, og skjemafunksjonene i api/ via worker/index.js.
+// Videresendinger og headere står i _redirects og _headers. Det som ikke skal publiseres, står i .assetsignore.
+// Lokalt: npx wrangler dev. Publisering: npx wrangler deploy (eller Workers Builds fra GitHub).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nrthai-webpage",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-01",
+  // Resend-pakken og api/ bruker Node-API-er (process.env, Buffer)
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    // /om-oss/index.html serveres på /om-oss, som canonical, hreflang og sitemap bruker
+    "html_handling": "drop-trailing-slash",
+    // 404.html med status 404, som på Vercel
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "observability": {
+    "enabled": true
+  }
+}

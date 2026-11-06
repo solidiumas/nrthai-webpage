@@ -1,0 +1,17 @@
+# Headere på Cloudflare. Samme som headers i vercel.json: endres den ene, endres den andre.
+# Gjelder bare de statiske filene. Svarene fra api/ får de samme sikkerhetsheaderne i worker/index.js.
+# Access-Control-Allow-Origin setter Vercel selv på statiske filer. Cloudflare gjør det ikke.
+# Treffer flere regler samme header, slår Cloudflare verdiene sammen med komma. Derfor fjerner
+# /assets/* den generelle Cache-Control før den setter sin egen.
+
+/*
+  Access-Control-Allow-Origin: *
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  ! Cache-Control
+  Cache-Control: public, max-age=3600

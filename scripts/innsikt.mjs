@@ -557,7 +557,7 @@ for (const a of alle) validate(a, slugs);
 if (new Set(alle.map((a) => a.nummer)).size !== alle.length) feil("to artikler har samme nummer");
 // Artikkelmapper uten kilde blir liggende på nettet (indeksert, med egen canonical) til noen sletter dem.
 for (const d of existsSync(join(ROOT, "innsikt")) ? readdirSync(join(ROOT, "innsikt"), { withFileTypes: true }) : []) {
-  if (d.isDirectory() && !slugs.has(d.name)) feil(`innsikt/${d.name}/ har ingen kilde i docs/innsikt/. Slett mappen, og legg inn en 301 i vercel.json hvis siden har vært publisert`);
+  if (d.isDirectory() && !slugs.has(d.name)) feil(`innsikt/${d.name}/ har ingen kilde i docs/innsikt/. Slett mappen, og legg inn en 301 i vercel.json og _redirects hvis siden har vært publisert`);
 }
 const stopp = () => {
   if (!errors.length) return;

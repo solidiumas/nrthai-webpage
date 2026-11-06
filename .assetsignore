@@ -1,0 +1,38 @@
+# Publiseres ikke på nrth.no når siden kjører på Cloudflare.
+# Samme som .vercelignore, pluss kildekode og verktøy som Vercel selv holder unna.
+
+# Som i .vercelignore
+partials/
+docs/
+CLAUDE.md
+ANALYSE-SYNLIGHET.md
+nrth-runden-omskriving-brief.md
+innsikt/*/og.json
+.github/
+
+# Pitch-deckene ligger lokalt (.git/info/exclude) og er ikke publisert på Vercel
+*.pdf
+
+# Funksjonene og Worker-koden (kjøres, publiseres ikke som filer)
+api/
+worker/
+wrangler.jsonc
+vercel.json
+
+# Verktøy og pakker
+scripts/
+node_modules/
+package.json
+package-lock.json
+
+# Git, lokale filer og hemmeligheter
+.git/
+.gitignore
+.vercelignore
+.vercel/
+.wrangler/
+.claude/
+.dev.vars*
+.env*
+.DS_Store
+handoff/

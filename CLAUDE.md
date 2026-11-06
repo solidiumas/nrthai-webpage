@@ -6,9 +6,10 @@ Tjenestesiden til Nrth AI AS for norske bedrifter. Hovedhandling: **Book et møt
 
 - Statisk HTML, én `index.html` per side i egen mappe. Ingen rammeverk, ingen byggesteg.
 - Felles stiler i `assets/site.css`. Felles skript i `assets/*.js` (vanilla, progressiv forbedring).
-- Vercel: `vercel.json` for videresendinger og headere. Funksjoner i `api/` (Node, CommonJS).
+- Vercel i dag, Cloudflare Workers når DNS er flyttet (`docs/cloudflare.md`). Videresendinger og headere står både i `vercel.json` og i `_redirects` og `_headers`. Endres den ene, endres den andre. Det som ikke skal publiseres, står i både `.vercelignore` og `.assetsignore`.
+- Funksjoner i `api/` (Node, CommonJS, `handler(req, res)`). På Cloudflare kjøres de av `worker/index.js`.
 - E-post via Resend (`RESEND_API_KEY`).
-- Lokalt: `npx vercel dev`.
+- Lokalt: `npx vercel dev`, eller `npx wrangler dev` for Cloudflare (nøkkelen i `.dev.vars`).
 
 ## Kilder
 
