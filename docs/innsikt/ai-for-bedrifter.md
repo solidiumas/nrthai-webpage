@@ -29,7 +29,7 @@ En god test: kan oppgaven beskrives i en setning, gjentas den minst ukentlig, og
 
 ## Hva koster det?
 
-Hos oss koster AI-kartlegging fra 25 000 kroner og tar tre til fem dager. En strategisprint på to uker koster fra 70 000 kroner. En pilot i drift tar to til tre uker og koster fra 60 000 kroner. AI-assistenter har oppsett fra ca. 35 000 kroner og drift fra 5 000 kroner per måned, og lokal AI-infrastruktur koster typisk 100 000 til 1 000 000+ kroner. Alle priser er eksklusive mva. og står på sidene om [AI-vurdering](/ai-vurdering), [implementering](/implementering), [AI-tjenester](/ai-tjenester) og [foredrag og kurs](/foredrag-og-kurs). I tillegg kommer forbruk på modeller, som for de fleste SMB-er ligger på noen hundre til noen tusen kroner i måneden per løsning.
+Hos oss koster AI-kartlegging fra 25 000 kroner og tar tre til fem dager. En strategisprint på to uker koster fra 70 000 kroner. En pilot i drift tar to til tre uker og koster fra 90 000 kroner. AI-assistenter har oppsett fra ca. 35 000 kroner og drift fra 3 490 kroner per måned, og lokal AI-infrastruktur koster typisk 100 000 til 1 000 000+ kroner. Alle priser er eksklusive mva. og står på sidene om [AI-vurdering](/ai-vurdering), [implementering](/implementering), [AI-tjenester](/ai-tjenester) og [foredrag og kurs](/foredrag-og-kurs). I tillegg kommer forbruk på modeller, som for de fleste SMB-er ligger på noen hundre til noen tusen kroner i måneden per løsning.
 
 En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året. Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tilsvarende én til flere ekstra ansatte, og kvaliteten går opp. AI koster typisk 20–40 % av det én ansatt koster.
 

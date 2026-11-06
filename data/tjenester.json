@@ -35,8 +35,8 @@
       "dor": "implementering",
       "navn": { "nb": "Pilot i drift", "en": "Pilot in production" },
       "leveranse": { "nb": "2–3 uker", "en": "2–3 weeks" },
-      "fraPris": 60000,
-      "prisTekst": { "nb": "Fra 60 000 kr", "en": "From NOK 60,000" },
+      "fraPris": 90000,
+      "prisTekst": { "nb": "Fra 90 000 kr", "en": "From NOK 90,000" },
       "url": { "nb": "https://nrth.no/implementering#pilot", "en": "https://nrth.no/en/implementation#pilot" }
     },
     {
@@ -53,9 +53,9 @@
       "dor": "implementering",
       "navn": { "nb": "Drift og forbedring", "en": "Operations and improvement" },
       "leveranse": { "nb": "Løpende", "en": "Ongoing" },
-      "fraPris": 5000,
+      "fraPris": 3490,
       "prisPer": { "nb": "måned", "en": "month" },
-      "prisTekst": { "nb": "Fra 5 000 kr per måned", "en": "From NOK 5,000 per month" },
+      "prisTekst": { "nb": "Fra 3 490 kr per måned", "en": "From NOK 3,490 per month" },
       "url": { "nb": "https://nrth.no/implementering#drift", "en": "https://nrth.no/en/implementation#operations" }
     },
     {
@@ -64,8 +64,8 @@
       "navn": { "nb": "AI-assistenter", "en": "AI assistants" },
       "leveranse": { "nb": "1–3 uker", "en": "1–3 weeks" },
       "fraPris": 35000,
-      "driftFraPrisPerMaaned": 5000,
-      "prisTekst": { "nb": "Oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned", "en": "Setup from about NOK 35,000, operations from NOK 5,000 per month" },
+      "driftFraPrisPerMaaned": 3490,
+      "prisTekst": { "nb": "Oppsett fra ca. 35 000 kr, drift fra 3 490 kr per måned", "en": "Setup from about NOK 35,000, operations from NOK 3,490 per month" },
       "url": { "nb": "https://nrth.no/ai-tjenester#ai-assistenter", "en": "https://nrth.no/en/ai-services#ai-assistants" }
     },
     {
@@ -109,8 +109,8 @@
       "dor": "informasjon",
       "navn": { "nb": "Foredrag og kurs", "en": "Talks and courses" },
       "leveranse": { "nb": "1–2 dager", "en": "1–2 days" },
-      "fraPris": 10000,
-      "prisTekst": { "nb": "AI-kurs 10 000 kr per deltaker", "en": "AI course NOK 10,000 per participant" },
+      "fraPris": 45000,
+      "prisTekst": { "nb": "AI-workshop fra 45 000 kr", "en": "AI workshop from NOK 45,000" },
       "url": { "nb": "https://nrth.no/foredrag-og-kurs", "en": "https://nrth.no/en/talks-and-courses" }
     }
   ]
