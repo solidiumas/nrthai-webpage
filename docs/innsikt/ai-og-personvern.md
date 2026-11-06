@@ -47,4 +47,4 @@ Som hovedregel ja, når AI-verktøyet behandler personopplysninger. Det skriver 
 
 ## Neste steg
 
-Hvis dere vil ha behandlingssted, databehandleravtale og logg bygget inn fra start, er det slik [Flow](https://trynrth.com/no/data) bygges. Hvis dere vil ha en gjennomgang av det dere bruker i dag, [book et møte](/book).
+Hvis dere vil ha behandlingssted, databehandleravtale og logg bygget inn fra start, er det slik [Flow](https://nrthflow.com/no/data) bygges. Hvis dere vil ha en gjennomgang av det dere bruker i dag, [book et møte](/book).

@@ -92,7 +92,7 @@ Sist oppdatert: 21. oktober 2026
 
 - **AI-vurdering** — AI-kartlegging (3–5 dager, fra 25 000 kr), strategisprint (2 uker, fra 70 000 kr), ledersparring (fra 25 000 kr per måned). https://nrth.no/ai-vurdering
 - **Implementering** — pilot i drift (2–3 uker, fra 60 000 kr), innføring av AI-verktøy (2–4 uker, fra 30 000 kr), drift og forbedring (fra 5 000 kr per måned). https://nrth.no/implementering
-- **AI-tjenester** — AI-assistenter (1–3 uker, oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned), skreddersydde løsninger (4–16 uker, fra ca. 150 000 kr), lokal AI-infrastruktur på egen maskinvare (2–4 uker, typisk 100 000–1 000 000+ kr). https://nrth.no/ai-tjenester
+- **AI-tjenester** — AI-assistenter (1–3 uker, oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned), AI-assistenter i Flow med ferdige oppsett (gratis i piloten, fast månedspris etter lansering i mai 2027), skreddersydde løsninger (4–16 uker, fra ca. 150 000 kr), lokal AI-infrastruktur på egen maskinvare (2–4 uker, typisk 100 000–1 000 000+ kr). https://nrth.no/ai-tjenester
 - **Foredrag og kurs** — for ledergrupper, ansatte og konferanser. Foredrag fra 20 000 kr, bedriftskurs (halv dag) fra 30 000 kr, workshop for ledergrupper (hel dag) fra 45 000 kr. https://nrth.no/foredrag-og-kurs
 
 Alle priser er eks. mva.
@@ -109,7 +109,7 @@ Kartlegg (1 uke) → Pilot (2–3 uker) → Drift (løpende).
 
 ## Selskapet
 
-Nrth AI AS (org.nr. 937 872 038), Bergen, etablert 2026. Gründere: Thomas Uthaug (forretning, produkt og leveranse) og Simen Uthaug (teknologi og utvikling). Vi lager også produktet Flow: https://trynrth.com
+Nrth AI AS (org.nr. 937 872 038), Bergen, etablert 2026. Gründere: Thomas Uthaug (forretning, produkt og leveranse) og Simen Uthaug (teknologi og utvikling). Vi lager også produktet Flow: https://nrthflow.com
 
 ## English
 

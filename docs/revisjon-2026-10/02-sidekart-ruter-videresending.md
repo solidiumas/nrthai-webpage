@@ -48,7 +48,7 @@ AI-vurdering · Implementering · AI-tjenester · Foredrag og kurs · Om oss · 
 © 2026 Nrth AI AS · Bergen · Org.nr. 937 872 038      Flow ↗ · LinkedIn ↗ · Investorer · English      Built by agents · ▲
 ```
 
-«Flow ↗» lenker til `https://trynrth.com` med `rel="noopener"`. Det samme gjelder Flow-blokken på forsiden og Om oss. Er trynrth.com ikke oppe når nrth.no publiseres, skjules lenkene og blokken til den er det (legg dem i HTML med `hidden`, så de er enkle å slå på).
+«Flow ↗» lenker til `https://nrthflow.com/no` på norske sider og `https://nrthflow.com` på engelske med `rel="noopener"`. Det samme gjelder Flow-blokken på forsiden og Om oss. Er trynrth.com ikke oppe når nrth.no publiseres, skjules lenkene og blokken til den er det (legg dem i HTML med `hidden`, så de er enkle å slå på).
 
 ## 4. Videresendinger (`vercel.json`)
 
@@ -66,7 +66,7 @@ Erstatt dagens `redirects` i `vercel.json` med denne listen (resten av filen beh
 }
 ```
 
-- `/product` sendes til forsiden nå. **Når trynrth.com er oppe**, endres den til `https://trynrth.com`.
+- `/product` sendes til `https://nrthflow.com` (trynrth.com sender selv videre dit).
 - Slett mappene `product/`, `work/`, `company/` og `contact/`. Videresendingene over tar over.
 - Behold `rewrites` for `/investors/:path*`.
 

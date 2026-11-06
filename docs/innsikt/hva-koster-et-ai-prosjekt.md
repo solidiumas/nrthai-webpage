@@ -43,7 +43,7 @@ En dyktig medarbeider koster 1–1,5 millioner kroner i året. Når AI støtter 
 
 ## Hva koster det å gjøre det selv?
 
-En del bedrifter vil kunne gjøre det meste selv med et verktøy som bygges for det. [Flow](https://trynrth.com/no/pilot) er i pilotfasen før åpen lansering i mai 2027. Det skal ha månedlige nivåer med inkluderte kreditter i NOK, og en estimert kostnad skal vises før hver oppgave. Da trenger dere kartleggingen, ikke implementeringen.
+En del bedrifter vil kunne gjøre det meste selv med et verktøy som bygges for det. [Flow](https://nrthflow.com/no/pilot) er i pilotfasen før åpen lansering i mai 2027. Det skal ha månedlige nivåer med inkluderte kreditter i NOK, og en estimert kostnad skal vises før hver oppgave. Da trenger dere kartleggingen, ikke implementeringen.
 
 ## Neste steg
 

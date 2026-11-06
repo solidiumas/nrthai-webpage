@@ -69,6 +69,15 @@
       "url": { "nb": "https://nrth.no/ai-tjenester#ai-assistenter", "en": "https://nrth.no/en/ai-services#ai-assistants" }
     },
     {
+      "id": "ai-assistenter-i-flow",
+      "dor": "ai-tjenester",
+      "navn": { "nb": "AI-assistenter i Flow", "en": "AI assistants in Flow" },
+      "leveranse": { "nb": "[varighet]", "en": "[duration]" },
+      "fraPris": 0,
+      "prisTekst": { "nb": "Gratis i piloten. Fast månedspris etter lansering i mai 2027.", "en": "Free during the pilot. Fixed monthly price after launch in May 2027." },
+      "url": { "nb": "https://nrth.no/ai-tjenester#flow", "en": "https://nrth.no/en/ai-services#flow" }
+    },
+    {
       "id": "skreddersydde-losninger",
       "dor": "ai-tjenester",
       "navn": { "nb": "Skreddersydde løsninger", "en": "Custom solutions" },
