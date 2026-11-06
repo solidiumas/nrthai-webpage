@@ -314,20 +314,18 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 ## Talks and courses `/en/talks-and-courses`
 
 **Title:** Talks and courses on AI for businesses · Nrth AI
-**Description:** Nrth AI gives talks, company courses and workshops on AI for leadership teams, staff and conferences.
+**Description:** Nrth AI gives talks, courses and workshops on AI for leadership teams, staff and conferences.
 
 ### Page hero
 - Kicker: ✦ Talks and courses
 - H1: **Talks and courses on *AI*.**
 - Intro: We give talks and courses for leadership teams, staff and conferences. Practical, concrete and adapted to your industry.
 
-### Formats
-1. **Talks** · 45–60 min · For staff, customers or conferences. What AI can do today, and what it means for you.
-2. **Company courses** · Half day · For teams who will use AI in their work, using their own tasks as practice material.
-3. **Leadership workshops** · Full day · The leadership team finds the first places AI should go, and leaves with a prioritised list.
-4. **Leadership course** · 2 days · Open course for managers and senior leaders, 10–15 places. [content] Next course: [date] in [place]. *(Draft 6 November 2026, translated from the Norwegian draft. Waiting for Thomas.)*
+### Formats (`card-grid--2`, two cards. Thomas, 6 November 2026: talks and company courses are not priced as separate offers)
+1. **AI course** · 2 days · Open course for managers and senior leaders, 10–15 places. [content] Next course: [date] in [place].
+2. **AI workshop for leadership teams** · Full day · The leadership team finds the first places AI should go, and leaves with a prioritised list.
 
-- Price: Talks from NOK 20,000, company courses from NOK 30,000, workshops from NOK 45,000 and leadership courses NOK 10,000 per participant. Travel outside Bergen is extra.
+- Price: AI course NOK 10,000 per participant and AI workshop from NOK 45,000. Travel outside Bergen is extra.
 - Button: **Ask about a talk →** (to `/en/book?topic=talk#book`)
 
 ### Book a meeting (topic: Talk or course)

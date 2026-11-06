@@ -108,9 +108,9 @@
       "id": "foredrag-og-kurs",
       "dor": "informasjon",
       "navn": { "nb": "Foredrag og kurs", "en": "Talks and courses" },
-      "leveranse": { "nb": "45 minutter til to dager", "en": "45 minutes to two days" },
-      "fraPris": 20000,
-      "prisTekst": { "nb": "Foredrag fra 20 000 kr", "en": "Talks from NOK 20,000" },
+      "leveranse": { "nb": "1–2 dager", "en": "1–2 days" },
+      "fraPris": 10000,
+      "prisTekst": { "nb": "AI-kurs 10 000 kr per deltaker", "en": "AI course NOK 10,000 per participant" },
       "url": { "nb": "https://nrth.no/foredrag-og-kurs", "en": "https://nrth.no/en/talks-and-courses" }
     }
   ]

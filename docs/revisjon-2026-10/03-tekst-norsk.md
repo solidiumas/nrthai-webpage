@@ -386,20 +386,18 @@ Bookingseksjonen uten overskrift (overskriften står i sidehero). Tema fra `?tem
 ## Foredrag og kurs `/foredrag-og-kurs`
 
 **Title:** Foredrag og kurs om AI for bedrifter · Nrth AI
-**Description:** Nrth AI holder foredrag, bedriftskurs og workshops om AI for ledergrupper, ansatte og konferanser.
+**Description:** Nrth AI holder foredrag, kurs og workshops om AI for ledergrupper, ansatte og konferanser.
 
 ### Sidehero
 - Kicker: ✦ Foredrag og kurs
 - H1: **Foredrag og kurs om *AI*.**
 - Ingress: Vi holder foredrag og kurs for ledergrupper, ansatte og konferanser. Praktisk, konkret og tilpasset bransjen deres.
 
-### Formater (`card-grid--2`, fire kort)
-1. **Foredrag** · 45–60 min · For ansatte, kunder eller konferanser. Hva AI kan gjøre i dag, og hva det betyr for dere.
-2. **Bedriftskurs** · Halv dag · For team som skal bruke AI i jobben, med egne oppgaver som øvingsstoff.
-3. **Workshop for ledergrupper** · Hel dag · Ledergruppen finner de første stedene AI skal inn, og går ut med en prioritert liste.
-4. **Lederkurs** · 2 dager · Åpent kurs for ledere og toppledere, 10–15 plasser. [innhold] Neste kurs: [dato] i [sted]. *(Utkast 6. november 2026, venter på godkjenning fra Thomas.)*
+### Formater (`card-grid--2`, to kort. Thomas 6. november 2026: foredrag og bedriftskurs prises ikke som egne tilbud)
+1. **AI-kurs** · 2 dager · Åpent kurs for ledere og toppledere, 10–15 plasser. [innhold] Neste kurs: [dato] i [sted].
+2. **AI-workshop for ledergrupper** · Hel dag · Ledergruppen finner de første stedene AI skal inn, og går ut med en prioritert liste.
 
-- Pris: Foredrag fra 20 000 kr, bedriftskurs fra 30 000 kr, workshop fra 45 000 kr og lederkurs 10 000 kr per deltaker. Reise utenfor Bergen kommer i tillegg.
+- Pris: AI-kurs 10 000 kr per deltaker og AI-workshop fra 45 000 kr. Reise utenfor Bergen kommer i tillegg.
 - Knapp: **Spør om et foredrag →** (til `/book?tema=foredrag#book`)
 
 ### Book et møte (tema: Foredrag eller kurs)
