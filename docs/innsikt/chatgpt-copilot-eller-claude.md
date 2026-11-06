@@ -35,7 +35,7 @@ Fem personer i ledelsen som skriver mye: en chat-lisens per person. Førti ansat
 
 ## 5. Hvor låst vil dere være?
 
-Copilot binder dere til Microsoft, ChatGPT til OpenAI, Claude til Anthropic. Det er greit så lenge dere vet det. Alternativet er et arbeidsrom som kan bytte modell under panseret, og som kan koble til en lokal modell for de mest sensitive dataene. Det er grunnen til at vi bygger [Flow](https://trynrth.com) modellagnostisk.
+Copilot binder dere til Microsoft, ChatGPT til OpenAI, Claude til Anthropic. Det er greit så lenge dere vet det. Alternativet er et arbeidsrom som kan bytte modell under panseret, og som kan koble til en lokal modell for de mest sensitive dataene. Det er grunnen til at vi bygger [Nrth Flow](https://nrthflow.com) modellagnostisk.
 
 ## Hva anbefaler vi?
 
