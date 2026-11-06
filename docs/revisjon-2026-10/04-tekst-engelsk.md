@@ -28,9 +28,9 @@ The English site is for international visitors and Norwegian companies with Engl
 - Link below: Prefer to write? **Send a request →** (to `/en/book#write`)
 
 ### Flow note (`os-note`)
-- Label: Flow
+- Label: Flow by Nrth
 - Text: We also build Flow: the workspace where companies put AI to work themselves.
-- Link: trynrth.com ↗
+- Link: nrthflow.com ↗ (to `https://nrthflow.com`)
 
 ### Talks and courses info box (`info-box`)
 - Kicker: ✦ Talks and courses
@@ -41,7 +41,7 @@ The English site is for international visitors and Norwegian companies with Engl
 ### Footer
 - Links: AI assessment · Implementation · AI services · Talks and courses · Insights · About · FAQ · Privacy
 - © 2026 Nrth AI AS · Bergen, Norway · Org. no. 937 872 038
-- Flow ↗ · LinkedIn ↗ (to `https://www.linkedin.com/company/nrth-ai/`) · Investors · Norsk
+- Flow by Nrth ↗ (to `https://nrthflow.com`) · LinkedIn ↗ (to `https://www.linkedin.com/company/nrth-ai/`) · Investors · Norsk
 - Built by agents · ▲
 
 ---
