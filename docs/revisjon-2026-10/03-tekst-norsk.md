@@ -77,8 +77,8 @@ AI-vurdering ✦ Implementering ✦ AI-tjenester ✦ Mer salg ✦ Mindre manuelt
 - Topp: 01 · AI-vurdering
 - Tittel: Finn ut hvor AI gir dere mest.
 - Tekst: Før dere bruker penger på verktøy, finner vi ut hvor AI faktisk øker salget eller sparer tid hos dere, og hva som bør gjøres først.
-- Liste: AI-kartlegging · 3–5 dager / Strategisprint · 2 uker / Ledersparring · månedlig
-- Pris: Fra 35 000 kr
+- Liste: AI-kartlegging · 3–5 dager / Strategisprint · 7–10 dager / Ledersparring · månedlig
+- Pris: Fra 25 000 kr
 - Lenke: Les mer → `/ai-vurdering`
 
 **Kort 2**
@@ -94,7 +94,7 @@ AI-vurdering ✦ Implementering ✦ AI-tjenester ✦ Mer salg ✦ Mindre manuelt
 - Tittel: Løsninger som selger mer og sparer tid.
 - Tekst: Vi bygger AI-løsninger rundt deres prosesser og data: AI-assistenter som avlaster teamet og automatiserer rutinearbeid, skreddersydde løsninger og AI på egen maskinvare.
 - Liste: AI-assistenter · 1–3 uker / Skreddersydde løsninger · 4–16 uker / Lokal AI-infrastruktur · 2–4 uker / Egen AI-modell · 6–16 uker
-- Pris: Fra 50 000 kr
+- Pris: Fra 35 000 kr
 - Lenke: Les mer → `/ai-tjenester`
 
 Under kortene: knapp **Book et møte →** og teksten «Usikre på hvor dere skal starte? Det finner vi ut i møtet.»
@@ -143,7 +143,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
 ## AI-vurdering `/ai-vurdering`
 
 **Title:** AI-vurdering og AI-strategi for bedrifter · Nrth AI
-**Description:** Finn ut hvor AI gir bedriften mest: AI-kartlegging på 3–5 dager, strategisprint på 2 uker og ledersparring. Fra 35 000 kr.
+**Description:** Finn ut hvor AI gir bedriften mest: AI-kartlegging på 3–5 dager, strategisprint på 7–10 dager og ledersparring. Fra 25 000 kr.
 
 ### Sidehero (`page-hero`)
 - Kicker: ✦ AI-vurdering
@@ -161,7 +161,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
   - Vurdering av hvor AI kan øke salget eller spare tid
   - Skriftlig veikart med prioriterte tiltak
 - Leveranse: 3–5 dager
-- Investering: Fra 35 000 kr
+- Investering: Fra 25 000 kr
 - Passer for: Bedrifter som vil vite hvor de skal begynne før de forplikter seg.
 
 **02 · Strategisprint** (`id="strategisprint"`)
@@ -171,8 +171,8 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
   - Regnestykke for gevinst og kostnad
   - Prioritert omfang for første pilot
   - Anbefaling om hva som bør kjøpes, og hva som bør bygges
-- Leveranse: 2 uker
-- Investering: Fra 75 000 kr
+- Leveranse: 7–10 dager
+- Investering: Fra 70 000 kr
 - Passer for: Ledergrupper som skal ta en beslutning om AI og vil ha et solid grunnlag.
 
 **03 · Ledersparring** (`id="ledersparring"`)
@@ -242,7 +242,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
 ## AI-tjenester `/ai-tjenester`
 
 **Title:** AI-tjenester og AI-assistenter for bedrifter · Nrth AI
-**Description:** AI-assistenter fra 50 000 kr, skreddersydde AI-løsninger og lokal AI-infrastruktur på egen maskinvare. Priser og tidslinjer på siden.
+**Description:** AI-assistenter fra 35 000 kr, skreddersydde AI-løsninger og lokal AI-infrastruktur på egen maskinvare. Priser og tidslinjer på siden.
 
 ### Sidehero
 - Kicker: ✦ AI-tjenester
@@ -261,7 +261,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
   - Drift på lokal infrastruktur når dataene krever det
   - Løpende forbedring og overvåking
 - Leveranse: 1–3 uker
-- Investering: Oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned. Typisk 20–40 % av kostnaden for en ansatt.
+- Investering: Oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned. Typisk 20–40 % av kostnaden for en ansatt.
 - Passer for: Bedrifter som vil at teamet skal rekke mer og levere bedre, særlig der det er mye repeterende kunnskapsarbeid eller store volum.
 
 **02 · Skreddersydde løsninger** (`id="skreddersydd"`)
@@ -408,7 +408,7 @@ Lagt til 21. oktober 2026 (Thomas: lenke i footeren, lik på norsk og engelsk). 
 ### Spørsmål (`prose`, H2 per spørsmål)
 1. **Hva gjør Nrth AI?** Vi hjelper bedrifter å ta i bruk AI: vi vurderer hvor AI gir mest, implementerer det, og bygger AI-tjenester som AI-assistenter og skreddersydde løsninger.
 2. **Hvordan starter vi?** Med et møte. Book på nrth.no/book. Deretter følger vi tre steg: kartlegg (1 uke), pilot (2–3 uker) og drift.
-3. **Hva koster det?** AI-kartlegging fra 35 000 kr. AI-assistenter fra ca. 50 000 kr i oppsett og 5 000 kr per måned i drift. Skreddersydde løsninger fra ca. 150 000 kr. Alle priser står på nrth.no.
+3. **Hva koster det?** AI-kartlegging fra 25 000 kr. AI-assistenter fra ca. 35 000 kr i oppsett og 5 000 kr per måned i drift. Skreddersydde løsninger fra ca. 150 000 kr. Alle priser står på nrth.no.
 4. **Holder dere foredrag og kurs?** Ja, for ledergrupper, ansatte og konferanser. Se nrth.no/foredrag-og-kurs.
 5. **Hvor holder dere til?** I Bergen. Vi møter bedrifter fysisk i hele Norge, og digitalt med kunder i utlandet.
 

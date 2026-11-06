@@ -2,13 +2,13 @@
 
 > Nrth AI AS (Bergen, Norge) hjelper norske bedrifter å ta i bruk AI. Vi gjør AI-vurderinger, implementerer AI i daglig drift og bygger AI-tjenester som gir mer salg og mer effektivt arbeid. Første steg er alltid et møte.
 
-Sist oppdatert: 29. oktober 2026
+Sist oppdatert: 6. november 2026
 
 ## Hva vi gjør
 
-- **AI-vurdering** — AI-kartlegging (3–5 dager, fra 35 000 kr), strategisprint (2 uker, fra 75 000 kr), ledersparring (fra 25 000 kr per måned). https://nrth.no/ai-vurdering
+- **AI-vurdering** — AI-kartlegging (3–5 dager, fra 25 000 kr), strategisprint (7–10 dager, fra 70 000 kr), ledersparring (fra 25 000 kr per måned). https://nrth.no/ai-vurdering
 - **Implementering** — pilot i drift (2–3 uker, fra 60 000 kr), innføring av AI-verktøy (2–4 uker, fra 30 000 kr), drift og forbedring (fra 5 000 kr per måned). https://nrth.no/implementering
-- **AI-tjenester** — AI-assistenter (1–3 uker, oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned), skreddersydde løsninger (4–16 uker, fra ca. 150 000 kr), lokal AI-infrastruktur på egen maskinvare (2–4 uker, typisk 100 000–1 000 000+ kr), egen AI-modell trent på bedriftens data, med drift og vedlikehold (6–16 uker, pris etter forespørsel). https://nrth.no/ai-tjenester
+- **AI-tjenester** — AI-assistenter (1–3 uker, oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned), skreddersydde løsninger (4–16 uker, fra ca. 150 000 kr), lokal AI-infrastruktur på egen maskinvare (2–4 uker, typisk 100 000–1 000 000+ kr), egen AI-modell trent på bedriftens data, med drift og vedlikehold (6–16 uker, pris etter forespørsel). https://nrth.no/ai-tjenester
 - **Foredrag og kurs** — for ledergrupper, ansatte og konferanser. Foredrag fra 20 000 kr, bedriftskurs (halv dag) fra 30 000 kr, workshop for ledergrupper (hel dag) fra 45 000 kr. https://nrth.no/foredrag-og-kurs
 
 Alle priser er eks. mva.
@@ -31,11 +31,11 @@ Nrth AI AS (org.nr. 937 872 038), Bergen, etablert 2026. Gründere: Thomas Uthau
 
 Artikler fra Nrth AI om AI i norske bedrifter, på norsk. Oversikt: https://nrth.no/innsikt · Atom-feed: https://nrth.no/innsikt/feed.xml
 
-- **AI for bedrifter i 2026: start, kostnad og fallgruver** (Thomas Uthaug, 27. oktober 2026): AI for bedrifter: slik tar en norsk bedrift i bruk AI uten å kaste bort penger. Hvor du starter, hva kartlegging og pilot koster, og hva du bør la være. https://nrth.no/innsikt/ai-for-bedrifter
+- **AI for bedrifter i 2026: start, kostnad og fallgruver** (Thomas Uthaug, 6. november 2026): AI for bedrifter: slik tar en norsk bedrift i bruk AI uten å kaste bort penger. Hvor du starter, hva kartlegging og pilot koster, og hva du bør la være. https://nrth.no/innsikt/ai-for-bedrifter
 - **AI i norske bedrifter: hva mangler de som ikke er i gang?** (Thomas Uthaug, 27. oktober 2026): AI i norske bedrifter: SSB-tallene for 2026 viser at 48 % av foretak med minst ti ansatte bruker AI. Hva det betyr for små bedrifter, og hva som virker. https://nrth.no/innsikt/norske-bedrifter-bruker-ai
 - **Lokal AI for bedrifter: egen maskinvare eller sky?** (Simen Uthaug, 27. oktober 2026): Lokal AI betyr at modellen kjører på maskinvare dere eier eller leier alene. Når det lønner seg, hva det koster, og når EU-sky holder. Nrth AI, Bergen. https://nrth.no/innsikt/lokal-ai
-- **Hva koster et AI-prosjekt? Priser og tidslinjer 2026** (Thomas Uthaug, 27. oktober 2026): Hva koster et AI-prosjekt? AI-kartlegging fra 35 000 kr, strategisprint fra 75 000 kr, pilot i drift på 2–3 uker. Hele regnestykket for en norsk SMB. https://nrth.no/innsikt/hva-koster-et-ai-prosjekt
-- **AI-assistenter: oppgaver, kostnad og grenser** (Thomas Uthaug, 27. oktober 2026): En AI-assistent er en AI-agent som tar én avgrenset rutineoppgave, på plan, med logg og kontroll. Fire eksempler, regnestykket bak 20–40 % og grensene. https://nrth.no/innsikt/ai-assistenter
+- **Hva koster et AI-prosjekt? Priser og tidslinjer 2026** (Thomas Uthaug, 6. november 2026): Hva koster et AI-prosjekt? AI-kartlegging fra 25 000 kr, strategisprint fra 70 000 kr, pilot i drift på 2–3 uker. Hele regnestykket for en norsk SMB. https://nrth.no/innsikt/hva-koster-et-ai-prosjekt
+- **AI-assistenter: oppgaver, kostnad og grenser** (Thomas Uthaug, 6. november 2026): En AI-assistent er en AI-agent som tar én avgrenset rutineoppgave, på plan, med logg og kontroll. Fire eksempler, regnestykket bak 20–40 % og grensene. https://nrth.no/innsikt/ai-assistenter
 - **AI og personvern: 6 ting å ha på plass før kundedata** (Thomas Uthaug, 27. oktober 2026): AI og personvern: kan dere bruke ChatGPT eller Copilot på kundedata? Ja, med databehandleravtale, behandlingssted, ingen trening, tilgang, logg og rutine. https://nrth.no/innsikt/ai-og-personvern
 - **AI-forordningen for norske bedrifter: hva gjelder nå** (Thomas Uthaug, 27. oktober 2026): EUs AI-forordning gjelder i hovedsak fra 2. august 2026, men høyrisikokravene er utsatt til 2027 og 2028. Hva en norsk SMB må gjøre, uten jus-språk. https://nrth.no/innsikt/ai-forordningen
 - **ChatGPT, Copilot eller Claude i bedriften? Slik velger du** (Simen Uthaug, 27. oktober 2026): ChatGPT, Copilot eller Claude? Fem spørsmål avgjør, ikke hvilken modell som er «best»: hvor dataene behandles, hva avtalen sier og om det kjører oppgaver. https://nrth.no/innsikt/chatgpt-copilot-eller-claude

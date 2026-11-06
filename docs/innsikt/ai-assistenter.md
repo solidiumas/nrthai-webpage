@@ -7,7 +7,7 @@ beskrivelse: En AI-assistent er en AI-agent som tar én avgrenset rutineoppgave,
 forfatter: thomas-uthaug
 tema: AI-assistenter
 publisert: 2026-10-27
-oppdatert: 2026-10-27
+oppdatert: 2026-11-06
 relaterte: hva-koster-et-ai-prosjekt, chatgpt-copilot-eller-claude
 en_tittel: AI assistants: tasks, cost and limits
 en_beskrivelse: An AI assistant is an AI agent that handles one routine task, on a schedule, with a log and human review. Four examples, the 20–40 % math and the limits.
@@ -32,7 +32,7 @@ Tidene er anslag for en bedrift med 10–50 ansatte, og avhenger av volum.
 
 ## Regnestykket bak 20–40 prosent
 
-En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året inkludert sosiale kostnader. En AI-assistent for én oppgave koster oppsett (fra ca. 50 000 kroner hos oss, 1–3 uker) pluss drift (fra 5 000 kroner per måned) pluss forbruk (500–3 000 kroner i måneden) pluss tiden et menneske bruker på å godkjenne resultatene. AI koster typisk 20–40 % av det én ansatt koster.
+En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året inkludert sosiale kostnader. En AI-assistent for én oppgave koster oppsett (fra ca. 35 000 kroner hos oss, 1–3 uker) pluss drift (fra 5 000 kroner per måned) pluss forbruk (500–3 000 kroner i måneden) pluss tiden et menneske bruker på å godkjenne resultatene. AI koster typisk 20–40 % av det én ansatt koster.
 
 Når AI støtter de ansatte og tar rutinearbeidet, kan teamet få kapasitet tilsvarende én til flere ekstra ansatte, og kvaliteten går opp.
 

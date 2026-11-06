@@ -60,7 +60,7 @@ Fyll `sameAs` med LinkedIn-siden og Proff-oppføringen når de finnes. `vatID` /
   "url": "https://nrth.no/ai-vurdering#kartlegging",
   "offers": {
     "@type": "Offer",
-    "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "NOK", "minPrice": 35000 }
+    "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "NOK", "minPrice": 25000 }
   }
 }
 ```
@@ -73,7 +73,7 @@ Tjenester uten pris (`[pris]`) får ingen `offers` før prisen er satt. Alle har
 
 1. **Hva gjør Nrth AI?** Vi hjelper bedrifter å ta i bruk AI: vi vurderer hvor AI gir mest, implementerer det, og bygger AI-tjenester som AI-assistenter og skreddersydde løsninger.
 2. **Hvordan starter vi?** Med et møte. Book på nrth.no/book. Deretter følger vi tre steg: kartlegg (1 uke), pilot (2–3 uker) og drift.
-3. **Hva koster det?** AI-kartlegging fra 35 000 kr. AI-assistenter fra ca. 50 000 kr i oppsett og 5 000 kr per måned i drift. Skreddersydde løsninger fra ca. 150 000 kr. Alle priser står på nrth.no.
+3. **Hva koster det?** AI-kartlegging fra 25 000 kr. AI-assistenter fra ca. 35 000 kr i oppsett og 5 000 kr per måned i drift. Skreddersydde løsninger fra ca. 150 000 kr. Alle priser står på nrth.no.
 4. **Holder dere foredrag og kurs?** Ja, for ledergrupper, ansatte og konferanser. Se nrth.no/foredrag-og-kurs.
 5. **Hvor holder dere til?** I Bergen. Vi møter bedrifter fysisk i hele Norge, og digitalt med kunder i utlandet.
 
@@ -90,9 +90,9 @@ Sist oppdatert: 21. oktober 2026
 
 ## Hva vi gjør
 
-- **AI-vurdering** — AI-kartlegging (3–5 dager, fra 35 000 kr), strategisprint (2 uker, fra 75 000 kr), ledersparring (fra 25 000 kr per måned). https://nrth.no/ai-vurdering
+- **AI-vurdering** — AI-kartlegging (3–5 dager, fra 25 000 kr), strategisprint (7–10 dager, fra 70 000 kr), ledersparring (fra 25 000 kr per måned). https://nrth.no/ai-vurdering
 - **Implementering** — pilot i drift (2–3 uker, fra 60 000 kr), innføring av AI-verktøy (2–4 uker, fra 30 000 kr), drift og forbedring (fra 5 000 kr per måned). https://nrth.no/implementering
-- **AI-tjenester** — AI-assistenter (1–3 uker, oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned), skreddersydde løsninger (4–16 uker, fra ca. 150 000 kr), lokal AI-infrastruktur på egen maskinvare (2–4 uker, typisk 100 000–1 000 000+ kr). https://nrth.no/ai-tjenester
+- **AI-tjenester** — AI-assistenter (1–3 uker, oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned), skreddersydde løsninger (4–16 uker, fra ca. 150 000 kr), lokal AI-infrastruktur på egen maskinvare (2–4 uker, typisk 100 000–1 000 000+ kr). https://nrth.no/ai-tjenester
 - **Foredrag og kurs** — for ledergrupper, ansatte og konferanser. Foredrag fra 20 000 kr, bedriftskurs (halv dag) fra 30 000 kr, workshop for ledergrupper (hel dag) fra 45 000 kr. https://nrth.no/foredrag-og-kurs
 
 Alle priser er eks. mva.
@@ -143,8 +143,8 @@ Format:
       "dor": "ai-vurdering",
       "navn": { "nb": "AI-kartlegging", "en": "AI assessment" },
       "leveranse": { "nb": "3–5 dager", "en": "3–5 days" },
-      "fraPris": 35000,
-      "prisTekst": { "nb": "Fra 35 000 kr", "en": "From NOK 35,000" },
+      "fraPris": 25000,
+      "prisTekst": { "nb": "Fra 25 000 kr", "en": "From NOK 25,000" },
       "url": { "nb": "https://nrth.no/ai-vurdering#kartlegging", "en": "https://nrth.no/en/ai-assessment#assessment" }
     }
   ]

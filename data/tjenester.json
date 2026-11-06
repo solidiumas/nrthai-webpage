@@ -7,17 +7,17 @@
       "dor": "ai-vurdering",
       "navn": { "nb": "AI-kartlegging", "en": "AI assessment" },
       "leveranse": { "nb": "3–5 dager", "en": "3–5 days" },
-      "fraPris": 35000,
-      "prisTekst": { "nb": "Fra 35 000 kr", "en": "From NOK 35,000" },
+      "fraPris": 25000,
+      "prisTekst": { "nb": "Fra 25 000 kr", "en": "From NOK 25,000" },
       "url": { "nb": "https://nrth.no/ai-vurdering#kartlegging", "en": "https://nrth.no/en/ai-assessment#assessment" }
     },
     {
       "id": "strategisprint",
       "dor": "ai-vurdering",
       "navn": { "nb": "Strategisprint", "en": "Strategy sprint" },
-      "leveranse": { "nb": "2 uker", "en": "2 weeks" },
-      "fraPris": 75000,
-      "prisTekst": { "nb": "Fra 75 000 kr", "en": "From NOK 75,000" },
+      "leveranse": { "nb": "7–10 dager", "en": "7–10 days" },
+      "fraPris": 70000,
+      "prisTekst": { "nb": "Fra 70 000 kr", "en": "From NOK 70,000" },
       "url": { "nb": "https://nrth.no/ai-vurdering#strategisprint", "en": "https://nrth.no/en/ai-assessment#sprint" }
     },
     {
@@ -63,9 +63,9 @@
       "dor": "ai-tjenester",
       "navn": { "nb": "AI-assistenter", "en": "AI assistants" },
       "leveranse": { "nb": "1–3 uker", "en": "1–3 weeks" },
-      "fraPris": 50000,
+      "fraPris": 35000,
       "driftFraPrisPerMaaned": 5000,
-      "prisTekst": { "nb": "Oppsett fra ca. 50 000 kr, drift fra 5 000 kr per måned", "en": "Setup from about NOK 50,000, operations from NOK 5,000 per month" },
+      "prisTekst": { "nb": "Oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned", "en": "Setup from about NOK 35,000, operations from NOK 5,000 per month" },
       "url": { "nb": "https://nrth.no/ai-tjenester#ai-assistenter", "en": "https://nrth.no/en/ai-services#ai-assistants" }
     },
     {
