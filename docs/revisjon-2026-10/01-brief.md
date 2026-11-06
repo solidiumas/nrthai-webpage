@@ -51,8 +51,8 @@ Kroneprisene er hentet fra commit `3d11de7`, før tjenestene ble gjort om til US
 | Ledersparring | AI-vurdering | Månedlig | Fra 25 000 kr per måned |
 | Pilot i drift | Implementering | 2–3 uker | **[pris]** |
 | Innføring av AI-verktøy | Implementering | **[varighet]** | **[pris]** |
-| Drift og forbedring | Implementering | Løpende | Fra 5 000 kr per måned (driftsprisen for AI-assistenter) |
-| AI-assistenter | AI-tjenester | 1–3 uker | Oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned |
+| Drift og forbedring | Implementering | Løpende | Fra 3 490 kr per måned (driftsprisen for AI-assistenter) |
+| AI-assistenter | AI-tjenester | 1–3 uker | Oppsett fra ca. 35 000 kr, drift fra 3 490 kr per måned |
 | Skreddersydde løsninger | AI-tjenester | 4–16 uker | Fastpris. Små fra ca. 150 000 kr, mellomstore fra 400 000 kr, store fra 1 000 000 kr |
 | Lokal AI-infrastruktur | AI-tjenester | 2–4 uker | Typisk 100 000 til 1 000 000+ kr |
 | Foredrag og kurs | Informasjon | **[varighet]** | **[pris]** eller «etter avtale» |

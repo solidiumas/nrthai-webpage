@@ -21,7 +21,7 @@ Tjenestesiden til Nrth AI AS for norske bedrifter. Hovedhandling: **Book et møt
 1. **Tekst:** bruk teksten fra `docs/revisjon-2026-10/03-tekst-norsk.md` og `04-tekst-engelsk.md` ordrett. Ikke skriv om, forkort eller legg til tekst. Mangler noe, spør.
 2. **Plassholdere** i `[hakeparenteser]` blir stående til Thomas fyller dem inn. Ikke finn på priser, datoer, tall eller kundenavn.
 3. **Norsk er standard** på `/`, engelsk under `/en/`. Hver side finnes på begge språk, med hreflang begge veier.
-4. **Ingen påstander om produktet** på denne siden. Flow omtales bare i Flow-blokken og footeren, med lenke til nrthflow.com.
+4. **Ingen påstander om produktet** på denne siden. Flow omtales bare i Flow-blokken, footeren, artiklene og Flow-kortet på `/ai-tjenester`, med lenke til nrthflow.com. Flow er ikke selvbetjent i første versjon: vi setter opp flowene for kunden ut fra ferdige oppsett. nrthflow.com viser ønsketilstanden, så ikke hent påstander derfra uten å spørre Thomas.
 5. **Aldri disse** på nrth.no: «Agentic OS», «on-premise runtime», «data never leaves», 72 %, 5×, «0 FTE».
 6. **Design:** bruk variablene og klassene i `site.css`. Ingen nye farger, fonter eller avrundede hjørner. `--fg-faint` brukes ikke til tekst som skal leses.
 7. **Tilgjengelighet:** ekte `<button>`, `<a href>`, `<input>` med `<label>`. Synlig fokus. `prefers-reduced-motion` respekteres.

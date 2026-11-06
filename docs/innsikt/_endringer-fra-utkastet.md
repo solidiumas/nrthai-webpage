@@ -161,3 +161,5 @@ Thomas satte nye priser. Artiklene følger tjenestesidene.
 - **Pris.** Strategisprint fra 75 000 kr → fra 70 000 kr i de samme to artiklene. Varigheten er fortsatt to uker.
 - **Pris.** Oppsett av AI-assistenter fra ca. 50 000 kr → fra ca. 35 000 kr i /innsikt/ai-assistenter, /innsikt/ai-for-bedrifter og /innsikt/hva-koster-et-ai-prosjekt.
 - Datoen «oppdatert» er satt til 6. november 2026 i de tre artiklene.
+- **Pris.** Pilot i drift fra 60 000 kr → fra 90 000 kr i /innsikt/ai-for-bedrifter og /innsikt/hva-koster-et-ai-prosjekt.
+- **Pris.** Drift fra 5 000 kr per måned → fra 3 490 kr per måned (samme som Flow) for AI-assistenter og drift og forbedring, i /innsikt/ai-assistenter, /innsikt/ai-for-bedrifter og /innsikt/hva-koster-et-ai-prosjekt.

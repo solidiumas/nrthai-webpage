@@ -35,8 +35,8 @@
       "dor": "implementering",
       "navn": { "nb": "Pilot i drift", "en": "Pilot in production" },
       "leveranse": { "nb": "2–3 uker", "en": "2–3 weeks" },
-      "fraPris": 60000,
-      "prisTekst": { "nb": "Fra 60 000 kr", "en": "From NOK 60,000" },
+      "fraPris": 90000,
+      "prisTekst": { "nb": "Fra 90 000 kr", "en": "From NOK 90,000" },
       "url": { "nb": "https://nrth.no/implementering#pilot", "en": "https://nrth.no/en/implementation#pilot" }
     },
     {
@@ -53,9 +53,9 @@
       "dor": "implementering",
       "navn": { "nb": "Drift og forbedring", "en": "Operations and improvement" },
       "leveranse": { "nb": "Løpende", "en": "Ongoing" },
-      "fraPris": 5000,
+      "fraPris": 3490,
       "prisPer": { "nb": "måned", "en": "month" },
-      "prisTekst": { "nb": "Fra 5 000 kr per måned", "en": "From NOK 5,000 per month" },
+      "prisTekst": { "nb": "Fra 3 490 kr per måned", "en": "From NOK 3,490 per month" },
       "url": { "nb": "https://nrth.no/implementering#drift", "en": "https://nrth.no/en/implementation#operations" }
     },
     {
@@ -64,9 +64,18 @@
       "navn": { "nb": "AI-assistenter", "en": "AI assistants" },
       "leveranse": { "nb": "1–3 uker", "en": "1–3 weeks" },
       "fraPris": 35000,
-      "driftFraPrisPerMaaned": 5000,
-      "prisTekst": { "nb": "Oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned", "en": "Setup from about NOK 35,000, operations from NOK 5,000 per month" },
+      "driftFraPrisPerMaaned": 3490,
+      "prisTekst": { "nb": "Oppsett fra ca. 35 000 kr, drift fra 3 490 kr per måned", "en": "Setup from about NOK 35,000, operations from NOK 3,490 per month" },
       "url": { "nb": "https://nrth.no/ai-tjenester#ai-assistenter", "en": "https://nrth.no/en/ai-services#ai-assistants" }
+    },
+    {
+      "id": "ai-assistenter-i-flow",
+      "dor": "ai-tjenester",
+      "navn": { "nb": "AI-assistenter i Flow", "en": "AI assistants in Flow" },
+      "leveranse": { "nb": "[varighet]", "en": "[duration]" },
+      "fraPris": 0,
+      "prisTekst": { "nb": "Gratis i piloten. Fast månedspris etter lansering i mai 2027.", "en": "Free during the pilot. Fixed monthly price after launch in May 2027." },
+      "url": { "nb": "https://nrth.no/ai-tjenester#flow", "en": "https://nrth.no/en/ai-services#flow" }
     },
     {
       "id": "skreddersydde-losninger",
