@@ -2,7 +2,7 @@
 
 *30. september 2026. Repo: `solidiumas/nrthai-webpage`. Legges i repoet under `docs/revisjon-2026-10/`.*
 
-nrth.no skal bli tjenestesiden til Nrth AI AS for norske bedrifter. Hovedhandlingen er **«Book et møte»**, om AI-vurdering, implementering eller AI-tjenester. Nrth OS flytter til trynrth.com. Foredrag og kurs ligger på siden som informasjon.
+nrth.no skal bli tjenestesiden til Nrth AI AS for norske bedrifter. Hovedhandlingen er **«Book et møte»**, om AI-vurdering, implementering eller AI-tjenester. Nrth OS flytter til nrthflow.com. Foredrag og kurs ligger på siden som informasjon.
 
 Strukturen er forslag **A · Tre dører** fra designlerretet «Nrth nettsider – forslag». Utseendet er **dagens nrth.no** (`assets/site.css`). Skissene i `referanse/` viser rekkefølge og innhold, ikke typografi.
 

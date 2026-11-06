@@ -24,7 +24,7 @@ Norske bedrifter, fra små bedrifter til store. Den som leser er daglig leder, �
 | Hovedhandling | «Book et møte» i menyen, i heroen, på hver tjenesteside og nederst på alle sider |
 | Sekundær handling | «Send en forespørsel» (dagens brief-skjema, oversatt). Ligger på `/book` under kalenderen |
 | Foredrag og kurs | Informasjon: egen side `/foredrag-og-kurs` og en liten boks på forsiden. Ikke i menyen |
-| Nrth OS | Ut av nrth.no. Én blokk på forsiden og Om oss, pluss lenke i footer til trynrth.com |
+| Nrth OS | Ut av nrth.no. Én blokk på forsiden og Om oss, pluss lenke i footer til nrthflow.com |
 | Språk | Norsk på `/` (standard). Engelsk under `/en/`. Egne sider per språk med hreflang, **ikke** en språkbryter som skjuler tekst |
 | Priser | I kroner, eks. mva. Synlige på tjenestesidene |
 | Design | Dagens nrth.no. `assets/site.css` er fasit. Ingen nye farger eller fonter |
@@ -73,5 +73,5 @@ Kroneprisene er hentet fra commit `3d11de7`, før tjenestene ble gjort om til US
 
 - Innholdssider og kundehistorier (kommer når det finnes kunder, se «C · Problemer vi løser» på lerretet).
 - Chat eller salgsagent på siden. `/api/chat` fjernes fra manifestene.
-- Flytting av investorsiden til trynrth.com.
+- Flytting av investorsiden til nrthflow.com.
 - Nytt designsystem. Designsystem-pakken (Satoshi/Inter, avrundede hjørner) gjelder **ikke** nrth.no.

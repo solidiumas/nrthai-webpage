@@ -22,15 +22,16 @@ Tjenestesiden til Nrth AI AS for norske bedrifter. Hovedhandling: **Book et møt
 1. **Tekst:** bruk teksten fra `docs/revisjon-2026-10/03-tekst-norsk.md` og `04-tekst-engelsk.md` ordrett. Ikke skriv om, forkort eller legg til tekst. Mangler noe, spør.
 2. **Plassholdere** i `[hakeparenteser]` blir stående til Thomas fyller dem inn. Ikke finn på priser, datoer, tall eller kundenavn.
 3. **Norsk er standard** på `/`, engelsk under `/en/`. Hver side finnes på begge språk, med hreflang begge veier.
-4. **Ingen påstander om produktet** utover det som er godkjent. Flow (het Nrth OS til november 2026) omtales bare i Flow-blokken, Flow-kortet på `/ai-tjenester` og footeren, med lenke til nrthflow.com (`/no` på norske sider). Flow er ikke selvbetjent i første versjon: vi setter opp flowene for kunden ut fra ferdige oppsett. nrthflow.com viser ønsketilstanden, så ikke hent påstander derfra uten å spørre Thomas.
-5. **Aldri disse** på nrth.no: «Agentic OS», «on-premise runtime», «data never leaves», 72 %, 5×, «0 FTE».
-6. **Design:** bruk variablene og klassene i `site.css`. Ingen nye farger, fonter eller avrundede hjørner. `--fg-faint` brukes ikke til tekst som skal leses.
-7. **Tilgjengelighet:** ekte `<button>`, `<a href>`, `<input>` med `<label>`. Synlig fokus. `prefers-reduced-motion` respekteres.
-8. **Siden skal kunne leses uten JavaScript.** Skjemaer virker uten JavaScript.
-9. **Priser** finnes i `data/tjenester.json` og i HTML. Endres den ene, endres den andre. Kjør `node scripts/sjekk-priser.mjs`.
-10. **Manifestene** (`agent.json`, `openapi.json`, `.well-known/ai-plugin.json`, `ai-actions` i `index.html`) lover bare endepunkter som finnes.
-11. **Ikke rør** `investors/` og `pitchdeck/` uten at Thomas ber om det.
-12. **Stil i tekst:** setningsstart med stor bokstav, resten små. Ingen utropstegn, ingen emoji.
+4. **Ingen påstander om produktet** på denne siden. Flow (het Nrth OS til november 2026) omtales bare i Flow-blokken, footeren og artiklene, med lenke til nrthflow.com (norske sider til `https://nrthflow.com/no`, engelske til `https://nrthflow.com`).
+5. **Navnet på produktet:** «Flow by Nrth» i Flow-blokken og footeren, «Nrth Flow» som lenketekst i artiklene og i strukturerte data, «Flow» ellers i løpende tekst. Samme regel som på nrthflow.com (`docs/14-domener-og-navn.md` i `solidiumas/nrth-trynrth-webpage`).
+6. **Aldri disse** på nrth.no: «Agentic OS», «on-premise runtime», «data never leaves», 72 %, 5×, «0 FTE».
+7. **Design:** bruk variablene og klassene i `site.css`. Ingen nye farger, fonter eller avrundede hjørner. `--fg-faint` brukes ikke til tekst som skal leses.
+8. **Tilgjengelighet:** ekte `<button>`, `<a href>`, `<input>` med `<label>`. Synlig fokus. `prefers-reduced-motion` respekteres.
+9. **Siden skal kunne leses uten JavaScript.** Skjemaer virker uten JavaScript.
+10. **Priser** finnes i `data/tjenester.json` og i HTML. Endres den ene, endres den andre. Kjør `node scripts/sjekk-priser.mjs`.
+11. **Manifestene** (`agent.json`, `openapi.json`, `.well-known/ai-plugin.json`, `ai-actions` i `index.html`) lover bare endepunkter som finnes.
+12. **Ikke rør** `investors/` og `pitchdeck/` uten at Thomas ber om det.
+13. **Stil i tekst:** setningsstart med stor bokstav, resten små. Ingen utropstegn, ingen emoji.
 
 ## Arbeidsform
 

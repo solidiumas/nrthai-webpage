@@ -34,9 +34,9 @@ Brukes nederst på alle sider unntatt `/book` og `/personvern`. Tema forhåndsve
 - Skjema og kalender: se `06-booking-og-skjema.md`
 
 ### Flow-blokk (`os-note`)
-- Etikett: Flow
+- Etikett: Flow by Nrth
 - Tekst: Vi lager også Flow: arbeidsrommet der bedrifter tar i bruk AI selv.
-- Lenke: nrthflow.com ↗
+- Lenke: nrthflow.com ↗ (til `https://nrthflow.com/no`)
 
 ### Infoboks om foredrag og kurs (`info-box`)
 - Kicker: ✦ Foredrag og kurs
@@ -47,7 +47,7 @@ Brukes nederst på alle sider unntatt `/book` og `/personvern`. Tema forhåndsve
 ### Footer
 - Lenker: AI-vurdering · Implementering · AI-tjenester · Foredrag og kurs · Innsikt · Om oss · Spørsmål og svar · Personvern
 - © 2026 Nrth AI AS · Bergen · Org.nr. 937 872 038
-- Flow ↗ · LinkedIn ↗ (til `https://www.linkedin.com/company/nrth-ai/`) · Investorer · English
+- Flow by Nrth ↗ (til `https://nrthflow.com/no`) · LinkedIn ↗ (til `https://www.linkedin.com/company/nrth-ai/`) · Investorer · English
 - Built by agents · ▲
 
 ---

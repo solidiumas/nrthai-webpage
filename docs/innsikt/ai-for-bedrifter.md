@@ -42,7 +42,7 @@ En dyktig medarbeider i Norge koster 1–1,5 millioner kroner i året. Når AI s
 
 ## Hva skjer etter piloten?
 
-En pilot som virker skal i drift, med logg, kontroll og et menneske i løkka der det betyr noe. Deretter utvides den til neste oppgave. Det er slik AI blir en del av driften i stedet for et prosjekt som dør når konsulenten drar. Hvis dere vil gjøre mesteparten selv, er det det [Flow](https://nrthflow.com/no) bygges for.
+En pilot som virker skal i drift, med logg, kontroll og et menneske i løkka der det betyr noe. Deretter utvides den til neste oppgave. Det er slik AI blir en del av driften i stedet for et prosjekt som dør når konsulenten drar. Hvis dere vil gjøre mesteparten selv, er det det [Nrth Flow](https://nrthflow.com) bygges for.
 
 ## Neste steg
 

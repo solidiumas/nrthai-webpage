@@ -85,7 +85,7 @@
 - [ ] Google Search Console: domeneeiendom for `nrth.no`, send inn sitemap.
 - [ ] Bing Webmaster Tools: send inn sitemap.
 - [ ] Fyll inn plassholderne under og publiser på nytt.
-- [ ] Når trynrth.com er oppe: slå på Nrth OS-lenkene og endre `/product` til å peke dit.
+- [ ] Når nrthflow.com er oppe: slå på Nrth OS-lenkene og endre `/product` til å peke dit.
 
 ## 5. Plassholdere Thomas må fylle inn
 
