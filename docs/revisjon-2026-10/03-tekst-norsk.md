@@ -210,7 +210,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
   - Test med ekte brukere
   - Måling mot målet, og anbefaling om neste steg
 - Leveranse: 2–3 uker
-- Investering: Fra 60 000 kr
+- Investering: Fra 90 000 kr
 - Passer for: Bedrifter som vil se effekt før de skalerer.
 
 **02 · Innføring av AI-verktøy** (`id="verktoy"`)
@@ -232,7 +232,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
   - Utvidelse til nye områder
   - Månedlig gjennomgang av resultater
 - Leveranse: Løpende
-- Investering: Fra 5 000 kr per måned
+- Investering: Fra 3 490 kr per måned
 - Passer for: Alle som har AI i drift og vil at den skal fortsette å levere.
 
 ### Book et møte (tema: Implementering)
@@ -261,10 +261,22 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
   - Drift på lokal infrastruktur når dataene krever det
   - Løpende forbedring og overvåking
 - Leveranse: 1–3 uker
-- Investering: Oppsett fra ca. 35 000 kr, drift fra 5 000 kr per måned. Typisk 20–40 % av kostnaden for en ansatt.
+- Investering: Oppsett fra ca. 35 000 kr, drift fra 3 490 kr per måned. Typisk 20–40 % av kostnaden for en ansatt.
 - Passer for: Bedrifter som vil at teamet skal rekke mer og levere bedre, særlig der det er mye repeterende kunnskapsarbeid eller store volum.
 
-**02 · Skreddersydde løsninger** (`id="skreddersydd"`)
+**02 · AI-assistenter i Flow** (`id="flow"`, godkjent av Thomas 6. november 2026)
+- Tekst: Flow er systemet vi bygger for oppgaver som går igjen hos mange bedrifter. Vi setter opp assistentene for dere med ferdige oppsett, og kobler dem til dokumentene deres.
+- Inkludert:
+  - Ferdige oppsett for blant annet fakturakontroll, tilbud, rapporter og kundeservice
+  - Oppsett sammen med dere
+  - Modellbruk er med i prisen
+  - Dere ser resultatet før det tas i bruk
+- Leveranse: [varighet]
+- Investering: Gratis i piloten. Fast månedspris etter lansering i mai 2027.
+- Passer for: Bedrifter som vil ha AI på vanlige oppgaver raskt, uten en løsning som bygges bare for dem.
+- Lenke: Les mer på nrthflow.com ↗ (til `https://nrthflow.com/no`)
+
+**03 · Skreddersydde løsninger** (`id="skreddersydd"`)
 - Tekst: Når standardverktøy ikke passer, designer og bygger vi løsningen som gjør det. Fra første idé til løsning i drift.
 - Inkludert:
   - Kartlegging og avgrensning
@@ -276,7 +288,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
 - Investering: Fastpris per prosjekt. Små fra ca. 150 000 kr, mellomstore fra 400 000 kr, store fra 1 000 000 kr.
 - Passer for: Bedrifter med et konkret problem der eksisterende verktøy kommer til kort på datasensitivitet, integrasjon eller fagområde.
 
-**03 · Lokal AI-infrastruktur** (`id="lokal-ai"`)
+**04 · Lokal AI-infrastruktur** (`id="lokal-ai"`)
 - Tekst: AI som kjører på deres egen maskinvare, innenfor deres nettverk. Vi velger maskinvare, setter opp modellene og sikrer løsningen.
 - Inkludert:
   - Spesifikasjon av maskinvare og hjelp med innkjøp
@@ -288,7 +300,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
 - Investering: Typisk 100 000 til 1 000 000+ kr, avhengig av omfang.
 - Passer for: Regulerte bransjer og bedrifter der kontroll over egne data er et strategisk valg, ikke et krav å krysse av for.
 
-**04 · Egen AI-modell** (`id="egen-modell"`, fire kort i `card-grid--2`)
+**05 · Egen AI-modell** (`id="egen-modell"`, fem kort i `card-grid--2`)
 - Tekst: Vi trener en AI-modell på deres egne data, så den kan fagområdet, språket og rutinene deres. Deretter drifter og vedlikeholder vi den, og trener den videre når dataene endrer seg.
 - Inkludert:
   - Vurdering av data, mål og om en egen modell lønner seg
@@ -374,19 +386,18 @@ Bookingseksjonen uten overskrift (overskriften står i sidehero). Tema fra `?tem
 ## Foredrag og kurs `/foredrag-og-kurs`
 
 **Title:** Foredrag og kurs om AI for bedrifter · Nrth AI
-**Description:** Nrth AI holder foredrag, bedriftskurs og workshops om AI for ledergrupper, ansatte og konferanser.
+**Description:** Nrth AI holder foredrag, kurs og workshops om AI for ledergrupper, ansatte og konferanser.
 
 ### Sidehero
 - Kicker: ✦ Foredrag og kurs
 - H1: **Foredrag og kurs om *AI*.**
 - Ingress: Vi holder foredrag og kurs for ledergrupper, ansatte og konferanser. Praktisk, konkret og tilpasset bransjen deres.
 
-### Formater (`card-grid--3`)
-1. **Foredrag** · 45–60 min · For ansatte, kunder eller konferanser. Hva AI kan gjøre i dag, og hva det betyr for dere.
-2. **Bedriftskurs** · Halv dag · For team som skal bruke AI i jobben, med egne oppgaver som øvingsstoff.
-3. **Workshop for ledergrupper** · Hel dag · Ledergruppen finner de første stedene AI skal inn, og går ut med en prioritert liste.
+### Formater (`card-grid--2`, to kort. Thomas 6. november 2026: foredrag og bedriftskurs prises ikke som egne tilbud, og AI-kurset står uten pris)
+1. **AI-kurs** · 2 dager · Åpent kurs for ledere og toppledere, 10–15 plasser. [innhold] Neste kurs: [dato] i [sted].
+2. **AI-workshop for ledergrupper** · Hel dag · Ledergruppen finner de første stedene AI skal inn, og går ut med en prioritert liste.
 
-- Pris: Foredrag fra 20 000 kr, bedriftskurs fra 30 000 kr og workshop fra 45 000 kr. Reise utenfor Bergen kommer i tillegg.
+- Pris: AI-workshop fra 45 000 kr. Reise utenfor Bergen kommer i tillegg.
 - Knapp: **Spør om et foredrag →** (til `/book?tema=foredrag#book`)
 
 ### Book et møte (tema: Foredrag eller kurs)
@@ -408,7 +419,7 @@ Lagt til 21. oktober 2026 (Thomas: lenke i footeren, lik på norsk og engelsk). 
 ### Spørsmål (`prose`, H2 per spørsmål)
 1. **Hva gjør Nrth AI?** Vi hjelper bedrifter å ta i bruk AI: vi vurderer hvor AI gir mest, implementerer det, og bygger AI-tjenester som AI-assistenter og skreddersydde løsninger.
 2. **Hvordan starter vi?** Med et møte. Book på nrth.no/book. Deretter følger vi tre steg: kartlegg (1 uke), pilot (2–3 uker) og drift.
-3. **Hva koster det?** AI-kartlegging fra 25 000 kr. AI-assistenter fra ca. 35 000 kr i oppsett og 5 000 kr per måned i drift. Skreddersydde løsninger fra ca. 150 000 kr. Alle priser står på nrth.no.
+3. **Hva koster det?** AI-kartlegging fra 25 000 kr. AI-assistenter fra ca. 35 000 kr i oppsett og 3 490 kr per måned i drift. Skreddersydde løsninger fra ca. 150 000 kr. Alle priser står på nrth.no.
 4. **Holder dere foredrag og kurs?** Ja, for ledergrupper, ansatte og konferanser. Se nrth.no/foredrag-og-kurs.
 5. **Hvor holder dere til?** I Bergen. Vi møter bedrifter fysisk i hele Norge, og digitalt med kunder i utlandet.
 
