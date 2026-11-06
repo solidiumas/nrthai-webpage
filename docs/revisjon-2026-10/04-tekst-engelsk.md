@@ -181,7 +181,7 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 - Text: One solution in production on real work, with a goal you can measure.
 - Included: Choosing a bounded area with a clear goal / Setup connected to your systems and data / Testing with real users / Measurement against the goal, and a recommendation for the next step
 - Delivery: 2–3 weeks
-- Investment: From NOK 60,000
+- Investment: From NOK 90,000
 - Best fit: Companies that want to see results before they scale.
 
 **02 · Rolling out AI tools** (`id="tools"`)
@@ -195,7 +195,7 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 - Text: We monitor, improve and expand what is in production.
 - Included: Monitoring and logs / Adjustments when the work changes / Expansion to new areas / A monthly review of results
 - Delivery: Ongoing
-- Investment: From NOK 5,000 per month
+- Investment: From NOK 3,490 per month
 - Best fit: Anyone with AI in production who wants it to keep delivering.
 
 ### Book a meeting (topic: Implementation)
@@ -217,7 +217,7 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 - Text: An AI assistant works alongside your people in a specific workflow: document processing, customer service, analysis, internal knowledge or sales follow-up. It takes the routine work, so people get more time for the work that needs them, and quality goes up.
 - Included: Mapping of the workflow and the people who use it / An AI assistant built around your processes / Integration with your existing tools and data / Deployment on local infrastructure when your data requires it / Ongoing improvement and monitoring
 - Delivery: 1–3 weeks
-- Investment: Setup from about NOK 35,000, operations from NOK 5,000 per month. Typically 20–40% of the cost of one employee.
+- Investment: Setup from about NOK 35,000, operations from NOK 3,490 per month. Typically 20–40% of the cost of one employee.
 - Best fit: Companies that want their team to get more done and deliver better work, especially where there is a lot of repetitive knowledge work or high volumes.
 
 **02 · AI assistants in Flow** (`id="flow"`, translated from the Norwegian text Thomas approved on 6 November 2026)
@@ -348,7 +348,7 @@ Added 21 October 2026. Mirror of `/sporsmal-og-svar`, with the same five questio
 ### Questions (`prose`, H2 per question)
 1. **What does Nrth AI do?** We help businesses adopt AI: we assess where AI does the most, implement it, and build AI services such as AI assistants and custom solutions.
 2. **How do we get started?** With a meeting. Book at nrth.no/en/book. Then we follow three steps: map (1 week), pilot (2–3 weeks) and run.
-3. **What does it cost?** AI assessment from NOK 25,000. AI assistants from about NOK 35,000 in setup and NOK 5,000 per month in operations. Custom solutions from about NOK 150,000. All prices are on nrth.no.
+3. **What does it cost?** AI assessment from NOK 25,000. AI assistants from about NOK 35,000 in setup and NOK 3,490 per month in operations. Custom solutions from about NOK 150,000. All prices are on nrth.no.
 4. **Do you give talks and courses?** Yes, for leadership teams, staff and conferences. See nrth.no/en/talks-and-courses.
 5. **Where are you based?** In Bergen, Norway. We meet businesses in person across Norway, and online with clients abroad.
 
