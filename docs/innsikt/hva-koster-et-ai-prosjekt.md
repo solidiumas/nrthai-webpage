@@ -20,7 +20,7 @@ Et AI-prosjekt i en norsk småbedrift koster typisk 100 000 til 400 000 kroner d
 | Leveranse | Tid | Pris | Passer for |
 |---|---|---|---|
 | AI-kartlegging | 3–5 dager | Fra 25 000 kr | Bedrifter som vil vite hvor de skal begynne |
-| Strategisprint | 7–10 dager | Fra 70 000 kr | Ledergrupper som skal ta en beslutning |
+| Strategisprint | 2 uker | Fra 70 000 kr | Ledergrupper som skal ta en beslutning |
 | Ledersparring | Månedlig | Fra 25 000 kr per måned | Daglige ledere som vil ha en partner som sier fra |
 | Pilot i drift | 2–3 uker | Fra 60 000 kr | Én løsning på én avgrenset oppgave |
 | Innføring av AI-verktøy | 2–4 uker | Fra 30 000 kr | Bedrifter som har kjøpt, eller skal kjøpe, AI-verktøy og vil få verdi ut av dem |

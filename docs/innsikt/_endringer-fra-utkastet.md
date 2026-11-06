@@ -158,6 +158,6 @@ Hver endring fra utkastene i strategidokumentet (fanen «Artikler nrth.no», 6. 
 Thomas satte nye priser. Artiklene følger tjenestesidene.
 
 - **Pris.** AI-kartlegging fra 35 000 kr → fra 25 000 kr i /innsikt/ai-for-bedrifter og /innsikt/hva-koster-et-ai-prosjekt (tabell og beskrivelse).
-- **Pris og tid.** Strategisprint på to uker fra 75 000 kr → på 7–10 dager fra 70 000 kr i de samme to artiklene.
+- **Pris.** Strategisprint fra 75 000 kr → fra 70 000 kr i de samme to artiklene. Varigheten er fortsatt to uker.
 - **Pris.** Oppsett av AI-assistenter fra ca. 50 000 kr → fra ca. 35 000 kr i /innsikt/ai-assistenter, /innsikt/ai-for-bedrifter og /innsikt/hva-koster-et-ai-prosjekt.
 - Datoen «oppdatert» er satt til 6. november 2026 i de tre artiklene.

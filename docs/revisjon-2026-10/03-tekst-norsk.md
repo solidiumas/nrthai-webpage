@@ -77,7 +77,7 @@ AI-vurdering ✦ Implementering ✦ AI-tjenester ✦ Mer salg ✦ Mindre manuelt
 - Topp: 01 · AI-vurdering
 - Tittel: Finn ut hvor AI gir dere mest.
 - Tekst: Før dere bruker penger på verktøy, finner vi ut hvor AI faktisk øker salget eller sparer tid hos dere, og hva som bør gjøres først.
-- Liste: AI-kartlegging · 3–5 dager / Strategisprint · 7–10 dager / Ledersparring · månedlig
+- Liste: AI-kartlegging · 3–5 dager / Strategisprint · 2 uker / Ledersparring · månedlig
 - Pris: Fra 25 000 kr
 - Lenke: Les mer → `/ai-vurdering`
 
@@ -143,7 +143,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
 ## AI-vurdering `/ai-vurdering`
 
 **Title:** AI-vurdering og AI-strategi for bedrifter · Nrth AI
-**Description:** Finn ut hvor AI gir bedriften mest: AI-kartlegging på 3–5 dager, strategisprint på 7–10 dager og ledersparring. Fra 25 000 kr.
+**Description:** Finn ut hvor AI gir bedriften mest: AI-kartlegging på 3–5 dager, strategisprint på 2 uker og ledersparring. Fra 25 000 kr.
 
 ### Sidehero (`page-hero`)
 - Kicker: ✦ AI-vurdering
@@ -171,7 +171,7 @@ Lagt til og godkjent av Thomas 27. oktober 2026. Kortene lages av `scripts/innsi
   - Regnestykke for gevinst og kostnad
   - Prioritert omfang for første pilot
   - Anbefaling om hva som bør kjøpes, og hva som bør bygges
-- Leveranse: 7–10 dager
+- Leveranse: 2 uker
 - Investering: Fra 70 000 kr
 - Passer for: Ledergrupper som skal ta en beslutning om AI og vil ha et solid grunnlag.
 

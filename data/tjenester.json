@@ -15,7 +15,7 @@
       "id": "strategisprint",
       "dor": "ai-vurdering",
       "navn": { "nb": "Strategisprint", "en": "Strategy sprint" },
-      "leveranse": { "nb": "7–10 dager", "en": "7–10 days" },
+      "leveranse": { "nb": "2 uker", "en": "2 weeks" },
       "fraPris": 70000,
       "prisTekst": { "nb": "Fra 70 000 kr", "en": "From NOK 70,000" },
       "url": { "nb": "https://nrth.no/ai-vurdering#strategisprint", "en": "https://nrth.no/en/ai-assessment#sprint" }

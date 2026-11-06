@@ -47,7 +47,7 @@ Kroneprisene er hentet fra commit `3d11de7`, før tjenestene ble gjort om til US
 | Tjeneste | Dør | Leveranse | Pris |
 |---|---|---|---|
 | AI-kartlegging | AI-vurdering | 3–5 dager | Fra 25 000 kr |
-| Strategisprint | AI-vurdering | 7–10 dager | Fra 70 000 kr |
+| Strategisprint | AI-vurdering | 2 uker | Fra 70 000 kr |
 | Ledersparring | AI-vurdering | Månedlig | Fra 25 000 kr per måned |
 | Pilot i drift | Implementering | 2–3 uker | **[pris]** |
 | Innføring av AI-verktøy | Implementering | **[varighet]** | **[pris]** |

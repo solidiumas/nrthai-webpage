@@ -70,7 +70,7 @@ AI assessment ✦ Implementation ✦ AI services ✦ More sales ✦ Less manual 
 **Card 1** · 01 · AI assessment
 - Title: Find out where AI does the most for you.
 - Text: Before you spend money on tools, we find where AI actually increases sales or saves time in your business, and what to do first.
-- List: AI assessment · 3–5 days / Strategy sprint · 7–10 days / Leadership advisory · monthly
+- List: AI assessment · 3–5 days / Strategy sprint · 2 weeks / Leadership advisory · monthly
 - Price: From NOK 25,000
 - Link: Read more → `/en/ai-assessment`
 
@@ -133,7 +133,7 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 ## AI assessment `/en/ai-assessment`
 
 **Title:** AI assessment and AI strategy for businesses · Nrth AI
-**Description:** Find out where AI does the most for your business: a 3–5 day AI assessment, a 7–10 day strategy sprint and leadership advisory. From NOK 25,000.
+**Description:** Find out where AI does the most for your business: a 3–5 day AI assessment, a 2-week strategy sprint and leadership advisory. From NOK 25,000.
 
 ### Page hero
 - Kicker: ✦ AI assessment
@@ -151,7 +151,7 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 **02 · Strategy sprint** (`id="sprint"`)
 - Text: Two intensive weeks that end in a plan you can carry out.
 - Included: Implementation plan / A model of gains and costs / Prioritised scope for the first pilot / A recommendation on what to buy and what to build
-- Delivery: 7–10 days
+- Delivery: 2 weeks
 - Investment: From NOK 70,000
 - Best fit: Leadership teams about to make a decision on AI who want solid ground to stand on.
 
