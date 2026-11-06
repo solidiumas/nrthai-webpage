@@ -325,8 +325,9 @@ Added and approved by Thomas on 27 October 2026. Made by `scripts/innsikt.mjs` f
 1. **Talks** · 45–60 min · For staff, customers or conferences. What AI can do today, and what it means for you.
 2. **Company courses** · Half day · For teams who will use AI in their work, using their own tasks as practice material.
 3. **Leadership workshops** · Full day · The leadership team finds the first places AI should go, and leaves with a prioritised list.
+4. **Leadership course** · 2 days · Open course for managers and senior leaders, 10–15 places. [content] Next course: [date] in [place]. *(Draft 6 November 2026, translated from the Norwegian draft. Waiting for Thomas.)*
 
-- Price: Talks from NOK 20,000, company courses from NOK 30,000 and workshops from NOK 45,000. Travel outside Bergen is extra.
+- Price: Talks from NOK 20,000, company courses from NOK 30,000, workshops from NOK 45,000 and leadership courses NOK 10,000 per participant. Travel outside Bergen is extra.
 - Button: **Ask about a talk →** (to `/en/book?topic=talk#book`)
 
 ### Book a meeting (topic: Talk or course)

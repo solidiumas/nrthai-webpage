@@ -108,7 +108,7 @@
       "id": "foredrag-og-kurs",
       "dor": "informasjon",
       "navn": { "nb": "Foredrag og kurs", "en": "Talks and courses" },
-      "leveranse": { "nb": "45 minutter til en hel dag", "en": "45 minutes to a full day" },
+      "leveranse": { "nb": "45 minutter til to dager", "en": "45 minutes to two days" },
       "fraPris": 20000,
       "prisTekst": { "nb": "Foredrag fra 20 000 kr", "en": "Talks from NOK 20,000" },
       "url": { "nb": "https://nrth.no/foredrag-og-kurs", "en": "https://nrth.no/en/talks-and-courses" }
