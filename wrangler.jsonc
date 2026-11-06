@@ -3,7 +3,7 @@
 // Lokalt: npx wrangler dev. Publisering: npx wrangler deploy (eller Workers Builds fra GitHub).
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "nrth-no",
+  "name": "nrthai-webpage",
   "main": "worker/index.js",
   "compatibility_date": "2026-11-01",
   // Resend-pakken og api/ bruker Node-API-er (process.env, Buffer)

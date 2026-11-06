@@ -1,12 +1,12 @@
 # Flytting av nrth.no fra Vercel til Cloudflare
 
-Koden er klar for Cloudflare Workers. Vercel drifter nrth.no til DNS flyttes. Oppsettene for Vercel og Cloudflare står side om side, så koden kan ligge på main før flyttingen.
+nrth.no kjører på Cloudflare Workers, i Workeren `nrthai-webpage`, som publiseres fra `main` med Workers Builds. Oppsettet for Vercel står fortsatt i repoet til Vercel er avviklet.
 
 ## Oppsettet
 
 | Fil | Hva den gjør | Tilsvarer på Vercel |
 |---|---|---|
-| `wrangler.jsonc` | Worker `nrth-no`. Statiske filer fra roten, `/om-oss/index.html` på `/om-oss` (`drop-trailing-slash`), `404.html` for ukjente adresser. Worker-koden kjøres bare for `/api/*`. | `cleanUrls`, `trailingSlash: false` |
+| `wrangler.jsonc` | Worker `nrthai-webpage`. Navnet må være det samme som Workeren i Cloudflare, ellers stopper Workers Builds med feil. Statiske filer fra roten, `/om-oss/index.html` på `/om-oss` (`drop-trailing-slash`), `404.html` for ukjente adresser. Worker-koden kjøres bare for `/api/*`. | `cleanUrls`, `trailingSlash: false` |
 | `_redirects` | Videresendingene | `redirects` i `vercel.json` |
 | `_headers` | Sikkerhetsheadere og mellomlagring | `headers` i `vercel.json` |
 | `.assetsignore` | Det som ikke publiseres, inkludert `api/`, `worker/` og `scripts/` | `.vercelignore` |
@@ -46,7 +46,56 @@ Siden svarer på http://localhost:8787.
 
 6. Bytt navnetjenere hos registraren til de to Cloudflare oppgir. Vent til Cloudflare melder at domenet er aktivt.
 7. Slett den gamle posten som peker `nrth.no` til Vercel. Legg så til `nrth.no` under Workerens Settings → Domains & Routes → Custom Domain. Cloudflare lager posten og sertifikatet.
-8. `www.nrth.no` til `nrth.no`: la posten for `www` peke til `nrth.no` og sett den til proxied (oransje sky). Legg så til en Redirect Rule fra `www.nrth.no/*` til `https://nrth.no/${1}` med 308 og spørrestrengen bevart. Det er det Vercel gjør i dag.
+8. `www.nrth.no` til `nrth.no`. Det krever to ting i Cloudflare: en DNS-post som gjør at Cloudflare tar imot `www.nrth.no`, og en regel som sender videre.
+
+   **a. DNS-posten.** DNS → Records. Finnes det en post med navnet `www` fra før (for eksempel en CNAME til Vercel), slett den. Velg så Add record:
+
+   | Felt | Verdi |
+   |---|---|
+   | Type | `AAAA` |
+   | Name | `www` |
+   | IPv6 address | `100::` |
+   | Proxy status | Proxied (oransje sky) |
+   | TTL | Auto |
+   | Comment | `Bare for videresending til nrth.no` |
+
+   `100::` er en adresse som ikke fører noe sted. Cloudflare svarer selv med videresendingen, så forespørselen kommer aldri dit. Posten må være proxied. Med «DNS only» (grå sky) virker ikke regelen.
+
+   **b. Regelen.** Rules → Overview → Create rule → Redirect Rule:
+
+   | Felt | Verdi |
+   |---|---|
+   | Rule name | `www til nrth.no` |
+   | When incoming requests match | Custom filter expression |
+   | Field | `Hostname` |
+   | Operator | `equals` |
+   | Value | `www.nrth.no` |
+   | Then, Type | `Dynamic` |
+   | Expression | `concat("https://nrth.no", http.request.uri.path)` |
+   | Status code | `308` |
+   | Preserve query string | På |
+
+   Under Edit expression skal det stå `(http.host eq "www.nrth.no")`. Velg Deploy.
+
+   Regelen treffer både `http://` og `https://` og tar med stien og spørrestrengen. `https://www.nrth.no/om-oss?utm_source=x` går til `https://nrth.no/om-oss?utm_source=x`. 308 er det samme som Vercel brukte.
+
+   **c. Unngå dette:**
+   - Malen med `https://www.*` treffer bare `https://`. Bruk regelen over.
+   - Ikke legg `www.nrth.no` til som Custom Domain på Workeren. Da svarer siden på to adresser i stedet for å sende videre.
+
+   **d. Sjekk.** Sertifikatet for `www` lages automatisk (Universal SSL dekker `www`). Det kan ta opptil 30 minutter før `www.nrth.no` virker for alle, fordi svaret «finnes ikke» mellomlagres så lenge. Så:
+
+   ```bash
+   curl -sI "https://www.nrth.no/om-oss?utm_source=test"
+   ```
+
+   Svaret skal ha `HTTP/2 308` og `location: https://nrth.no/om-oss?utm_source=test`.
+
+   ```bash
+   curl -sIL "http://www.nrth.no/" | grep -iE "^(HTTP|location)"
+   ```
+
+   Siste `location` skal være `https://nrth.no/`, og siste svar `HTTP/2 200`.
 9. SSL/TLS → Edge Certificates: slå på «Always Use HTTPS» og HSTS med max-age 2 år (63072000), som Vercel sender i dag.
 10. Sjekk at `curl -sI https://nrth.no` viser `server: cloudflare`, at `https://www.nrth.no` videresender, og send et skjema.
 
